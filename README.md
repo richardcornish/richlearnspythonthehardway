@@ -1,4 +1,4 @@
-# Rich learning Python the hard way
+# Rich learns Python the hard way
 
 This repository contains the code I wrote to complete the [52 exercises](http://learnpythonthehardway.org/book/) of [Learn Python the Hard Way](http://learnpythonthehardway.org/) by [Zed Shaw](http://zedshaw.com/about/).
 
