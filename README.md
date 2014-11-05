@@ -42,7 +42,7 @@ git push origin master
 ghp-import -p pelican/output
 ```
 
-Visit [http://richardcornish.github.io/lpthw/](http://richardcornish.github.io/lpthw/).
+Visit [http://richardcornish.github.io/lpthw/](http://richardcornish.github.io/lpthw/) (or [http://richlearnspythonthehardway.org/](http://richlearnspythonthehardway.org/)).
 
 ## Domains
 
