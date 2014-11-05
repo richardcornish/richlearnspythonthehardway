@@ -8,7 +8,7 @@ I attempt to write about this probably horrific experience with [GitHub Pages](h
 
 ## Installation
 
-You can create a similar diary of trauma.
+You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary.
 
 ```
 mkvirtualenv lpthw
