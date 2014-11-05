@@ -4,6 +4,7 @@
 
 # Pelican
 pelican/cache/
+pelican/output/
 
 
 # Byte-compiled / optimized / DLL files
