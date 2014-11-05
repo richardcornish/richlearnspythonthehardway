@@ -6,7 +6,7 @@ To ensure completion I have entered into a blood pact with a friend doing likewi
 
 I attempt to write about this probably horrific experience with [GitHub Pages](https://pages.github.com/) and [Pelican](http://blog.getpelican.com/) at [richlearnspythonthehardway.org](http://richlearnspythonthehardway.org/).
 
-## Installation
+## Install
 
 You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary.
 
@@ -15,6 +15,8 @@ mkvirtualenv lpthw
 git clone git@github.com:richardcornish/lpthw.git
 pip install -r requirements.txt
 ```
+
+## Write
 
 [Add and edit](http://docs.getpelican.com/en/latest/content.html) [Markdown](https://help.github.com/articles/markdown-basics/) files in `pelican/content/`. Then generate them:
 
@@ -25,6 +27,8 @@ python -m SimpleHTTPServer
 ```
 
 Visit [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
+
+## Publish
 
 Now publish to the live Interwebs:
 
