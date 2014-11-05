@@ -4,7 +4,7 @@ This repository contains the code I wrote to complete the [52 exercises](http://
 
 To ensure completion I have entered into a blood pact with a friend doing likewise.
 
-I attempt to write about this probably horrific experience with [GitHub Pages](https://pages.github.com/) and [Pelican](http://blog.getpelican.com/) at [http://richlearnspythonthehardway.org/](richlearnspythonthehardway.org).
+I attempt to write about this probably horrific experience with [GitHub Pages](https://pages.github.com/) and [Pelican](http://blog.getpelican.com/) at [richlearnspythonthehardway.org](http://richlearnspythonthehardway.org/).
 
 ## Installation
 
@@ -16,7 +16,7 @@ git clone git@github.com:richardcornish/lpthw.git
 pip install -r requirements.txt
 ```
 
-Add and edit Markdown files in `pelican/content/`. Then generate them:
+[Add and edit](http://docs.getpelican.com/en/latest/content.html) [Markdown](https://help.github.com/articles/markdown-basics/) files in `pelican/content/`. Then generate them:
 
 ```
 pelican pelican/content -o pelican/output -s pelican/pelicanconf.py
@@ -29,9 +29,17 @@ Visit [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 Now publish to the live Interwebs:
 
 ```
-cd ../../
+cd ../../ # Back to the top
 ghp-import pelican/output
 git push origin gh-pages
 ```
 
-Visit [http://richardcornish.github.io/lpthw/](http://richardcornish.github.io/lpthw/). Because Pelican uses absolute paths and GitHub Pages for projects uses relative paths, i.e. `lpthw/`, paths will break unless visiting the [pretty domain](http://richlearnspythonthehardway.org/).
+Visit [http://richardcornish.github.io/lpthw/](http://richardcornish.github.io/lpthw/).
+
+Because Pelican uses absolute paths and GitHub Pages (for projects) uses relative paths, i.e. the `lpthw/` in `http://richardcornish.github.io/lpthw/`, paths will break unless visiting the [pretty domain](http://richlearnspythonthehardway.org/).
+
+## Domains
+
+1. Replace the text in `pelican/content/extra/CNAME` with your own domain, and save, commit, push.
+2. [Copy the IPs](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/) for A records from GitHub
+3. Enter the records in your domain registrar's control panel, e.g. in [Google Domains](https://support.google.com/domains/answer/3290350?authuser=1&hl=en).
