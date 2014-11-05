@@ -1,4 +1,9 @@
+# Mac OS X Finder
 *.DS_Store
+
+
+# Pelican
+pelican/cache/
 
 
 # Byte-compiled / optimized / DLL files
