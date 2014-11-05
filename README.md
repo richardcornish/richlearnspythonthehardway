@@ -26,14 +26,19 @@ cd pelican/output/
 python -m SimpleHTTPServer
 ```
 
+Add `-t` to `pelican` for plain text. :)
+
 Visit [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 
 ## Publish
 
-Now publish to the live Interwebs:
+Now publish to the live Interwebs.
 
 ```
 cd ../../ # Back to the top
+git add .
+git commit -m "..."
+git push origin master
 ghp-import pelican/output
 git push origin gh-pages
 ```
