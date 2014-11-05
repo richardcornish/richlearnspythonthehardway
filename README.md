@@ -39,14 +39,13 @@ cd ../../ # Back to the top
 git add .
 git commit -m "..."
 git push origin master
-ghp-import pelican/output
-git push origin gh-pages
+ghp-import -p pelican/output
 ```
 
 Visit [http://richardcornish.github.io/lpthw/](http://richardcornish.github.io/lpthw/).
 
 ## Domains
 
-1. Replace the text in `pelican/content/extra/CNAME` with your own domain, and save, commit, push.
-2. [Copy the IPs](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/) for A records from GitHub
-3. Enter the records in your domain registrar's control panel, e.g. in [Google Domains](https://support.google.com/domains/answer/3290350?authuser=1&hl=en).
+1. Replace the text in `pelican/content/extra/CNAME` with your own domain (and follow publish steps).
+2. [Copy the IP addresses](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider/) for A records from GitHub
+3. Enter the IP addresses for the A record of your domain into your domain registrar's control panel, e.g. in [Google Domains](https://support.google.com/domains/answer/3290350?authuser=1&hl=en).
