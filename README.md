@@ -40,8 +40,6 @@ git push origin gh-pages
 
 Visit [http://richardcornish.github.io/lpthw/](http://richardcornish.github.io/lpthw/).
 
-Because Pelican uses absolute paths and GitHub Pages (for projects) uses relative paths, i.e. the `lpthw/` in `http://richardcornish.github.io/lpthw/`, paths will break unless visiting the [pretty domain](http://richlearnspythonthehardway.org/).
-
 ## Domains
 
 1. Replace the text in `pelican/content/extra/CNAME` with your own domain, and save, commit, push.
