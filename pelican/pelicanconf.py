@@ -35,3 +35,6 @@ DEFAULT_PAGINATION = False
 # Custom domain
 STATIC_PATHS = ['images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
+
+# Typogrify
+TYPOGRIFY = TRUE
