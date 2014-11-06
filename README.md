@@ -8,7 +8,7 @@ I attempt to write about this probably horrific experience with [GitHub Pages](h
 
 ## Install
 
-You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary.
+You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary. I typically install projects to `~/Sites`, but is by no means required.
 
 ```
 mkvirtualenv lpthw
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 ## Write
 
-[Add and edit](http://docs.getpelican.com/en/latest/content.html) [Markdown](https://help.github.com/articles/markdown-basics/) files in `pelican/content/`. Then generate them:
+[Add](http://docs.getpelican.com/en/latest/content.html) and edit [Markdown](https://help.github.com/articles/markdown-basics/) files in `pelican/content/`. Then generate them:
 
 ```
 pelican pelican/content -o pelican/output -s pelican/pelicanconf.py
