@@ -13,6 +13,7 @@ You can create a similar diary of trauma by [forking this repository](https://he
 ```
 mkvirtualenv lpthw
 git clone git@github.com:richardcornish/lpthw.git
+cd lpthw/
 pip install -r requirements.txt
 ```
 
