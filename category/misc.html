@@ -20,9 +20,48 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-0.html">Exercise&nbsp;0</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-1.html">Exercise&nbsp;1</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2014-11-05T22:08:00-06:00">
+        <abbr class="published" title="2014-11-06T23:55:00-06:00">
+                Published: Thu 06 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>I worked through <a href="http://learnpythonthehardway.org/book/ex1.html">exercise 1</a> tonight. It was, hrm,&nbsp;basic.</p>
+<p>I entered these lines in a <code>.py</code> file and ran it with <code>python ex01.py</code>:</p>
+<div class="highlight"><pre><span class="n">print</span> <span class="s">&quot;Hello World!&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Hello Again&quot;</span>
+<span class="n">print</span> <span class="s">&quot;I like typing this.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;This is fun.&quot;</span>
+<span class="n">print</span> <span class="err">&#39;</span><span class="n">Yay</span><span class="o">!</span> <span class="n">Printing</span><span class="p">.</span><span class="err">&#39;</span>
+<span class="n">print</span> <span class="s">&quot;I&#39;d much rather you &#39;not&#39;.&quot;</span>
+<span class="n">print</span> <span class="err">&#39;</span><span class="n">I</span> <span class="s">&quot;said&quot;</span> <span class="k">do</span> <span class="n">not</span> <span class="n">touch</span> <span class="n">this</span><span class="p">.</span><span class="err">&#39;</span>
+</pre></div>
+
+
+<p>I typed them out like Zed said&nbsp;to.</p>
+<p>Here&#8217;s a screenshot of&nbsp;it.</p>
+<p><img alt="Exercise 01" src="ex01.png" title="Exercise 01" /></p>
+<p>I look forward to the more advanced&nbsp;material.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-0.html" rel="bookmark"
+                           title="Permalink to Exercise 0">Exercise&nbsp;0</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-11-05T23:08:00-06:00">
                 Published: Wed 05 November 2014
         </abbr>
 
@@ -31,32 +70,12 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>I know. I took too long to do this. I learned just enough Python to work with Django, which took course over the past eight (!) years. The first time I installed Django in winter 2006, I took 18 hours over two days. It worked, but it looked like an&nbsp;abomination.</p>
-<p>So, today I am going to do one exercise from Learn Python the Hard Way each day until I finish all 52 exercises. I&#8217;m going to write about my experiences, good or bad. I&#8217;m most fluent in JavaScript because of my background as a designer and front-end developer, but I have some basic Python knowledge from using Django. We&#8217;re going to find out how&nbsp;basic.</p>
-<p>The &#8220;zeroth&#8221; exercise doesn&#8217;t have any code to write. It&#8217;s just opening Terminal on a Mac, a Python shell, and Googling when you get stuck, which is what I guess I do most of the time anyway. I spent the rest of my time making this blog with <a href="http://blog.getpelican.com/">Pelican</a>, <a href="https://pip.pypa.io/">Pip</a>, <a href="http://virtualenv.readthedocs.org/">Virtualenv</a>, <a href="http://virtualenvwrapper.readthedocs.org/">Virtualenvwrapper</a>, and <a href="http://git-scm.com/">Git</a>, and I installed Python with <a href="http://brew.sh/">Homebrew</a>&nbsp;instead.</p>
-<p>So, uh, maybe I know more than I let&nbsp;on.</p>
-<p>Because there isn&#8217;t much to share from the book, here is how I installed&nbsp;Python.</p>
-<p>Edit your <code>~/.bash_profile</code> in the text editor of your chocie to get ready for what&#8217;s&nbsp;coming:</p>
-<div class="highlight"><pre><span class="cp"># Paths</span>
-<span class="n">export</span> <span class="n">PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">:</span><span class="err">$</span><span class="n">PATH</span>
-
-<span class="cp"># Virtualenv</span>
-<span class="n">export</span> <span class="n">WORKON_HOME</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="p">.</span><span class="n">virtualenvs</span>
-
-<span class="cp"># Virtualenvwrapper</span>
-<span class="n">source</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">virtualenvwrapper</span><span class="p">.</span><span class="n">sh</span>
-</pre></div>
-
-
-<p>Now install Xcode&#8217;s command line tools, Homebrew, and&nbsp;Python:</p>
-<div class="highlight"><pre><span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
-<span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
-</pre></div>
-
-
-<p>If you&#8217;re interested in creating a similar blog to this one, all my code is on <a href="https://github.com/richardcornish/lpthw">GitHub</a>.</p>                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                <p>I know. I took too long to do this. I learned just enough Python to work with Django, which took course over the past eight (!) years. The first time I installed Django in winter 2006, I took 18 hours over two days. It worked, but it looked like an&nbsp;abomination ...</p>
+                <a class="readmore" href="/exercise-0.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
