@@ -21,8 +21,7 @@ pip install -r requirements.txt
 
 ```
 pelican pelican/content -o pelican/output -s pelican/pelicanconf.py
-cd pelican/output/
-python -m SimpleHTTPServer
+cd pelican/output/ && python -m SimpleHTTPServer
 ```
 
 Add `-t` to `pelican` for plain text. :)
