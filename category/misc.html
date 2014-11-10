@@ -20,7 +20,103 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-3.html">Exercise&nbsp;3</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-4.html">Exercise&nbsp;4</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-09T23:49:00-06:00">
+                Published: Sun 09 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>I was a little late but I finished <a href="http://learnpythonthehardway.org/book/ex4.html">exercise 4</a> tonight. I learned about&nbsp;variables.</p>
+<p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex04.py</code>:</p>
+<div class="highlight"><pre><span class="cp"># Exercise 4</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex4.html</span>
+
+<span class="cp"># Number of total cars</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="cp"># Number of spaces in each car</span>
+<span class="n">space_in_a_car</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="cp"># Number of total drivers</span>
+<span class="n">drivers</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="cp"># Number of total passengers</span>
+<span class="n">passengers</span> <span class="o">=</span> <span class="mi">90</span>
+
+<span class="cp"># Cars left over without drivers</span>
+<span class="n">cars_not_driven</span> <span class="o">=</span> <span class="n">cars</span> <span class="o">-</span> <span class="n">drivers</span>
+
+<span class="cp"># Each driver represents a car driven</span>
+<span class="n">cars_driven</span> <span class="o">=</span> <span class="n">drivers</span>
+
+<span class="cp"># All the cars times the space in each car equal the total capacity</span>
+<span class="n">carpool_capacity</span> <span class="o">=</span> <span class="n">cars_driven</span> <span class="o">*</span> <span class="n">space_in_a_car</span>
+
+<span class="cp"># The average number of passengers is all passengers divided by total cars driven</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">cars_driven</span>
+
+
+<span class="n">print</span> <span class="s">&quot;There are&quot;</span><span class="p">,</span> <span class="n">cars</span><span class="p">,</span> <span class="s">&quot;cars available.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;There are only&quot;</span><span class="p">,</span> <span class="n">drivers</span><span class="p">,</span> <span class="s">&quot;drivers available.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;There will be&quot;</span><span class="p">,</span> <span class="n">cars_not_driven</span><span class="p">,</span> <span class="s">&quot;empty cars today.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;We can transport&quot;</span><span class="p">,</span> <span class="n">carpool_capacity</span><span class="p">,</span> <span class="s">&quot;people today.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;We have&quot;</span><span class="p">,</span> <span class="n">passengers</span><span class="p">,</span> <span class="s">&quot;to carpool today.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;We need to put about&quot;</span><span class="p">,</span> <span class="n">average_passengers_per_car</span><span class="p">,</span> <span class="s">&quot;in each car.&quot;</span>
+</pre></div>
+
+
+<p><img alt="Exercise 04" src="/images/ex04.png" title="Exercise 04" /></p>
+<p>He said in his&nbsp;lesson:</p>
+<blockquote>
+<p>Explain this error in your own words. Make sure you use line numbers and explain&nbsp;why.</p>
+</blockquote>
+<div class="highlight"><pre><span class="nx">Traceback</span> <span class="p">(</span><span class="nx">most</span> <span class="nx">recent</span> <span class="nb">call</span> <span class="nb">last</span><span class="p">):</span>
+  <span class="nb">File</span> <span class="s2">&quot;ex4.py&quot;</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">8</span><span class="p">,</span> <span class="k">in</span> <span class="o">&lt;</span><span class="nx">module</span><span class="o">&gt;</span>
+    <span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="nx">car_pool_capacity</span> <span class="o">/</span> <span class="nx">passenger</span>
+<span class="nx">NameError</span><span class="p">:</span> <span class="nb">name</span> <span class="s1">&#39;car_pool_capacity&#39;</span> <span class="nx">is</span> <span class="ow">not</span> <span class="nx">defined</span>
+</pre></div>
+
+
+<p>First, <code>car_pool_capacity</code> is not the name of the variable. It&#8217;s <code>carpool_capacity</code>. Admittedly I didn&#8217;t catch this until the plugin of my text editor, <a href="http://www.sublimetext.com/">Sublime Text</a>, highlighted a line error for me. I use <a href="http://emmet.io/">Emmet</a> to more easily write <span class="caps">HTML</span> and <span class="caps">CSS</span>, and it comes with a <a href="https://github.com/emmetio/pyv8-binaries">PyV8</a>, a Python lint checker, which is great at catching little syntax erorrs. Maybe this is &#8220;cheating,&#8221; but if a tool can help you get your work done faster, I&#8217;m all for it. We&#8217;re all using computers, am I right? Plus I noticed on my own that <code>passenger</code> is not a variable name, but <code>passengers</code> is.</p>
+<p>But maybe more serious is the conceptual computation, even if the variables were&nbsp;&#8220;correct&#8221;:</p>
+<div class="highlight"><pre><span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">carpool_capacity</span> <span class="o">/</span> <span class="n">passengers</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="n">cars_driven</span> <span class="o">*</span> <span class="n">space_in_a_car</span><span class="p">)</span> <span class="o">/</span> <span class="n">passengers</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="n">drivers</span> <span class="o">*</span> <span class="n">space_in_a_car</span><span class="p">)</span> <span class="o">/</span> <span class="n">passengers</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">90</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mf">120.0</span> <span class="o">/</span> <span class="mi">90</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mf">1.3333333333333333</span>
+</pre></div>
+
+
+<p>Dividing the capacity by the number of passengers doesn&#8217;t make any sense. That&#8217;s far worse than misspelling variables. What if your program ran as a false positive, without mistake? This is called a <em>semantic error</em>, one of the <a href="http://www.greenteapress.com/thinkpython/html/thinkpython002.html#toc6">three kinds of errors that can occur</a>. I learned this several years ago from &#8220;<a href="http://www.greenteapress.com/thinkpython/">Think Python: How to Think Like a Computer Scientist</a>,&#8221; but it&#8217;s a shame a lot of people don&#8217;t learn the basics and rush into programming without slowing down to learn the&nbsp;basics.</p>
+<p>What the right way looks&nbsp;like:</p>
+<div class="highlight"><pre><span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">cars_driven</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">drivers</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mi">90</span> <span class="o">/</span> <span class="mi">30</span>
+<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+
+
+<p>The value for <code>space_in_a_car</code>, 4.0, doesn&#8217;t seem to be necessary as a floating point number. Spaces are whole numbers, integers (unless you count the bitch seat). It&#8217;s only used to compute <code>carpool_capacity</code>, which is a product of <code>cars_driven</code> and <code>space_in_a_car</code>. Floating unnecessarily adds a decimal point and&nbsp;digits.</p>
+<p>I&#8217;m glad to see him already acknowledging string formatting in the &#8220;common student questions,&#8221; e.g. <code>print "Hey %s there." % "you"</code>, but I&#8217;m kind of bummed <a href="http://docs.python-guide.org/en/latest/writing/structure/#mutable-and-immutable-types">it changed in Python 3</a>. Some simple things seemed to have gotten complicated in Python 3, but I hope it makes more sense to me later when (if?) I ever learn more about the next&nbsp;version.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-3.html" rel="bookmark"
+                           title="Permalink to Exercise 3">Exercise&nbsp;3</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-08T13:49:00-06:00">
                 Published: Sat 08 November 2014
@@ -31,7 +127,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Today was <a href="http://learnpythonthehardway.org/book/ex3.html">exercise 3</a>. I learned about arithmetic&nbsp;operators.</p>
+</footer><!-- /.post-info -->                <p>Today was <a href="http://learnpythonthehardway.org/book/ex3.html">exercise 3</a>. I learned about arithmetic&nbsp;operators.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex03.py</code>:</p>
 <div class="highlight"><pre><span class="cp"># Exercise 3</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex3.html</span>
@@ -39,85 +135,10 @@
 <span class="cp"># Announce the counting of the chickens</span>
 <span class="n">print</span> <span class="s">&quot;I will now count my chickens:&quot;</span>
 
-<span class="cp"># Prints Hens and Roosters counts, according to &quot;operator precedence&quot;</span>
-
-<span class="cp"># 25 + 30 / 6</span>
-<span class="cp"># 25 + 5</span>
-<span class="cp"># 30</span>
-<span class="n">print</span> <span class="s">&quot;Hens&quot;</span><span class="p">,</span> <span class="mi">25</span> <span class="o">+</span> <span class="mi">30</span> <span class="o">/</span> <span class="mi">6</span>
-
-<span class="cp"># 100 - 75 % 4</span>
-<span class="cp"># 100 - 3</span>
-<span class="cp"># 97</span>
-<span class="n">print</span> <span class="s">&quot;Roosters&quot;</span><span class="p">,</span> <span class="mi">100</span> <span class="o">-</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">%</span> <span class="mi">4</span>
-
-<span class="cp"># Announce the counting of the eggs</span>
-<span class="n">print</span> <span class="s">&quot;Now I will count the eggs:&quot;</span>
-
-<span class="cp"># Compute the egg expression</span>
-<span class="cp"># 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6</span>
-<span class="cp"># 3 + 2 + 1 - 5 + 0 - 0 + 6</span>
-<span class="cp"># 5 + -4 + 0 + 6</span>
-<span class="cp"># 1 + 6</span>
-<span class="cp"># 7</span>
-<span class="n">print</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">6</span>
-
-<span class="cp"># Ask a question</span>
-<span class="n">print</span> <span class="s">&quot;Is it true that 3 + 2 &lt; 5 - 7?&quot;</span>
-
-<span class="cp"># Print AND compute the expression AND compare them</span>
-<span class="cp"># 5 &lt; -2</span>
-<span class="n">print</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">7</span> <span class="err">#</span> <span class="n">False</span>
-
-<span class="cp"># Print the question AND compute the expression</span>
-<span class="n">print</span> <span class="s">&quot;What is 3 + 2?&quot;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span> <span class="err">#</span> <span class="mi">5</span>
-<span class="n">print</span> <span class="s">&quot;What is 5 - 7?&quot;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">7</span> <span class="err">#</span> <span class="o">-</span><span class="mi">2</span>
-
-<span class="cp"># Print a grand revelation</span>
-<span class="n">print</span> <span class="s">&quot;Oh, that&#39;s why it&#39;s False.&quot;</span>
-
-<span class="cp"># Print your desire to continue</span>
-<span class="n">print</span> <span class="s">&quot;How about some more.&quot;</span>
-
-<span class="cp"># Print the question AND compute the expression, now with more truthiness</span>
-<span class="n">print</span> <span class="s">&quot;Is it greater?&quot;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">2</span> <span class="err">#</span> <span class="n">True</span>
-<span class="n">print</span> <span class="s">&quot;Is it greater or equal?&quot;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="err">#</span> <span class="n">True</span>
-<span class="n">print</span> <span class="s">&quot;Is it less or equal?&quot;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">2</span> <span class="err">#</span> <span class="n">False</span>
-</pre></div>
-
-
-<p><img alt="Exercise 03" src="/images/ex03.png" title="Exercise 03" /></p>
-<p>I&#8217;m surprised that Zed doesn&#8217;t try to call the operators, well, operators or mention <a href="https://docs.python.org/2/reference/expressions.html#operator-precedence">operator precedence</a>. Instead he opts for &#8220;symbols&#8221; and doesn&#8217;t explain the less obvious operators, like modulo (<code>%</code>), until the &#8220;common student&nbsp;questions.&#8221;</p>
-<p>I am hard pressed to think of a time when I&#8217;ve used modulo, and I usually have to look it up or screw around in the Terminal. When I ask developers, I usually get the same&nbsp;reaction.</p>
-<p>Once and for all, from the <a href="https://docs.python.org/2/reference/expressions.html#binary-arithmetic-operations">documentation</a>:</p>
-<blockquote>
-<p>The % (modulo) operator yields the remainder from the division of the first argument by the&nbsp;second.</p>
-</blockquote>
-<p>Example:</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span> <span class="o">%</span> <span class="mi">3</span> <span class="err">#</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">or</span> <span class="mi">2</span> <span class="n">with</span> <span class="n">remainder</span> <span class="mi">0</span>
-</pre></div>
-
-
-<p>In plain English: 3 divides 6 two times, with a remainder of 0. The modulo is&nbsp;zero.</p>
-<p>Example:</p>
-<div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">%</span> <span class="mi">4</span> <span class="err">#</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">=</span> <span class="mf">0.75</span><span class="p">,</span> <span class="n">or</span> <span class="mi">0</span> <span class="n">with</span> <span class="n">remainder</span> <span class="mi">3</span>
-</pre></div>
-
-
-<p>In plain English: 4 divides 3 zero times, with a remainder of, well, 3. The modulo is&nbsp;three.</p>
-<p>He also doesn&#8217;t mention the difference between integers and floating point numbers (or decimal numbers) when it comes to arithmetic. I understand that <a href="https://docs.python.org/2/library/stdtypes.html#numeric-types-int-float-long-complex">it</a> <a href="https://docs.python.org/2/tutorial/floatingpoint.html">goes</a> <a href="https://docs.python.org/2/library/decimal.html">much</a>, <a href="https://docs.python.org/2/faq/design.html#why-are-floating-point-calculations-so-inaccurate">much</a> <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">deeper</a> than it should have gone, but it should be called out just for student&nbsp;awareness.</p>
-<p>I&#8217;m not saying he should just say &#8220;go read the Python docs,&#8221; which are ugly and for the most part incomprehensible, but there&#8217;s a middle ground between enticing, explanation, and&nbsp;reference.</p>
-<p>Also, just&nbsp;remember:</p>
-<blockquote>
-<p>Every programming language has some kind of way of doing numbers and math. Do not worry: programmers lie frequently about being math geniuses when they really aren&#8217;t. If they were math geniuses, they would be doing math, not writing buggy web frameworks so they can drive race&nbsp;cars.</p>
-</blockquote>
-<p>Shine on, you crazy <a href="http://david.heinemeierhansson.com/">gemstone</a>.</p>
-<p><a href="http://david.heinemeierhansson.com/"><img alt="DHH goes vroom" src="/images/dhh-racecar.jpg" title="DHH goes vroom" /></a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="cp"># Prints Hens and Roosters counts ...</span></pre></div>
+                <a class="readmore" href="/exercise-3.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -192,8 +213,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info -->                <p>I know. I took too long to do this. I learned just enough <a href="https://www.python.org/">Python</a> to work with <a href="https://www.djangoproject.com/">Django</a>, which took course over the past eight (!) years. The first time I installed Django in winter 2006, it took 18 hours over two days. It worked but it was an&nbsp;abomination.</p>
-<p>So ...</p>
+</footer><!-- /.post-info -->                <p>I know. I took too long to do this. I learned just enough <a href="https://www.python.org/">Python</a> to work with <a href="https://www.djangoproject.com/">Django</a>, which took course over the past eight (!) years. The first time I installed Django was in winter 2006, and it took 18 hours over two days. It worked but it was an ...</p>
                 <a class="readmore" href="/exercise-0.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
