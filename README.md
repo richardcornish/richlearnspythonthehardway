@@ -20,7 +20,7 @@ pip install -r requirements.txt
 [Add](http://docs.getpelican.com/en/latest/content.html) and edit [Markdown](https://help.github.com/articles/markdown-basics/) files in `pelican/content/`. Then generate them:
 
 ```
-pelican pelican/content -o pelican/output -s pelican/pelicanconf.py
+pelican pelican/content -o pelican/output -s pelican/pelicanconf.py -t pelican/themes/rich
 cd pelican/output/ && python -m SimpleHTTPServer
 ```
 
