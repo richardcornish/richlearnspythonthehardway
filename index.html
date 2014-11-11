@@ -20,7 +20,76 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-4.html">Exercise&nbsp;4</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-5.html">Exercise&nbsp;5</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-11T01:14:00-06:00">
+                Published: Tue 11 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Another late night with Python. Tonight was <a href="http://learnpythonthehardway.org/book/ex5.html">exercise 5</a> and it covered string formatting and&nbsp;replacement.</p>
+<p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex05.py</code>:</p>
+<div class="highlight"><pre><span class="cp"># Exercise 5</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex5.html</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Zed</span> <span class="n">A</span><span class="p">.</span> <span class="n">Shaw</span><span class="err">&#39;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">35</span> <span class="err">#</span> <span class="n">not</span> <span class="n">a</span> <span class="n">lie</span>
+<span class="n">height</span> <span class="o">=</span> <span class="mi">74</span> <span class="err">#</span> <span class="n">inches</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="mi">180</span> <span class="err">#</span> <span class="n">lbs</span>
+<span class="n">eyes</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Blue</span><span class="err">&#39;</span>
+<span class="n">teeth</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">White</span><span class="err">&#39;</span>
+<span class="n">hair</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Brown</span><span class="err">&#39;</span>
+
+<span class="n">print</span> <span class="s">&quot;Let&#39;s talk about %s.&quot;</span> <span class="o">%</span> <span class="n">name</span>
+<span class="n">print</span> <span class="s">&quot;He&#39;s %d inches tall.&quot;</span> <span class="o">%</span> <span class="n">height</span>
+<span class="n">print</span> <span class="s">&quot;He&#39;s %d pounds heavy.&quot;</span> <span class="o">%</span> <span class="n">weight</span>
+<span class="n">print</span> <span class="s">&quot;Actually that&#39;s not too heavy.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;He&#39;s got %s eyes and %s hair.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">eyes</span><span class="p">,</span> <span class="n">hair</span><span class="p">)</span>
+<span class="n">print</span> <span class="s">&quot;His teeth are usually %s depending on the coffee.&quot;</span> <span class="o">%</span> <span class="n">teeth</span>
+
+<span class="cp"># this line is tricky, try to get it exactly right</span>
+<span class="n">print</span> <span class="s">&quot;If I add %d, %d, and %d I get %d.&quot;</span> <span class="o">%</span> <span class="p">(</span>
+    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">age</span> <span class="o">+</span> <span class="n">height</span> <span class="o">+</span> <span class="n">weight</span><span class="p">)</span>
+
+
+<span class="cp"># Study drills</span>
+<span class="n">height_cm</span> <span class="o">=</span> <span class="n">height</span> <span class="o">*</span> <span class="mf">2.54</span> <span class="err">#</span> <span class="n">cm</span>
+<span class="n">weight_kg</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">*</span> <span class="mf">0.453592</span> <span class="err">#</span> <span class="n">kg</span>
+
+<span class="n">print</span> <span class="s">&quot;He&#39;s %d centimeters tall.&quot;</span> <span class="o">%</span> <span class="n">height_cm</span>
+<span class="n">print</span> <span class="s">&quot;He&#39;s %d kilograms heavy.&quot;</span> <span class="o">%</span> <span class="n">weight_kg</span>
+
+<span class="cp"># %r format character</span>
+<span class="n">r</span> <span class="o">=</span> <span class="s">&quot;Print this no matter what&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Here is what %%r does: %r&quot;</span> <span class="o">%</span> <span class="n">r</span>
+</pre></div>
+
+
+<p><img alt="Exercise 05" src="/images/ex05.png" title="Exercise 05" /></p>
+<p>Nothing too crazy, just some string formatting, specifically decimal, <code>%d</code>, representation, <code>%r</code>, and string, <code>%s</code>. Here are all of the <a href="https://docs.python.org/2/library/stdtypes.html#string-formatting-operations">Python format characters</a>.</p>
+<p>A quick search on Google brings up all of the Imperial-Metric conversions that I forgot from middle&nbsp;school:</p>
+<ul>
+<li>1 in = 2.54&nbsp;cm</li>
+<li>1 lb = 0.453592&nbsp;kg</li>
+</ul>
+<p>Now, can anyone go back and do formatting and replacing of all my traumatic middle school memories? Because that would be&nbsp;fabulous.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-4.html" rel="bookmark"
+                           title="Permalink to Exercise 4">Exercise&nbsp;4</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-09T23:49:00-06:00">
                 Published: Sun 09 November 2014
@@ -31,7 +100,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>I was a little late but I finished <a href="http://learnpythonthehardway.org/book/ex4.html">exercise 4</a> tonight. I learned about&nbsp;variables.</p>
+</footer><!-- /.post-info -->                <p>I was a little late but I finished <a href="http://learnpythonthehardway.org/book/ex4.html">exercise 4</a> tonight. I learned about&nbsp;variables.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex04.py</code>:</p>
 <div class="highlight"><pre><span class="cp"># Exercise 4</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex4.html</span>
@@ -39,76 +108,10 @@
 <span class="cp"># Number of total cars</span>
 <span class="n">cars</span> <span class="o">=</span> <span class="mi">100</span>
 
-<span class="cp"># Number of spaces in each car</span>
-<span class="n">space_in_a_car</span> <span class="o">=</span> <span class="mi">4</span>
-
-<span class="cp"># Number of total drivers</span>
-<span class="n">drivers</span> <span class="o">=</span> <span class="mi">30</span>
-
-<span class="cp"># Number of total passengers</span>
-<span class="n">passengers</span> <span class="o">=</span> <span class="mi">90</span>
-
-<span class="cp"># Cars left over without drivers</span>
-<span class="n">cars_not_driven</span> <span class="o">=</span> <span class="n">cars</span> <span class="o">-</span> <span class="n">drivers</span>
-
-<span class="cp"># Each driver represents a car driven</span>
-<span class="n">cars_driven</span> <span class="o">=</span> <span class="n">drivers</span>
-
-<span class="cp"># All the cars times the space in each car equal the total capacity</span>
-<span class="n">carpool_capacity</span> <span class="o">=</span> <span class="n">cars_driven</span> <span class="o">*</span> <span class="n">space_in_a_car</span>
-
-<span class="cp"># The average number of passengers is all passengers divided by total cars driven</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">cars_driven</span>
-
-
-<span class="n">print</span> <span class="s">&quot;There are&quot;</span><span class="p">,</span> <span class="n">cars</span><span class="p">,</span> <span class="s">&quot;cars available.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;There are only&quot;</span><span class="p">,</span> <span class="n">drivers</span><span class="p">,</span> <span class="s">&quot;drivers available.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;There will be&quot;</span><span class="p">,</span> <span class="n">cars_not_driven</span><span class="p">,</span> <span class="s">&quot;empty cars today.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We can transport&quot;</span><span class="p">,</span> <span class="n">carpool_capacity</span><span class="p">,</span> <span class="s">&quot;people today.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We have&quot;</span><span class="p">,</span> <span class="n">passengers</span><span class="p">,</span> <span class="s">&quot;to carpool today.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We need to put about&quot;</span><span class="p">,</span> <span class="n">average_passengers_per_car</span><span class="p">,</span> <span class="s">&quot;in each car.&quot;</span>
-</pre></div>
-
-
-<p><img alt="Exercise 04" src="/images/ex04.png" title="Exercise 04" /></p>
-<p>He said in his&nbsp;lesson:</p>
-<blockquote>
-<p>Explain this error in your own words. Make sure you use line numbers and explain&nbsp;why.</p>
-</blockquote>
-<div class="highlight"><pre><span class="nx">Traceback</span> <span class="p">(</span><span class="nx">most</span> <span class="nx">recent</span> <span class="nb">call</span> <span class="nb">last</span><span class="p">):</span>
-  <span class="nb">File</span> <span class="s2">&quot;ex4.py&quot;</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">8</span><span class="p">,</span> <span class="k">in</span> <span class="o">&lt;</span><span class="nx">module</span><span class="o">&gt;</span>
-    <span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="nx">car_pool_capacity</span> <span class="o">/</span> <span class="nx">passenger</span>
-<span class="nx">NameError</span><span class="p">:</span> <span class="nb">name</span> <span class="s1">&#39;car_pool_capacity&#39;</span> <span class="nx">is</span> <span class="ow">not</span> <span class="nx">defined</span>
-</pre></div>
-
-
-<p>First, <code>car_pool_capacity</code> is not the name of the variable. It&#8217;s <code>carpool_capacity</code>. Admittedly I didn&#8217;t catch this until the plugin of my text editor, <a href="http://www.sublimetext.com/">Sublime Text</a>, highlighted a line error for me. I use <a href="http://emmet.io/">Emmet</a> to more easily write <span class="caps">HTML</span> and <span class="caps">CSS</span>, and it comes with a <a href="https://github.com/emmetio/pyv8-binaries">PyV8</a>, a Python lint checker, which is great at catching little syntax erorrs. Maybe this is &#8220;cheating,&#8221; but if a tool can help you get your work done faster, I&#8217;m all for it. We&#8217;re all using computers, am I right? Plus I noticed on my own that <code>passenger</code> is not a variable name, but <code>passengers</code> is.</p>
-<p>But maybe more serious is the conceptual computation, even if the variables were&nbsp;&#8220;correct&#8221;:</p>
-<div class="highlight"><pre><span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">carpool_capacity</span> <span class="o">/</span> <span class="n">passengers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="n">cars_driven</span> <span class="o">*</span> <span class="n">space_in_a_car</span><span class="p">)</span> <span class="o">/</span> <span class="n">passengers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="n">drivers</span> <span class="o">*</span> <span class="n">space_in_a_car</span><span class="p">)</span> <span class="o">/</span> <span class="n">passengers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">90</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mf">120.0</span> <span class="o">/</span> <span class="mi">90</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mf">1.3333333333333333</span>
-</pre></div>
-
-
-<p>Dividing the capacity by the number of passengers doesn&#8217;t make any sense. That&#8217;s far worse than misspelling variables. What if your program ran as a false positive, without mistake? This is called a <em>semantic error</em>, one of the <a href="http://www.greenteapress.com/thinkpython/html/thinkpython002.html#toc6">three kinds of errors that can occur</a>. I learned this several years ago from &#8220;<a href="http://www.greenteapress.com/thinkpython/">Think Python: How to Think Like a Computer Scientist</a>,&#8221; but it&#8217;s a shame a lot of people don&#8217;t learn the basics and rush into programming without slowing&nbsp;down.</p>
-<p>What the right way looks&nbsp;like:</p>
-<div class="highlight"><pre><span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">cars_driven</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">drivers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mi">90</span> <span class="o">/</span> <span class="mi">30</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mi">3</span>
-</pre></div>
-
-
-<p>The value for <code>space_in_a_car</code>, 4.0, doesn&#8217;t seem to be necessary as a floating point number. Spaces are whole numbers, integers (unless you count the bitch seat). It&#8217;s only used to compute <code>carpool_capacity</code>, which is a product of <code>cars_driven</code> and <code>space_in_a_car</code>. Floating unnecessarily adds a decimal point and&nbsp;digits.</p>
-<p>I&#8217;m glad to see him already acknowledging string formatting in the &#8220;common student questions,&#8221; e.g. <code>print "Hey %s there." % "you"</code>, but I&#8217;m kind of bummed <a href="http://docs.python-guide.org/en/latest/writing/structure/#mutable-and-immutable-types">it changed in Python 3</a>. Some simple things seemed to have gotten complicated in Python 3, but I hope it makes more sense to me later when (if?) I ever learn more about the next&nbsp;version.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="cp"># Number of spaces in each car ...</span></pre></div>
+                <a class="readmore" href="/exercise-4.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
