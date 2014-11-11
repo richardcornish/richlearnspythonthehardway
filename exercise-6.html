@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 6</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-6.html" rel="bookmark"
+           title="Permalink to Exercise 6">Exercise&nbsp;6</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-11-11T15:05:00-06:00">
+                Published: Tue 11 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>Today I finished the thrill ride known as <a href="http://learnpythonthehardway.org/book/ex6.html">exercise 6</a>.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 6</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex6.html</span>
+
+<span class="cp"># Assign values to cryptic variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s">&quot;There are %d types of people.&quot;</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="n">binary</span> <span class="o">=</span> <span class="s">&quot;binary&quot;</span>
+<span class="n">do_not</span> <span class="o">=</span> <span class="s">&quot;don&#39;t&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Those who know %s and those who %s.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="n">do_not</span><span class="p">)</span> <span class="err">#</span> <span class="mi">1</span><span class="p">)</span> <span class="n">and</span> <span class="mi">2</span><span class="p">)</span> <span class="n">a</span> <span class="n">string</span> <span class="n">inside</span> <span class="n">a</span> <span class="n">string</span>
+
+<span class="cp"># Print x and y</span>
+<span class="n">print</span> <span class="n">x</span>
+<span class="n">print</span> <span class="n">y</span>
+
+<span class="cp"># Print the literal representation of x and the string of y</span>
+<span class="n">print</span> <span class="s">&quot;I said: %r.&quot;</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">print</span> <span class="s">&quot;I also said: &#39;%s&#39;.&quot;</span> <span class="o">%</span> <span class="n">y</span> <span class="err">#</span> <span class="mi">3</span><span class="p">)</span> <span class="n">a</span> <span class="n">string</span> <span class="n">inside</span> <span class="n">a</span> <span class="n">string</span>
+
+<span class="cp"># Determine how funny this joke is and allow evaluation to have a literal representation value appended to it</span>
+<span class="n">hilarious</span> <span class="o">=</span> <span class="n">False</span>
+<span class="n">joke_evaluation</span> <span class="o">=</span> <span class="s">&quot;Isn&#39;t that joke so funny?! %r&quot;</span>
+
+<span class="cp"># Print the evaluation and insert the hilarious status into it</span>
+<span class="n">print</span> <span class="n">joke_evaluation</span> <span class="o">%</span> <span class="n">hilarious</span>
+
+<span class="cp"># Assign strings to variables w and e</span>
+<span class="n">w</span> <span class="o">=</span> <span class="s">&quot;This is the left side of...&quot;</span>
+<span class="n">e</span> <span class="o">=</span> <span class="s">&quot;a string with a right side.&quot;</span>
+
+<span class="cp"># Print the concatenation of w and e</span>
+<span class="n">print</span> <span class="n">w</span> <span class="o">+</span> <span class="n">e</span>
+</pre></div>
+
+
+<p>It looked a little like&nbsp;this:</p>
+<p><img alt="Exercise 06" src="/images/ex06.png" title="Exercise 06" /></p>
+<p>As for the study drills, I could only find three places where a string was inserted into another string, not the four Zed claimed that there might be. He lied to me. Zed Shaw lied to me, just like my last girlfriend. Tell me, <em>Jessica</em>: If I didn&#8217;t own any goldfish, why did I have the bowl, huh? <a href="https://www.youtube.com/watch?v=jUJNsS7kqDM">Why did I have the bowl</a>,&nbsp;Jessica?</p>
+<p>It was frustrating how difficult it was to find that the plus symbol is overloaded as an operator for addition and string concatenation in the Python documentation. Yes, it&#8217;s that way in many dynamic languages, but sometimes it feels like the documentation was written by a scientific standards committee&#8212;not that there is anything wrong with that (<a href="/images/science.gif">science</a>!)&#8212;but this <a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literal-concatenation">doesn&#8217;t exactly roll off the tongue</a>:</p>
+<blockquote>
+<p>2.4.2. String literal concatenation
+&#8230;
+Note that this feature is defined at the syntactical level, but implemented at compile time. The <code>+</code> operator must be used to concatenate string expressions at run time. Also note that literal concatenation can use different quoting styles for each component (even mixing raw strings and triple quoted&nbsp;strings).</p>
+</blockquote>
+<p>I worked on today&#8217;s exercise at my favorite coffee shop, <a href="http://www.yelp.com/biz/julius-meinl-chicago-3">Julius Meinl</a>, so here is a photo of the chocolate cupcake I ate. You can&#8217;t beat&nbsp;$2.95!</p>
+<p><img alt="Julius Meinl chocolate upcake" src="/images/julius_meinl-cupcake.jpg" title="Exercise 06" /></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

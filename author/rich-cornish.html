@@ -20,7 +20,75 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-5.html">Exercise&nbsp;5</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-6.html">Exercise&nbsp;6</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-11T15:05:00-06:00">
+                Published: Tue 11 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Today I finished the thrill ride known as <a href="http://learnpythonthehardway.org/book/ex6.html">exercise 6</a>.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 6</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex6.html</span>
+
+<span class="cp"># Assign values to cryptic variables</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s">&quot;There are %d types of people.&quot;</span> <span class="o">%</span> <span class="mi">10</span>
+<span class="n">binary</span> <span class="o">=</span> <span class="s">&quot;binary&quot;</span>
+<span class="n">do_not</span> <span class="o">=</span> <span class="s">&quot;don&#39;t&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Those who know %s and those who %s.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="n">do_not</span><span class="p">)</span> <span class="err">#</span> <span class="mi">1</span><span class="p">)</span> <span class="n">and</span> <span class="mi">2</span><span class="p">)</span> <span class="n">a</span> <span class="n">string</span> <span class="n">inside</span> <span class="n">a</span> <span class="n">string</span>
+
+<span class="cp"># Print x and y</span>
+<span class="n">print</span> <span class="n">x</span>
+<span class="n">print</span> <span class="n">y</span>
+
+<span class="cp"># Print the literal representation of x and the string of y</span>
+<span class="n">print</span> <span class="s">&quot;I said: %r.&quot;</span> <span class="o">%</span> <span class="n">x</span>
+<span class="n">print</span> <span class="s">&quot;I also said: &#39;%s&#39;.&quot;</span> <span class="o">%</span> <span class="n">y</span> <span class="err">#</span> <span class="mi">3</span><span class="p">)</span> <span class="n">a</span> <span class="n">string</span> <span class="n">inside</span> <span class="n">a</span> <span class="n">string</span>
+
+<span class="cp"># Determine how funny this joke is and allow evaluation to have a literal representation value appended to it</span>
+<span class="n">hilarious</span> <span class="o">=</span> <span class="n">False</span>
+<span class="n">joke_evaluation</span> <span class="o">=</span> <span class="s">&quot;Isn&#39;t that joke so funny?! %r&quot;</span>
+
+<span class="cp"># Print the evaluation and insert the hilarious status into it</span>
+<span class="n">print</span> <span class="n">joke_evaluation</span> <span class="o">%</span> <span class="n">hilarious</span>
+
+<span class="cp"># Assign strings to variables w and e</span>
+<span class="n">w</span> <span class="o">=</span> <span class="s">&quot;This is the left side of...&quot;</span>
+<span class="n">e</span> <span class="o">=</span> <span class="s">&quot;a string with a right side.&quot;</span>
+
+<span class="cp"># Print the concatenation of w and e</span>
+<span class="n">print</span> <span class="n">w</span> <span class="o">+</span> <span class="n">e</span>
+</pre></div>
+
+
+<p>It looked a little like&nbsp;this:</p>
+<p><img alt="Exercise 06" src="/images/ex06.png" title="Exercise 06" /></p>
+<p>As for the study drills, I could only find three places where a string was inserted into another string, not the four Zed claimed that there might be. He lied to me. Zed Shaw lied to me, just like my last girlfriend. Tell me, <em>Jessica</em>: If I didn&#8217;t own any goldfish, why did I have the bowl, huh? <a href="https://www.youtube.com/watch?v=jUJNsS7kqDM">Why did I have the bowl</a>,&nbsp;Jessica?</p>
+<p>It was frustrating how difficult it was to find that the plus symbol is overloaded as an operator for addition and string concatenation in the Python documentation. Yes, it&#8217;s that way in many dynamic languages, but sometimes it feels like the documentation was written by a scientific standards committee&#8212;not that there is anything wrong with that (<a href="/images/science.gif">science</a>!)&#8212;but this <a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literal-concatenation">doesn&#8217;t exactly roll off the tongue</a>:</p>
+<blockquote>
+<p>2.4.2. String literal concatenation
+&#8230;
+Note that this feature is defined at the syntactical level, but implemented at compile time. The <code>+</code> operator must be used to concatenate string expressions at run time. Also note that literal concatenation can use different quoting styles for each component (even mixing raw strings and triple quoted&nbsp;strings).</p>
+</blockquote>
+<p>I worked on today&#8217;s exercise at my favorite coffee shop, <a href="http://www.yelp.com/biz/julius-meinl-chicago-3">Julius Meinl</a>, so here is a photo of the chocolate cupcake I ate. You can&#8217;t beat&nbsp;$2.95!</p>
+<p><img alt="Julius Meinl chocolate upcake" src="/images/julius_meinl-cupcake.jpg" title="Exercise 06" /></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-5.html" rel="bookmark"
+                           title="Permalink to Exercise 5">Exercise&nbsp;5</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-11T01:14:00-06:00">
                 Published: Tue 11 November 2014
@@ -31,57 +99,17 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Another late night with Python. Tonight was <a href="http://learnpythonthehardway.org/book/ex5.html">exercise 5</a> and it covered string formatting and&nbsp;replacement.</p>
+</footer><!-- /.post-info -->                <p>Another late night with Python. Tonight was <a href="http://learnpythonthehardway.org/book/ex5.html">exercise 5</a> and it covered string formatting and&nbsp;replacement.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex05.py</code>:</p>
 <div class="highlight"><pre><span class="cp"># Exercise 5</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex5.html</span>
 
 <span class="n">name</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Zed</span> <span class="n">A</span><span class="p">.</span> <span class="n">Shaw</span><span class="err">&#39;</span>
 <span class="n">age</span> <span class="o">=</span> <span class="mi">35</span> <span class="err">#</span> <span class="n">not</span> <span class="n">a</span> <span class="n">lie</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">74</span> <span class="err">#</span> <span class="n">inches</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="mi">180</span> <span class="err">#</span> <span class="n">lbs</span>
-<span class="n">eyes</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Blue</span><span class="err">&#39;</span>
-<span class="n">teeth</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">White</span><span class="err">&#39;</span>
-<span class="n">hair</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Brown</span><span class="err">&#39;</span>
-
-<span class="n">print</span> <span class="s">&quot;Let&#39;s talk about %s.&quot;</span> <span class="o">%</span> <span class="n">name</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d inches tall.&quot;</span> <span class="o">%</span> <span class="n">height</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d pounds heavy.&quot;</span> <span class="o">%</span> <span class="n">weight</span>
-<span class="n">print</span> <span class="s">&quot;Actually that&#39;s not too heavy.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s got %s eyes and %s hair.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">eyes</span><span class="p">,</span> <span class="n">hair</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;His teeth are usually %s depending on the coffee.&quot;</span> <span class="o">%</span> <span class="n">teeth</span>
-
-<span class="cp"># this line is tricky, try to get it exactly right</span>
-<span class="n">print</span> <span class="s">&quot;If I add %d, %d, and %d I get %d.&quot;</span> <span class="o">%</span> <span class="p">(</span>
-    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">age</span> <span class="o">+</span> <span class="n">height</span> <span class="o">+</span> <span class="n">weight</span><span class="p">)</span>
-
-
-<span class="cp"># Study drills</span>
-<span class="n">height_cm</span> <span class="o">=</span> <span class="n">height</span> <span class="o">*</span> <span class="mf">2.54</span> <span class="err">#</span> <span class="n">cm</span>
-<span class="n">weight_kg</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">*</span> <span class="mf">0.453592</span> <span class="err">#</span> <span class="n">kg</span>
-
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d centimeters tall.&quot;</span> <span class="o">%</span> <span class="n">height_cm</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d kilograms heavy.&quot;</span> <span class="o">%</span> <span class="n">weight_kg</span>
-
-<span class="cp"># %r format character</span>
-<span class="n">r</span> <span class="o">=</span> <span class="s">&quot;Print this no matter what&quot;</span>
-<span class="n">print</span> <span class="s">&quot;Here is what %%r does: %r&quot;</span> <span class="o">%</span> <span class="n">r</span>
-</pre></div>
-
-
-<p><img alt="Exercise 05" src="/images/ex05.png" title="Exercise 05" /></p>
-<p>Nothing too crazy, just some string formatting, specifically decimal, <code>%d</code>, representation, <code>%r</code>, and string, <code>%s</code>. Here are all of the <a href="https://docs.python.org/2/library/stdtypes.html#string-formatting-operations">Python format characters</a>.</p>
-<p>A quick search on Google brings up all of the Imperial-Metric conversions that I forgot from middle&nbsp;school:</p>
-<ul>
-<li>1 in = 2.54&nbsp;cm</li>
-<li>1 lb = 0.453592&nbsp;kg</li>
-</ul>
-<p>Now, can anyone go back and do formatting and replacing of all my traumatic middle school memories? Because that would be&nbsp;fabulous.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">height</span> <span class="o">=</span> <span class="mi">74 ...</span></pre></div>
+                <a class="readmore" href="/exercise-5.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
