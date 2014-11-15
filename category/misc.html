@@ -34,7 +34,87 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-7.html">Exercise&nbsp;7</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-9.html">Exercise&nbsp;9</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-14T22:12:00-06:00">
+                Published: Fri 14 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>And now for the second exericse I&#8217;m doing tonight, <a href="http://learnpythonthehardway.org/book/ex9.html">exercise 9</a>.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 9</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex9.html</span>
+
+<span class="cp"># Here&#39;s some new strange stuff, remember type it exactly.</span>
+
+<span class="n">days</span> <span class="o">=</span> <span class="s">&quot;Mon Tue Wed Thu Fri Sat Sun&quot;</span>
+<span class="n">months</span> <span class="o">=</span> <span class="s">&quot;Jan</span><span class="se">\n</span><span class="s">Feb</span><span class="se">\n</span><span class="s">Mar</span><span class="se">\n</span><span class="s">Apr</span><span class="se">\n</span><span class="s">May</span><span class="se">\n</span><span class="s">Jun</span><span class="se">\n</span><span class="s">Jul</span><span class="se">\n</span><span class="s">Aug&quot;</span>
+
+<span class="n">print</span> <span class="s">&quot;Here are the days: &quot;</span><span class="p">,</span> <span class="n">days</span>
+<span class="n">print</span> <span class="s">&quot;Here are the months: &quot;</span><span class="p">,</span> <span class="n">months</span>
+
+<span class="n">print</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="n">There</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">something</span> <span class="n">going</span> <span class="n">on</span> <span class="n">here</span><span class="p">.</span>
+<span class="n">With</span> <span class="n">the</span> <span class="n">three</span> <span class="kt">double</span><span class="o">-</span><span class="n">quotes</span><span class="p">.</span>
+<span class="n">We</span><span class="err">&#39;</span><span class="n">ll</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">type</span> <span class="n">as</span> <span class="n">much</span> <span class="n">as</span> <span class="n">we</span> <span class="n">like</span><span class="p">.</span>
+<span class="n">Even</span> <span class="mi">4</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">we</span> <span class="n">want</span><span class="p">,</span> <span class="n">or</span> <span class="mi">5</span> <span class="n">or</span> <span class="mf">6.</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+
+
+<p><img alt="Exercise 09" src="/images/ex09.png" title="Exercise 09" /></p>
+<p><code>%r</code> prints the new lines, which is interesting because I&#8217;ve been using <code>\n</code> for new lines for so long, I don&#8217;t remember where I learned it or what convention it follows. It turns out Python is <a href="https://docs.python.org/2/library/stdtypes.html#file.newlines">following Unix-style convention</a>, and Wikipedia has a <a href="http://en.wikipedia.org/wiki/Newline">long, long entry on newlines</a>.</p>
+<p>Interestingly, I didn&#8217;t know you could print a <a href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">docstring</a>, or even that it would print&nbsp;literally.</p>
+<p>From the common student&nbsp;questions:</p>
+<blockquote>
+<p>Is it bad that my errors are always spelling&nbsp;mistakes?</p>
+</blockquote>
+<p>If you&#8217;ve ever worked with a developer, then known he or she will say at least once (and likely many times) when code doesn&#8217;t work &#8220;It would help if I could spell&nbsp;correctly.&#8221;</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-8.html" rel="bookmark"
+                           title="Permalink to Exercise 8">Exercise&nbsp;8</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-11-14T21:51:00-06:00">
+                Published: Fri 14 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->                <p>I fell behind last night and didn&#8217;t do my exercise. I&#8217;m going to make up for it with two of them tonight. The first one up is <a href="http://learnpythonthehardway.org/book/ex8.html">exercise 8</a>.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 8</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex8.html</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="s">&quot;%r %r %r %r&quot;</span>
+
+<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4 ...</span></pre></div>
+                <a class="readmore" href="/exercise-8.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-7.html" rel="bookmark"
+                           title="Permalink to Exercise 7">Exercise&nbsp;7</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-12T20:31:00-06:00">
                 Published: Wed 12 November 2014
@@ -45,7 +125,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Another day, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex7.html">exercise 7</a>.</p>
+</footer><!-- /.post-info -->                <p>Another day, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex7.html">exercise 7</a>.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 7</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex7.html</span>
 
@@ -53,201 +133,10 @@
 <span class="n">print</span> <span class="s">&quot;Mary had a little lamb.&quot;</span>
 
 <span class="cp"># Print second line of nursery rhyme with string formatting of &quot;snow&quot;</span>
-<span class="n">print</span> <span class="s">&quot;Its fleece was white as %s.&quot;</span> <span class="o">%</span> <span class="err">&#39;</span><span class="n">snow</span><span class="err">&#39;</span>
-
-<span class="cp"># Print third line of nursery rhyme</span>
-<span class="n">print</span> <span class="s">&quot;And everywhere that Mary went.&quot;</span>
-
-<span class="cp"># Print the period character 10 times</span>
-<span class="n">print</span> <span class="s">&quot;.&quot;</span> <span class="o">*</span> <span class="mi">10</span> <span class="err">#</span> <span class="n">what</span><span class="err">&#39;</span><span class="n">d</span> <span class="n">that</span> <span class="k">do</span><span class="o">?</span>
-
-<span class="cp"># Assign each letter of &quot;CheeseBurger&quot; to a respective ascending variable</span>
-<span class="n">end1</span> <span class="o">=</span> <span class="s">&quot;C&quot;</span>
-<span class="n">end2</span> <span class="o">=</span> <span class="s">&quot;h&quot;</span>
-<span class="n">end3</span> <span class="o">=</span> <span class="s">&quot;e&quot;</span>
-<span class="n">end4</span> <span class="o">=</span> <span class="s">&quot;e&quot;</span>
-<span class="n">end5</span> <span class="o">=</span> <span class="s">&quot;s&quot;</span>
-<span class="n">end6</span> <span class="o">=</span> <span class="s">&quot;e&quot;</span>
-<span class="n">end7</span> <span class="o">=</span> <span class="s">&quot;B&quot;</span>
-<span class="n">end8</span> <span class="o">=</span> <span class="s">&quot;u&quot;</span>
-<span class="n">end9</span> <span class="o">=</span> <span class="s">&quot;r&quot;</span>
-<span class="n">end10</span> <span class="o">=</span> <span class="s">&quot;g&quot;</span>
-<span class="n">end11</span> <span class="o">=</span> <span class="s">&quot;e&quot;</span>
-<span class="n">end12</span> <span class="o">=</span> <span class="s">&quot;r&quot;</span>
-
-<span class="cp"># Prints the concatenation of variables end1-end6, a space via the comma, and</span>
-<span class="cp"># continues to print the concatenation of variables end7-end12</span>
-<span class="cp"># Removing the comma forces a line break between both lines</span>
-
-<span class="cp"># watch that comma at the end.  try removing it to see what happens</span>
-<span class="n">print</span> <span class="n">end1</span> <span class="o">+</span> <span class="n">end2</span> <span class="o">+</span> <span class="n">end3</span> <span class="o">+</span> <span class="n">end4</span> <span class="o">+</span> <span class="n">end5</span> <span class="o">+</span> <span class="n">end6</span><span class="p">,</span>
-<span class="n">print</span> <span class="n">end7</span> <span class="o">+</span> <span class="n">end8</span> <span class="o">+</span> <span class="n">end9</span> <span class="o">+</span> <span class="n">end10</span> <span class="o">+</span> <span class="n">end11</span> <span class="o">+</span> <span class="n">end12</span>
-</pre></div>
-
-
-<p>And here is what it looked&nbsp;like:</p>
-<p><img alt="Exercise 07" src="/images/ex07.png" title="Exercise 07" /></p>
-<p>I was a little surprised by today&#8217;s lesson. The last three lessons have all been mostly about line printing, variables, and string concatenation and formatting. I know it gets harder later on, but writing comments for every line, no matter how droll, gets&nbsp;tedious.</p>
-<p>The asterisk symbol is interesting because it&#8217;s a rare moment of overloading an operator other than the plus symbol. Just to compare the mess of overloading operators in Python, Ruby, and&nbsp;JavaScript&#8230;</p>
-<p>Addition and concatenation of&nbsp;numbers:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Python</th>
-<th>Ruby</th>
-<th>JavaScript</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 + 10</td>
-<td>11</td>
-<td>11</td>
-<td>11</td>
-</tr>
-<tr>
-<td>&#8220;1&#8221; + 10</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td><strong>&#8220;110&#8221;</strong></td>
-</tr>
-<tr>
-<td>1 + &#8220;10&#8221;</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td><strong>&#8220;110&#8221;</strong></td>
-</tr>
-<tr>
-<td>&#8220;1&#8221; + &#8220;10&#8221;</td>
-<td>&#8220;110&#8221;</td>
-<td>&#8220;110&#8221;</td>
-<td>&#8220;110&#8221;</td>
-</tr>
-</tbody>
-</table>
-<p>Multiplication and repetition of&nbsp;numbers:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Python</th>
-<th>Ruby</th>
-<th>JavaScript</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 * 10</td>
-<td>10</td>
-<td>10</td>
-<td>10</td>
-</tr>
-<tr>
-<td>&#8220;1&#8221; * 10</td>
-<td>&#8220;1111111111&#8221;</td>
-<td>&#8220;1111111111&#8221;</td>
-<td><strong>10</strong></td>
-</tr>
-<tr>
-<td>1 * &#8220;10&#8221;</td>
-<td>&#8220;10&#8221;</td>
-<td><strong>TypeError</strong></td>
-<td><strong>10</strong></td>
-</tr>
-<tr>
-<td>&#8220;1&#8221; * &#8220;10&#8221;</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td><strong>10</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Addition and concatenation of strings and&nbsp;numbers:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Python</th>
-<th>Ruby</th>
-<th>JavaScript</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#8220;1&#8221; + &#8220;jessica&#8221;</td>
-<td>&#8220;1jessica&#8221;</td>
-<td>&#8220;1jessica&#8221;</td>
-<td>&#8220;1jessica&#8221;</td>
-</tr>
-<tr>
-<td>1 + &#8220;jessica&#8221;</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td><strong>&#8220;1jessica&#8221;</strong></td>
-</tr>
-<tr>
-<td>&#8220;jessica&#8221; + &#8220;1&#8221;</td>
-<td>&#8220;jessica1&#8221;</td>
-<td>&#8220;jessica1&#8221;</td>
-<td>&#8220;jessica1&#8221;</td>
-</tr>
-<tr>
-<td>&#8220;jessica&#8221; + 1</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td><strong>&#8220;jessica1&#8221;</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Multiplication and repetition of strings and&nbsp;numbers:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Python</th>
-<th>Ruby</th>
-<th>JavaScript</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#8220;1&#8221; * &#8220;jessica&#8221;</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td>NaN</td>
-</tr>
-<tr>
-<td>1 * &#8220;jessica&#8221;</td>
-<td>&#8220;jessica&#8221;</td>
-<td><strong>TypeError</strong></td>
-<td>NaN</td>
-</tr>
-<tr>
-<td>&#8220;jessica&#8221; * &#8220;1&#8221;</td>
-<td>TypeError</td>
-<td>TypeError</td>
-<td>NaN</td>
-</tr>
-<tr>
-<td>&#8220;jessica&#8221; * 1</td>
-<td>&#8220;jessica&#8221;</td>
-<td>&#8220;jessica&#8221;</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-<p>I bolded the offenders that stood out to me personally. The multiplication of a string is not unique to Python, but its <em>consistency</em> is. Ruby will repeat a string, but only when <em>the string is on the left</em>. <a href="https://www.destroyallsoftware.com/talks/wat">Wat</a>?</p>
-<p>JavaScript, however, gets the blue ribbon for having loosest morals, coercing anything it can into a string <em>except</em> when the coercion from string to number doesn&#8217;t make sense <em>or</em> when the asterisk is used. Then it starts losing its mind, sticking its fingers into its ears and saying <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> over and&nbsp;over.</p>
-<p>I think it&#8217;s time to take ol&#8217; JavaScript out behind the shed and put &#8216;er&nbsp;down.</p>
-<p><em>sh sh sh sh sh sh sh sh sh&nbsp;sh</em></p>
-<p><em>pats &#8216;er on the&nbsp;head</em></p>
-<p>There, there. It&#8217;s going to be all right. It&#8217;ll all be over&nbsp;soon.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">print</span> <span class="s">&quot;Its fleece was white as ...</span></pre></div>
+                <a class="readmore" href="/exercise-7.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
