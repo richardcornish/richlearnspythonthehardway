@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 10</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;10</h1>
+
+    <p time="2014-11-15T12:45:00-06:00">Sat 15 November 2014</p>
+
+
+    <p>I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex10.html">exercise 10</a> done today before I have some dim sum for lunch.&nbsp;Yummy!</p>
+<div class="highlight"><pre><span class="cp"># Exercise 10</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex10.html</span>
+
+<span class="n">tabby_cat</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">I&#39;m tabbed in.&quot;</span>
+<span class="n">persian_cat</span> <span class="o">=</span> <span class="s">&quot;I&#39;m split</span><span class="se">\n</span><span class="s">on a line.&quot;</span>
+<span class="n">backslash_cat</span> <span class="o">=</span> <span class="s">&quot;I&#39;m </span><span class="se">\\</span><span class="s"> a </span><span class="se">\\</span><span class="s"> cat.&quot;</span>
+
+<span class="n">fat_cat</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="n">I</span><span class="err">&#39;</span><span class="n">ll</span> <span class="k">do</span> <span class="n">a</span> <span class="n">list</span><span class="o">:</span>
+<span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Cat</span> <span class="n">food</span>
+<span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Fishes</span>
+<span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Catnip</span><span class="err">\</span><span class="n">n</span><span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Grass</span>
+<span class="s">&quot;&quot;&quot;</span>
+
+<span class="n">print</span> <span class="n">tabby_cat</span>
+<span class="n">print</span> <span class="n">persian_cat</span>
+<span class="n">print</span> <span class="n">backslash_cat</span>
+<span class="n">print</span> <span class="n">fat_cat</span>
+
+<span class="n">print</span> <span class="s">&quot;Backslash: </span><span class="se">\\</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Single-quote: </span><span class="se">\&#39;</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Double-quote: </span><span class="se">\&quot;</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII bell: </span><span class="se">\a</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII backspace: </span><span class="se">\b</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII formfeed: </span><span class="se">\f</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII linefeed: </span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Character named name in the Unicode database: \N{name}&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Carriage return: </span><span class="se">\r</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Horizontal tab: </span><span class="se">\t</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="n">u</span><span class="s">&quot;Character with 16-bit hex value xxxx: </span><span class="se">\uF8FF</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="n">u</span><span class="s">&quot;Character with 32-bit hex value xxxxxxxx: </span><span class="se">\U0001F4A9</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII vertical tab: </span><span class="se">\v</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Character with octal value ooo: \ooo&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Character with hex value hh: </span><span class="se">\x00</span><span class="s">&quot;</span>
+
+<span class="cp"># while True:</span>
+<span class="cp">#     for i in [&quot;/&quot;,&quot;-&quot;,&quot;|&quot;,&quot;\\&quot;,&quot;|&quot;]:</span>
+<span class="cp">#         print &quot;%s\r&quot; % i,</span>
+</pre></div>
+
+
+<p><img alt="Exercise 10" src="/images/ex10.png" title="Exercise 10" /></p>
+<p>Today was fun with <a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literals">escape sequences</a>. I have to admit, about a third of these I know and use, another third I never used and forgot, and the last third I should probably try to remember how they work more&nbsp;often.</p>
+<p>One of my favorites to remember is the <a href="https://en.wikipedia.org/wiki/Bell_character"><span class="caps">ASCII</span> bell</a>:</p>
+<blockquote>
+<p>A bell code (sometimes bell character) is a device control code originally sent to ring a small electromechanical bell on tickers and other teleprinters and teletypewriters to alert operators at the other end of the line, often of an incoming message. Though tickers punched the bell codes into their tapes, printers generally do not print a character when the bell code is&nbsp;received.</p>
+</blockquote>
+<p>When video monitors and (rudimentary) audio became a thing, rather than displaying a bell character, it was sensibly replaced with a sound played, which we all know and love when adjusting the sound on our&nbsp;computers.</p>
+<p>I decided to add some of my own favorite characters to the exercise for the 16-bit and 32-bit Unicode hexes: the <a href="http://www.fileformat.info/info/unicode/char/f8ff/index.htm">Apple symbol</a>, which is <code>\uF8FF</code>, and the <a href="http://www.fileformat.info/info/unicode/char/1f4a9/index.htm">Pile of Poo</a>, which is <code>\U0001F4A9</code>. When you want to print them out, just <a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literals">prepend a lowercase <code>u</code> to the string</a> before the opening quotation&nbsp;mark.</p>
+<p>There&#8217;s a lot of <a href="http://zachholman.com/posts/abusing-emoji/">joy to be had</a> with <a href="http://inamidst.com/stuff/unidata/">Unicode</a>, <a href="http://www.emojitracker.com/">emoji</a>, and our dear friend <img alt="Pile of Poo emoji" src="/images/emoji-poop.png" title="Pile of Poo emoji" />, but I&#8217;ll leave you with&nbsp;this:</p>
+<p><a href="http://emojimasks.com/"><img alt="Emoji masks" src="/images/emojimasks.jpg" title="Emoji masks" /></a></p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>

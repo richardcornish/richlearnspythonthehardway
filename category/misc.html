@@ -34,7 +34,82 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-9.html">Exercise&nbsp;9</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-10.html">Exercise&nbsp;10</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-15T12:45:00-06:00">
+                Published: Sat 15 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex10.html">exercise 10</a> done today before I have some dim sum for lunch.&nbsp;Yummy!</p>
+<div class="highlight"><pre><span class="cp"># Exercise 10</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex10.html</span>
+
+<span class="n">tabby_cat</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">I&#39;m tabbed in.&quot;</span>
+<span class="n">persian_cat</span> <span class="o">=</span> <span class="s">&quot;I&#39;m split</span><span class="se">\n</span><span class="s">on a line.&quot;</span>
+<span class="n">backslash_cat</span> <span class="o">=</span> <span class="s">&quot;I&#39;m </span><span class="se">\\</span><span class="s"> a </span><span class="se">\\</span><span class="s"> cat.&quot;</span>
+
+<span class="n">fat_cat</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="n">I</span><span class="err">&#39;</span><span class="n">ll</span> <span class="k">do</span> <span class="n">a</span> <span class="n">list</span><span class="o">:</span>
+<span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Cat</span> <span class="n">food</span>
+<span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Fishes</span>
+<span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Catnip</span><span class="err">\</span><span class="n">n</span><span class="err">\</span><span class="n">t</span><span class="o">*</span> <span class="n">Grass</span>
+<span class="s">&quot;&quot;&quot;</span>
+
+<span class="n">print</span> <span class="n">tabby_cat</span>
+<span class="n">print</span> <span class="n">persian_cat</span>
+<span class="n">print</span> <span class="n">backslash_cat</span>
+<span class="n">print</span> <span class="n">fat_cat</span>
+
+<span class="n">print</span> <span class="s">&quot;Backslash: </span><span class="se">\\</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Single-quote: </span><span class="se">\&#39;</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Double-quote: </span><span class="se">\&quot;</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII bell: </span><span class="se">\a</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII backspace: </span><span class="se">\b</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII formfeed: </span><span class="se">\f</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII linefeed: </span><span class="se">\n</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Character named name in the Unicode database: \N{name}&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Carriage return: </span><span class="se">\r</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Horizontal tab: </span><span class="se">\t</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="n">u</span><span class="s">&quot;Character with 16-bit hex value xxxx: </span><span class="se">\uF8FF</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="n">u</span><span class="s">&quot;Character with 32-bit hex value xxxxxxxx: </span><span class="se">\U0001F4A9</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;ASCII vertical tab: </span><span class="se">\v</span><span class="s">&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Character with octal value ooo: \ooo&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Character with hex value hh: </span><span class="se">\x00</span><span class="s">&quot;</span>
+
+<span class="cp"># while True:</span>
+<span class="cp">#     for i in [&quot;/&quot;,&quot;-&quot;,&quot;|&quot;,&quot;\\&quot;,&quot;|&quot;]:</span>
+<span class="cp">#         print &quot;%s\r&quot; % i,</span>
+</pre></div>
+
+
+<p><img alt="Exercise 10" src="/images/ex10.png" title="Exercise 10" /></p>
+<p>Today was fun with <a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literals">escape sequences</a>. I have to admit, about a third of these I know and use, another third I never used and forgot, and the last third I should probably try to remember how they work more&nbsp;often.</p>
+<p>One of my favorites to remember is the <a href="https://en.wikipedia.org/wiki/Bell_character"><span class="caps">ASCII</span> bell</a>:</p>
+<blockquote>
+<p>A bell code (sometimes bell character) is a device control code originally sent to ring a small electromechanical bell on tickers and other teleprinters and teletypewriters to alert operators at the other end of the line, often of an incoming message. Though tickers punched the bell codes into their tapes, printers generally do not print a character when the bell code is&nbsp;received.</p>
+</blockquote>
+<p>When video monitors and (rudimentary) audio became a thing, rather than displaying a bell character, it was sensibly replaced with a sound played, which we all know and love when adjusting the sound on our&nbsp;computers.</p>
+<p>I decided to add some of my own favorite characters to the exercise for the 16-bit and 32-bit Unicode hexes: the <a href="http://www.fileformat.info/info/unicode/char/f8ff/index.htm">Apple symbol</a>, which is <code>\uF8FF</code>, and the <a href="http://www.fileformat.info/info/unicode/char/1f4a9/index.htm">Pile of Poo</a>, which is <code>\U0001F4A9</code>. When you want to print them out, just <a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literals">prepend a lowercase <code>u</code> to the string</a> before the opening quotation&nbsp;mark.</p>
+<p>There&#8217;s a lot of <a href="http://zachholman.com/posts/abusing-emoji/">joy to be had</a> with <a href="http://inamidst.com/stuff/unidata/">Unicode</a>, <a href="http://www.emojitracker.com/">emoji</a>, and our dear friend <img alt="Pile of Poo emoji" src="/images/emoji-poop.png" title="Pile of Poo emoji" />, but I&#8217;ll leave you with&nbsp;this:</p>
+<p><a href="http://emojimasks.com/"><img alt="Emoji masks" src="/images/emojimasks.jpg" title="Emoji masks" /></a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-9.html" rel="bookmark"
+                           title="Permalink to Exercise 9">Exercise&nbsp;9</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-14T22:12:00-06:00">
                 Published: Fri 14 November 2014
@@ -45,40 +120,17 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>And now for the second exericse I&#8217;m doing tonight, <a href="http://learnpythonthehardway.org/book/ex9.html">exercise 9</a>.</p>
+</footer><!-- /.post-info -->                <p>And now for the second exericse I&#8217;m doing tonight, <a href="http://learnpythonthehardway.org/book/ex9.html">exercise 9</a>.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 9</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex9.html</span>
 
 <span class="cp"># Here&#39;s some new strange stuff, remember type it exactly.</span>
 
 <span class="n">days</span> <span class="o">=</span> <span class="s">&quot;Mon Tue Wed Thu Fri Sat Sun&quot;</span>
-<span class="n">months</span> <span class="o">=</span> <span class="s">&quot;Jan</span><span class="se">\n</span><span class="s">Feb</span><span class="se">\n</span><span class="s">Mar</span><span class="se">\n</span><span class="s">Apr</span><span class="se">\n</span><span class="s">May</span><span class="se">\n</span><span class="s">Jun</span><span class="se">\n</span><span class="s">Jul</span><span class="se">\n</span><span class="s">Aug&quot;</span>
-
-<span class="n">print</span> <span class="s">&quot;Here are the days: &quot;</span><span class="p">,</span> <span class="n">days</span>
-<span class="n">print</span> <span class="s">&quot;Here are the months: &quot;</span><span class="p">,</span> <span class="n">months</span>
-
-<span class="n">print</span> <span class="s">&quot;&quot;&quot;</span>
-<span class="n">There</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">something</span> <span class="n">going</span> <span class="n">on</span> <span class="n">here</span><span class="p">.</span>
-<span class="n">With</span> <span class="n">the</span> <span class="n">three</span> <span class="kt">double</span><span class="o">-</span><span class="n">quotes</span><span class="p">.</span>
-<span class="n">We</span><span class="err">&#39;</span><span class="n">ll</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">type</span> <span class="n">as</span> <span class="n">much</span> <span class="n">as</span> <span class="n">we</span> <span class="n">like</span><span class="p">.</span>
-<span class="n">Even</span> <span class="mi">4</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">we</span> <span class="n">want</span><span class="p">,</span> <span class="n">or</span> <span class="mi">5</span> <span class="n">or</span> <span class="mf">6.</span>
-<span class="s">&quot;&quot;&quot;</span>
-</pre></div>
-
-
-<p><img alt="Exercise 09" src="/images/ex09.png" title="Exercise 09" /></p>
-<p><code>%r</code> prints the new lines, which is interesting because I&#8217;ve been using <code>\n</code> for new lines for so long, I don&#8217;t remember where I learned it or what convention it follows. It turns out Python is <a href="https://docs.python.org/2/library/stdtypes.html#file.newlines">following Unix-style convention</a>, and Wikipedia has a <a href="http://en.wikipedia.org/wiki/Newline">long, long entry on newlines</a>.</p>
-<p>Interestingly, I didn&#8217;t know you could print a <a href="https://www.python.org/dev/peps/pep-0257/#multi-line-docstrings">docstring</a>, or even that it would print&nbsp;literally.</p>
-<p>From the common student&nbsp;questions:</p>
-<blockquote>
-<p>Is it bad that my errors are always spelling&nbsp;mistakes?</p>
-</blockquote>
-<p>If you&#8217;ve ever worked with a developer, then know that he or she will say at least once (and likely many times) when code doesn&#8217;t work: &#8220;It would help if I could spell&nbsp;correctly.&#8221;</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">months</span> <span class="o">=</span> <span class="s">&quot;Jan</span><span class="se">\n</span><span class="s">Feb</span><span class="se">\n</span><span class="s">Mar</span><span class="se">\n</span><span class="s">Apr</span><span class="se">\n</span><span class="s">May</span><span class="se">\n</span><span class="s">Jun ...</span></pre></div>
+                <a class="readmore" href="/exercise-9.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
