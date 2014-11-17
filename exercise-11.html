@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 11</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;11</h1>
+
+    <p time="2014-11-17T12:40:00-06:00">Mon 17 November 2014</p>
+
+
+    <p>It&#8217;s late and I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex11.html">exercise 11</a> done before I go to bed. I was reading about how to enable <a href="http://blog.cloudflare.com/introducing-universal-ssl/"><span class="caps">SSL</span> for free with CloudFlare</a> (!) and time got away from me. More on that at the&nbsp;bottom.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 11</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex11.html</span>
+
+<span class="n">print</span> <span class="s">&quot;How old are you?&quot;</span><span class="p">,</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+<span class="n">print</span> <span class="s">&quot;How tall are you?&quot;</span><span class="p">,</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+<span class="n">print</span> <span class="s">&quot;How much do you weigh?&quot;</span><span class="p">,</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+
+<span class="n">print</span> <span class="s">&quot;So, you&#39;re %r old, %r tall and %r heavy.&quot;</span> <span class="o">%</span> <span class="p">(</span>
+    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Do you like bed?&quot;</span><span class="p">,</span>
+<span class="n">bed</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+<span class="n">print</span> <span class="s">&quot;Do you wish you were in bed?&quot;</span><span class="p">,</span>
+<span class="n">wish</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+<span class="n">print</span> <span class="s">&quot;Good night. Sleep...&quot;</span><span class="p">,</span>
+<span class="n">tight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+
+<span class="n">print</span> <span class="s">&quot;Do you like bed? %r.&quot;</span> <span class="o">%</span> <span class="n">bed</span>
+<span class="n">print</span> <span class="s">&quot;Do you wish you were in bed? %r.&quot;</span> <span class="o">%</span> <span class="n">wish</span>
+<span class="n">print</span> <span class="s">&quot;Good night. Sleep...%r!&quot;</span> <span class="o">%</span> <span class="n">tight</span>
+</pre></div>
+
+
+<p><img alt="Exercise 11" src="/images/ex11.png" title="Exercise 11" /></p>
+<p>Time for something a little more exciting: take the user&#8217;s input, manipulate it, and display it back. To allow this, we use Python&#8217;s <a href="https://docs.python.org/2/library/functions.html#raw_input"><code>raw_input()</code></a>&nbsp;method:</p>
+<blockquote>
+<p>If the prompt argument is present, it is written to standard output without a trailing newline. The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that. When <span class="caps">EOF</span> is read, EOFError is&nbsp;raised.</p>
+</blockquote>
+<p>And now back to my&nbsp;distraction&#8230;</p>
+<p>In light of last year&#8217;s <a href="http://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data">security scandals</a>, I think it&#8217;s amazing that companies like CloudFlare are leading the way to democratize <span class="caps">HTTPS</span>. As far as I can tell, this blog can now be accessed at a secure <span class="caps">URL</span> so nobody but I (in limited, anonymized ways) or you know that you visited this&nbsp;website.</p>
+<p>From <a href="http://blog.cloudflare.com/introducing-universal-ssl/">CloudFlare&#8217;s blog</a>:</p>
+<blockquote>
+<p>Having cutting-edge encryption may not seem important to a small blog, but it is critical to advancing the encrypted-by-default future of the Internet. Every byte, however seemingly mundane, that flows encrypted across the Internet makes it more difficult for those who wish to intercept, throttle, or censor the&nbsp;web. </p>
+</blockquote>
+<p>&#8230;hey! I&#8217;m not <em>mundane</em>.&nbsp;Often.</p>
+<blockquote>
+<p>In other words, ensuring your personal blog is available over <span class="caps">HTTPS</span> makes it more likely that a human rights organization or social media service or independent journalist will be accessible around the world. Together we can do great&nbsp;things.</p>
+</blockquote>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
