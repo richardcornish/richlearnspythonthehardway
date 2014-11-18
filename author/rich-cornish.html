@@ -34,7 +34,46 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-11.html">Exercise&nbsp;11</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-12.html">Exercise&nbsp;12</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-18T00:19:00-06:00">
+                Published: Tue 18 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Another night, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex12.html">exercise 12</a>, and it builds off of exercise 11. We put strings inside <code>raw_input()</code> to make it ask the question instead of separating the questions into <code>print</code> statements.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 12</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex12.html</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How old are you? &quot;</span><span class="p">)</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How tall are you? &quot;</span><span class="p">)</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How much do you weigh? &quot;</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;So, you&#39;re %r old, %r tall and %r heavy.&quot;</span> <span class="o">%</span> <span class="p">(</span>
+    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 12" src="/images/ex12-1.png" title="Exercise 12" /></p>
+<p>We also get to use <a href="https://docs.python.org/2/library/pydoc.html"><code>pydoc</code></a> to read the documentation in the Terminal. I finally understand why the Python documentation is so ugly: Developers can use the docs from the command line&nbsp;instead!</p>
+<p><img alt="Exercise 12" src="/images/ex12-2.png" title="Exercise 12" /></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-11.html" rel="bookmark"
+                           title="Permalink to Exercise 11">Exercise&nbsp;11</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-17T12:40:00-06:00">
                 Published: Mon 17 November 2014
@@ -45,53 +84,14 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>It&#8217;s late and I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex11.html">exercise 11</a> done before I go to bed. I was reading about how to enable <a href="http://blog.cloudflare.com/introducing-universal-ssl/"><span class="caps">SSL</span> for free with CloudFlare</a> (!) and time got away from me. More on that at the&nbsp;bottom.</p>
+</footer><!-- /.post-info -->                <p>It&#8217;s late and I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex11.html">exercise 11</a> done before I go to bed. I was reading about how to enable <a href="http://blog.cloudflare.com/introducing-universal-ssl/"><span class="caps">SSL</span> for free with CloudFlare</a> (!) and time got away from me. More on that at the&nbsp;bottom.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 11</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex11.html</span>
 
-<span class="n">print</span> <span class="s">&quot;How old are you?&quot;</span><span class="p">,</span>
-<span class="n">age</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;How tall are you?&quot;</span><span class="p">,</span>
-<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;How much do you weigh?&quot;</span><span class="p">,</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-
-<span class="n">print</span> <span class="s">&quot;So, you&#39;re %r old, %r tall and %r heavy.&quot;</span> <span class="o">%</span> <span class="p">(</span>
-    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;Do you like bed?&quot;</span><span class="p">,</span>
-<span class="n">bed</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;Do you wish you were in bed?&quot;</span><span class="p">,</span>
-<span class="n">wish</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;Good night. Sleep...&quot;</span><span class="p">,</span>
-<span class="n">tight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-
-<span class="n">print</span> <span class="s">&quot;Do you like bed? %r.&quot;</span> <span class="o">%</span> <span class="n">bed</span>
-<span class="n">print</span> <span class="s">&quot;Do you wish you were in bed? %r.&quot;</span> <span class="o">%</span> <span class="n">wish</span>
-<span class="n">print</span> <span class="s">&quot;Good night. Sleep...%r!&quot;</span> <span class="o">%</span> <span class="n">tight</span>
-</pre></div>
-
-
-<p><img alt="Exercise 11" src="/images/ex11.png" title="Exercise 11" /></p>
-<p>Time for something a little more exciting: take the user&#8217;s input, manipulate it, and display it back. To allow this, we use Python&#8217;s <a href="https://docs.python.org/2/library/functions.html#raw_input"><code>raw_input()</code></a>&nbsp;method:</p>
-<blockquote>
-<p>If the prompt argument is present, it is written to standard output without a trailing newline. The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that. When <span class="caps">EOF</span> is read, EOFError is&nbsp;raised.</p>
-</blockquote>
-<p>And now back to my&nbsp;distraction&#8230;</p>
-<p>In light of last year&#8217;s <a href="http://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data">security scandals</a>, I think it&#8217;s amazing that companies like CloudFlare are leading the way to democratize <span class="caps">HTTPS</span>. As far as I can tell, this blog can now be accessed at a <a href="https://richlearnspythonthehardway.org/">secure <span class="caps">URL</span></a> so nobody but I (in limited, anonymized ways) or you know that you visited this&nbsp;website.</p>
-<p>From <a href="http://blog.cloudflare.com/introducing-universal-ssl/">CloudFlare&#8217;s blog</a>:</p>
-<blockquote>
-<p>Having cutting-edge encryption may not seem important to a small blog, but it is critical to advancing the encrypted-by-default future of the Internet. Every byte, however seemingly mundane, that flows encrypted across the Internet makes it more difficult for those who wish to intercept, throttle, or censor the&nbsp;web. </p>
-</blockquote>
-<p>&#8230;hey! I&#8217;m not <em>mundane</em>.&nbsp;Often.</p>
-<blockquote>
-<p>In other words, ensuring your personal blog is available over <span class="caps">HTTPS</span> makes it more likely that a human rights organization or social media service or independent journalist will be accessible around the world. Together we can do great&nbsp;things.</p>
-</blockquote>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">print ...</span></pre></div>
+                <a class="readmore" href="/exercise-11.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
