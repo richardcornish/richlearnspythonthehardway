@@ -34,7 +34,103 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-12.html">Exercise&nbsp;12</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-14.html">Exercise&nbsp;14</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-19T23:50:00-06:00">
+                Published: Wed 19 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Next up tonight was <a href="http://learnpythonthehardway.org/book/ex14.html">exercise 14</a>. The code more tightly integrated <code>argv</code>, <code>raw_input</code> and&nbsp;docstrings.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 14</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex14.html</span>
+
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+
+<span class="n">script</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="n">lucky_charm</span> <span class="o">=</span> <span class="n">argv</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="err">&#39;$$$</span> <span class="err">&#39;</span>
+
+<span class="n">print</span> <span class="s">&quot;Hi %s, I&#39;m the %s script.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">script</span><span class="p">)</span>
+<span class="n">print</span> <span class="s">&quot;I&#39;d like to ask you a few questions.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Do you like me %s?&quot;</span> <span class="o">%</span> <span class="n">user_name</span>
+<span class="n">likes</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Where do you live %s?&quot;</span> <span class="o">%</span> <span class="n">user_name</span>
+<span class="n">lives</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;What kind of computer do you have?&quot;</span>
+<span class="n">computer</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="n">Alright</span><span class="p">,</span> <span class="n">so</span> <span class="n">you</span> <span class="n">said</span> <span class="o">%</span><span class="n">r</span> <span class="n">about</span> <span class="n">liking</span> <span class="n">me</span><span class="p">.</span>
+<span class="n">You</span> <span class="n">live</span> <span class="n">in</span> <span class="o">%</span><span class="n">r</span><span class="p">.</span> <span class="n">Not</span> <span class="n">sure</span> <span class="n">where</span> <span class="n">that</span> <span class="n">is</span><span class="p">.</span>
+<span class="n">And</span> <span class="n">you</span> <span class="n">have</span> <span class="n">a</span> <span class="o">%</span><span class="n">r</span> <span class="n">computer</span><span class="p">.</span> <span class="n">Nice</span><span class="p">.</span>
+<span class="n">Your</span> <span class="n">lucky</span> <span class="n">charm</span> <span class="n">is</span> <span class="n">a</span> <span class="o">%</span><span class="n">r</span><span class="p">.</span>
+<span class="s">&quot;&quot;&quot; % (likes, lives, computer, lucky_charm)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 14" src="/images/ex14.png" title="Exercise 14" /></p>
+<p>As I am obligated to fulfill the study drills, finding information about <a href="http://en.wikipedia.org/wiki/Zork">Zork</a> was pretty&nbsp;easy:</p>
+<blockquote>
+<p>Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure. The first version of Zork was written in 1977–1979 using the <span class="caps">MDL</span> programming language on a <span class="caps">DEC</span> <span class="caps">PDP</span>-10&nbsp;computer.</p>
+</blockquote>
+<p>Adventure was a little harder because the name was so generic. Funnily enough, I remember seeing this title when watching a pseudo documentary on the video game <a href="http://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial_(video_game)"><span class="caps">E.T.</span> the Extra-Terrestrial</a> for the <a href="http://en.wikipedia.org/wiki/Atari_2600">Atari 2600</a>.</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/WUsQmYRfynw" frameborder="0" allowfullscreen></iframe>
+
+<p><a href="http://en.wikipedia.org/wiki/Adventure_(1979_video_game)">Adventure</a> was one of the games on the Atari&nbsp;2600:</p>
+<blockquote>
+<p>Adventure is a video game for the Atari 2600 video game console, released in Christmas 1979 or 1980. In the game, the player controls a square avatar whose quest is to hunt an open world environment for a hidden magical chalice, returning it to the yellow castle. The game world is also populated by roaming enemies: dragons, which can eat the avatar; and a bat, which randomly steals and hides items around the game&nbsp;world.</p>
+</blockquote>
+<p>Finding and playing Zork was a bit of a challenge because versions of it were released for several platforms over several <em>decades</em>, but I found an <a href="http://stella.sourceforge.net/">emulator of Atari 2600</a> and an <a href="http://www.atariage.com/system_items.html?SystemID=2600&amp;ItemTypeID=ROM">Adventure <span class="caps">ROM</span></a>. It kind of worked once, but it was pretty buggy. A guy moved around and you try to hit him with a block of pixels. All in all, pretty terrible, even by &#8220;old school&#8221;&nbsp;standards.</p>
+<iframe width="420" height="315" src="//www.youtube.com/embed/Ad7uh9xVm7Q" frameborder="0" allowfullscreen></iframe>
+
+<p>Zed Shaw is pretty&nbsp;old.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-13.html" rel="bookmark"
+                           title="Permalink to Exercise 13">Exercise&nbsp;13</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-11-19T23:16:00-06:00">
+                Published: Wed 19 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->                <p>Going to do another two exercises tonight to make up for yesterday. First up was <a href="http://learnpythonthehardway.org/book/ex13.html">exercise 13</a>, and it covered variable arguments, which is assigning more than one value to a variable with <a href="https://docs.python.org/2/library/sys.html#sys.argv"><code>argv</code></a>.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 13</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex13.html</span>
+
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+
+<span class="n">script</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third ...</span></pre></div>
+                <a class="readmore" href="/exercise-13.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-12.html" rel="bookmark"
+                           title="Permalink to Exercise 12">Exercise&nbsp;12</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-18T00:19:00-06:00">
                 Published: Tue 18 November 2014
@@ -45,27 +141,15 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Another night, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex12.html">exercise 12</a>, and it builds off of exercise 11. We put strings inside <code>raw_input()</code> to make it ask the question instead of separating the questions into <code>print</code> statements.</p>
+</footer><!-- /.post-info -->                <p>Another night, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex12.html">exercise 12</a>, and it builds off of exercise 11. We put strings inside <code>raw_input()</code> to make it ask the question instead of separating the questions into <code>print</code> statements.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 12</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex12.html</span>
 
 <span class="n">age</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How old are you? &quot;</span><span class="p">)</span>
-<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How tall are you? &quot;</span><span class="p">)</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How much do you weigh? &quot;</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;So, you&#39;re %r old, %r tall and %r heavy.&quot;</span> <span class="o">%</span> <span class="p">(</span>
-    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
-</pre></div>
-
-
-<p><img alt="Exercise 12" src="/images/ex12-1.png" title="Exercise 12" /></p>
-<p>We also get to use <a href="https://docs.python.org/2/library/pydoc.html"><code>pydoc</code></a> to read the documentation in the Terminal. I finally understand why the Python documentation is so ugly: Developers can use the docs from the command line&nbsp;instead!</p>
-<p><img alt="Exercise 12" src="/images/ex12-2.png" title="Exercise 12" /></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input ...</span></pre></div>
+                <a class="readmore" href="/exercise-12.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

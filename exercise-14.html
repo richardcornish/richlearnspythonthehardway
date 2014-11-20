@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 14</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;14</h1>
+
+    <p time="2014-11-19T23:50:00-06:00">Wed 19 November 2014</p>
+
+
+    <p>Next up tonight was <a href="http://learnpythonthehardway.org/book/ex14.html">exercise 14</a>. The code more tightly integrated <code>argv</code>, <code>raw_input</code> and&nbsp;docstrings.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 14</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex14.html</span>
+
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+
+<span class="n">script</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="n">lucky_charm</span> <span class="o">=</span> <span class="n">argv</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="err">&#39;$$$</span> <span class="err">&#39;</span>
+
+<span class="n">print</span> <span class="s">&quot;Hi %s, I&#39;m the %s script.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">script</span><span class="p">)</span>
+<span class="n">print</span> <span class="s">&quot;I&#39;d like to ask you a few questions.&quot;</span>
+<span class="n">print</span> <span class="s">&quot;Do you like me %s?&quot;</span> <span class="o">%</span> <span class="n">user_name</span>
+<span class="n">likes</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Where do you live %s?&quot;</span> <span class="o">%</span> <span class="n">user_name</span>
+<span class="n">lives</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;What kind of computer do you have?&quot;</span>
+<span class="n">computer</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="n">Alright</span><span class="p">,</span> <span class="n">so</span> <span class="n">you</span> <span class="n">said</span> <span class="o">%</span><span class="n">r</span> <span class="n">about</span> <span class="n">liking</span> <span class="n">me</span><span class="p">.</span>
+<span class="n">You</span> <span class="n">live</span> <span class="n">in</span> <span class="o">%</span><span class="n">r</span><span class="p">.</span> <span class="n">Not</span> <span class="n">sure</span> <span class="n">where</span> <span class="n">that</span> <span class="n">is</span><span class="p">.</span>
+<span class="n">And</span> <span class="n">you</span> <span class="n">have</span> <span class="n">a</span> <span class="o">%</span><span class="n">r</span> <span class="n">computer</span><span class="p">.</span> <span class="n">Nice</span><span class="p">.</span>
+<span class="n">Your</span> <span class="n">lucky</span> <span class="n">charm</span> <span class="n">is</span> <span class="n">a</span> <span class="o">%</span><span class="n">r</span><span class="p">.</span>
+<span class="s">&quot;&quot;&quot; % (likes, lives, computer, lucky_charm)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 14" src="/images/ex14.png" title="Exercise 14" /></p>
+<p>As I am obligated to fulfill the study drills, finding information about <a href="http://en.wikipedia.org/wiki/Zork">Zork</a> was pretty&nbsp;easy:</p>
+<blockquote>
+<p>Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure. The first version of Zork was written in 1977–1979 using the <span class="caps">MDL</span> programming language on a <span class="caps">DEC</span> <span class="caps">PDP</span>-10&nbsp;computer.</p>
+</blockquote>
+<p>Adventure was a little harder because the name was so generic. Funnily enough, I remember seeing this title when watching a pseudo documentary on the video game <a href="http://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial_(video_game)"><span class="caps">E.T.</span> the Extra-Terrestrial</a> for the <a href="http://en.wikipedia.org/wiki/Atari_2600">Atari 2600</a>.</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/WUsQmYRfynw" frameborder="0" allowfullscreen></iframe>
+
+<p><a href="http://en.wikipedia.org/wiki/Adventure_(1979_video_game)">Adventure</a> was one of the games on the Atari&nbsp;2600:</p>
+<blockquote>
+<p>Adventure is a video game for the Atari 2600 video game console, released in Christmas 1979 or 1980. In the game, the player controls a square avatar whose quest is to hunt an open world environment for a hidden magical chalice, returning it to the yellow castle. The game world is also populated by roaming enemies: dragons, which can eat the avatar; and a bat, which randomly steals and hides items around the game&nbsp;world.</p>
+</blockquote>
+<p>Finding and playing Zork was a bit of a challenge because versions of it were released for several platforms over several <em>decades</em>, but I found an <a href="http://stella.sourceforge.net/">emulator of Atari 2600</a> and an <a href="http://www.atariage.com/system_items.html?SystemID=2600&amp;ItemTypeID=ROM">Adventure <span class="caps">ROM</span></a>. It kind of worked once, but it was pretty buggy. A guy moved around and you try to hit him with a block of pixels. All in all, pretty terrible, even by &#8220;old school&#8221;&nbsp;standards.</p>
+<iframe width="420" height="315" src="//www.youtube.com/embed/Ad7uh9xVm7Q" frameborder="0" allowfullscreen></iframe>
+
+<p>Zed Shaw is pretty&nbsp;old.</p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
