@@ -34,7 +34,70 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-14.html">Exercise&nbsp;14</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-15.html">Exercise&nbsp;15</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-20T23:02:00-06:00">
+                Published: Thu 20 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Two weeks done! Woo, woo! I had a few stumbles here and there, but I didn&#8217;t let it get me down. I know other people were interested in learning Python with me, but they couldn&#8217;t get through <a href="http://learnpythonthehardway.org/book/ex0.html">exercise 0</a>. You didn&#8217;t even have to write any code, but just install&nbsp;Python.</p>
+<p>It bums me out that people look at the whole thing and think &#8220;I can&#8217;t do this. It&#8217;s too much.&#8221; Just do <em>one exercise</em>. Or hell, just <em>read the exercise</em>. Just get something done. Maybe something will pique your interest. Maybe natural curiosity will take over. Maybe you&#8217;ll want to do it because it&#8217;s&#8212;<em>gasp</em>&#8212;fun. There have already been a few nights that I didn&#8217;t have time to do my exericse. No big deal, I did two tomorrow, or if that wasn&#8217;t possible, I would have just done one exercise. And I would have taken 53 days to finish 52 exercises. That&#8217;s not a big deal when you compare it to doing <em>0 exercises in 52 days</em>.</p>
+<p>I&#8217;m not perfect, which makes my perfectionist skin crawl, but I do my best where I can, and move on to the next thing. The time where I had the luxury to make my code &#8220;perfect&#8221; I found that there wasn&#8217;t a perfect answer. Programming is about making tradeoffs. Sometimes there were better ones and there were worse ones, but when you eventually get good enough, you realize that there is no right answer, but only different answers. That&#8217;s my advice for&nbsp;tonight.</p>
+<p>Anyway, back to tonight&#8217;s exercise&#8230; <a href="http://learnpythonthehardway.org/book/ex15.html">Exercise 15</a> is all about opening files! Who needs desktop and a&nbsp;mouse??</p>
+<div class="highlight"><pre><span class="cp"># Exercise 15</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex15.html</span>
+
+<span class="cp"># import argv from the sys module</span>
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+
+<span class="cp"># assign the the name of the file as an argument to argv</span>
+<span class="n">script</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">argv</span>
+
+<span class="cp"># open the file and assign the result to txt</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="cp"># print the name of the file and the contents of the file</span>
+<span class="n">print</span> <span class="s">&quot;Here&#39;s your file %r:&quot;</span> <span class="o">%</span> <span class="n">filename</span>
+<span class="n">print</span> <span class="n">txt</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="cp"># prompt asking the name of the file again</span>
+<span class="n">print</span> <span class="s">&quot;Type the filename again:&quot;</span>
+<span class="n">file_again</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;&gt; &quot;</span><span class="p">)</span>
+
+<span class="cp"># open the file</span>
+<span class="n">txt_again</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">file_again</span><span class="p">)</span>
+
+<span class="cp"># print the contents of the file</span>
+<span class="n">print</span> <span class="n">txt_again</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 15" src="/images/ex15.png" title="Exercise 15" /></p>
+<p>We&#8217;re using the <a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a> command to, well, open files. The study drills encourage you to also open a file from the Python prompt instead of from Bash, which is slightly less obvious. You have to type in the full path to the&nbsp;file:</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">&quot;/Users/Rich/Sites/lpthw/exercises/ex15_sample.txt&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are fancier ways of <a href="https://docs.python.org/2/library/runpy.html">autodetecting the path to the file</a> that is currently being run from within itself, but those are a little out of scope for this&nbsp;lesson.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-14.html" rel="bookmark"
+                           title="Permalink to Exercise 14">Exercise&nbsp;14</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-19T23:50:00-06:00">
                 Published: Wed 19 November 2014
@@ -45,7 +108,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Next up tonight was <a href="http://learnpythonthehardway.org/book/ex14.html">exercise 14</a>. The code more tightly integrated <code>argv</code>, <code>raw_input</code> and&nbsp;docstrings.</p>
+</footer><!-- /.post-info -->                <p>Next up tonight was <a href="http://learnpythonthehardway.org/book/ex14.html">exercise 14</a>. The code more tightly integrated <code>argv</code>, <code>raw_input</code> and&nbsp;docstrings.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 14</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex14.html</span>
 
@@ -55,46 +118,10 @@
 <span class="n">prompt</span> <span class="o">=</span> <span class="err">&#39;$$$</span> <span class="err">&#39;</span>
 
 <span class="n">print</span> <span class="s">&quot;Hi %s, I&#39;m the %s script.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">script</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;I&#39;d like to ask you a few questions.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;Do you like me %s?&quot;</span> <span class="o">%</span> <span class="n">user_name</span>
-<span class="n">likes</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;Where do you live %s?&quot;</span> <span class="o">%</span> <span class="n">user_name</span>
-<span class="n">lives</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;What kind of computer do you have?&quot;</span>
-<span class="n">computer</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;&quot;&quot;</span>
-<span class="n">Alright</span><span class="p">,</span> <span class="n">so</span> <span class="n">you</span> <span class="n">said</span> <span class="o">%</span><span class="n">r</span> <span class="n">about</span> <span class="n">liking</span> <span class="n">me</span><span class="p">.</span>
-<span class="n">You</span> <span class="n">live</span> <span class="n">in</span> <span class="o">%</span><span class="n">r</span><span class="p">.</span> <span class="n">Not</span> <span class="n">sure</span> <span class="n">where</span> <span class="n">that</span> <span class="n">is</span><span class="p">.</span>
-<span class="n">And</span> <span class="n">you</span> <span class="n">have</span> <span class="n">a</span> <span class="o">%</span><span class="n">r</span> <span class="n">computer</span><span class="p">.</span> <span class="n">Nice</span><span class="p">.</span>
-<span class="n">Your</span> <span class="n">lucky</span> <span class="n">charm</span> <span class="n">is</span> <span class="n">a</span> <span class="o">%</span><span class="n">r</span><span class="p">.</span>
-<span class="s">&quot;&quot;&quot; % (likes, lives, computer, lucky_charm)</span>
-</pre></div>
-
-
-<p><img alt="Exercise 14" src="/images/ex14.png" title="Exercise 14" /></p>
-<p>As I am obligated to fulfill the study drills, finding information about <a href="http://en.wikipedia.org/wiki/Zork">Zork</a> was pretty&nbsp;easy:</p>
-<blockquote>
-<p>Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure. The first version of Zork was written in 1977–1979 using the <span class="caps">MDL</span> programming language on a <span class="caps">DEC</span> <span class="caps">PDP</span>-10&nbsp;computer.</p>
-</blockquote>
-<p>Adventure was a little harder because the name was so generic. Funnily enough, I remember seeing this title when watching a pseudo documentary on the video game <a href="http://en.wikipedia.org/wiki/E.T._the_Extra-Terrestrial_(video_game)"><span class="caps">E.T.</span> the Extra-Terrestrial</a> for the <a href="http://en.wikipedia.org/wiki/Atari_2600">Atari 2600</a>.</p>
-<iframe width="560" height="315" src="//www.youtube.com/embed/WUsQmYRfynw" frameborder="0" allowfullscreen></iframe>
-
-<p><a href="http://en.wikipedia.org/wiki/Adventure_(1979_video_game)">Adventure</a> was one of the games on the Atari&nbsp;2600:</p>
-<blockquote>
-<p>Adventure is a video game for the Atari 2600 video game console, released in Christmas 1979 or 1980. In the game, the player controls a square avatar whose quest is to hunt an open world environment for a hidden magical chalice, returning it to the yellow castle. The game world is also populated by roaming enemies: dragons, which can eat the avatar; and a bat, which randomly steals and hides items around the game&nbsp;world.</p>
-</blockquote>
-<p>Finding and playing Zork was a bit of a challenge because versions of it were released for several platforms over several <em>decades</em>, but I found an <a href="http://stella.sourceforge.net/">emulator of Atari 2600</a> and an <a href="http://www.atariage.com/system_items.html?SystemID=2600&amp;ItemTypeID=ROM">Adventure <span class="caps">ROM</span></a>. It kind of worked once, but it was pretty buggy. A guy moved around and you try to hit him with a block of pixels. All in all, pretty terrible, even by &#8220;old school&#8221;&nbsp;standards.</p>
-<iframe width="420" height="315" src="//www.youtube.com/embed/Ad7uh9xVm7Q" frameborder="0" allowfullscreen></iframe>
-
-<p>Zed Shaw is pretty&nbsp;old.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">print</span> <span class="s">&quot;I&#39;d like to ask you a ...</span></pre></div>
+                <a class="readmore" href="/exercise-14.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

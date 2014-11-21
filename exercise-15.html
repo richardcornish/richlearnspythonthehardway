@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 15</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;15</h1>
+
+    <p time="2014-11-20T23:02:00-06:00">Thu 20 November 2014</p>
+
+
+    <p>Two weeks done! Woo, woo! I had a few stumbles here and there, but I didn&#8217;t let it get me down. I know other people were interested in learning Python with me, but they couldn&#8217;t get through <a href="http://learnpythonthehardway.org/book/ex0.html">exercise 0</a>. You didn&#8217;t even have to write any code, but just install&nbsp;Python.</p>
+<p>It bums me out that people look at the whole thing and think &#8220;I can&#8217;t do this. It&#8217;s too much.&#8221; Just do <em>one exercise</em>. Or hell, just <em>read the exercise</em>. Just get something done. Maybe something will pique your interest. Maybe natural curiosity will take over. Maybe you&#8217;ll want to do it because it&#8217;s&#8212;<em>gasp</em>&#8212;fun. There have already been a few nights that I didn&#8217;t have time to do my exericse. No big deal, I did two tomorrow, or if that wasn&#8217;t possible, I would have just done one exercise. And I would have taken 53 days to finish 52 exercises. That&#8217;s not a big deal when you compare it to doing <em>0 exercises in 52 days</em>.</p>
+<p>I&#8217;m not perfect, which makes my perfectionist skin crawl, but I do my best where I can, and move on to the next thing. The time where I had the luxury to make my code &#8220;perfect&#8221; I found that there wasn&#8217;t a perfect answer. Programming is about making tradeoffs. Sometimes there were better ones and there were worse ones, but when you eventually get good enough, you realize that there is no right answer, but only different answers. That&#8217;s my advice for&nbsp;tonight.</p>
+<p>Anyway, back to tonight&#8217;s exercise&#8230; <a href="http://learnpythonthehardway.org/book/ex15.html">Exercise 15</a> is all about opening files! Who needs desktop and a&nbsp;mouse??</p>
+<div class="highlight"><pre><span class="cp"># Exercise 15</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex15.html</span>
+
+<span class="cp"># import argv from the sys module</span>
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+
+<span class="cp"># assign the the name of the file as an argument to argv</span>
+<span class="n">script</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">argv</span>
+
+<span class="cp"># open the file and assign the result to txt</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+<span class="cp"># print the name of the file and the contents of the file</span>
+<span class="n">print</span> <span class="s">&quot;Here&#39;s your file %r:&quot;</span> <span class="o">%</span> <span class="n">filename</span>
+<span class="n">print</span> <span class="n">txt</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="cp"># prompt asking the name of the file again</span>
+<span class="n">print</span> <span class="s">&quot;Type the filename again:&quot;</span>
+<span class="n">file_again</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;&gt; &quot;</span><span class="p">)</span>
+
+<span class="cp"># open the file</span>
+<span class="n">txt_again</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">file_again</span><span class="p">)</span>
+
+<span class="cp"># print the contents of the file</span>
+<span class="n">print</span> <span class="n">txt_again</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 15" src="/images/ex15.png" title="Exercise 15" /></p>
+<p>We&#8217;re using the <a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a> command to, well, open files. The study drills encourage you to also open a file from the Python prompt instead of from Bash, which is slightly less obvious. You have to type in the full path to the&nbsp;file:</p>
+<div class="highlight"><pre><span class="err">$</span> <span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">&quot;/Users/Rich/Sites/lpthw/exercises/ex15_sample.txt&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>There are fancier ways of <a href="https://docs.python.org/2/library/runpy.html">autodetecting the path to the file</a> that is currently being run from within itself, but those are a little out of scope for this&nbsp;lesson.</p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
