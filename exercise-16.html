@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 16</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;16</h1>
+
+    <p time="2014-11-23T02:08:00-06:00">Sun 23 November 2014</p>
+
+
+    <p>I missed last night (see <a href="/exercise-15.html">my thoughts on missed nights</a>), and so it&#8217;s <a href="http://learnpythonthehardway.org/book/ex16.html">Exercise 16</a> tonight. More on file opening and&nbsp;manipulation.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 16</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex16.html</span>
+
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+
+<span class="n">script</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">argv</span>
+
+<span class="n">print</span> <span class="s">&quot;We&#39;re going to erase %r.&quot;</span> <span class="o">%</span> <span class="n">filename</span>
+<span class="n">print</span> <span class="s">&quot;If you don&#39;t want that, hit CTRL-C (^C).&quot;</span>
+<span class="n">print</span> <span class="s">&quot;If you do want that, hit RETURN.&quot;</span>
+
+<span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;?&quot;</span><span class="p">)</span>
+<span class="n">print</span> <span class="s">&quot;Opening the file...&quot;</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span>
+
+<span class="cp"># print &quot;Truncating the file.  Goodbye!&quot;</span>
+<span class="cp"># target.truncate()</span>
+
+<span class="n">print</span> <span class="s">&quot;Now I&#39;m going to ask you for three lines.&quot;</span>
+<span class="n">line1</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;line 1: &quot;</span><span class="p">)</span>
+<span class="n">line2</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;line 2: &quot;</span><span class="p">)</span>
+<span class="n">line3</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;line 3: &quot;</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;I&#39;m going to write these to the file.&quot;</span>
+<span class="n">target</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line1</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="n">line2</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="n">line3</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;And finally, we close it.&quot;</span>
+<span class="n">target</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="cp"># Read and print the contents of the file</span>
+<span class="n">print</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">Time to print out the file:&quot;</span>
+<span class="n">target</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">print</span> <span class="n">target</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">target</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 16" src="/images/ex16.png" title="Exercise 16" /></p>
+<p>As per the study drills, I added the last few lines to re-open the same file, read its contents, print them to the console, and close the file. I also condensed the multiple <code>target.write()</code> methods into one line with string&nbsp;concatenation.</p>
+<p>I often found that people who played with file manipulation in languages often forget the arguments that can be passed into the <a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a>&nbsp;method:</p>
+<blockquote>
+<p>The most commonly-used values of mode are <code>r</code> for reading, <code>w</code> for writing (truncating the file if it already exists), and <code>a</code> for appending (which on some Unix systems means that all writes append to the end of the file regardless of the current seek position). If mode is omitted, it defaults to&nbsp;&#8216;r&#8217;.</p>
+</blockquote>
+<p>We need to pass <code>w</code> into the <code>open</code> method because we are writing to the file, and Python requires the code to explicitly acknowledge the action. The documentation also mentions that if <code>w</code> is passed, running <a href="https://docs.python.org/2/library/stdtypes.html#file.truncate"><code>truncate</code></a> on the file object isn&#8217;t necessary. I commented it out, and my code ran just&nbsp;fine.</p>
+<p>That&#8217;s because this man knows how my code is&nbsp;doing:</p>
+<p><img alt="Matthew McConaughey" src="/images/matthew_mcconaughey-alright.gif" title="Matthew McConaughey" /></p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
