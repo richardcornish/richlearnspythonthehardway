@@ -34,7 +34,72 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-16.html">Exercise&nbsp;16</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-17.html">Exercise&nbsp;17</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-24T02:08:00-06:00">
+                Published: Mon 24 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Tonight was <a href="http://learnpythonthehardway.org/book/ex17.html">Exercise 17</a>, and we&#8217;re learning how to copy one file&#8217;s contents into&nbsp;another.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 17</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex17.html</span>
+
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="n">from</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span> <span class="n">import</span> <span class="n">exists</span>
+
+<span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span>
+
+<span class="n">print</span> <span class="s">&quot;Copying from %s to %s&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
+
+<span class="cp"># we could do these two on one line, how?</span>
+<span class="n">in_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">)</span>
+<span class="n">indata</span> <span class="o">=</span> <span class="n">in_file</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">print</span> <span class="s">&quot;The input file is %d bytes long&quot;</span> <span class="o">%</span> <span class="n">len</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Does the output file exist? %r&quot;</span> <span class="o">%</span> <span class="n">exists</span><span class="p">(</span><span class="n">to_file</span><span class="p">)</span>
+<span class="n">print</span> <span class="s">&quot;Ready, hit RETURN to continue, CTRL-C to abort.&quot;</span>
+<span class="n">raw_input</span><span class="p">()</span>
+
+<span class="n">out_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">out_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Alright, all done.&quot;</span>
+
+<span class="n">out_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">in_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 17" src="/images/ex17.png" title="Exercise 17" /></p>
+<p>The study drill encouraged me to read about <code>cat</code> in the&nbsp;manual.</p>
+<p><img alt="Cat" src="/images/cat-man.png" title="Cat" /></p>
+<p>My guess on the necessity of <a href="https://docs.python.org/2/library/stdtypes.html#file.close">closing the file</a> is that without it, it can be read or written by other code that might follow it. It might also be a memory&nbsp;issue.</p>
+<p>Another study drill encouraged me to read about the <a href="https://docs.python.org/2/reference/simple_stmts.html#import"><code>import</code> statement</a>. It&#8217;s kind of funny reading about it. It&#8217;s so fundamental to Python and was probably among the first code I typed. At first it felt strange and foreign to me, but traversing the file system with dotted sytax and importing the module directly or by directory also came across as an incredibly elegant syntax to&nbsp;me.</p>
+<p>As for the fun part about writing this code into one&nbsp;line:</p>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span><span class="p">;</span> <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span><span class="p">;</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">).</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
+
+<p>It&#8217;s not <em>too</em> hard: Replace the variables with their value equivalents and get rid of all of the print statements and command prompts. Whether it&#8217;s <em>user friendly</em>&#8230;good designers always design for personas and not the all-encompassing generic user.&nbsp;;)</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-16.html" rel="bookmark"
+                           title="Permalink to Exercise 16">Exercise&nbsp;16</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-23T02:08:00-06:00">
                 Published: Sun 23 November 2014
@@ -45,7 +110,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>I missed last night (see <a href="/exercise-15.html">my thoughts on missed nights</a>), and so it&#8217;s <a href="http://learnpythonthehardway.org/book/ex16.html">Exercise 16</a> tonight. More on file opening and&nbsp;manipulation.</p>
+</footer><!-- /.post-info -->                <p>I missed last night (see <a href="/exercise-15.html">my thoughts on missed nights</a>), and so it&#8217;s <a href="http://learnpythonthehardway.org/book/ex16.html">Exercise 16</a> tonight. More on file opening and&nbsp;manipulation.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 16</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex16.html</span>
 
@@ -54,49 +119,10 @@
 <span class="n">script</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">argv</span>
 
 <span class="n">print</span> <span class="s">&quot;We&#39;re going to erase %r.&quot;</span> <span class="o">%</span> <span class="n">filename</span>
-<span class="n">print</span> <span class="s">&quot;If you don&#39;t want that, hit CTRL-C (^C).&quot;</span>
-<span class="n">print</span> <span class="s">&quot;If you do want that, hit RETURN.&quot;</span>
-
-<span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;?&quot;</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;Opening the file...&quot;</span>
-<span class="n">target</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span>
-
-<span class="cp"># print &quot;Truncating the file.  Goodbye!&quot;</span>
-<span class="cp"># target.truncate()</span>
-
-<span class="n">print</span> <span class="s">&quot;Now I&#39;m going to ask you for three lines.&quot;</span>
-<span class="n">line1</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;line 1: &quot;</span><span class="p">)</span>
-<span class="n">line2</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;line 2: &quot;</span><span class="p">)</span>
-<span class="n">line3</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;line 3: &quot;</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;I&#39;m going to write these to the file.&quot;</span>
-<span class="n">target</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line1</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="n">line2</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">+</span> <span class="n">line3</span> <span class="o">+</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;And finally, we close it.&quot;</span>
-<span class="n">target</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="cp"># Read and print the contents of the file</span>
-<span class="n">print</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">Time to print out the file:&quot;</span>
-<span class="n">target</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="sc">&#39;r&#39;</span><span class="p">)</span>
-<span class="n">print</span> <span class="n">target</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">target</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-
-<p><img alt="Exercise 16" src="/images/ex16.png" title="Exercise 16" /></p>
-<p>As per the study drills, I added the last few lines to re-open the same file, read its contents, print them to the console, and close the file. I also condensed the multiple <code>target.write()</code> methods into one line with string&nbsp;concatenation.</p>
-<p>I often found that people who played with file manipulation in languages often forget the arguments that can be passed into the <a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a>&nbsp;method:</p>
-<blockquote>
-<p>The most commonly-used values of mode are <code>r</code> for reading, <code>w</code> for writing (truncating the file if it already exists), and <code>a</code> for appending (which on some Unix systems means that all writes append to the end of the file regardless of the current seek position). If mode is omitted, it defaults to&nbsp;&#8216;r&#8217;.</p>
-</blockquote>
-<p>We need to pass <code>w</code> into the <code>open</code> method because we are writing to the file, and Python requires the code to explicitly acknowledge the action. The documentation also mentions that if <code>w</code> is passed, running <a href="https://docs.python.org/2/library/stdtypes.html#file.truncate"><code>truncate</code></a> on the file object isn&#8217;t necessary. I commented it out, and my code ran just&nbsp;fine.</p>
-<p>That&#8217;s because this man knows how my code is&nbsp;doing:</p>
-<p><img alt="Matthew McConaughey" src="/images/matthew_mcconaughey-alright.gif" title="Matthew McConaughey" /></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="n">print</span> <span class="s">&quot;If you don ...</span></pre></div>
+                <a class="readmore" href="/exercise-16.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

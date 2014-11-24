@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 17</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;17</h1>
+
+    <p time="2014-11-24T02:08:00-06:00">Mon 24 November 2014</p>
+
+
+    <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex17.html">Exercise 17</a>, and we&#8217;re learning how to copy one file&#8217;s contents into&nbsp;another.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 17</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex17.html</span>
+
+<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="n">from</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span> <span class="n">import</span> <span class="n">exists</span>
+
+<span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span>
+
+<span class="n">print</span> <span class="s">&quot;Copying from %s to %s&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
+
+<span class="cp"># we could do these two on one line, how?</span>
+<span class="n">in_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">)</span>
+<span class="n">indata</span> <span class="o">=</span> <span class="n">in_file</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">print</span> <span class="s">&quot;The input file is %d bytes long&quot;</span> <span class="o">%</span> <span class="n">len</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Does the output file exist? %r&quot;</span> <span class="o">%</span> <span class="n">exists</span><span class="p">(</span><span class="n">to_file</span><span class="p">)</span>
+<span class="n">print</span> <span class="s">&quot;Ready, hit RETURN to continue, CTRL-C to abort.&quot;</span>
+<span class="n">raw_input</span><span class="p">()</span>
+
+<span class="n">out_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">out_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;Alright, all done.&quot;</span>
+
+<span class="n">out_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">in_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 17" src="/images/ex17.png" title="Exercise 17" /></p>
+<p>The study drill encouraged me to read about <code>cat</code> in the&nbsp;manual.</p>
+<p><img alt="Cat" src="/images/cat-man.png" title="Cat" /></p>
+<p>My guess on the necessity of <a href="https://docs.python.org/2/library/stdtypes.html#file.close">closing the file</a> is that without it, it can be read or written by other code that might follow it. It might also be a memory&nbsp;issue.</p>
+<p>Another study drill encouraged me to read about the <a href="https://docs.python.org/2/reference/simple_stmts.html#import"><code>import</code> statement</a>. It&#8217;s kind of funny reading about it. It&#8217;s so fundamental to Python and was probably among the first code I typed. At first it felt strange and foreign to me, but traversing the file system with dotted sytax and importing the module directly or by directory also came across as an incredibly elegant syntax to&nbsp;me.</p>
+<p>As for the fun part about writing this code into one&nbsp;line:</p>
+<div class="highlight"><pre><span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span><span class="p">;</span> <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span><span class="p">;</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">).</span><span class="n">read</span><span class="p">())</span>
+</pre></div>
+
+
+<p>It&#8217;s not <em>too</em> hard: Replace the variables with their value equivalents and get rid of all of the print statements and command prompts. Whether it&#8217;s <em>user friendly</em>&#8230;good designers always design for personas and not the all-encompassing generic user.&nbsp;;)</p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
