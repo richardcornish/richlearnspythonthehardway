@@ -34,7 +34,73 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-17.html">Exercise&nbsp;17</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-18.html">Exercise&nbsp;18</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-25T00:02:00-06:00">
+                Published: Tue 25 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>I didn&#8217;t feel like slogging through <a href="http://learnpythonthehardway.org/book/ex18.html">Exercise 18</a> last night, but I&#8217;m back on it tonight. It&#8217;s time for one of the foundational parts of programming:&nbsp;functions!</p>
+<div class="highlight"><pre><span class="cp"># Exercise 18</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex18.html</span>
+
+<span class="cp"># this one is like your scripts with argv</span>
+<span class="n">def</span> <span class="n">print_two</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">=</span> <span class="n">args</span>
+    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+
+<span class="cp"># ok, that *args is actually pointless, we can just do this</span>
+<span class="n">def</span> <span class="n">print_two_again</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+
+<span class="cp"># this just takes one argument</span>
+<span class="n">def</span> <span class="n">print_one</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;arg1: %r&quot;</span> <span class="o">%</span> <span class="n">arg1</span>
+
+<span class="cp"># this one takes no arguments</span>
+<span class="n">def</span> <span class="n">print_none</span><span class="p">()</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;I got nothin&#39;.&quot;</span>
+
+<span class="n">print_two</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
+<span class="n">print_two_again</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
+<span class="n">print_one</span><span class="p">(</span><span class="s">&quot;First!&quot;</span><span class="p">)</span>
+<span class="n">print_none</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 18" src="/images/ex18.png" title="Exercise 18" /></p>
+<p><a href="https://docs.python.org/2/reference/compound_stmts.html#function-definitions">Functions</a> are in some way the most conceptually fundamental part of programming. We can all understand the benefits of strings and numbers and storing them into variables, but the ability to send them away and receive something else back, efficiently and without repetition, was likely a groundbreaking moment for&nbsp;programming.</p>
+<p>Sometimes I forget how foreign the concept of functions are to people. I remember having to look up the syntax (all three different kinds) in JavaScript all of the time. You have to&nbsp;remember:</p>
+<ol>
+<li>Did you start your function definition with&nbsp;def?</li>
+<li>Does your function name have only characters and <code>_</code> (underscore)&nbsp;characters?</li>
+<li>Did you put an open parenthesis <code>(</code> right after the function&nbsp;name?</li>
+<li>Did you put your arguments after the parenthesis <code>(</code> separated by&nbsp;commas?</li>
+<li>Did you make each argument unique (meaning no duplicated&nbsp;names)?</li>
+<li>Did you put a close parenthesis and a colon <code>):</code> after the&nbsp;arguments?</li>
+<li>Did you indent all lines of code you want in the function four spaces? No more, no&nbsp;less.</li>
+<li>Did you &#8220;end&#8221; your function by going back to writing with no indent (dedenting we call&nbsp;it)?</li>
+</ol>
+<p>I don&#8217;t really even think about all that stuff. It&#8217;s likely this has a lot of similarity in how people <a href="https://www.youtube.com/watch?v=HnufOkguW2E">learn to play the piano</a>.</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/HnufOkguW2E" frameborder="0" allowfullscreen></iframe>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-17.html" rel="bookmark"
+                           title="Permalink to Exercise 17">Exercise&nbsp;17</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-24T02:08:00-06:00">
                 Published: Mon 24 November 2014
@@ -45,7 +111,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Tonight was <a href="http://learnpythonthehardway.org/book/ex17.html">Exercise 17</a>, and we&#8217;re learning how to copy one file&#8217;s contents into&nbsp;another.</p>
+</footer><!-- /.post-info -->                <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex17.html">Exercise 17</a>, and we&#8217;re learning how to copy one file&#8217;s contents into&nbsp;another.</p>
 <div class="highlight"><pre><span class="cp"># Exercise 17</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex17.html</span>
 
@@ -56,42 +122,10 @@
 
 <span class="n">print</span> <span class="s">&quot;Copying from %s to %s&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
 
-<span class="cp"># we could do these two on one line, how?</span>
-<span class="n">in_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">)</span>
-<span class="n">indata</span> <span class="o">=</span> <span class="n">in_file</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="n">print</span> <span class="s">&quot;The input file is %d bytes long&quot;</span> <span class="o">%</span> <span class="n">len</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;Does the output file exist? %r&quot;</span> <span class="o">%</span> <span class="n">exists</span><span class="p">(</span><span class="n">to_file</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;Ready, hit RETURN to continue, CTRL-C to abort.&quot;</span>
-<span class="n">raw_input</span><span class="p">()</span>
-
-<span class="n">out_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span>
-<span class="n">out_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
-
-<span class="n">print</span> <span class="s">&quot;Alright, all done.&quot;</span>
-
-<span class="n">out_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">in_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-
-
-<p><img alt="Exercise 17" src="/images/ex17.png" title="Exercise 17" /></p>
-<p>The study drill encouraged me to read about <code>cat</code> in the&nbsp;manual.</p>
-<p><img alt="Cat" src="/images/cat-man.png" title="Cat" /></p>
-<p>My guess on the necessity of <a href="https://docs.python.org/2/library/stdtypes.html#file.close">closing the file</a> is that without it, it can be read or written by other code that might follow it. It might also be a memory&nbsp;issue.</p>
-<p>Another study drill encouraged me to read about the <a href="https://docs.python.org/2/reference/simple_stmts.html#import"><code>import</code> statement</a>. It&#8217;s kind of funny reading about it. It&#8217;s so fundamental to Python and was probably among the first code I typed. At first it felt strange and foreign to me, but traversing the file system with dotted sytax and importing the module directly or by directory also came across as an incredibly elegant syntax to&nbsp;me.</p>
-<p>As for the fun part about writing this code into one&nbsp;line:</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span><span class="p">;</span> <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span><span class="p">;</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">).</span><span class="n">read</span><span class="p">())</span>
-</pre></div>
-
-
-<p>It&#8217;s not <em>too</em> hard: Replace the variables with their value equivalents and get rid of all of the print statements and command prompts. Whether it&#8217;s <em>user friendly</em>&#8230;good designers always design for personas and not the all-encompassing generic user.&nbsp;;)</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="cp"># we could do these ...</span></pre></div>
+                <a class="readmore" href="/exercise-17.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

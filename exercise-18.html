@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 18</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;18</h1>
+
+    <p time="2014-11-25T00:02:00-06:00">Tue 25 November 2014</p>
+
+
+    <p>I didn&#8217;t feel like slogging through <a href="http://learnpythonthehardway.org/book/ex18.html">Exercise 18</a> last night, but I&#8217;m back on it tonight. It&#8217;s time for one of the foundational parts of programming:&nbsp;functions!</p>
+<div class="highlight"><pre><span class="cp"># Exercise 18</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex18.html</span>
+
+<span class="cp"># this one is like your scripts with argv</span>
+<span class="n">def</span> <span class="n">print_two</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">=</span> <span class="n">args</span>
+    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+
+<span class="cp"># ok, that *args is actually pointless, we can just do this</span>
+<span class="n">def</span> <span class="n">print_two_again</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+
+<span class="cp"># this just takes one argument</span>
+<span class="n">def</span> <span class="n">print_one</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;arg1: %r&quot;</span> <span class="o">%</span> <span class="n">arg1</span>
+
+<span class="cp"># this one takes no arguments</span>
+<span class="n">def</span> <span class="n">print_none</span><span class="p">()</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;I got nothin&#39;.&quot;</span>
+
+<span class="n">print_two</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
+<span class="n">print_two_again</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
+<span class="n">print_one</span><span class="p">(</span><span class="s">&quot;First!&quot;</span><span class="p">)</span>
+<span class="n">print_none</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="Exercise 18" src="/images/ex18.png" title="Exercise 18" /></p>
+<p><a href="https://docs.python.org/2/reference/compound_stmts.html#function-definitions">Functions</a> are in some way the most conceptually fundamental part of programming. We can all understand the benefits of strings and numbers and storing them into variables, but the ability to send them away and receive something else back, efficiently and without repetition, was likely a groundbreaking moment for&nbsp;programming.</p>
+<p>Sometimes I forget how foreign the concept of functions are to people. I remember having to look up the syntax (all three different kinds) in JavaScript all of the time. You have to&nbsp;remember:</p>
+<ol>
+<li>Did you start your function definition with&nbsp;def?</li>
+<li>Does your function name have only characters and <code>_</code> (underscore)&nbsp;characters?</li>
+<li>Did you put an open parenthesis <code>(</code> right after the function&nbsp;name?</li>
+<li>Did you put your arguments after the parenthesis <code>(</code> separated by&nbsp;commas?</li>
+<li>Did you make each argument unique (meaning no duplicated&nbsp;names)?</li>
+<li>Did you put a close parenthesis and a colon <code>):</code> after the&nbsp;arguments?</li>
+<li>Did you indent all lines of code you want in the function four spaces? No more, no&nbsp;less.</li>
+<li>Did you &#8220;end&#8221; your function by going back to writing with no indent (dedenting we call&nbsp;it)?</li>
+</ol>
+<p>I don&#8217;t really even think about all that stuff. It&#8217;s likely this has a lot of similarity in how people <a href="https://www.youtube.com/watch?v=HnufOkguW2E">learn to play the piano</a>.</p>
+<iframe width="560" height="315" src="//www.youtube.com/embed/HnufOkguW2E" frameborder="0" allowfullscreen></iframe>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
