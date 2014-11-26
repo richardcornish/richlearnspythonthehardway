@@ -34,7 +34,89 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-18.html">Exercise&nbsp;18</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-19.html">Exercise&nbsp;19</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-25T23:54:00-06:00">
+                Published: Tue 25 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p><a href="http://learnpythonthehardway.org/book/ex19.html">Exercise 19</a> continues with functions and using variables as&nbsp;arguments.</p>
+<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">19</span>
+<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex19.html</span>
+
+<span class="err">#</span> <span class="nx">define</span> <span class="nx">a</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">parameters</span>
+<span class="nx">def</span> <span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">cheese_count</span><span class="p">,</span> <span class="nx">boxes_of_crackers</span><span class="p">)</span><span class="o">:</span>
+    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">cheeses</span>
+    <span class="nx">print</span> <span class="s2">&quot;You have %d cheeses!&quot;</span> <span class="o">%</span> <span class="nx">cheese_count</span>
+    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">boxes</span>
+    <span class="nx">print</span> <span class="s2">&quot;You have %d boxes of crackers!&quot;</span> <span class="o">%</span> <span class="nx">boxes_of_crackers</span>
+    <span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">party</span> <span class="nx">animal</span> <span class="nx">street</span> <span class="nx">cred</span>
+    <span class="nx">print</span> <span class="s2">&quot;Man that&#39;s enough for a party!&quot;</span>
+    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">necessity</span> <span class="k">for</span> <span class="nx">warmth</span>
+    <span class="nx">print</span> <span class="s2">&quot;Get a blanket.\n&quot;</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">description</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
+<span class="nx">print</span> <span class="s2">&quot;We can just give the function numbers directly:&quot;</span>
+<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">integers</span>
+<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">description</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
+<span class="nx">print</span> <span class="s2">&quot;OR, we can use variables from our script:&quot;</span>
+<span class="err">#</span> <span class="nx">assign</span> <span class="nx">integer</span> <span class="nx">values</span> <span class="nx">to</span> <span class="nx">cheese</span> <span class="nx">and</span> <span class="nx">crackers</span>
+<span class="nx">amount_of_cheese</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nx">amount_of_crackers</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">variables</span>
+<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">amount_of_cheese</span><span class="p">,</span> <span class="nx">amount_of_crackers</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">description</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
+<span class="nx">print</span> <span class="s2">&quot;We can even do math inside too:&quot;</span>
+<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">addition</span> <span class="nx">of</span> <span class="nx">integers</span> <span class="kd">with</span> <span class="nx">plus</span> <span class="nx">operator</span>
+<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">desciption</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
+<span class="nx">print</span> <span class="s2">&quot;And we can combine the two, variables and math:&quot;</span>
+<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">variables</span> <span class="nx">and</span> <span class="nx">addition</span> <span class="nx">of</span> <span class="nx">integers</span>
+<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">amount_of_cheese</span> <span class="o">+</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">amount_of_crackers</span> <span class="o">+</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 19" src="/images/ex19-1.png" title="Exercise 19" /></p>
+<p>The study drill told me to &#8220;write at least one more function of your own design, and run it 10 different ways.&#8221; I think Zed Shaw meant to use addition, modulo, variable assignment, <code>argv</code>, <code>*args</code>, etc., to execute the function. But seeing as I&#8217;m really lazy, I cheated and created my own random number generator to, well, run it &#8220;10 different ways&#8221; (at least, 10 ways whose probability of repetition are highly&nbsp;unlikely).</p>
+<p>Here it&nbsp;is:</p>
+<div class="highlight"><pre><span class="n">import</span> <span class="n">random</span>
+
+<span class="n">def</span> <span class="n">creeping_on_my_ex</span><span class="p">(</span><span class="n">text_messages</span><span class="p">,</span> <span class="n">calls</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">print</span> <span class="s">&quot;You sent %d text messages and made %d calls. Creep!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">text_messages</span><span class="p">,</span> <span class="n">calls</span><span class="p">)</span>
+
+<span class="n">def</span> <span class="n">random_int</span><span class="p">()</span><span class="o">:</span>
+    <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">creeping_on_my_ex</span><span class="p">(</span><span class="n">random_int</span><span class="p">(),</span> <span class="n">random_int</span><span class="p">())</span>
+</pre></div>
+
+
+<p><img alt="Exercise 19" src="/images/ex19-2.png" title="Exercise 19" /></p>
+<p>I used a <a href="https://docs.python.org/2/reference/compound_stmts.html#the-for-statement"><code>for</code></a> loop (we haven&#8217;t covered this yet) and <a href="https://docs.python.org/2/library/functions.html#xrange"><code>xrange</code></a> to cover a quantity of 10 numbers, and passed in a <a href="https://docs.python.org/2/library/random.html#random.random">random integer</a> for the arguments of the&nbsp;function. </p>
+<p>What do you think of that, Jessica? Huh? Yeah. That&#8217;s what I&nbsp;thought.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-18.html" rel="bookmark"
+                           title="Permalink to Exercise 18">Exercise&nbsp;18</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-25T00:02:00-06:00">
                 Published: Tue 25 November 2014
@@ -45,54 +127,16 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>I didn&#8217;t feel like slogging through <a href="http://learnpythonthehardway.org/book/ex18.html">Exercise 18</a> last night, but I&#8217;m back on it tonight. It&#8217;s time for one of the foundational parts of programming:&nbsp;functions!</p>
+</footer><!-- /.post-info -->                <p>I didn&#8217;t feel like slogging through <a href="http://learnpythonthehardway.org/book/ex18.html">Exercise 18</a> last night, but I&#8217;m back on it tonight. It&#8217;s time for one of the foundational parts of programming:&nbsp;functions!</p>
 <div class="highlight"><pre><span class="cp"># Exercise 18</span>
 <span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex18.html</span>
 
 <span class="cp"># this one is like your scripts with argv</span>
 <span class="n">def</span> <span class="n">print_two</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">=</span> <span class="n">args</span>
-    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
-
-<span class="cp"># ok, that *args is actually pointless, we can just do this</span>
-<span class="n">def</span> <span class="n">print_two_again</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
-
-<span class="cp"># this just takes one argument</span>
-<span class="n">def</span> <span class="n">print_one</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;arg1: %r&quot;</span> <span class="o">%</span> <span class="n">arg1</span>
-
-<span class="cp"># this one takes no arguments</span>
-<span class="n">def</span> <span class="n">print_none</span><span class="p">()</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;I got nothin&#39;.&quot;</span>
-
-<span class="n">print_two</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
-<span class="n">print_two_again</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
-<span class="n">print_one</span><span class="p">(</span><span class="s">&quot;First!&quot;</span><span class="p">)</span>
-<span class="n">print_none</span><span class="p">()</span>
-</pre></div>
-
-
-<p><img alt="Exercise 18" src="/images/ex18.png" title="Exercise 18" /></p>
-<p><a href="https://docs.python.org/2/reference/compound_stmts.html#function-definitions">Functions</a> are in some way the most conceptually fundamental part of programming. We can all understand the benefits of strings and numbers and storing them into variables, but the ability to send them away and receive something else back, efficiently and without repetition, was likely a groundbreaking moment for&nbsp;programming.</p>
-<p>Sometimes I forget how foreign the concept of functions are to people. I still remember when I had to look up the syntax for functions in JavaScript (all three kinds). In Python, you have to&nbsp;remember:</p>
-<ol>
-<li>Did you start your function definition with <code>def</code>?</li>
-<li>Does your function name have only characters and <code>_</code> (underscore)&nbsp;characters?</li>
-<li>Did you put an open parenthesis <code>(</code> right after the function&nbsp;name?</li>
-<li>Did you put your arguments after the parenthesis <code>(</code> separated by&nbsp;commas?</li>
-<li>Did you make each argument unique (meaning no duplicated&nbsp;names)?</li>
-<li>Did you put a close parenthesis and a colon <code>):</code> after the&nbsp;arguments?</li>
-<li>Did you indent all lines of code you want in the function four spaces? No more, no&nbsp;less.</li>
-<li>Did you &#8220;end&#8221; your function by going back to writing with no indent (dedenting we call&nbsp;it)?</li>
-</ol>
-<p>I don&#8217;t really even think about all that stuff. It&#8217;s likely this is similar to how people <a href="https://www.youtube.com/watch?v=HnufOkguW2E">learn to play the piano</a>.</p>
-<iframe width="560" height="315" src="//www.youtube.com/embed/HnufOkguW2E" frameborder="0" allowfullscreen></iframe>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+    <span class="n">arg1 ...</span></pre></div>
+                <a class="readmore" href="/exercise-18.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
