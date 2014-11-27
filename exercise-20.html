@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 20</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;20</h1>
+
+    <p time="2014-11-26T22:50:00-06:00">Wed 26 November 2014</p>
+
+
+    <p>Tonight was the big <a href="http://learnpythonthehardway.org/book/ex20.html">2-0</a>! Twenty exercises down, another 32-ish to go. This exercise continues functions, a couple of new file object type functions, and an auto&nbsp;incrementer.</p>
+<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">20</span>
+<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex20.html</span>
+
+<span class="err">#</span> <span class="kr">import</span> <span class="nx">the</span> <span class="nx">argv</span> <span class="kd">function</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">sys</span> <span class="nx">module</span>
+<span class="nx">from</span> <span class="nx">sys</span> <span class="kr">import</span> <span class="nx">argv</span>
+
+<span class="err">#</span> <span class="nx">set</span> <span class="nx">up</span> <span class="nx">script</span> <span class="k">for</span> <span class="nx">one</span> <span class="nx">parameter</span>
+<span class="nx">script</span><span class="p">,</span> <span class="nx">input_file</span> <span class="o">=</span> <span class="nx">argv</span>
+
+<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">contents</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span>
+<span class="nx">def</span> <span class="nx">print_all</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="nx">f</span><span class="p">.</span><span class="nx">read</span><span class="p">()</span>
+
+<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">move</span> <span class="nx">cursor</span> <span class="nx">to</span> <span class="nx">first</span> <span class="nx">position</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span>
+<span class="nx">def</span> <span class="nx">rewind</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">f</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">contents</span> <span class="nx">of</span> <span class="nx">a</span> <span class="nx">specific</span> <span class="nx">line</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">its</span> <span class="nx">line</span>
+<span class="nx">def</span> <span class="nx">print_a_line</span><span class="p">(</span><span class="nx">line_count</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="nx">line_count</span><span class="p">,</span> <span class="nx">f</span><span class="p">.</span><span class="nx">readline</span><span class="p">()</span>
+
+<span class="err">#</span> <span class="nx">open</span> <span class="nx">the</span> <span class="nx">passed</span> <span class="nx">file</span> <span class="nx">and</span> <span class="nx">assign</span> <span class="nx">it</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">variable</span>
+<span class="nx">current_file</span> <span class="o">=</span> <span class="nx">open</span><span class="p">(</span><span class="nx">input_file</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">print</span>
+<span class="nx">print</span> <span class="s2">&quot;First let&#39;s print the whole file:\n&quot;</span>
+
+<span class="err">#</span> <span class="nx">send</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_all</span> <span class="kd">function</span>
+<span class="nx">print_all</span><span class="p">(</span><span class="nx">current_file</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">rewind</span>
+<span class="nx">print</span> <span class="s2">&quot;Now let&#39;s rewind, kind of like a tape.&quot;</span>
+
+<span class="err">#</span> <span class="nx">send</span> <span class="nx">the</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">rewind</span> <span class="kd">function</span>
+<span class="nx">rewind</span><span class="p">(</span><span class="nx">current_file</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">more</span>
+<span class="nx">print</span> <span class="s2">&quot;Let&#39;s print three lines:&quot;</span>
+
+<span class="err">#</span> <span class="nx">index</span> <span class="nx">current</span> <span class="nx">line</span>
+<span class="nx">current_line</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
+<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">increment</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">by</span> <span class="mi">1</span>
+<span class="nx">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
+<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
+
+<span class="err">#</span> <span class="nx">increment</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">by</span> <span class="mi">1</span>
+<span class="nx">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
+<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 20" src="/images/ex20.png" title="Exercise 20" /></p>
+<p>Because it&#8217;s hard to find anything in the Python documentation, I&#8217;ll link to and summarize them&nbsp;here:</p>
+<ul>
+<li>
+<p><a href="https://docs.python.org/2/library/sys.html#sys.argv"><code>argv</code></a></p>
+<p>argument variables; passes in names of files to be used during script&nbsp;execution</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a></p>
+<p>opens a&nbsp;file</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/library/stdtypes.html#file.read"><code>read</code></a></p>
+<p>reads the contents of a file, probably stores result in a&nbsp;variable</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/library/stdtypes.html#file.seek"><code>seek</code></a></p>
+<p>as far as I can tell, &#8220;moves cursor&#8221; to particular lines of a&nbsp;file</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/library/stdtypes.html#file.readline"><code>readline</code></a></p>
+<p>reads a particular line of a file, probably stores result in a&nbsp;variable</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/reference/compound_stmts.html#function-definitions"><code>def</code></a></p>
+<p>defines a&nbsp;function</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/reference/simple_stmts.html#augmented-assignment-statements"><code>+=</code></a></p>
+<p>one kind of &#8220;augmented assignment statement&#8221;; adds one value to a second value and stores result in second value; takes the common case of <code>exes = exes + 1</code> and rewrites it to the equivalent (in this case) <code>exes += 1</code></p>
+</li>
+</ul>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
