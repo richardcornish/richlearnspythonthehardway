@@ -34,7 +34,106 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-20.html">Exercise&nbsp;20</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-21.html">Exercise&nbsp;21</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-27T21:53:00-06:00">
+                Published: Thu 27 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Happy Thanksgiving! You thought I wouldn&#8217;t do an exercise tonight because of the holiday? Why, writing computer code on Thanksgiving is a great way to avoid friends and&nbsp;family!</p>
+<p>Tonight was <a href="http://learnpythonthehardway.org/book/ex21.html">exercise 21</a>. We&#8217;re still doing functions, but now we <code>return</code> values with&nbsp;them!</p>
+<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">21</span>
+<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex21.html</span>
+
+<span class="nx">def</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;ADDING %d + %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+
+<span class="nx">def</span> <span class="nx">subtract</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;SUBTRACTING %d - %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span>
+
+<span class="nx">def</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;MULTIPLYING %d * %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span>
+
+<span class="nx">def</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;DIVIDING %d / %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span>
+
+
+<span class="nx">print</span> <span class="s2">&quot;Let&#39;s do some math with just functions!&quot;</span>
+
+<span class="nx">age</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nx">height</span> <span class="o">=</span> <span class="nx">subtract</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nx">weight</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nx">iq</span> <span class="o">=</span> <span class="nx">divide</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nx">print</span> <span class="s2">&quot;Age: %d, Height: %d, Weight: %d, IQ: %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">iq</span><span class="p">)</span>
+
+
+<span class="err">#</span> <span class="nx">A</span> <span class="nx">puzzle</span> <span class="k">for</span> <span class="nx">extra</span> <span class="nx">credit</span><span class="p">,</span> <span class="nx">type</span> <span class="nx">it</span> <span class="k">in</span> <span class="nx">anyway</span><span class="p">.</span>
+<span class="nx">print</span> <span class="s2">&quot;Here is a puzzle.&quot;</span>
+
+<span class="nx">what</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="nx">subtract</span><span class="p">(</span><span class="nx">height</span><span class="p">,</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">weight</span><span class="p">,</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">iq</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+
+<span class="nx">print</span> <span class="s2">&quot;That becomes: &quot;</span><span class="p">,</span> <span class="nx">what</span><span class="p">,</span> <span class="s2">&quot;Can you do it by hand?&quot;</span>
+</pre></div>
+
+
+<p><img alt="Exercise 21" src="/images/ex21-1.png" title="Exercise 21" /></p>
+<p>The study drills weren&#8217;t too bad. Here&#8217;s the breakdown of that shitty&nbsp;equation:</p>
+<div class="highlight"><pre><span class="cp"># Study drill #1</span>
+<span class="cp"># This is not meant to be run, but rather read line by line</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="n">iq</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">subtract</span><span class="p">(</span><span class="n">subtract</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">multiply</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">divide</span><span class="p">(</span><span class="n">divide</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">25</span><span class="p">)))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="mi">4500</span><span class="p">))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="o">-</span><span class="mi">4426</span><span class="p">)</span>
+<span class="n">what</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4391</span>
+</pre></div>
+
+
+<p>Next up, let&#8217;s replace the original <code>what</code> equation with our own number and see what happens. The mind tingles with anticipation if you graphed&nbsp;it!</p>
+<div class="highlight"><pre><span class="cp"># Study drill #2</span>
+<span class="n">number</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">what_2</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="n">iq</span><span class="p">,</span> <span class="n">number</span><span class="p">))))</span>
+<span class="n">print</span> <span class="s">&quot;When we change the number to %d, we get&quot;</span> <span class="o">%</span> <span class="n">number</span><span class="p">,</span> <span class="n">what_2</span>
+</pre></div>
+
+
+<p><img alt="Exercise 21" src="/images/ex21-2.png" title="Exercise 21" /></p>
+<p>And lastly, if we were to make our own equation by replacing arithmetic operands with&nbsp;functions:</p>
+<div class="highlight"><pre><span class="cp"># Study drill #3</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">print</span> <span class="s">&quot;When I make my own crazy-ass equation, it&#39;s %d&quot;</span> <span class="o">%</span> <span class="n">what_3</span>
+</pre></div>
+
+
+<p><img alt="Exercise 21" src="/images/ex21-3.png" title="Exercise 21" /></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-20.html" rel="bookmark"
+                           title="Permalink to Exercise 20">Exercise&nbsp;20</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-26T22:50:00-06:00">
                 Published: Wed 26 November 2014
@@ -45,103 +144,17 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Tonight was the big <a href="http://learnpythonthehardway.org/book/ex20.html">2-0</a>! Twenty exercises down, another 32-ish to go. This exercise continues functions, a couple of new file object type functions, and an auto&nbsp;incrementer.</p>
+</footer><!-- /.post-info -->                <p>Tonight was the big <a href="http://learnpythonthehardway.org/book/ex20.html">2-0</a>! Twenty exercises down, another 32-ish to go. This exercise continues functions, a couple of new file object type functions, and an auto&nbsp;incrementer.</p>
 <div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">20</span>
 <span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex20.html</span>
 
 <span class="err">#</span> <span class="kr">import</span> <span class="nx">the</span> <span class="nx">argv</span> <span class="kd">function</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">sys</span> <span class="nx">module</span>
 <span class="nx">from</span> <span class="nx">sys</span> <span class="kr">import</span> <span class="nx">argv</span>
 
-<span class="err">#</span> <span class="nx">set</span> <span class="nx">up</span> <span class="nx">script</span> <span class="k">for</span> <span class="nx">one</span> <span class="nx">parameter</span>
-<span class="nx">script</span><span class="p">,</span> <span class="nx">input_file</span> <span class="o">=</span> <span class="nx">argv</span>
-
-<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">contents</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span>
-<span class="nx">def</span> <span class="nx">print_all</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">print</span> <span class="nx">f</span><span class="p">.</span><span class="nx">read</span><span class="p">()</span>
-
-<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">move</span> <span class="nx">cursor</span> <span class="nx">to</span> <span class="nx">first</span> <span class="nx">position</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span>
-<span class="nx">def</span> <span class="nx">rewind</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">contents</span> <span class="nx">of</span> <span class="nx">a</span> <span class="nx">specific</span> <span class="nx">line</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">its</span> <span class="nx">line</span>
-<span class="nx">def</span> <span class="nx">print_a_line</span><span class="p">(</span><span class="nx">line_count</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">print</span> <span class="nx">line_count</span><span class="p">,</span> <span class="nx">f</span><span class="p">.</span><span class="nx">readline</span><span class="p">()</span>
-
-<span class="err">#</span> <span class="nx">open</span> <span class="nx">the</span> <span class="nx">passed</span> <span class="nx">file</span> <span class="nx">and</span> <span class="nx">assign</span> <span class="nx">it</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">variable</span>
-<span class="nx">current_file</span> <span class="o">=</span> <span class="nx">open</span><span class="p">(</span><span class="nx">input_file</span><span class="p">)</span>
-
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">print</span>
-<span class="nx">print</span> <span class="s2">&quot;First let&#39;s print the whole file:\n&quot;</span>
-
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_all</span> <span class="kd">function</span>
-<span class="nx">print_all</span><span class="p">(</span><span class="nx">current_file</span><span class="p">)</span>
-
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">rewind</span>
-<span class="nx">print</span> <span class="s2">&quot;Now let&#39;s rewind, kind of like a tape.&quot;</span>
-
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">the</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">rewind</span> <span class="kd">function</span>
-<span class="nx">rewind</span><span class="p">(</span><span class="nx">current_file</span><span class="p">)</span>
-
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">more</span>
-<span class="nx">print</span> <span class="s2">&quot;Let&#39;s print three lines:&quot;</span>
-
-<span class="err">#</span> <span class="nx">index</span> <span class="nx">current</span> <span class="nx">line</span>
-<span class="nx">current_line</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
-<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
-
-<span class="err">#</span> <span class="nx">increment</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">by</span> <span class="mi">1</span>
-<span class="nx">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
-<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
-
-<span class="err">#</span> <span class="nx">increment</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">by</span> <span class="mi">1</span>
-<span class="nx">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
-<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
-</pre></div>
-
-
-<p><img alt="Exercise 20" src="/images/ex20.png" title="Exercise 20" /></p>
-<p>Because it&#8217;s hard to find anything in the Python documentation, I&#8217;ll link to and summarize them&nbsp;here:</p>
-<ul>
-<li>
-<p><a href="https://docs.python.org/2/library/sys.html#sys.argv"><code>argv</code></a></p>
-<p>argument variables; passes in names of files to be used during script&nbsp;execution</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a></p>
-<p>opens a&nbsp;file</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.read"><code>read</code></a></p>
-<p>reads the contents of a file, probably stores result in a&nbsp;variable</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.seek"><code>seek</code></a></p>
-<p>as far as I can tell, &#8220;moves cursor&#8221; to particular lines of a&nbsp;file</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.readline"><code>readline</code></a></p>
-<p>reads a particular line of a file, probably stores result in a&nbsp;variable</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/compound_stmts.html#function-definitions"><code>def</code></a></p>
-<p>defines a&nbsp;function</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/simple_stmts.html#augmented-assignment-statements"><code>+=</code></a></p>
-<p>one kind of &#8220;augmented assignment statement&#8221;; adds one value to a second value and stores result in second value; takes the common case of <code>exes = exes + 1</code> and rewrites it to the equivalent (in this case) <code>exes += 1</code></p>
-</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="err">#</span> <span class="nx">set</span> <span class="nx">up ...</span></pre></div>
+                <a class="readmore" href="/exercise-20.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

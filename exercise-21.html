@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 21</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;21</h1>
+
+    <p time="2014-11-27T21:53:00-06:00">Thu 27 November 2014</p>
+
+
+    <p>Happy Thanksgiving! You thought I wouldn&#8217;t do an exercise tonight because of the holiday? Why, writing computer code on Thanksgiving is a great way to avoid friends and&nbsp;family!</p>
+<p>Tonight was <a href="http://learnpythonthehardway.org/book/ex21.html">exercise 21</a>. We&#8217;re still doing functions, but now we <code>return</code> values with&nbsp;them!</p>
+<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">21</span>
+<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex21.html</span>
+
+<span class="nx">def</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;ADDING %d + %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+
+<span class="nx">def</span> <span class="nx">subtract</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;SUBTRACTING %d - %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span>
+
+<span class="nx">def</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;MULTIPLYING %d * %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span>
+
+<span class="nx">def</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">:</span>
+    <span class="nx">print</span> <span class="s2">&quot;DIVIDING %d / %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span>
+
+
+<span class="nx">print</span> <span class="s2">&quot;Let&#39;s do some math with just functions!&quot;</span>
+
+<span class="nx">age</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nx">height</span> <span class="o">=</span> <span class="nx">subtract</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nx">weight</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nx">iq</span> <span class="o">=</span> <span class="nx">divide</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nx">print</span> <span class="s2">&quot;Age: %d, Height: %d, Weight: %d, IQ: %d&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="nx">height</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">iq</span><span class="p">)</span>
+
+
+<span class="err">#</span> <span class="nx">A</span> <span class="nx">puzzle</span> <span class="k">for</span> <span class="nx">extra</span> <span class="nx">credit</span><span class="p">,</span> <span class="nx">type</span> <span class="nx">it</span> <span class="k">in</span> <span class="nx">anyway</span><span class="p">.</span>
+<span class="nx">print</span> <span class="s2">&quot;Here is a puzzle.&quot;</span>
+
+<span class="nx">what</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="nx">age</span><span class="p">,</span> <span class="nx">subtract</span><span class="p">(</span><span class="nx">height</span><span class="p">,</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">weight</span><span class="p">,</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">iq</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+
+<span class="nx">print</span> <span class="s2">&quot;That becomes: &quot;</span><span class="p">,</span> <span class="nx">what</span><span class="p">,</span> <span class="s2">&quot;Can you do it by hand?&quot;</span>
+</pre></div>
+
+
+<p><img alt="Exercise 21" src="/images/ex21-1.png" title="Exercise 21" /></p>
+<p>The study drills weren&#8217;t too bad. Here&#8217;s the breakdown of that shitty&nbsp;equation:</p>
+<div class="highlight"><pre><span class="cp"># Study drill #1</span>
+<span class="cp"># This is not meant to be run, but rather read line by line</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="n">iq</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">subtract</span><span class="p">(</span><span class="n">subtract</span><span class="p">(</span><span class="mi">78</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">multiply</span><span class="p">(</span><span class="n">multiply</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">divide</span><span class="p">(</span><span class="n">divide</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">180</span><span class="p">,</span> <span class="mi">25</span><span class="p">)))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span> <span class="mi">4500</span><span class="p">))</span>
+<span class="n">what</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="o">-</span><span class="mi">4426</span><span class="p">)</span>
+<span class="n">what</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4391</span>
+</pre></div>
+
+
+<p>Next up, let&#8217;s replace the original <code>what</code> equation with our own number and see what happens. The mind tingles with anticipation if you graphed&nbsp;it!</p>
+<div class="highlight"><pre><span class="cp"># Study drill #2</span>
+<span class="n">number</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">what_2</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="n">iq</span><span class="p">,</span> <span class="n">number</span><span class="p">))))</span>
+<span class="n">print</span> <span class="s">&quot;When we change the number to %d, we get&quot;</span> <span class="o">%</span> <span class="n">number</span><span class="p">,</span> <span class="n">what_2</span>
+</pre></div>
+
+
+<p><img alt="Exercise 21" src="/images/ex21-2.png" title="Exercise 21" /></p>
+<p>And lastly, if we were to make our own equation by replacing arithmetic operands with&nbsp;functions:</p>
+<div class="highlight"><pre><span class="cp"># Study drill #3</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">what_3</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">subtract</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">multiply</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">divide</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="n">print</span> <span class="s">&quot;When I make my own crazy-ass equation, it&#39;s %d&quot;</span> <span class="o">%</span> <span class="n">what_3</span>
+</pre></div>
+
+
+<p><img alt="Exercise 21" src="/images/ex21-3.png" title="Exercise 21" /></p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>
