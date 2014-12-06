@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 23</title>
+    <link rel="stylesheet" href="/theme/css/main.css">
+
+
+
+    <!--[if IE]>
+        <script src="/theme/js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body id="index" class="home">
+
+    <header id="banner" class="body">
+        <p><a href="/">Rich learns Python the hard way</a></p>
+        <p></p>
+        <nav>
+            <ul>
+
+
+
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<article>
+
+    <h1>Exercise&nbsp;23</h1>
+
+    <p time="2014-11-30T12:38:00-06:00">Sun 30 November 2014</p>
+
+
+    <p>Work was really tough this week, so I didn&#8217;t have time for exercises at home. I&#8217;m also trying to get a work project done this weekend, and then after that I hope I can stop taking work home with me. It&#8217;s&nbsp;exhausting.</p>
+<p>Picking up where we last left off, <a href="http://learnpythonthehardway.org/book/ex23.html">Exercise 23</a> also has no code. Instead our mission is&nbsp;to:</p>
+<ol>
+<li>Find Python source code for things you&nbsp;need.</li>
+<li>Read through the code and looking for&nbsp;files.</li>
+<li>Try to understand code you&nbsp;find.</li>
+</ol>
+<p>Nice! There have been a lot of interesting projects I want to get into but haven&#8217;t found the time to get into them. I&#8217;ve always been curious about the technology the <a href="http://blog.apps.chicagotribune.com/">Chicago Tribune News Applications Team</a> uses. I&#8217;ve worked with them on design projects, but have been very shy and reluctant to talk about code. Now I get an excuse to examine one of their&nbsp;projects.</p>
+<p>Let&#8217;s look at <a href="http://tarbell.tribapps.com/">Tarbell</a>:</p>
+<blockquote>
+<p>Tarbell is a lightweight web publishing platform. Tarbell makes it quick and easy to start projects based on common templates. Tarbell optionally allows project data to be managed with Google Spreadsheets and easy project publishing with Amazon&nbsp;S3.</p>
+</blockquote>
+<p>It was a little hard <a href="https://github.com/tarbell-project/tarbell">following the code</a>, so I installed it and tried getting a basic page going. It&#8217;s a <a href="http://flask.pocoo.org/">Flask-based</a>, static webpage generator, which I can see being useful in a newsroom. I got through the <a href="http://tarbell.readthedocs.org/en/0.9-beta7/tutorial.html">tutorial</a> just far enough to get a blog going for our the universe&#8217;s favorite savior of the human race, <a href="http://interstellarfilm.wikia.com/wiki/Murphy_Cooper">Murphy Cooper</a>.</p>
+<p><img alt="Exercise 23" src="/images/ex23-1.png" title="Exercise 23" /></p>
+<p>Let&#8217;s run the&nbsp;server:</p>
+<p><img alt="Exercise 23" src="/images/ex23-2.png" title="Exercise 23" /></p>
+<p>I went through the labor of <a href="http://tarbell.readthedocs.org/en/0.9-beta7/install.html#configure-google-spreadsheet-access-optional">using the Google Console <span class="caps">API</span> to allow spreadsheet access</a> (switching between the <a href="http://tarbell.readthedocs.org/en/0.9-beta6/tutorial.html">beta6</a> and <a href="http://tarbell.readthedocs.org/en/0.9-beta7/tutorial.html">beta7</a> versions of the docs due to broken images), but couldn&#8217;t get a spreadsheet working. The docs say to edit the spreadsheet you just made&#8230;but I don&#8217;t think I ever made one. I don&#8217;t know if I missed a step, but I couldn&#8217;t figure it&nbsp;out.</p>
+<p>I will probably prefer <a href="http://getpelican.com/">Pelican</a> (which made this blog) or <a href="http://cactusformac.com/">Cactus</a> (whose Mac <span class="caps">GUI</span> went free this week) before Tarbell, but it&#8217;s good to know choices exist, and I can see this being a choice for newsrooms that rely on Google Spreadsheets as a <span class="caps">GUI</span>.</p>
+
+</article>
+
+    
+    </main>
+
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>blogroll</h2>
+            <ul>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+            </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+            <h2>social</h2>
+            <ul>
+
+                <li><a href="#">You can add links in your config file</a></li>
+                <li><a href="#">Another social link</a></li>
+            </ul>
+        </div><!-- /.social -->
+    </section>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+
+</body>
+</html>

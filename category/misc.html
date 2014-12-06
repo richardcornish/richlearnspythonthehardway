@@ -34,7 +34,48 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-22.html">Exercise&nbsp;22</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-23.html">Exercise&nbsp;23</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-11-30T12:38:00-06:00">
+                Published: Sun 30 November 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Work was really tough this week, so I didn&#8217;t have time for exercises at home. I&#8217;m also trying to get a work project done this weekend, and then after that I hope I can stop taking work home with me. It&#8217;s&nbsp;exhausting.</p>
+<p>Picking up where we last left off, <a href="http://learnpythonthehardway.org/book/ex23.html">Exercise 23</a> also has no code. Instead our mission is&nbsp;to:</p>
+<ol>
+<li>Find Python source code for things you&nbsp;need.</li>
+<li>Read through the code and looking for&nbsp;files.</li>
+<li>Try to understand code you&nbsp;find.</li>
+</ol>
+<p>Nice! There have been a lot of interesting projects I want to get into but haven&#8217;t found the time to get into them. I&#8217;ve always been curious about the technology the <a href="http://blog.apps.chicagotribune.com/">Chicago Tribune News Applications Team</a> uses. I&#8217;ve worked with them on design projects, but have been very shy and reluctant to talk about code. Now I get an excuse to examine one of their&nbsp;projects.</p>
+<p>Let&#8217;s look at <a href="http://tarbell.tribapps.com/">Tarbell</a>:</p>
+<blockquote>
+<p>Tarbell is a lightweight web publishing platform. Tarbell makes it quick and easy to start projects based on common templates. Tarbell optionally allows project data to be managed with Google Spreadsheets and easy project publishing with Amazon&nbsp;S3.</p>
+</blockquote>
+<p>It was a little hard <a href="https://github.com/tarbell-project/tarbell">following the code</a>, so I installed it and tried getting a basic page going. It&#8217;s a <a href="http://flask.pocoo.org/">Flask-based</a>, static webpage generator, which I can see being useful in a newsroom. I got through the <a href="http://tarbell.readthedocs.org/en/0.9-beta7/tutorial.html">tutorial</a> just far enough to get a blog going for our the universe&#8217;s favorite savior of the human race, <a href="http://interstellarfilm.wikia.com/wiki/Murphy_Cooper">Murphy Cooper</a>.</p>
+<p><img alt="Exercise 23" src="/images/ex23-1.png" title="Exercise 23" /></p>
+<p>Let&#8217;s run the&nbsp;server:</p>
+<p><img alt="Exercise 23" src="/images/ex23-2.png" title="Exercise 23" /></p>
+<p>I went through the labor of <a href="http://tarbell.readthedocs.org/en/0.9-beta7/install.html#configure-google-spreadsheet-access-optional">using the Google Console <span class="caps">API</span> to allow spreadsheet access</a> (switching between the <a href="http://tarbell.readthedocs.org/en/0.9-beta6/tutorial.html">beta6</a> and <a href="http://tarbell.readthedocs.org/en/0.9-beta7/tutorial.html">beta7</a> versions of the docs due to broken images), but couldn&#8217;t get a spreadsheet working. The docs say to edit the spreadsheet you just made&#8230;but I don&#8217;t think I ever made one. I don&#8217;t know if I missed a step, but I couldn&#8217;t figure it&nbsp;out.</p>
+<p>I will probably prefer <a href="http://getpelican.com/">Pelican</a> (which made this blog) or <a href="http://cactusformac.com/">Cactus</a> (whose Mac <span class="caps">GUI</span> went free this week) before Tarbell, but it&#8217;s good to know choices exist, and I can see this being a choice for newsrooms that rely on Google Spreadsheets as a <span class="caps">GUI</span>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-22.html" rel="bookmark"
+                           title="Permalink to Exercise 22">Exercise&nbsp;22</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-11-28T20:20:00-06:00">
                 Published: Fri 28 November 2014
@@ -45,118 +86,14 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p><a href="http://learnpythonthehardway.org/book/ex22.html">Exercise 22</a> is kind of strange. There isn&#8217;t any code to write; it&#8217;s just reviewing all the types, methods, variables, functions, and other code we&#8217;ve learned so far. Here&nbsp;goes.</p>
+</footer><!-- /.post-info -->                <p><a href="http://learnpythonthehardway.org/book/ex22.html">Exercise 22</a> is kind of strange. There isn&#8217;t any code to write; it&#8217;s just reviewing all the types, methods, variables, functions, and other code we&#8217;ve learned so far. Here&nbsp;goes.</p>
 <ul>
 <li>
 <p><a href="https://docs.python.org/2/reference/lexical_analysis.html#comments">comments</a></p>
-<p>Comments allow you to describe your code without it being executed. They should usually be fewer than 80 characters and each line is preceded by an octothorpe (<code>#</code>).</p>
-</li>
-<li>
-<p><a href="https://www.python.org/dev/peps/pep-0257/#one-line-docstrings">docstrings</a></p>
-<p>Docstrings are comments that more thoroughly describe the code around it, usually inside a class or method, and preceded and succeded by three double quotation marks (<code>"""</code>).</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/lexical_analysis.html#delimiters">variables</a></p>
-<p>Variables are places in memory in which values are saved. They can be referred in several places in code, and can be overwritten. A concept this fundamental was surprisingly hard to find in the docs, and I&#8217;m not sure this was the correct&nbsp;link.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/compound_stmts.html#function">functions</a></p>
-<p>An executable statement that can use parameters to act on variables and can return a result of maniuplating the&nbsp;parameters.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literals">strings</a></p>
-<p>A sequence of characters, often interpreted&nbsp;literally.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/lexical_analysis.html#string-literals">escape&nbsp;sequences</a></p>
-<p>Special characters in strings that require escaping to be displayed, usually by a&nbsp;backslash.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/lexical_analysis.html#numeric-literals">numbers</a></p>
-<p>A sequence of numerals, often integers, but possibly floats or&nbsp;decimals.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file-objects">files</a></p>
-<p>A file loaded into memory as an&nbsp;object.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/expressions.html#binary-arithmetic-operations"><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></a></p>
-<p>Binary arithmetic operators; performs addition, subtraction, multiplication, and division. The last is &#8220;modulo,&#8221; which returns the integer remainder after division of two&nbsp;numbers.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#comparisons"><code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code></a></p>
-<p>Comparison operators; greater than, less than, greater than or equal to, and less than or equal&nbsp;to.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#string-formatting"><code>%s</code>, <code>%d</code>, <code>%r</code></a></p>
-<p>Special escape sequences used to format strings, digits, and raw interpretation into other strings, often sequentially after the termination of a string and a modulo&nbsp;symbol.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/functions.html#print"><code>print</code></a></p>
-<p>Displays text, usually strings, to the&nbsp;console.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#modules"><code>import</code></a></p>
-<p>Finds and loads an external Python module for use in the&nbsp;code.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/sys.html#sys.argv"><code>argv</code></a></p>
-<p>Variable arguments; allows arguments to be passed to a file when run from the&nbsp;console.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/functions.html#raw_input"><code>raw_input</code></a></p>
-<p>A way of prompting the user for input from the&nbsp;console.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/functions.html#len"><code>len</code></a></p>
-<p>A method that returns the number of characters of a string or other object&#8217;s&nbsp;length.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a></p>
-<p>A method that opens a file on&nbsp;disk.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.seek"><code>file.seek</code></a></p>
-<p>A method on file objects that places the cursor after a specified&nbsp;byte.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.read"><code>file.read</code></a></p>
-<p>A method on file objects that copies the contents of a file into&nbsp;memory.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.readline"><code>file.readline</code></a></p>
-<p>A method on file objects that copies the contents of a single line of a file into&nbsp;memory.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.write"><code>file.write</code></a></p>
-<p>A method on file objects that overwrites the contents of a&nbsp;file.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#file.close"><code>file.close</code></a></p>
-<p>A method on file objects that close the file out of&nbsp;memory.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/os.path.html#os.path.exists"><code>os.path.exists</code></a></p>
-<p>A method from the operating system module that checks for the existence of a file&#8217;s&nbsp;path.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/glossary.html#term-parameter"><code>*args</code></a></p>
-<p>A convention for passing several variables into one argument of a&nbsp;function.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/reference/simple_stmts.html#return"><code>return</code></a></p>
-<p>A reserved word in a function that stops the function from further execution, possibly sending a value back to where the function was first&nbsp;called.</p>
-</li>
-<li>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#boolean-values"><code>True</code>, <code>False</code></a></p>
-<p>Possible values of boolean&nbsp;objects</p>
-</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>Comments allow you to describe your code without it being executed. They should usually be fewer ...</p></li></ul>
+                <a class="readmore" href="/exercise-22.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
