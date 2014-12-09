@@ -1,43 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rich learns Python the hard way</title>
-    <link rel="stylesheet" href="/theme/css/main.css">
+        <meta charset="utf-8" />
+        <title>Rich learns Python the hard way</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
-
-
-    <!--[if IE]>
-        <script src="/theme/js/html5.js"></script>
-    <![endif]-->
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
 
 <body id="index" class="home">
-
-    <header id="banner" class="body">
-        <p><a href="/">Rich learns Python the hard way</a></p>
-        <p></p>
-        <nav>
-            <ul>
-
-
-
-                    <li class="active"><a href="/category/misc.html">misc</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <main>
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+                <nav><ul>
+                    <li><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-23.html">Exercise&nbsp;23</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-24.html">Exercise&nbsp;24</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2014-11-30T12:38:00-06:00">
-                Published: Sun 30 November 2014
+        <abbr class="published" title="2014-12-08T18:08:00-06:00">
+                Published: Mon 08 December 2014
         </abbr>
 
         <address class="vcard author">
@@ -45,29 +31,79 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Work was really tough this week, so I didn&#8217;t have time for exercises at home. I&#8217;m also trying to get a work project done this weekend, and then after that I hope I can stop taking work home with me. It&#8217;s&nbsp;exhausting.</p>
-<p>Picking up where we last left off, <a href="http://learnpythonthehardway.org/book/ex23.html">Exercise 23</a> also has no code. Instead our mission is&nbsp;to:</p>
-<ol>
-<li>Find Python source code for things you&nbsp;need.</li>
-<li>Read through the code and looking for&nbsp;files.</li>
-<li>Try to understand code you&nbsp;find.</li>
-</ol>
-<p>Nice! There have been a lot of interesting projects I want to get into but haven&#8217;t found the time to get into them. I&#8217;ve always been curious about the technology the <a href="http://blog.apps.chicagotribune.com/">Chicago Tribune News Applications Team</a> uses. I&#8217;ve worked with them on design projects, but have been very shy and reluctant to talk about code. Now I get an excuse to examine one of their&nbsp;projects.</p>
-<p>Let&#8217;s look at <a href="http://tarbell.tribapps.com/">Tarbell</a>:</p>
-<blockquote>
-<p>Tarbell is a lightweight web publishing platform. Tarbell makes it quick and easy to start projects based on common templates. Tarbell optionally allows project data to be managed with Google Spreadsheets and easy project publishing with Amazon&nbsp;S3.</p>
-</blockquote>
-<p>It was a little hard <a href="https://github.com/tarbell-project/tarbell">following the code</a>, so I installed it and tried getting a basic page going. It&#8217;s a <a href="http://flask.pocoo.org/">Flask-based</a>, static webpage generator, which I can see being useful in a newsroom. I got through the <a href="http://tarbell.readthedocs.org/en/0.9-beta7/tutorial.html">tutorial</a> just far enough to get a blog going for our the universe&#8217;s favorite savior of the human race, <a href="http://interstellarfilm.wikia.com/wiki/Murphy_Cooper">Murphy Cooper</a>.</p>
-<p><img alt="Exercise 23" src="/images/ex23-1.png" title="Exercise 23" /></p>
-<p>Let&#8217;s run the&nbsp;server:</p>
-<p><img alt="Exercise 23" src="/images/ex23-2.png" title="Exercise 23" /></p>
-<p>I went through the labor of <a href="http://tarbell.readthedocs.org/en/0.9-beta7/install.html#configure-google-spreadsheet-access-optional">using the Google Console <span class="caps">API</span> to allow spreadsheet access</a> (switching between the <a href="http://tarbell.readthedocs.org/en/0.9-beta6/tutorial.html">beta6</a> and <a href="http://tarbell.readthedocs.org/en/0.9-beta7/tutorial.html">beta7</a> versions of the docs due to broken images), but couldn&#8217;t get a spreadsheet working. The docs say to edit the spreadsheet you just made&#8230;but I don&#8217;t think I ever made one. I don&#8217;t know if I missed a step, but I couldn&#8217;t figure it&nbsp;out.</p>
-<p>I will probably prefer <a href="http://getpelican.com/">Pelican</a> (which made this blog) or <a href="http://cactusformac.com/">Cactus</a> (whose Mac <span class="caps">GUI</span> went free this week) before Tarbell, but it&#8217;s good to know choices exist, and I can see this being a choice for newsrooms that rely on Google Spreadsheets as a <span class="caps">GUI</span>.</p>                </article>
+</footer><!-- /.post-info --><p>I tried to fit in an exercise this weekend but couldn&#8217;t quite get there, but tonight I just finished <a href="http://learnpythonthehardway.org/book/ex24.html">Exercise 24</a>. This one was fairly similar to exercises <a href="http://learnpythonthehardway.org/book/ex19.html">19</a> and <a href="http://learnpythonthehardway.org/book/ex21.html">21</a>, where you run a script with fairly diverse things happening, like variables, functions, printing, arguments, parameters, string formatting,&nbsp;etc.</p>
+<div class="highlight"><pre><span class="cp"># Exercise 24</span>
+<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex24.html</span>
+
+<span class="n">print</span> <span class="s">&quot;Let&#39;s practice everything.&quot;</span>
+<span class="n">print</span> <span class="err">&#39;</span><span class="n">You</span><span class="err">\&#39;</span><span class="n">d</span> <span class="n">need</span> <span class="n">to</span> <span class="n">know</span> <span class="err">\&#39;</span><span class="n">bout</span> <span class="n">escapes</span> <span class="n">with</span> <span class="err">\\</span> <span class="n">that</span> <span class="k">do</span> <span class="err">\</span><span class="n">n</span> <span class="n">newlines</span> <span class="n">and</span> <span class="err">\</span><span class="n">t</span> <span class="n">tabs</span><span class="p">.</span><span class="err">&#39;</span>
+
+<span class="n">poem</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="err">\</span><span class="n">tThe</span> <span class="n">lovely</span> <span class="n">world</span>
+<span class="n">with</span> <span class="n">logic</span> <span class="n">so</span> <span class="n">firmly</span> <span class="n">planted</span>
+<span class="n">cannot</span> <span class="n">discern</span> <span class="err">\</span><span class="n">n</span> <span class="n">the</span> <span class="n">needs</span> <span class="n">of</span> <span class="n">love</span>
+<span class="n">nor</span> <span class="n">comprehend</span> <span class="n">passion</span> <span class="n">from</span> <span class="n">intuition</span>
+<span class="n">and</span> <span class="n">requires</span> <span class="n">an</span> <span class="n">explanation</span>
+<span class="err">\</span><span class="n">n</span><span class="err">\</span><span class="n">twhere</span> <span class="n">there</span> <span class="n">is</span> <span class="n">none</span><span class="p">.</span>
+<span class="s">&quot;&quot;&quot;</span>
+
+<span class="n">print</span> <span class="s">&quot;--------------&quot;</span>
+<span class="n">print</span> <span class="n">poem</span>
+<span class="n">print</span> <span class="s">&quot;--------------&quot;</span>
+
+
+<span class="n">five</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span>
+<span class="n">print</span> <span class="s">&quot;This should be five: %s&quot;</span> <span class="o">%</span> <span class="n">five</span>
+
+<span class="n">def</span> <span class="n">secret_formula</span><span class="p">(</span><span class="n">started</span><span class="p">)</span><span class="o">:</span>
+    <span class="n">jelly_beans</span> <span class="o">=</span> <span class="n">started</span> <span class="o">*</span> <span class="mi">500</span>
+    <span class="n">jars</span> <span class="o">=</span> <span class="n">jelly_beans</span> <span class="o">/</span> <span class="mi">1000</span>
+    <span class="n">crates</span> <span class="o">=</span> <span class="n">jars</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">jelly_beans</span><span class="p">,</span> <span class="n">jars</span><span class="p">,</span> <span class="n">crates</span>
+
+
+<span class="n">start_point</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">beans</span><span class="p">,</span> <span class="n">jars</span><span class="p">,</span> <span class="n">crates</span> <span class="o">=</span> <span class="n">secret_formula</span><span class="p">(</span><span class="n">start_point</span><span class="p">)</span>
+
+<span class="n">print</span> <span class="s">&quot;With a starting point of: %d&quot;</span> <span class="o">%</span> <span class="n">start_point</span>
+<span class="n">print</span> <span class="s">&quot;We&#39;d have %d beans, %d jars, and %d crates.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">beans</span><span class="p">,</span> <span class="n">jars</span><span class="p">,</span> <span class="n">crates</span><span class="p">)</span>
+
+<span class="n">start_point</span> <span class="o">=</span> <span class="n">start_point</span> <span class="o">/</span> <span class="mi">10</span>
+
+<span class="n">print</span> <span class="s">&quot;We can also do that this way:&quot;</span>
+<span class="n">print</span> <span class="s">&quot;We&#39;d have %d beans, %d jars, and %d crates.&quot;</span> <span class="o">%</span> <span class="n">secret_formula</span><span class="p">(</span><span class="n">start_point</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 24" src="/images/ex24.png" title="Exercise 24" /></p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
                     <hr />
                     <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-23.html" rel="bookmark"
+                           title="Permalink to Exercise 23">Exercise&nbsp;23</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-05T12:38:00-06:00">
+                Published: Fri 05 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->                <p>Work was really tough this week, so I didn&#8217;t have time for exercises at home. I&#8217;m also trying to get a work project done this weekend, and then after that I hope I can stop taking work home with me. It&#8217;s&nbsp;exhausting.</p>
+<p>Picking up where we last ...</p>
+                <a class="readmore" href="/exercise-23.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -723,32 +759,32 @@
             </article></li>
                 </ol><!-- /#posts-list -->
                 </section><!-- /#content -->
-    
-    </main>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
 
-    <section id="extras" class="body">
-        <div class="blogroll">
-            <h2>blogroll</h2>
-            <ul>
-                <li><a href="http://python.org/">Python</a></li>
-                <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
-                <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
-            </ul>
-        </div><!-- /.blogroll -->
-        <div class="social">
-            <h2>social</h2>
-            <ul>
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-                <li><a href="#">You can add links in your config file</a></li>
-                <li><a href="#">Another social link</a></li>
-            </ul>
-        </div><!-- /.social -->
-    </section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-    <footer>
-        <p>&copy;</p>
-    </footer>
-
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
 </body>
 </html>
