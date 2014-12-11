@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 25</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-25.html" rel="bookmark"
+           title="Permalink to Exercise 25">Exercise&nbsp;25</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-10T18:06:00-06:00">
+                Published: Wed 10 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex25.html">Exercise 25</a>, and we&#8217;re onto running our scripts from the&nbsp;console.</p>
+<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">25</span>
+<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex25.html</span>
+
+<span class="nx">def</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">stuff</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;</span>
+    <span class="nx">words</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">words</span>
+
+<span class="nx">def</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nx">sorted</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Prints the first word after popping it off.&quot;&quot;&quot;</span>
+    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="nx">print</span> <span class="nx">word</span>
+
+<span class="nx">def</span> <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Prints the last word after popping it off.&quot;&quot;&quot;</span>
+    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nx">print</span> <span class="nx">word</span>
+
+<span class="nx">def</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Takes in a full sentence and returns the sorted words.&quot;&quot;&quot;</span>
+    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">print_first_and_last</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Prints the first and last words of the sentence.&quot;&quot;&quot;</span>
+    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
+    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+
+<span class="nx">def</span> <span class="nx">print_first_and_last_sorted</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Sorts the words then prints the first and last one.&quot;&quot;&quot;</span>
+    <span class="nx">words</span> <span class="o">=</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
+    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="Exercise 25" src="/images/ex25.png" title="Exercise 25" /></p>
+<p>The methods we&nbsp;used:</p>
+<ul>
+<li>
+<p><a href="https://docs.python.org/2/library/stdtypes.html#str.split"><code>split</code></a></p>
+<p>Separates a string with a separator and returns a list. In this case, we&#8217;re separating words when a space is&nbsp;found.</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/library/functions.html#sorted"><code>sorted</code></a></p>
+<p>Sorts items in an <a href="https://docs.python.org/2/glossary.html#term-iterable">interable</a></p>
+</li>
+<li>
+<p><a href="https://docs.python.org/2/library/stdtypes.html#set.pop"><code>pop</code></a></p>
+<p>Removes and returns the indexed item out of a list. A negative index means start from the&nbsp;right.</p>
+</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="http://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/lpthw">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
