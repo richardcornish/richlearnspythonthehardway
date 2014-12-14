@@ -13,14 +13,104 @@
 <body id="index" class="home">
         <header id="banner" class="body">
                 <h1><a href="/">Rich learns Python the hard way </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/misc.html">misc</a></li>
-                </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-26.html">Exercise&nbsp;26</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-27.html">Exercise&nbsp;27</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-12-14T13:06:00-06:00">
+                Published: Sun 14 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>I have now officially passed the halfway point of this programmatic thrill ride. I can barely&#8230;<em>function</em>.</p>
+<p>Today&#8217;s exercise is to memorize logic, specifically <a href="https://en.wikipedia.org/wiki/Truth_table">truth tables</a>. Ah, truth tables. I remember you from <a href="https://courses.illinois.edu/schedule/2015/spring/PHIL/102">Philosophy 102, Logic and Reasoning</a> when I was a student at the <a href="http://illinois.edu/">University of Illinois</a>. I also remember the &#8220;C&#8221; I got. Sweet, (bitter)sweet&nbsp;memories.</p>
+<p>To better memorize how <a href="https://docs.python.org/2/library/stdtypes.html#truth-value-testing">truth value testing</a> works, <a href="http://learnpythonthehardway.org/book/ex27.html">exercise 27</a> said to practice with a series of flash cards while I wait for my ex Jessica to call&nbsp;back. </p>
+<p>There&#8217;s one problem, though. And it&#8217;s not that Jessica hasn&#8217;t texted me back after I documented the ups and downs of our relationship in a novel-length emoji&nbsp;sequence.</p>
+<p>The problem is that I&#8217;m really lazy. Come on, I ain&#8217;t gonna make those flash cards. So, I wrote a program to quiz me, grade me, and judge&nbsp;me.</p>
+<p>And here it&nbsp;is:</p>
+<div class="highlight"><pre><span class="err">#</span> <span class="nt">Exercise</span> <span class="nt">27</span>
+<span class="err">#</span> <span class="nt">http</span><span class="o">://</span><span class="nt">learnpythonthehardway</span><span class="nc">.org</span><span class="o">/</span><span class="nt">book</span><span class="o">/</span><span class="nt">ex27</span><span class="nc">.html</span>
+
+<span class="nt">import</span> <span class="nt">random</span>
+
+<span class="nt">print</span> <span class="s2">&quot;Truth Table quiz!&quot;</span>
+<span class="nt">print</span> <span class="s2">&quot;Answer t for True and f for False&quot;</span>
+<span class="nt">print</span> <span class="s2">&quot;Press any key to begin&quot;</span>
+
+<span class="nt">raw_input</span><span class="o">()</span>
+
+<span class="nt">questions</span> <span class="o">=</span> <span class="cp">[</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;True or False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;True or True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;False or True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;False or False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;True and False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;True and True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;False and True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;False and False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (True or False)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (True or True)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (False or True)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (False or False)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (True and False)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (True and True)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (False and True)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not (False and False)&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;1 != 0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;1 != 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 != 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 != 0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;1 == 0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;1 == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 == 0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
+<span class="cp">]</span>
+
+<span class="nt">random</span><span class="nc">.shuffle</span><span class="o">(</span><span class="nt">questions</span><span class="o">)</span>
+<span class="nt">answers</span> <span class="o">=</span> <span class="cp">[]</span>
+
+<span class="nt">for</span> <span class="nt">q</span> <span class="nt">in</span> <span class="nt">questions</span><span class="o">:</span>
+    <span class="nt">a</span> <span class="o">=</span> <span class="nt">raw_input</span><span class="o">(</span><span class="nt">q</span><span class="cp">[</span><span class="s1">&#39;q&#39;</span><span class="cp">]</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="o">)</span>
+    <span class="nt">if</span> <span class="nt">a</span> <span class="o">==</span> <span class="nt">q</span><span class="cp">[</span><span class="s1">&#39;a&#39;</span><span class="cp">]</span><span class="o">:</span>
+        <span class="nt">print</span> <span class="s2">&quot;Correct!&quot;</span>
+        <span class="nt">answers</span><span class="nc">.append</span><span class="o">(</span><span class="nt">True</span><span class="o">)</span>
+    <span class="nt">else</span><span class="o">:</span>
+        <span class="nt">print</span> <span class="s2">&quot;Incorrect&quot;</span>
+        <span class="nt">answers</span><span class="nc">.append</span><span class="o">(</span><span class="nt">False</span><span class="o">)</span>
+
+<span class="nt">score</span> <span class="o">=</span> <span class="nt">float</span><span class="o">(</span><span class="nt">answers</span><span class="nc">.count</span><span class="o">(</span><span class="nt">True</span><span class="o">))</span> <span class="o">/</span> <span class="nt">len</span><span class="o">(</span><span class="nt">answers</span><span class="o">)</span> <span class="o">*</span> <span class="nt">100</span>
+
+<span class="nt">print</span> <span class="s2">&quot;You scored: %d%%&quot;</span> <span class="o">%</span> <span class="nt">score</span>
+</pre></div>
+
+
+<p>You run it just like any other script: <code>python ex27.py</code>.</p>
+<p><img alt="Exercise 27" src="/images/ex27.png" title="Exercise 27" /></p>
+<p>And how did I do? <span class="caps">OK</span>, so&nbsp;84%.</p>
+<p>I was going&nbsp;fast.</p>
+<p>In between emojis to&nbsp;Jessica.</p>
+<p>I am under no false impression that she&#8217;ll <img alt="Couple with heart" src="/images/1f491.png" title="Couple with heart" /> <img alt="Face with no good gesture" src="/images/1f645.png" title="Face with no good gesture" /> <img alt="Recreational vehicle" src="/images/1f699.png" title="Recreational vehicle" /> <img alt="Neutral face" src="/images/1f610.png" title="Neutral face" /> <img alt="Expressionless face" src="/images/1f611.png" title="Expressionless face" /> <img alt="Hamburger" src="/images/1f354.png" title="Hamburger" /> me back soon enough. And that&#8217;s the&nbsp;truth.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-26.html" rel="bookmark"
+                           title="Permalink to Exercise 26">Exercise&nbsp;26</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-12-11T17:43:00-06:00">
                 Published: Thu 11 December 2014
@@ -31,121 +121,13 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>I am almost done with the first half of the book! It&#8217;s <a href="http://learnpythonthehardway.org/book/ex26.html">Exercise 26</a> for today and I get to fix bad code!&nbsp;Nice!</p>
+</footer><!-- /.post-info -->                <p>I am almost done with the first half of the book! It&#8217;s <a href="http://learnpythonthehardway.org/book/ex26.html">Exercise 26</a> for today and I get to fix bad code!&nbsp;Nice!</p>
 <p>A wise&nbsp;warning:</p>
 <blockquote>
-<p>Before you continue, I have a quiz for you. This quiz will be very hard because it requires you to fix someone else&#8217;s code. When you are a programmer you often have to deal with other programmers&#8217; code, and also with their arrogance. Programmers will very frequently claim that their code is&nbsp;perfect.</p>
-<p>These programmers are stupid people who care little for others. A good programmer assumes, like a good scientist, that there&#8217;s always some probability their code is wrong. Good programmers start from the premise that their software is broken and then work to rule out all possible ways it could be wrong before finally admitting that maybe it really is the other guy&#8217;s&nbsp;code.</p>
-</blockquote>
-<p>Amen. A million&nbsp;amens.</p>
-<p>What I came up&nbsp;with:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">26</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex26.html</span>
-
-<span class="nx">def</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">stuff</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">words</span>
-
-<span class="nx">def</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nx">sorted</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-
-<span class="nx">def</span> <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the first word after popping it off.&quot;&quot;&quot;</span>
-    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="nx">print</span> <span class="nx">word</span>
-
-<span class="nx">def</span> <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the last word after popping it off.&quot;&quot;&quot;</span>
-    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nx">print</span> <span class="nx">word</span>
-
-<span class="nx">def</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Takes in a full sentence and returns the sorted words.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-
-<span class="nx">def</span> <span class="nx">print_first_and_last</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the first and last words of the sentence.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-
-<span class="nx">def</span> <span class="nx">print_first_and_last_sorted</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words then prints the first and last one.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-
-
-<span class="nx">print</span> <span class="s2">&quot;Let&#39;s practice everything.&quot;</span>
-<span class="nx">print</span> <span class="s1">&#39;You\&#39;d need to know \&#39;bout escapes with \\ that do \n newlines and \t tabs.&#39;</span>
-
-<span class="nx">poem</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">\tThe lovely world</span>
-<span class="s2">with logic so firmly planted</span>
-<span class="s2">cannot discern \n the needs of love</span>
-<span class="s2">nor comprehend passion from intuition</span>
-<span class="s2">and requires an explanation</span>
-<span class="s2">\n\t\twhere there is none.</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-
-<span class="nx">print</span> <span class="s2">&quot;--------------&quot;</span>
-<span class="nx">print</span> <span class="nx">poem</span>
-<span class="nx">print</span> <span class="s2">&quot;--------------&quot;</span>
-
-<span class="nx">five</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span>
-<span class="nx">print</span> <span class="s2">&quot;This should be five: %s&quot;</span> <span class="o">%</span> <span class="nx">five</span>
-
-<span class="nx">def</span> <span class="nx">secret_formula</span><span class="p">(</span><span class="nx">started</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">jelly_beans</span> <span class="o">=</span> <span class="nx">started</span> <span class="o">*</span> <span class="mi">500</span>
-    <span class="nx">jars</span> <span class="o">=</span> <span class="nx">jelly_beans</span> <span class="o">/</span> <span class="mi">1000</span>
-    <span class="nx">crates</span> <span class="o">=</span> <span class="nx">jars</span> <span class="o">/</span> <span class="mi">100</span>
-    <span class="k">return</span> <span class="nx">jelly_beans</span><span class="p">,</span> <span class="nx">jars</span><span class="p">,</span> <span class="nx">crates</span>
-
-
-<span class="nx">start_point</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="nx">beans</span><span class="p">,</span> <span class="nx">jars</span><span class="p">,</span> <span class="nx">crates</span> <span class="o">=</span> <span class="nx">secret_formula</span><span class="p">(</span><span class="nx">start_point</span><span class="p">)</span>
-
-<span class="nx">print</span> <span class="s2">&quot;With a starting point of: %d&quot;</span> <span class="o">%</span> <span class="nx">start_point</span>
-<span class="nx">print</span> <span class="s2">&quot;We&#39;d have %d beans, %d jars, and %d crates.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">beans</span><span class="p">,</span> <span class="nx">jars</span><span class="p">,</span> <span class="nx">crates</span><span class="p">)</span>
-
-<span class="nx">start_point</span> <span class="o">=</span> <span class="nx">start_point</span> <span class="o">/</span> <span class="mi">10</span>
-
-<span class="nx">print</span> <span class="s2">&quot;We can also do that this way:&quot;</span>
-<span class="nx">print</span> <span class="s2">&quot;We&#39;d have %d beans, %d jars, and %d crabapples.&quot;</span> <span class="o">%</span> <span class="nx">secret_formula</span><span class="p">(</span><span class="nx">start_point</span><span class="p">)</span>
-
-
-<span class="nx">sentence</span> <span class="o">=</span> <span class="s2">&quot;All good\tthings come to those who wait.&quot;</span>
-
-<span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-<span class="nx">sorted_words</span> <span class="o">=</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-
-<span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-<span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-<span class="nx">print_first_word</span><span class="p">(</span><span class="nx">sorted_words</span><span class="p">)</span>
-<span class="nx">print_last_word</span><span class="p">(</span><span class="nx">sorted_words</span><span class="p">)</span>
-<span class="nx">sorted_words</span> <span class="o">=</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-<span class="nx">print</span> <span class="nx">sorted_words</span>
-
-<span class="nx">print_first_and_last</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-
-<span class="nx">print_first_and_last_sorted</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-</pre></div>
-
-
-<p>Let&#8217;s run&nbsp;it:</p>
-<p><img alt="Exercise 26" src="/images/ex26.png" title="Exercise 26" /></p>
-<p>I <em>think</em> that&#8217;s correct. It&#8217;s hard to know without seeing the answer. Lots of syntax errors, misspellings of function names, and even misspellings of words in strings. Spelling nerds of the world,&nbsp;unite.</p>
-<p>It&#8217;s a little more interesting (and useful) to see the diff between the two files. Fortunately, because I&#8217;ve been using <a href="https://github.com/richardcornish/lpthw">GitHub</a> to save my work on this blog, I can show the difference. Check it out: the <a href="https://github.com/richardcornish/lpthw/blob/13fdf52eedbc0dbdc2eb2c0b656a4b2fa1e74bd5/exercises/ex26.py">before file</a> and the <a href="https://github.com/richardcornish/lpthw/blob/master/exercises/ex26.py">after file</a>. And now for the <a href="https://github.com/richardcornish/lpthw/commit/7c95e54462a2309931fdfb7cb6afb595f9569efe?diff=split">pretty diff view</a>.</p>
-<p>The introduction to this lesson left a big impression on me. No matter where you go, no matter what you do, remember this: There will be  people who think that their code is perfect. They will be offended. They will tell you they are offended. They will take it out on you. Don&#8217;t let them bring you down. Your job is to make sure things work, and you have to power through and do whatever it takes to make that&nbsp;happen.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>Before you continue, I have a quiz for you. This quiz will be very hard because it requires you to fix someone ...</p></blockquote>
+                <a class="readmore" href="/exercise-26.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
