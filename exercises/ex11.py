@@ -1,5 +1,5 @@
 # Exercise 11
-# http://learnpythonthehardway.org/book/ex11.html
+# https://learnpythonthehardway.org/book/ex11.html
 
 print "How old are you?",
 age = raw_input()

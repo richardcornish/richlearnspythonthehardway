@@ -1,5 +1,5 @@
 # Exercise 18
-# http://learnpythonthehardway.org/book/ex18.html
+# https://learnpythonthehardway.org/book/ex18.html
 
 # this one is like your scripts with argv
 def print_two(*args):

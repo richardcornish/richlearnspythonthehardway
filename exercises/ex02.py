@@ -1,5 +1,5 @@
 # Exercise 2
-# http://learnpythonthehardway.org/book/ex2.html
+# https://learnpythonthehardway.org/book/ex2.html
 
 # A comment, this is so you can read your program later.
 # Anything after the # is ignored by python.

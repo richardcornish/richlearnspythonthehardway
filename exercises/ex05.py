@@ -1,5 +1,5 @@
 # Exercise 5
-# http://learnpythonthehardway.org/book/ex5.html
+# https://learnpythonthehardway.org/book/ex5.html
 
 name = 'Zed A. Shaw'
 age = 35 # not a lie

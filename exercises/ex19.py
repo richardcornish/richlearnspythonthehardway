@@ -1,5 +1,5 @@
 # Exercise 19
-# http://learnpythonthehardway.org/book/ex19.html
+# https://learnpythonthehardway.org/book/ex19.html
 
 # define a function with two parameters
 def cheese_and_crackers(cheese_count, boxes_of_crackers):

@@ -1,5 +1,5 @@
 # Exercise 1
-# http://learnpythonthehardway.org/book/ex1.html
+# https://learnpythonthehardway.org/book/ex1.html
 
 print "Hello World!"
 print "Hello Again"

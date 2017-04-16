@@ -1,5 +1,5 @@
 # Exercise 25
-# http://learnpythonthehardway.org/book/ex25.html
+# https://learnpythonthehardway.org/book/ex25.html
 
 def break_words(stuff):
 	"""This function will break up words for us."""

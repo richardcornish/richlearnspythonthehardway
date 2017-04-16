@@ -1,5 +1,5 @@
 # Exercise 4
-# http://learnpythonthehardway.org/book/ex4.html
+# https://learnpythonthehardway.org/book/ex4.html
 
 # Number of total cars
 cars = 100

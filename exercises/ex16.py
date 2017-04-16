@@ -1,5 +1,5 @@
 # Exercise 16
-# http://learnpythonthehardway.org/book/ex16.html
+# https://learnpythonthehardway.org/book/ex16.html
 
 from sys import argv
 

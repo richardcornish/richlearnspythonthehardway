@@ -1,5 +1,5 @@
 # Exercise 6
-# http://learnpythonthehardway.org/book/ex6.html
+# https://learnpythonthehardway.org/book/ex6.html
 
 # Assign values to cryptic variables
 x = "There are %d types of people." % 10

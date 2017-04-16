@@ -1,2 +1,2 @@
 # Exercise 0
-# http://learnpythonthehardway.org/book/ex0.html
+# https://learnpythonthehardway.org/book/ex0.html

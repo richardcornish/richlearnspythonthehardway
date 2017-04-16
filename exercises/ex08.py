@@ -1,5 +1,5 @@
 # Exercise 8
-# http://learnpythonthehardway.org/book/ex8.html
+# https://learnpythonthehardway.org/book/ex8.html
 
 formatter = "%r %r %r %r"
 

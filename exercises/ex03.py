@@ -1,5 +1,5 @@
 # Exercise 3
-# http://learnpythonthehardway.org/book/ex3.html
+# https://learnpythonthehardway.org/book/ex3.html
 
 # Announce the counting of the chickens
 print "I will now count my chickens:"

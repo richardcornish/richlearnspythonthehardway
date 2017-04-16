@@ -1,5 +1,5 @@
 # Exercise 20
-# http://learnpythonthehardway.org/book/ex20.html
+# https://learnpythonthehardway.org/book/ex20.html
 
 # import the argv function from the sys module
 from sys import argv

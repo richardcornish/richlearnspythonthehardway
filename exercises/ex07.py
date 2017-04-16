@@ -1,5 +1,5 @@
 # Exercise 7
-# http://learnpythonthehardway.org/book/ex7.html
+# https://learnpythonthehardway.org/book/ex7.html
 
 # Print first line of "Mary Had a Little Lamb" nursery rhyme
 print "Mary had a little lamb."

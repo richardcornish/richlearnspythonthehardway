@@ -1,5 +1,5 @@
 # Exercise 27
-# http://learnpythonthehardway.org/book/ex27.html
+# https://learnpythonthehardway.org/book/ex27.html
 
 import random
 

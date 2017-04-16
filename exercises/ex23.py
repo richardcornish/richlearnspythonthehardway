@@ -1,2 +1,2 @@
 # Exercise 23
-# http://learnpythonthehardway.org/book/ex23.html
+# https://learnpythonthehardway.org/book/ex23.html

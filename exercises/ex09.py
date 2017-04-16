@@ -1,5 +1,5 @@
 # Exercise 9
-# http://learnpythonthehardway.org/book/ex9.html
+# https://learnpythonthehardway.org/book/ex9.html
 
 # Here's some new strange stuff, remember type it exactly.
 

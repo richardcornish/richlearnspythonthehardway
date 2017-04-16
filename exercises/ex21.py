@@ -1,5 +1,5 @@
 # Exercise 21
-# http://learnpythonthehardway.org/book/ex21.html
+# https://learnpythonthehardway.org/book/ex21.html
 
 def add(a, b):
     print "ADDING %d + %d" % (a, b)
