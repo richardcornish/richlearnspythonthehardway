@@ -34,18 +34,18 @@
 <p>There&#8217;s one problem, though. And it&#8217;s not that Jessica hasn&#8217;t texted me back after I documented the ups and downs of our relationship in a novel-length emoji&nbsp;sequence.</p>
 <p>The problem is that I&#8217;m really lazy. Come on, I ain&#8217;t gonna make those flash cards. So, I wrote a program to quiz me, grade me, and judge&nbsp;me.</p>
 <p>And here it&nbsp;is:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">Exercise</span> <span class="nt">27</span>
-<span class="err">#</span> <span class="nt">http</span><span class="o">://</span><span class="nt">learnpythonthehardway</span><span class="nc">.org</span><span class="o">/</span><span class="nt">book</span><span class="o">/</span><span class="nt">ex27</span><span class="nc">.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 27</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex27.html</span>
 
-<span class="nt">import</span> <span class="nt">random</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
-<span class="nt">print</span> <span class="s2">&quot;Truth Table quiz!&quot;</span>
-<span class="nt">print</span> <span class="s2">&quot;Answer t for True and f for False&quot;</span>
-<span class="nt">print</span> <span class="s2">&quot;Press any key to begin&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Truth Table quiz!&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Answer t for True and f for False&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Press any key to begin&quot;</span>
 
-<span class="nt">raw_input</span><span class="o">()</span>
+<span class="nb">raw_input</span><span class="p">()</span>
 
-<span class="nt">questions</span> <span class="o">=</span> <span class="cp">[</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;True or False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
@@ -72,32 +72,32 @@
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;1 == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 == 0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
-<span class="cp">]</span>
+<span class="p">]</span>
 
-<span class="nt">random</span><span class="nc">.shuffle</span><span class="o">(</span><span class="nt">questions</span><span class="o">)</span>
-<span class="nt">answers</span> <span class="o">=</span> <span class="cp">[]</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
+<span class="n">answers</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nt">for</span> <span class="nt">q</span> <span class="nt">in</span> <span class="nt">questions</span><span class="o">:</span>
-    <span class="nt">a</span> <span class="o">=</span> <span class="nt">raw_input</span><span class="o">(</span><span class="nt">q</span><span class="cp">[</span><span class="s1">&#39;q&#39;</span><span class="cp">]</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="o">)</span>
-    <span class="nt">if</span> <span class="nt">a</span> <span class="o">==</span> <span class="nt">q</span><span class="cp">[</span><span class="s1">&#39;a&#39;</span><span class="cp">]</span><span class="o">:</span>
-        <span class="nt">print</span> <span class="s2">&quot;Correct!&quot;</span>
-        <span class="nt">answers</span><span class="nc">.append</span><span class="o">(</span><span class="nt">True</span><span class="o">)</span>
-    <span class="nt">else</span><span class="o">:</span>
-        <span class="nt">print</span> <span class="s2">&quot;Incorrect&quot;</span>
-        <span class="nt">answers</span><span class="nc">.append</span><span class="o">(</span><span class="nt">False</span><span class="o">)</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">q</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]:</span>
+        <span class="k">print</span> <span class="s2">&quot;Correct!&quot;</span>
+        <span class="n">answers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Incorrect&quot;</span>
+        <span class="n">answers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 
-<span class="nt">score</span> <span class="o">=</span> <span class="nt">float</span><span class="o">(</span><span class="nt">answers</span><span class="nc">.count</span><span class="o">(</span><span class="nt">True</span><span class="o">))</span> <span class="o">/</span> <span class="nt">len</span><span class="o">(</span><span class="nt">answers</span><span class="o">)</span> <span class="o">*</span> <span class="nt">100</span>
+<span class="n">score</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">answers</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="bp">True</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">answers</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 
-<span class="nt">print</span> <span class="s2">&quot;You scored: %d%%&quot;</span> <span class="o">%</span> <span class="nt">score</span>
+<span class="k">print</span> <span class="s2">&quot;You scored: </span><span class="si">%d%%</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">score</span>
 </pre></div>
 
 
 <p>You run it just like any other script: <code>python ex27.py</code>.</p>
-<p><img alt="Exercise 27" src="/images/ex27.png" title="Exercise 27" /></p>
+<p><img alt="Exercise 27" src="/images/ex27.png" title="Exercise 27"></p>
 <p>And how did I do? <span class="caps">OK</span>, so&nbsp;84%.</p>
 <p>I was going&nbsp;fast.</p>
 <p>In between emojis to&nbsp;Jessica.</p>
-<p>I am under no false impression that she&#8217;ll <img alt="Couple with heart" src="/images/1f491.png" title="Couple with heart" /> <img alt="Face with no good gesture" src="/images/1f645.png" title="Face with no good gesture" /> <img alt="Recreational vehicle" src="/images/1f699.png" title="Recreational vehicle" /> <img alt="Neutral face" src="/images/1f610.png" title="Neutral face" /> <img alt="Expressionless face" src="/images/1f611.png" title="Expressionless face" /> <img alt="Hamburger" src="/images/1f354.png" title="Hamburger" /> me back soon enough. And that&#8217;s the&nbsp;truth.</p>                </article>
+<p>I am under no false impression that she&#8217;ll <img alt="Couple with heart" src="/images/1f491.png" title="Couple with heart"> <img alt="Face with no good gesture" src="/images/1f645.png" title="Face with no good gesture"> <img alt="Recreational vehicle" src="/images/1f699.png" title="Recreational vehicle"> <img alt="Neutral face" src="/images/1f610.png" title="Neutral face"> <img alt="Expressionless face" src="/images/1f611.png" title="Expressionless face"> <img alt="Hamburger" src="/images/1f354.png" title="Hamburger"> me back soon enough. And that&#8217;s the&nbsp;truth.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -124,7 +124,7 @@
 </footer><!-- /.post-info -->                <p>I am almost done with the first half of the book! It&#8217;s <a href="http://learnpythonthehardway.org/book/ex26.html">Exercise 26</a> for today and I get to fix bad code!&nbsp;Nice!</p>
 <p>A wise&nbsp;warning:</p>
 <blockquote>
-<p>Before you continue, I have a quiz for you. This quiz will be very hard because it requires you to fix someone ...</p></blockquote>
+<p>Before you continue, I have a quiz for you. This quiz will be very hard because it requires you to fix someone …</p></blockquote>
                 <a class="readmore" href="/exercise-26.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -147,19 +147,19 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex25.html">Exercise 25</a>, and we&#8217;re onto running our scripts from the&nbsp;console.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">25</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex25.html</span>
+<div class="highlight"><pre><span></span># Exercise 25
+# http://learnpythonthehardway.org/book/ex25.html
 
-<span class="nx">def</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">stuff</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">words</span>
+def break_words(stuff):
+    &quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;
+    words = stuff.split(&#39; &#39;)
+    return words
 
-<span class="nx">def</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nx">sorted</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def sort_words(words):
+    &quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;
+    return sorted(words)
 
-<span class="nx">def</span> <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words ...</span></pre></div>
+def print_first_word(words …</pre></div>
                 <a class="readmore" href="/exercise-25.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -181,7 +181,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info -->                <p>I tried to fit in an exercise this weekend but couldn&#8217;t quite get there, but tonight I just finished <a href="http://learnpythonthehardway.org/book/ex24.html">Exercise 24</a>. This one was fairly similar to exercises <a href="http://learnpythonthehardway.org/book/ex19.html">19</a> and <a href="http://learnpythonthehardway.org/book/ex21.html">21</a>, where you run a script with fairly diverse things happening, like variables, functions, printing, arguments, parameters, string formatting ...</p>
+</footer><!-- /.post-info -->                <p>I tried to fit in an exercise this weekend but couldn&#8217;t quite get there, but tonight I just finished <a href="http://learnpythonthehardway.org/book/ex24.html">Exercise 24</a>. This one was fairly similar to exercises <a href="http://learnpythonthehardway.org/book/ex19.html">19</a> and <a href="http://learnpythonthehardway.org/book/ex21.html">21</a>, where you run a script with fairly diverse things happening, like variables, functions, printing, arguments, parameters, string formatting …</p>
                 <a class="readmore" href="/exercise-24.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -204,7 +204,7 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Work was really tough this week, so I didn&#8217;t have time for exercises at home. I&#8217;m also trying to get a work project done this weekend, and then after that I hope I can stop taking work home with me. It&#8217;s&nbsp;exhausting.</p>
-<p>Picking up where we last ...</p>
+<p>Picking up where we last …</p>
                 <a class="readmore" href="/exercise-23.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -230,7 +230,7 @@
 <ul>
 <li>
 <p><a href="https://docs.python.org/2/reference/lexical_analysis.html#comments">comments</a></p>
-<p>Comments allow you to describe your code without it being executed. They should usually be fewer ...</p></li></ul>
+<p>Comments allow you to describe your code without it being executed. They should usually be fewer …</p></li></ul>
                 <a class="readmore" href="/exercise-22.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -254,8 +254,8 @@
 
 </footer><!-- /.post-info -->                <p>Happy Thanksgiving! You thought I wouldn&#8217;t do an exercise tonight because of the holiday? Why, writing computer code on Thanksgiving is a great way to avoid friends and&nbsp;family!</p>
 <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex21.html">exercise 21</a>. We&#8217;re still doing functions, but now we <code>return</code> values with&nbsp;them!</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">21</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway ...</span></pre></div>
+<div class="highlight"><pre><span></span># Exercise 21
+# http://learnpythonthehardway …</pre></div>
                 <a class="readmore" href="/exercise-21.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -278,13 +278,13 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Tonight was the big <a href="http://learnpythonthehardway.org/book/ex20.html">2-0</a>! Twenty exercises down, another 32-ish to go. This exercise continues functions, a couple of new file object type functions, and an auto&nbsp;incrementer.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">20</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex20.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 20</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex20.html</span>
 
-<span class="err">#</span> <span class="kr">import</span> <span class="nx">the</span> <span class="nx">argv</span> <span class="kd">function</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">sys</span> <span class="nx">module</span>
-<span class="nx">from</span> <span class="nx">sys</span> <span class="kr">import</span> <span class="nx">argv</span>
+<span class="c1"># import the argv function from the sys module</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
-<span class="err">#</span> <span class="nx">set</span> <span class="nx">up ...</span></pre></div>
+<span class="c1"># set up …</span></pre></div>
                 <a class="readmore" href="/exercise-20.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -307,15 +307,15 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p><a href="http://learnpythonthehardway.org/book/ex19.html">Exercise 19</a> continues with functions and using variables as&nbsp;arguments.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">19</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex19.html</span>
+<div class="highlight"><pre><span></span># Exercise 19
+# http://learnpythonthehardway.org/book/ex19.html
 
-<span class="err">#</span> <span class="nx">define</span> <span class="nx">a</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">parameters</span>
-<span class="nx">def</span> <span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">cheese_count</span><span class="p">,</span> <span class="nx">boxes_of_crackers</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">cheeses</span>
-    <span class="nx">print</span> <span class="s2">&quot;You have %d cheeses!&quot;</span> <span class="o">%</span> <span class="nx">cheese_count</span>
-    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">boxes</span>
-    <span class="nx">print</span> <span class="s2">&quot;You have %d boxes of ...</span></pre></div>
+# define a function with two parameters
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    # print the number of cheeses
+    print &quot;You have %d cheeses!&quot; % cheese_count
+    # print the number of boxes
+    print &quot;You have %d boxes of …</pre></div>
                 <a class="readmore" href="/exercise-19.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -338,12 +338,12 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>I didn&#8217;t feel like slogging through <a href="http://learnpythonthehardway.org/book/ex18.html">Exercise 18</a> last night, but I&#8217;m back on it tonight. It&#8217;s time for one of the foundational parts of programming:&nbsp;functions!</p>
-<div class="highlight"><pre><span class="cp"># Exercise 18</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex18.html</span>
+<div class="highlight"><pre><span></span># Exercise 18
+# http://learnpythonthehardway.org/book/ex18.html
 
-<span class="cp"># this one is like your scripts with argv</span>
-<span class="n">def</span> <span class="n">print_two</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">arg1 ...</span></pre></div>
+# this one is like your scripts with argv
+def print_two(*args):
+    arg1 …</pre></div>
                 <a class="readmore" href="/exercise-18.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -366,17 +366,17 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex17.html">Exercise 17</a>, and we&#8217;re learning how to copy one file&#8217;s contents into&nbsp;another.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 17</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex17.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 17</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex17.html</span>
 
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
-<span class="n">from</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span> <span class="n">import</span> <span class="n">exists</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">exists</span>
 
 <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="n">print</span> <span class="s">&quot;Copying from %s to %s&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Copying from </span><span class="si">%s</span><span class="s2"> to </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
 
-<span class="cp"># we could do these ...</span></pre></div>
+<span class="c1"># we could do these …</span></pre></div>
                 <a class="readmore" href="/exercise-17.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -399,15 +399,15 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>I missed last night (see <a href="/exercise-15.html">my thoughts on missed nights</a>), and so it&#8217;s <a href="http://learnpythonthehardway.org/book/ex16.html">Exercise 16</a> tonight. More on file opening and&nbsp;manipulation.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 16</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex16.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 16</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex16.html</span>
 
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
 <span class="n">script</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="n">print</span> <span class="s">&quot;We&#39;re going to erase %r.&quot;</span> <span class="o">%</span> <span class="n">filename</span>
-<span class="n">print</span> <span class="s">&quot;If you don ...</span></pre></div>
+<span class="k">print</span> <span class="s2">&quot;We&#39;re going to erase </span><span class="si">%r</span><span class="s2">.&quot;</span> <span class="o">%</span> <span class="n">filename</span>
+<span class="k">print</span> <span class="s2">&quot;If you don …</span></pre></div>
                 <a class="readmore" href="/exercise-16.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -429,7 +429,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info -->                <p>Two weeks done! Woo, woo! I had a few stumbles here and there, but I didn&#8217;t let it get me down. I know other people were interested in learning Python with me, but they couldn&#8217;t get through <a href="http://learnpythonthehardway.org/book/ex0.html">exercise 0</a>. You didn&#8217;t even have to write any code ...</p>
+</footer><!-- /.post-info -->                <p>Two weeks done! Woo, woo! I had a few stumbles here and there, but I didn&#8217;t let it get me down. I know other people were interested in learning Python with me, but they couldn&#8217;t get through <a href="http://learnpythonthehardway.org/book/ex0.html">exercise 0</a>. You didn&#8217;t even have to write any code …</p>
                 <a class="readmore" href="/exercise-15.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -452,16 +452,16 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Next up tonight was <a href="http://learnpythonthehardway.org/book/ex14.html">exercise 14</a>. The code more tightly integrated <code>argv</code>, <code>raw_input</code> and&nbsp;docstrings.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 14</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex14.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 14</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex14.html</span>
 
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
 <span class="n">script</span><span class="p">,</span> <span class="n">user_name</span><span class="p">,</span> <span class="n">lucky_charm</span> <span class="o">=</span> <span class="n">argv</span>
-<span class="n">prompt</span> <span class="o">=</span> <span class="err">&#39;$$$</span> <span class="err">&#39;</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s1">&#39;$$$ &#39;</span>
 
-<span class="n">print</span> <span class="s">&quot;Hi %s, I&#39;m the %s script.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">script</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;I&#39;d like to ask you a ...</span></pre></div>
+<span class="k">print</span> <span class="s2">&quot;Hi </span><span class="si">%s</span><span class="s2">, I&#39;m the </span><span class="si">%s</span><span class="s2"> script.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">user_name</span><span class="p">,</span> <span class="n">script</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;I&#39;d like to ask you a …</span></pre></div>
                 <a class="readmore" href="/exercise-14.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -484,12 +484,12 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Going to do another two exercises tonight to make up for yesterday. First up was <a href="http://learnpythonthehardway.org/book/ex13.html">exercise 13</a>, and it covered variable arguments, which is assigning more than one value to a variable with <a href="https://docs.python.org/2/library/sys.html#sys.argv"><code>argv</code></a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 13</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex13.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 13</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex13.html</span>
 
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
-<span class="n">script</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third ...</span></pre></div>
+<span class="n">script</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third …</span></pre></div>
                 <a class="readmore" href="/exercise-13.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -512,11 +512,11 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Another night, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex12.html">exercise 12</a>, and it builds off of exercise 11. We put strings inside <code>raw_input()</code> to make it ask the question instead of separating the questions into <code>print</code> statements.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 12</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex12.html</span>
+<div class="highlight"><pre><span></span># Exercise 12
+# http://learnpythonthehardway.org/book/ex12.html
 
-<span class="n">age</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;How old are you? &quot;</span><span class="p">)</span>
-<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input ...</span></pre></div>
+age = raw_input(&quot;How old are you? &quot;)
+height = raw_input …</pre></div>
                 <a class="readmore" href="/exercise-12.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -539,10 +539,10 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>It&#8217;s late and I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex11.html">exercise 11</a> done before I go to bed. I was reading about how to enable <a href="http://blog.cloudflare.com/introducing-universal-ssl/"><span class="caps">SSL</span> for free with CloudFlare</a> (!) and time got away from me. More on that at the&nbsp;bottom.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 11</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex11.html</span>
+<div class="highlight"><pre><span></span># Exercise 11
+# http://learnpythonthehardway.org/book/ex11.html
 
-<span class="n">print ...</span></pre></div>
+print …</pre></div>
                 <a class="readmore" href="/exercise-11.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -565,15 +565,16 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex10.html">exercise 10</a> done today before I have some <a href="http://www.yelp.com/biz/furama-restaurant-chicago-2">dim sum for lunch</a>.&nbsp;Yummy!</p>
-<div class="highlight"><pre><span class="cp"># Exercise 10</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex10.html</span>
+<div class="highlight"><pre><span></span># Exercise 10
+# http://learnpythonthehardway.org/book/ex10.html
 
-<span class="n">tabby_cat</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\t</span><span class="s">I&#39;m tabbed in.&quot;</span>
-<span class="n">persian_cat</span> <span class="o">=</span> <span class="s">&quot;I&#39;m split</span><span class="se">\n</span><span class="s">on a line.&quot;</span>
-<span class="n">backslash_cat</span> <span class="o">=</span> <span class="s">&quot;I&#39;m </span><span class="se">\\</span><span class="s"> a </span><span class="se">\\</span><span class="s"> cat.&quot;</span>
+tabby_cat = &quot;\tI&#39;m tabbed in.&quot;
+persian_cat = &quot;I&#39;m split\non a line.&quot;
+backslash_cat = &quot;I&#39;m \\ a \\ cat.&quot;
 
-<span class="n">fat_cat</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
-<span class="n">I</span><span class="err">&#39;</span><span class="n">ll</span> <span class="k">do</span> <span class="n">a ...</span></pre></div>
+fat_cat = &quot;&quot;&quot;
+I&#39;ll do a list:
+\t …</pre></div>
                 <a class="readmore" href="/exercise-10.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -596,13 +597,15 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>And now for the second exericse I&#8217;m doing tonight, <a href="http://learnpythonthehardway.org/book/ex9.html">exercise 9</a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 9</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex9.html</span>
+<div class="highlight"><pre><span></span># Exercise 9
+# http://learnpythonthehardway.org/book/ex9.html
 
-<span class="cp"># Here&#39;s some new strange stuff, remember type it exactly.</span>
+# Here&#39;s some new strange stuff, remember type it exactly.
 
-<span class="n">days</span> <span class="o">=</span> <span class="s">&quot;Mon Tue Wed Thu Fri Sat Sun&quot;</span>
-<span class="n">months</span> <span class="o">=</span> <span class="s">&quot;Jan</span><span class="se">\n</span><span class="s">Feb</span><span class="se">\n</span><span class="s">Mar</span><span class="se">\n</span><span class="s">Apr</span><span class="se">\n</span><span class="s">May</span><span class="se">\n</span><span class="s">Jun ...</span></pre></div>
+days = &quot;Mon Tue Wed Thu Fri Sat Sun&quot;
+months = &quot;Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug&quot;
+
+print &quot;Here are …</pre></div>
                 <a class="readmore" href="/exercise-9.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -625,12 +628,12 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>I fell behind last night and didn&#8217;t do my exercise. I&#8217;m going to make up for it with two of them tonight. The first one up is <a href="http://learnpythonthehardway.org/book/ex8.html">exercise 8</a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 8</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex8.html</span>
+<div class="highlight"><pre><span></span># Exercise 8
+# http://learnpythonthehardway.org/book/ex8.html
 
-<span class="n">formatter</span> <span class="o">=</span> <span class="s">&quot;%r %r %r %r&quot;</span>
+formatter = &quot;%r %r %r %r&quot;
 
-<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4 ...</span></pre></div>
+print formatter % (1, 2, 3, 4 …</pre></div>
                 <a class="readmore" href="/exercise-8.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -653,14 +656,14 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Another day, another exercise. Tonight was <a href="http://learnpythonthehardway.org/book/ex7.html">exercise 7</a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 7</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex7.html</span>
+<div class="highlight"><pre><span></span># Exercise 7
+# http://learnpythonthehardway.org/book/ex7.html
 
-<span class="cp"># Print first line of &quot;Mary Had a Little Lamb&quot; nursery rhyme</span>
-<span class="n">print</span> <span class="s">&quot;Mary had a little lamb.&quot;</span>
+# Print first line of &quot;Mary Had a Little Lamb&quot; nursery rhyme
+print &quot;Mary had a little lamb.&quot;
 
-<span class="cp"># Print second line of nursery rhyme with string formatting of &quot;snow&quot;</span>
-<span class="n">print</span> <span class="s">&quot;Its fleece was white as ...</span></pre></div>
+# Print second line of nursery rhyme with string formatting of &quot;snow&quot;
+print &quot;Its fleece was white as …</pre></div>
                 <a class="readmore" href="/exercise-7.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -683,14 +686,14 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->                <p>Today I finished the thrill ride known as <a href="http://learnpythonthehardway.org/book/ex6.html">exercise 6</a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 6</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex6.html</span>
+<div class="highlight"><pre><span></span># Exercise 6
+# http://learnpythonthehardway.org/book/ex6.html
 
-<span class="cp"># Assign values to cryptic variables</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s">&quot;There are %d types of people.&quot;</span> <span class="o">%</span> <span class="mi">10</span>
-<span class="n">binary</span> <span class="o">=</span> <span class="s">&quot;binary&quot;</span>
-<span class="n">do_not</span> <span class="o">=</span> <span class="s">&quot;don&#39;t&quot;</span>
-<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Those who know %s and those who %s.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="n">do_not</span><span class="p">)</span> <span class="err">#</span> <span class="mi">1</span><span class="p">)</span> <span class="n">and</span> <span class="mi">2 ...</span></pre></div>
+# Assign values to cryptic variables
+x = &quot;There are %d types of people.&quot; % 10
+binary = &quot;binary&quot;
+do_not = &quot;don&#39;t&quot;
+y = &quot;Those who know %s and those who %s.&quot; % (binary, do_not) # 1) and 2 …</pre></div>
                 <a class="readmore" href="/exercise-6.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -714,12 +717,12 @@
 
 </footer><!-- /.post-info -->                <p>Another late night with Python. Tonight was <a href="http://learnpythonthehardway.org/book/ex5.html">exercise 5</a> and it covered string formatting and&nbsp;replacement.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex05.py</code>:</p>
-<div class="highlight"><pre><span class="cp"># Exercise 5</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex5.html</span>
+<div class="highlight"><pre><span></span># Exercise 5
+# http://learnpythonthehardway.org/book/ex5.html
 
-<span class="n">name</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Zed</span> <span class="n">A</span><span class="p">.</span> <span class="n">Shaw</span><span class="err">&#39;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">35</span> <span class="err">#</span> <span class="n">not</span> <span class="n">a</span> <span class="n">lie</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">74 ...</span></pre></div>
+name = &#39;Zed A. Shaw&#39;
+age = 35 # not a lie
+height = 74 …</pre></div>
                 <a class="readmore" href="/exercise-5.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -743,13 +746,13 @@
 
 </footer><!-- /.post-info -->                <p>I was a little late but I finished <a href="http://learnpythonthehardway.org/book/ex4.html">exercise 4</a> tonight. I learned about&nbsp;variables.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex04.py</code>:</p>
-<div class="highlight"><pre><span class="cp"># Exercise 4</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex4.html</span>
+<div class="highlight"><pre><span></span># Exercise 4
+# http://learnpythonthehardway.org/book/ex4.html
 
-<span class="cp"># Number of total cars</span>
-<span class="n">cars</span> <span class="o">=</span> <span class="mi">100</span>
+# Number of total cars
+cars = 100
 
-<span class="cp"># Number of spaces in each car ...</span></pre></div>
+# Number of spaces in each car …</pre></div>
                 <a class="readmore" href="/exercise-4.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -773,13 +776,13 @@
 
 </footer><!-- /.post-info -->                <p>Today was <a href="http://learnpythonthehardway.org/book/ex3.html">exercise 3</a>. I learned about arithmetic&nbsp;operators.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex03.py</code>:</p>
-<div class="highlight"><pre><span class="cp"># Exercise 3</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex3.html</span>
+<div class="highlight"><pre><span></span># Exercise 3
+# http://learnpythonthehardway.org/book/ex3.html
 
-<span class="cp"># Announce the counting of the chickens</span>
-<span class="n">print</span> <span class="s">&quot;I will now count my chickens:&quot;</span>
+# Announce the counting of the chickens
+print &quot;I will now count my chickens:&quot;
 
-<span class="cp"># Prints Hens and Roosters counts ...</span></pre></div>
+# Prints Hens and Roosters counts …</pre></div>
                 <a class="readmore" href="/exercise-3.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -803,10 +806,10 @@
 
 </footer><!-- /.post-info -->                <p>Today was <a href="http://learnpythonthehardway.org/book/ex2.html">exercise 2</a>. I learned how to make comments for single&nbsp;lines.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex02.py</code>:</p>
-<div class="highlight"><pre><span class="cp"># A comment, this is so you can read your program later.</span>
-<span class="cp"># Anything after the # is ignored by python.</span>
+<div class="highlight"><pre><span></span># A comment, this is so you can read your program later.
+# Anything after the # is ignored by python.
 
-<span class="n">print</span> <span class="s">&quot;I could have ...</span></pre></div>
+print &quot;I could have …</pre></div>
                 <a class="readmore" href="/exercise-2.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -830,12 +833,12 @@
 
 </footer><!-- /.post-info -->                <p>I worked through <a href="http://learnpythonthehardway.org/book/ex1.html">exercise 1</a> tonight. It was, um,&nbsp;basic.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex01.py</code>:</p>
-<div class="highlight"><pre><span class="n">print</span> <span class="s">&quot;Hello World!&quot;</span>
-<span class="n">print</span> <span class="s">&quot;Hello Again&quot;</span>
-<span class="n">print</span> <span class="s">&quot;I like typing this.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;This is fun.&quot;</span>
-<span class="n">print</span> <span class="err">&#39;</span><span class="n">Yay</span><span class="o">!</span> <span class="n">Printing</span><span class="p">.</span><span class="err">&#39;</span>
-<span class="n">print</span> <span class="s">&quot;I&#39;d much rather you &#39;not ...</span></pre></div>
+<div class="highlight"><pre><span></span>print &quot;Hello World!&quot;
+print &quot;Hello Again&quot;
+print &quot;I like typing this.&quot;
+print &quot;This is fun.&quot;
+print &#39;Yay! Printing.&#39;
+print &quot;I&#39;d much rather you &#39;not …</pre></div>
                 <a class="readmore" href="/exercise-1.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -857,7 +860,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info -->                <p>I know. I took too long to do this. I learned just enough <a href="https://www.python.org/">Python</a> to work with <a href="https://www.djangoproject.com/">Django</a>, which took course over the past eight (!) years. The first time I installed Django was in winter 2006, and it took 18 hours over two days. It worked but it was an ...</p>
+</footer><!-- /.post-info -->                <p>I know. I took too long to do this. I learned just enough <a href="https://www.python.org/">Python</a> to work with <a href="https://www.djangoproject.com/">Django</a>, which took course over the past eight (!) years. The first time I installed Django was in winter 2006, and it took 18 hours over two days. It worked but it was an …</p>
                 <a class="readmore" href="/exercise-0.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>

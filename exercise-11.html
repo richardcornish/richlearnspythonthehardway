@@ -34,33 +34,33 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>It&#8217;s late and I&#8217;m trying to get <a href="http://learnpythonthehardway.org/book/ex11.html">exercise 11</a> done before I go to bed. I was reading about how to enable <a href="http://blog.cloudflare.com/introducing-universal-ssl/"><span class="caps">SSL</span> for free with CloudFlare</a> (!) and time got away from me. More on that at the&nbsp;bottom.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 11</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex11.html</span>
+<div class="highlight"><pre><span></span># Exercise 11
+# http://learnpythonthehardway.org/book/ex11.html
 
-<span class="n">print</span> <span class="s">&quot;How old are you?&quot;</span><span class="p">,</span>
-<span class="n">age</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;How tall are you?&quot;</span><span class="p">,</span>
-<span class="n">height</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;How much do you weigh?&quot;</span><span class="p">,</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+print &quot;How old are you?&quot;,
+age = raw_input()
+print &quot;How tall are you?&quot;,
+height = raw_input()
+print &quot;How much do you weigh?&quot;,
+weight = raw_input()
 
-<span class="n">print</span> <span class="s">&quot;So, you&#39;re %r old, %r tall and %r heavy.&quot;</span> <span class="o">%</span> <span class="p">(</span>
-    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+print &quot;So, you&#39;re %r old, %r tall and %r heavy.&quot; % (
+    age, height, weight)
 
-<span class="n">print</span> <span class="s">&quot;Do you like bed?&quot;</span><span class="p">,</span>
-<span class="n">bed</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;Do you wish you were in bed?&quot;</span><span class="p">,</span>
-<span class="n">wish</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
-<span class="n">print</span> <span class="s">&quot;Good night. Sleep...&quot;</span><span class="p">,</span>
-<span class="n">tight</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">()</span>
+print &quot;Do you like bed?&quot;,
+bed = raw_input()
+print &quot;Do you wish you were in bed?&quot;,
+wish = raw_input()
+print &quot;Good night. Sleep...&quot;,
+tight = raw_input()
 
-<span class="n">print</span> <span class="s">&quot;Do you like bed? %r.&quot;</span> <span class="o">%</span> <span class="n">bed</span>
-<span class="n">print</span> <span class="s">&quot;Do you wish you were in bed? %r.&quot;</span> <span class="o">%</span> <span class="n">wish</span>
-<span class="n">print</span> <span class="s">&quot;Good night. Sleep...%r!&quot;</span> <span class="o">%</span> <span class="n">tight</span>
+print &quot;Do you like bed? %r.&quot; % bed
+print &quot;Do you wish you were in bed? %r.&quot; % wish
+print &quot;Good night. Sleep...%r!&quot; % tight
 </pre></div>
 
 
-<p><img alt="Exercise 11" src="/images/ex11.png" title="Exercise 11" /></p>
+<p><img alt="Exercise 11" src="/images/ex11.png" title="Exercise 11"></p>
 <p>Time for something a little more exciting: take the user&#8217;s input, manipulate it, and display it back. To allow this, we use Python&#8217;s <a href="https://docs.python.org/2/library/functions.html#raw_input"><code>raw_input()</code></a>&nbsp;method:</p>
 <blockquote>
 <p>If the prompt argument is present, it is written to standard output without a trailing newline. The function then reads a line from input, converts it to a string (stripping a trailing newline), and returns that. When <span class="caps">EOF</span> is read, EOFError is&nbsp;raised.</p>

@@ -34,26 +34,26 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>I fell behind last night and didn&#8217;t do my exercise. I&#8217;m going to make up for it with two of them tonight. The first one up is <a href="http://learnpythonthehardway.org/book/ex8.html">exercise 8</a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 8</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex8.html</span>
+<div class="highlight"><pre><span></span># Exercise 8
+# http://learnpythonthehardway.org/book/ex8.html
 
-<span class="n">formatter</span> <span class="o">=</span> <span class="s">&quot;%r %r %r %r&quot;</span>
+formatter = &quot;%r %r %r %r&quot;
 
-<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span><span class="s">&quot;one&quot;</span><span class="p">,</span> <span class="s">&quot;two&quot;</span><span class="p">,</span> <span class="s">&quot;three&quot;</span><span class="p">,</span> <span class="s">&quot;four&quot;</span><span class="p">)</span>
-<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span><span class="n">True</span><span class="p">,</span> <span class="n">False</span><span class="p">,</span> <span class="n">False</span><span class="p">,</span> <span class="n">True</span><span class="p">)</span>
-<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span><span class="n">formatter</span><span class="p">,</span> <span class="n">formatter</span><span class="p">,</span> <span class="n">formatter</span><span class="p">,</span> <span class="n">formatter</span><span class="p">)</span>
-<span class="n">print</span> <span class="n">formatter</span> <span class="o">%</span> <span class="p">(</span>
-    <span class="s">&quot;I had this thing.&quot;</span><span class="p">,</span>
-    <span class="s">&quot;That you could type up right.&quot;</span><span class="p">,</span>
-    <span class="s">&quot;But it didn&#39;t sing.&quot;</span><span class="p">,</span>
-    <span class="s">&quot;So I said goodnight.&quot;</span>
-<span class="p">)</span>
+print formatter % (1, 2, 3, 4)
+print formatter % (&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;)
+print formatter % (True, False, False, True)
+print formatter % (formatter, formatter, formatter, formatter)
+print formatter % (
+    &quot;I had this thing.&quot;,
+    &quot;That you could type up right.&quot;,
+    &quot;But it didn&#39;t sing.&quot;,
+    &quot;So I said goodnight.&quot;
+)
 </pre></div>
 
 
 <p>A screenshot to prove my 133t&nbsp;status:</p>
-<p><img alt="Exercise 08" src="/images/ex08.png" title="Exercise 08" /></p>
+<p><img alt="Exercise 08" src="/images/ex08.png" title="Exercise 08"></p>
 <p>The last line uses double quotes to enclose the strings that use single quotes because Python would otherwise prematurely process the single quotation marks inside the string, which would result in Python trying to process the remaining portion of the string as business logic, casuing an&nbsp;error.</p>
 <p>And let us never speak of this moment ever&nbsp;again.</p>
 <p>Because I&#8217;ll lose my mind if I have to explain this concept to another human being for the rest of my&nbsp;life.</p>

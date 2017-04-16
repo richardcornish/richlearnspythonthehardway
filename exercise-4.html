@@ -35,72 +35,72 @@
 
 </footer><!-- /.post-info -->      <p>I was a little late but I finished <a href="http://learnpythonthehardway.org/book/ex4.html">exercise 4</a> tonight. I learned about&nbsp;variables.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex04.py</code>:</p>
-<div class="highlight"><pre><span class="cp"># Exercise 4</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex4.html</span>
+<div class="highlight"><pre><span></span># Exercise 4
+# http://learnpythonthehardway.org/book/ex4.html
 
-<span class="cp"># Number of total cars</span>
-<span class="n">cars</span> <span class="o">=</span> <span class="mi">100</span>
+# Number of total cars
+cars = 100
 
-<span class="cp"># Number of spaces in each car</span>
-<span class="n">space_in_a_car</span> <span class="o">=</span> <span class="mi">4</span>
+# Number of spaces in each car
+space_in_a_car = 4
 
-<span class="cp"># Number of total drivers</span>
-<span class="n">drivers</span> <span class="o">=</span> <span class="mi">30</span>
+# Number of total drivers
+drivers = 30
 
-<span class="cp"># Number of total passengers</span>
-<span class="n">passengers</span> <span class="o">=</span> <span class="mi">90</span>
+# Number of total passengers
+passengers = 90
 
-<span class="cp"># Cars left over without drivers</span>
-<span class="n">cars_not_driven</span> <span class="o">=</span> <span class="n">cars</span> <span class="o">-</span> <span class="n">drivers</span>
+# Cars left over without drivers
+cars_not_driven = cars - drivers
 
-<span class="cp"># Each driver represents a car driven</span>
-<span class="n">cars_driven</span> <span class="o">=</span> <span class="n">drivers</span>
+# Each driver represents a car driven
+cars_driven = drivers
 
-<span class="cp"># All the cars times the space in each car equal the total capacity</span>
-<span class="n">carpool_capacity</span> <span class="o">=</span> <span class="n">cars_driven</span> <span class="o">*</span> <span class="n">space_in_a_car</span>
+# All the cars times the space in each car equal the total capacity
+carpool_capacity = cars_driven * space_in_a_car
 
-<span class="cp"># The average number of passengers is all passengers divided by total cars driven</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">cars_driven</span>
+# The average number of passengers is all passengers divided by total cars driven
+average_passengers_per_car = passengers / cars_driven
 
 
-<span class="n">print</span> <span class="s">&quot;There are&quot;</span><span class="p">,</span> <span class="n">cars</span><span class="p">,</span> <span class="s">&quot;cars available.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;There are only&quot;</span><span class="p">,</span> <span class="n">drivers</span><span class="p">,</span> <span class="s">&quot;drivers available.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;There will be&quot;</span><span class="p">,</span> <span class="n">cars_not_driven</span><span class="p">,</span> <span class="s">&quot;empty cars today.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We can transport&quot;</span><span class="p">,</span> <span class="n">carpool_capacity</span><span class="p">,</span> <span class="s">&quot;people today.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We have&quot;</span><span class="p">,</span> <span class="n">passengers</span><span class="p">,</span> <span class="s">&quot;to carpool today.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We need to put about&quot;</span><span class="p">,</span> <span class="n">average_passengers_per_car</span><span class="p">,</span> <span class="s">&quot;in each car.&quot;</span>
+print &quot;There are&quot;, cars, &quot;cars available.&quot;
+print &quot;There are only&quot;, drivers, &quot;drivers available.&quot;
+print &quot;There will be&quot;, cars_not_driven, &quot;empty cars today.&quot;
+print &quot;We can transport&quot;, carpool_capacity, &quot;people today.&quot;
+print &quot;We have&quot;, passengers, &quot;to carpool today.&quot;
+print &quot;We need to put about&quot;, average_passengers_per_car, &quot;in each car.&quot;
 </pre></div>
 
 
-<p><img alt="Exercise 04" src="/images/ex04.png" title="Exercise 04" /></p>
+<p><img alt="Exercise 04" src="/images/ex04.png" title="Exercise 04"></p>
 <p>He said in his&nbsp;lesson:</p>
 <blockquote>
 <p>Explain this error in your own words. Make sure you use line numbers and explain&nbsp;why.</p>
 </blockquote>
-<div class="highlight"><pre><span class="nx">Traceback</span> <span class="p">(</span><span class="nx">most</span> <span class="nx">recent</span> <span class="nb">call</span> <span class="nb">last</span><span class="p">):</span>
-  <span class="nb">File</span> <span class="s2">&quot;ex4.py&quot;</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">8</span><span class="p">,</span> <span class="k">in</span> <span class="o">&lt;</span><span class="nx">module</span><span class="o">&gt;</span>
-    <span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="nx">car_pool_capacity</span> <span class="o">/</span> <span class="nx">passenger</span>
-<span class="nx">NameError</span><span class="p">:</span> <span class="nb">name</span> <span class="s1">&#39;car_pool_capacity&#39;</span> <span class="nx">is</span> <span class="ow">not</span> <span class="nx">defined</span>
+<div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;ex4.py&quot;, line 8, in &lt;module&gt;
+    average_passengers_per_car = car_pool_capacity / passenger
+NameError: name &#39;car_pool_capacity&#39; is not defined
 </pre></div>
 
 
 <p>First, <code>car_pool_capacity</code> is not the name of the variable. It&#8217;s <code>carpool_capacity</code>. Admittedly I didn&#8217;t catch this until the plugin of my text editor, <a href="http://www.sublimetext.com/">Sublime Text</a>, highlighted a line error for me. I use <a href="http://emmet.io/">Emmet</a> to more easily write <span class="caps">HTML</span> and <span class="caps">CSS</span>, and it comes with a <a href="https://github.com/emmetio/pyv8-binaries">PyV8</a>, a Python lint checker, which is great at catching little syntax erorrs. Maybe this is &#8220;cheating,&#8221; but if a tool can help you get your work done faster, I&#8217;m all for it. We&#8217;re all using computers, am I right? Plus I noticed on my own that <code>passenger</code> is not a variable name, but <code>passengers</code> is.</p>
 <p>But maybe more serious is the conceptual computation, even if the variables were&nbsp;&#8220;correct&#8221;:</p>
-<div class="highlight"><pre><span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">carpool_capacity</span> <span class="o">/</span> <span class="n">passengers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="n">cars_driven</span> <span class="o">*</span> <span class="n">space_in_a_car</span><span class="p">)</span> <span class="o">/</span> <span class="n">passengers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="n">drivers</span> <span class="o">*</span> <span class="n">space_in_a_car</span><span class="p">)</span> <span class="o">/</span> <span class="n">passengers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="mf">4.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">90</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mf">120.0</span> <span class="o">/</span> <span class="mi">90</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mf">1.3333333333333333</span>
+<div class="highlight"><pre><span></span>average_passengers_per_car = carpool_capacity / passengers
+average_passengers_per_car = (cars_driven * space_in_a_car) / passengers
+average_passengers_per_car = (drivers * space_in_a_car) / passengers
+average_passengers_per_car = (30 * 4.0) / 90
+average_passengers_per_car = 120.0 / 90
+average_passengers_per_car = 1.3333333333333333
 </pre></div>
 
 
 <p>Dividing the capacity by the number of passengers doesn&#8217;t make any sense. That&#8217;s far worse than misspelling variables. What if your program ran as a false positive, without mistake? This is called a <em>semantic error</em>, one of the <a href="http://www.greenteapress.com/thinkpython/html/thinkpython002.html#toc6">three kinds of errors that can occur</a>. I learned this several years ago from &#8220;<a href="http://www.greenteapress.com/thinkpython/">Think Python: How to Think Like a Computer Scientist</a>,&#8221; but it&#8217;s a shame a lot of people don&#8217;t learn the basics and rush into programming without slowing&nbsp;down.</p>
 <p>What the right way looks&nbsp;like:</p>
-<div class="highlight"><pre><span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">cars_driven</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="n">passengers</span> <span class="o">/</span> <span class="n">drivers</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mi">90</span> <span class="o">/</span> <span class="mi">30</span>
-<span class="n">average_passengers_per_car</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><pre><span></span>average_passengers_per_car = passengers / cars_driven
+average_passengers_per_car = passengers / drivers
+average_passengers_per_car = 90 / 30
+average_passengers_per_car = 3
 </pre></div>
 
 

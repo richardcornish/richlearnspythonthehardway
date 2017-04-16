@@ -34,66 +34,66 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>Tonight was the big <a href="http://learnpythonthehardway.org/book/ex20.html">2-0</a>! Twenty exercises down, another 32-ish to go. This exercise continues functions, a couple of new file object type functions, and an auto&nbsp;incrementer.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">20</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex20.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 20</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex20.html</span>
 
-<span class="err">#</span> <span class="kr">import</span> <span class="nx">the</span> <span class="nx">argv</span> <span class="kd">function</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">sys</span> <span class="nx">module</span>
-<span class="nx">from</span> <span class="nx">sys</span> <span class="kr">import</span> <span class="nx">argv</span>
+<span class="c1"># import the argv function from the sys module</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
-<span class="err">#</span> <span class="nx">set</span> <span class="nx">up</span> <span class="nx">script</span> <span class="k">for</span> <span class="nx">one</span> <span class="nx">parameter</span>
-<span class="nx">script</span><span class="p">,</span> <span class="nx">input_file</span> <span class="o">=</span> <span class="nx">argv</span>
+<span class="c1"># set up script for one parameter</span>
+<span class="n">script</span><span class="p">,</span> <span class="n">input_file</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">contents</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span>
-<span class="nx">def</span> <span class="nx">print_all</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">print</span> <span class="nx">f</span><span class="p">.</span><span class="nx">read</span><span class="p">()</span>
+<span class="c1"># define function to print contents of file object f</span>
+<span class="k">def</span> <span class="nf">print_all</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">move</span> <span class="nx">cursor</span> <span class="nx">to</span> <span class="nx">first</span> <span class="nx">position</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span>
-<span class="nx">def</span> <span class="nx">rewind</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">f</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># define function to move cursor to first position of file object f</span>
+<span class="k">def</span> <span class="nf">rewind</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">define</span> <span class="kd">function</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">contents</span> <span class="nx">of</span> <span class="nx">a</span> <span class="nx">specific</span> <span class="nx">line</span> <span class="nx">of</span> <span class="nx">file</span> <span class="nx">object</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">and</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">its</span> <span class="nx">line</span>
-<span class="nx">def</span> <span class="nx">print_a_line</span><span class="p">(</span><span class="nx">line_count</span><span class="p">,</span> <span class="nx">f</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">print</span> <span class="nx">line_count</span><span class="p">,</span> <span class="nx">f</span><span class="p">.</span><span class="nx">readline</span><span class="p">()</span>
+<span class="c1"># define function to print the contents of a specific line of file object f, and number of its line</span>
+<span class="k">def</span> <span class="nf">print_a_line</span><span class="p">(</span><span class="n">line_count</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">line_count</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
 
-<span class="err">#</span> <span class="nx">open</span> <span class="nx">the</span> <span class="nx">passed</span> <span class="nx">file</span> <span class="nx">and</span> <span class="nx">assign</span> <span class="nx">it</span> <span class="nx">to</span> <span class="nx">a</span> <span class="nx">variable</span>
-<span class="nx">current_file</span> <span class="o">=</span> <span class="nx">open</span><span class="p">(</span><span class="nx">input_file</span><span class="p">)</span>
+<span class="c1"># open the passed file and assign it to a variable</span>
+<span class="n">current_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">print</span>
-<span class="nx">print</span> <span class="s2">&quot;First let&#39;s print the whole file:\n&quot;</span>
+<span class="c1"># print your intent to print</span>
+<span class="k">print</span> <span class="s2">&quot;First let&#39;s print the whole file:</span><span class="se">\n</span><span class="s2">&quot;</span>
 
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_all</span> <span class="kd">function</span>
-<span class="nx">print_all</span><span class="p">(</span><span class="nx">current_file</span><span class="p">)</span>
+<span class="c1"># send file to the print_all function</span>
+<span class="n">print_all</span><span class="p">(</span><span class="n">current_file</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">rewind</span>
-<span class="nx">print</span> <span class="s2">&quot;Now let&#39;s rewind, kind of like a tape.&quot;</span>
+<span class="c1"># print your intent to rewind</span>
+<span class="k">print</span> <span class="s2">&quot;Now let&#39;s rewind, kind of like a tape.&quot;</span>
 
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">the</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">rewind</span> <span class="kd">function</span>
-<span class="nx">rewind</span><span class="p">(</span><span class="nx">current_file</span><span class="p">)</span>
+<span class="c1"># send the file to the rewind function</span>
+<span class="n">rewind</span><span class="p">(</span><span class="n">current_file</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">intent</span> <span class="nx">to</span> <span class="nx">print</span> <span class="nx">more</span>
-<span class="nx">print</span> <span class="s2">&quot;Let&#39;s print three lines:&quot;</span>
+<span class="c1"># print your intent to print more</span>
+<span class="k">print</span> <span class="s2">&quot;Let&#39;s print three lines:&quot;</span>
 
-<span class="err">#</span> <span class="nx">index</span> <span class="nx">current</span> <span class="nx">line</span>
-<span class="nx">current_line</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
-<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
+<span class="c1"># index current line</span>
+<span class="n">current_line</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># send current line and file to the print_a_line function</span>
+<span class="c1"># current line = 1</span>
+<span class="n">print_a_line</span><span class="p">(</span><span class="n">current_line</span><span class="p">,</span> <span class="n">current_file</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">increment</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">by</span> <span class="mi">1</span>
-<span class="nx">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
-<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
+<span class="c1"># increment current line by 1</span>
+<span class="n">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1"># send current line and file to the print_a_line function</span>
+<span class="c1"># current line = 2</span>
+<span class="n">print_a_line</span><span class="p">(</span><span class="n">current_line</span><span class="p">,</span> <span class="n">current_file</span><span class="p">)</span>
 
-<span class="err">#</span> <span class="nx">increment</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">by</span> <span class="mi">1</span>
-<span class="nx">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="err">#</span> <span class="nx">send</span> <span class="nx">current</span> <span class="nx">line</span> <span class="nx">and</span> <span class="nx">file</span> <span class="nx">to</span> <span class="nx">the</span> <span class="nx">print_a_line</span> <span class="kd">function</span>
-<span class="err">#</span> <span class="nx">current</span> <span class="nx">line</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nx">print_a_line</span><span class="p">(</span><span class="nx">current_line</span><span class="p">,</span> <span class="nx">current_file</span><span class="p">)</span>
+<span class="c1"># increment current line by 1</span>
+<span class="n">current_line</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c1"># send current line and file to the print_a_line function</span>
+<span class="c1"># current line = 1</span>
+<span class="n">print_a_line</span><span class="p">(</span><span class="n">current_line</span><span class="p">,</span> <span class="n">current_file</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="Exercise 20" src="/images/ex20.png" title="Exercise 20" /></p>
+<p><img alt="Exercise 20" src="/images/ex20.png" title="Exercise 20"></p>
 <p>Because it&#8217;s hard to find anything in the Python documentation, I&#8217;ll link to and summarize them&nbsp;here:</p>
 <ul>
 <li>

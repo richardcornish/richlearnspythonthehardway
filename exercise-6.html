@@ -34,41 +34,41 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>Today I finished the thrill ride known as <a href="http://learnpythonthehardway.org/book/ex6.html">exercise 6</a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 6</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex6.html</span>
+<div class="highlight"><pre><span></span># Exercise 6
+# http://learnpythonthehardway.org/book/ex6.html
 
-<span class="cp"># Assign values to cryptic variables</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s">&quot;There are %d types of people.&quot;</span> <span class="o">%</span> <span class="mi">10</span>
-<span class="n">binary</span> <span class="o">=</span> <span class="s">&quot;binary&quot;</span>
-<span class="n">do_not</span> <span class="o">=</span> <span class="s">&quot;don&#39;t&quot;</span>
-<span class="n">y</span> <span class="o">=</span> <span class="s">&quot;Those who know %s and those who %s.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="n">do_not</span><span class="p">)</span> <span class="err">#</span> <span class="mi">1</span><span class="p">)</span> <span class="n">and</span> <span class="mi">2</span><span class="p">)</span> <span class="n">a</span> <span class="n">string</span> <span class="n">inside</span> <span class="n">a</span> <span class="n">string</span>
+# Assign values to cryptic variables
+x = &quot;There are %d types of people.&quot; % 10
+binary = &quot;binary&quot;
+do_not = &quot;don&#39;t&quot;
+y = &quot;Those who know %s and those who %s.&quot; % (binary, do_not) # 1) and 2) a string inside a string
 
-<span class="cp"># Print x and y</span>
-<span class="n">print</span> <span class="n">x</span>
-<span class="n">print</span> <span class="n">y</span>
+# Print x and y
+print x
+print y
 
-<span class="cp"># Print the literal representation of x and the string of y</span>
-<span class="n">print</span> <span class="s">&quot;I said: %r.&quot;</span> <span class="o">%</span> <span class="n">x</span>
-<span class="n">print</span> <span class="s">&quot;I also said: &#39;%s&#39;.&quot;</span> <span class="o">%</span> <span class="n">y</span> <span class="err">#</span> <span class="mi">3</span><span class="p">)</span> <span class="n">a</span> <span class="n">string</span> <span class="n">inside</span> <span class="n">a</span> <span class="n">string</span>
+# Print the literal representation of x and the string of y
+print &quot;I said: %r.&quot; % x
+print &quot;I also said: &#39;%s&#39;.&quot; % y # 3) a string inside a string
 
-<span class="cp"># Determine how funny this joke is and allow evaluation to have a literal representation value appended to it</span>
-<span class="n">hilarious</span> <span class="o">=</span> <span class="n">False</span>
-<span class="n">joke_evaluation</span> <span class="o">=</span> <span class="s">&quot;Isn&#39;t that joke so funny?! %r&quot;</span>
+# Determine how funny this joke is and allow evaluation to have a literal representation value appended to it
+hilarious = False
+joke_evaluation = &quot;Isn&#39;t that joke so funny?! %r&quot;
 
-<span class="cp"># Print the evaluation and insert the hilarious status into it</span>
-<span class="n">print</span> <span class="n">joke_evaluation</span> <span class="o">%</span> <span class="n">hilarious</span>
+# Print the evaluation and insert the hilarious status into it
+print joke_evaluation % hilarious
 
-<span class="cp"># Assign strings to variables w and e</span>
-<span class="n">w</span> <span class="o">=</span> <span class="s">&quot;This is the left side of...&quot;</span>
-<span class="n">e</span> <span class="o">=</span> <span class="s">&quot;a string with a right side.&quot;</span>
+# Assign strings to variables w and e
+w = &quot;This is the left side of...&quot;
+e = &quot;a string with a right side.&quot;
 
-<span class="cp"># Print the concatenation of w and e</span>
-<span class="n">print</span> <span class="n">w</span> <span class="o">+</span> <span class="n">e</span>
+# Print the concatenation of w and e
+print w + e
 </pre></div>
 
 
 <p>It looked a little like&nbsp;this:</p>
-<p><img alt="Exercise 06" src="/images/ex06.png" title="Exercise 06" /></p>
+<p><img alt="Exercise 06" src="/images/ex06.png" title="Exercise 06"></p>
 <p>As for the study drills, I could only find three places where a string was inserted into another string, not the four Zed claimed that there might be. He lied to me. Zed Shaw lied to me, just like my last girlfriend. Tell me, <em>Jessica</em>: If I didn&#8217;t own any goldfish, why did I have the bowl, huh? <a href="https://www.youtube.com/watch?v=jUJNsS7kqDM">Why did I have the bowl</a>,&nbsp;Jessica?</p>
 <p>It was frustrating how difficult it was to find that the plus symbol is overloaded as an operator for addition and string concatenation in the Python documentation. Yes, it&#8217;s that way in many dynamic languages, but sometimes it feels like the documentation was written by a scientific standards committee&#8212;not that there is anything wrong with that (<a href="/images/science.gif">science</a>!)&#8212;but this <a href="https://docs.python.org/2/reference/expressions.html#binary-arithmetic-operations">doesn&#8217;t exactly roll off the tongue</a>:</p>
 <blockquote>
@@ -77,7 +77,7 @@
 The <code>+</code> (addition) operator yields the sum of its arguments. The arguments must either both be numbers or both sequences of the same type. In the former case, the numbers are converted to a common type and then added together. In the latter case, the sequences are&nbsp;concatenated.</p>
 </blockquote>
 <p>I worked on today&#8217;s exercise at my favorite coffee shop, <a href="http://www.yelp.com/biz/julius-meinl-chicago-3">Julius Meinl</a>, so here is a photo of the chocolate cupcake I ate. You can&#8217;t beat&nbsp;$2.95!</p>
-<p><a href="/images/julius_meinl-cupcake.jpg"><img alt="Julius Meinl chocolate upcake" src="/images/julius_meinl-cupcake.jpg" title="Exercise 06" /></a></p>
+<p><a href="/images/julius_meinl-cupcake.jpg"><img alt="Julius Meinl chocolate upcake" src="/images/julius_meinl-cupcake.jpg" title="Exercise 06"></a></p>
     </div><!-- /.entry-content -->
 
   </article>

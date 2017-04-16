@@ -34,48 +34,48 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex25.html">Exercise 25</a>, and we&#8217;re onto running our scripts from the&nbsp;console.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">25</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex25.html</span>
+<div class="highlight"><pre><span></span># Exercise 25
+# http://learnpythonthehardway.org/book/ex25.html
 
-<span class="nx">def</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">stuff</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">words</span>
+def break_words(stuff):
+    &quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;
+    words = stuff.split(&#39; &#39;)
+    return words
 
-<span class="nx">def</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nx">sorted</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def sort_words(words):
+    &quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;
+    return sorted(words)
 
-<span class="nx">def</span> <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the first word after popping it off.&quot;&quot;&quot;</span>
-    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="nx">print</span> <span class="nx">word</span>
+def print_first_word(words):
+    &quot;&quot;&quot;Prints the first word after popping it off.&quot;&quot;&quot;
+    word = words.pop(0)
+    print word
 
-<span class="nx">def</span> <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the last word after popping it off.&quot;&quot;&quot;</span>
-    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nx">print</span> <span class="nx">word</span>
+def print_last_word(words):
+    &quot;&quot;&quot;Prints the last word after popping it off.&quot;&quot;&quot;
+    word = words.pop(-1)
+    print word
 
-<span class="nx">def</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Takes in a full sentence and returns the sorted words.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def sort_sentence(sentence):
+    &quot;&quot;&quot;Takes in a full sentence and returns the sorted words.&quot;&quot;&quot;
+    words = break_words(sentence)
+    return sort_words(words)
 
-<span class="nx">def</span> <span class="nx">print_first_and_last</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the first and last words of the sentence.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def print_first_and_last(sentence):
+    &quot;&quot;&quot;Prints the first and last words of the sentence.&quot;&quot;&quot;
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
 
-<span class="nx">def</span> <span class="nx">print_first_and_last_sorted</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words then prints the first and last one.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def print_first_and_last_sorted(sentence):
+    &quot;&quot;&quot;Sorts the words then prints the first and last one.&quot;&quot;&quot;
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
 </pre></div>
 
 
-<p><img alt="Exercise 25" src="/images/ex25.png" title="Exercise 25" /></p>
+<p><img alt="Exercise 25" src="/images/ex25.png" title="Exercise 25"></p>
 <p>The methods we&nbsp;used:</p>
 <ul>
 <li>

@@ -34,34 +34,34 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>I didn&#8217;t feel like slogging through <a href="http://learnpythonthehardway.org/book/ex18.html">Exercise 18</a> last night, but I&#8217;m back on it tonight. It&#8217;s time for one of the foundational parts of programming:&nbsp;functions!</p>
-<div class="highlight"><pre><span class="cp"># Exercise 18</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex18.html</span>
+<div class="highlight"><pre><span></span># Exercise 18
+# http://learnpythonthehardway.org/book/ex18.html
 
-<span class="cp"># this one is like your scripts with argv</span>
-<span class="n">def</span> <span class="n">print_two</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">=</span> <span class="n">args</span>
-    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+# this one is like your scripts with argv
+def print_two(*args):
+    arg1, arg2 = args
+    print &quot;arg1: %r, arg2: %r&quot; % (arg1, arg2)
 
-<span class="cp"># ok, that *args is actually pointless, we can just do this</span>
-<span class="n">def</span> <span class="n">print_two_again</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;arg1: %r, arg2: %r&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+# ok, that *args is actually pointless, we can just do this
+def print_two_again(arg1, arg2):
+    print &quot;arg1: %r, arg2: %r&quot; % (arg1, arg2)
 
-<span class="cp"># this just takes one argument</span>
-<span class="n">def</span> <span class="n">print_one</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;arg1: %r&quot;</span> <span class="o">%</span> <span class="n">arg1</span>
+# this just takes one argument
+def print_one(arg1):
+    print &quot;arg1: %r&quot; % arg1
 
-<span class="cp"># this one takes no arguments</span>
-<span class="n">def</span> <span class="n">print_none</span><span class="p">()</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;I got nothin&#39;.&quot;</span>
+# this one takes no arguments
+def print_none():
+    print &quot;I got nothin&#39;.&quot;
 
-<span class="n">print_two</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
-<span class="n">print_two_again</span><span class="p">(</span><span class="s">&quot;Zed&quot;</span><span class="p">,</span><span class="s">&quot;Shaw&quot;</span><span class="p">)</span>
-<span class="n">print_one</span><span class="p">(</span><span class="s">&quot;First!&quot;</span><span class="p">)</span>
-<span class="n">print_none</span><span class="p">()</span>
+print_two(&quot;Zed&quot;,&quot;Shaw&quot;)
+print_two_again(&quot;Zed&quot;,&quot;Shaw&quot;)
+print_one(&quot;First!&quot;)
+print_none()
 </pre></div>
 
 
-<p><img alt="Exercise 18" src="/images/ex18.png" title="Exercise 18" /></p>
+<p><img alt="Exercise 18" src="/images/ex18.png" title="Exercise 18"></p>
 <p><a href="https://docs.python.org/2/reference/compound_stmts.html#function-definitions">Functions</a> are in some way the most conceptually fundamental part of programming. We can all understand the benefits of strings and numbers and storing them into variables, but the ability to send them away and receive something else back, efficiently and without repetition, was likely a groundbreaking moment for&nbsp;programming.</p>
 <p>Sometimes I forget how foreign the concept of functions are to people. I still remember when I had to look up the syntax for functions in JavaScript (all three kinds). In Python, you have to&nbsp;remember:</p>
 <ol>

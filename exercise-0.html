@@ -38,21 +38,21 @@
 <p>The <a href="http://learnpythonthehardway.org/book/ex0.html">&#8220;zeroth&#8221; exercise</a> doesn&#8217;t have any code to write. It&#8217;s just opening Terminal on a Mac, a Python shell, and Googling when you get stuck, which I guess I do most of the time anyway. I spent about an hour making this blog with <a href="http://blog.getpelican.com/">Pelican</a>, <a href="https://pip.pypa.io/">Pip</a>, <a href="http://virtualenv.readthedocs.org/">Virtualenv</a>, <a href="http://virtualenvwrapper.readthedocs.org/">Virtualenvwrapper</a>, and <a href="http://git-scm.com/">Git</a>.</p>
 <p>Because there isn&#8217;t much to share from the book, here is how I installed Python with <a href="http://brew.sh/">Homebrew</a>.</p>
 <p>Edit your <code>~/.bash_profile</code> in the text editor of your chocie to get ready for what&#8217;s&nbsp;coming:</p>
-<div class="highlight"><pre><span class="cp"># Paths</span>
-<span class="n">export</span> <span class="n">PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">:</span><span class="err">$</span><span class="n">PATH</span>
+<div class="highlight"><pre><span></span># Paths
+export PATH=/usr/local/bin:$PATH
 
-<span class="cp"># Virtualenv</span>
-<span class="n">export</span> <span class="n">WORKON_HOME</span><span class="o">=</span><span class="err">$</span><span class="n">HOME</span><span class="o">/</span><span class="p">.</span><span class="n">virtualenvs</span>
+# Virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
 
-<span class="cp"># Virtualenvwrapper</span>
-<span class="n">source</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">virtualenvwrapper</span><span class="p">.</span><span class="n">sh</span>
+# Virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 </pre></div>
 
 
 <p>Now install Xcode&#8217;s command line tools, Homebrew, and&nbsp;Python:</p>
-<div class="highlight"><pre><span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
-<span class="n">ruby</span> <span class="o">-</span><span class="n">e</span> <span class="s">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">python</span>
+<div class="highlight"><pre><span></span>xcode-select --install
+ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+brew install python
 </pre></div>
 
 

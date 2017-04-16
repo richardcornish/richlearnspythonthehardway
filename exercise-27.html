@@ -39,18 +39,18 @@
 <p>There&#8217;s one problem, though. And it&#8217;s not that Jessica hasn&#8217;t texted me back after I documented the ups and downs of our relationship in a novel-length emoji&nbsp;sequence.</p>
 <p>The problem is that I&#8217;m really lazy. Come on, I ain&#8217;t gonna make those flash cards. So, I wrote a program to quiz me, grade me, and judge&nbsp;me.</p>
 <p>And here it&nbsp;is:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nt">Exercise</span> <span class="nt">27</span>
-<span class="err">#</span> <span class="nt">http</span><span class="o">://</span><span class="nt">learnpythonthehardway</span><span class="nc">.org</span><span class="o">/</span><span class="nt">book</span><span class="o">/</span><span class="nt">ex27</span><span class="nc">.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 27</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex27.html</span>
 
-<span class="nt">import</span> <span class="nt">random</span>
+<span class="kn">import</span> <span class="nn">random</span>
 
-<span class="nt">print</span> <span class="s2">&quot;Truth Table quiz!&quot;</span>
-<span class="nt">print</span> <span class="s2">&quot;Answer t for True and f for False&quot;</span>
-<span class="nt">print</span> <span class="s2">&quot;Press any key to begin&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Truth Table quiz!&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Answer t for True and f for False&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Press any key to begin&quot;</span>
 
-<span class="nt">raw_input</span><span class="o">()</span>
+<span class="nb">raw_input</span><span class="p">()</span>
 
-<span class="nt">questions</span> <span class="o">=</span> <span class="cp">[</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;not True&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;True or False&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
@@ -77,32 +77,32 @@
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;1 == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 == 1&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span> <span class="s1">&#39;0 == 0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">},</span>
-<span class="cp">]</span>
+<span class="p">]</span>
 
-<span class="nt">random</span><span class="nc">.shuffle</span><span class="o">(</span><span class="nt">questions</span><span class="o">)</span>
-<span class="nt">answers</span> <span class="o">=</span> <span class="cp">[]</span>
+<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span>
+<span class="n">answers</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nt">for</span> <span class="nt">q</span> <span class="nt">in</span> <span class="nt">questions</span><span class="o">:</span>
-    <span class="nt">a</span> <span class="o">=</span> <span class="nt">raw_input</span><span class="o">(</span><span class="nt">q</span><span class="cp">[</span><span class="s1">&#39;q&#39;</span><span class="cp">]</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="o">)</span>
-    <span class="nt">if</span> <span class="nt">a</span> <span class="o">==</span> <span class="nt">q</span><span class="cp">[</span><span class="s1">&#39;a&#39;</span><span class="cp">]</span><span class="o">:</span>
-        <span class="nt">print</span> <span class="s2">&quot;Correct!&quot;</span>
-        <span class="nt">answers</span><span class="nc">.append</span><span class="o">(</span><span class="nt">True</span><span class="o">)</span>
-    <span class="nt">else</span><span class="o">:</span>
-        <span class="nt">print</span> <span class="s2">&quot;Incorrect&quot;</span>
-        <span class="nt">answers</span><span class="nc">.append</span><span class="o">(</span><span class="nt">False</span><span class="o">)</span>
+<span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">questions</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="n">q</span><span class="p">[</span><span class="s1">&#39;q&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">q</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]:</span>
+        <span class="k">print</span> <span class="s2">&quot;Correct!&quot;</span>
+        <span class="n">answers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Incorrect&quot;</span>
+        <span class="n">answers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 
-<span class="nt">score</span> <span class="o">=</span> <span class="nt">float</span><span class="o">(</span><span class="nt">answers</span><span class="nc">.count</span><span class="o">(</span><span class="nt">True</span><span class="o">))</span> <span class="o">/</span> <span class="nt">len</span><span class="o">(</span><span class="nt">answers</span><span class="o">)</span> <span class="o">*</span> <span class="nt">100</span>
+<span class="n">score</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">answers</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="bp">True</span><span class="p">))</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">answers</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
 
-<span class="nt">print</span> <span class="s2">&quot;You scored: %d%%&quot;</span> <span class="o">%</span> <span class="nt">score</span>
+<span class="k">print</span> <span class="s2">&quot;You scored: </span><span class="si">%d%%</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">score</span>
 </pre></div>
 
 
 <p>You run it just like any other script: <code>python ex27.py</code>.</p>
-<p><img alt="Exercise 27" src="/images/ex27.png" title="Exercise 27" /></p>
+<p><img alt="Exercise 27" src="/images/ex27.png" title="Exercise 27"></p>
 <p>And how did I do? <span class="caps">OK</span>, so&nbsp;84%.</p>
 <p>I was going&nbsp;fast.</p>
 <p>In between emojis to&nbsp;Jessica.</p>
-<p>I am under no false impression that she&#8217;ll <img alt="Couple with heart" src="/images/1f491.png" title="Couple with heart" /> <img alt="Face with no good gesture" src="/images/1f645.png" title="Face with no good gesture" /> <img alt="Recreational vehicle" src="/images/1f699.png" title="Recreational vehicle" /> <img alt="Neutral face" src="/images/1f610.png" title="Neutral face" /> <img alt="Expressionless face" src="/images/1f611.png" title="Expressionless face" /> <img alt="Hamburger" src="/images/1f354.png" title="Hamburger" /> me back soon enough. And that&#8217;s the&nbsp;truth.</p>
+<p>I am under no false impression that she&#8217;ll <img alt="Couple with heart" src="/images/1f491.png" title="Couple with heart"> <img alt="Face with no good gesture" src="/images/1f645.png" title="Face with no good gesture"> <img alt="Recreational vehicle" src="/images/1f699.png" title="Recreational vehicle"> <img alt="Neutral face" src="/images/1f610.png" title="Neutral face"> <img alt="Expressionless face" src="/images/1f611.png" title="Expressionless face"> <img alt="Hamburger" src="/images/1f354.png" title="Hamburger"> me back soon enough. And that&#8217;s the&nbsp;truth.</p>
     </div><!-- /.entry-content -->
 
   </article>

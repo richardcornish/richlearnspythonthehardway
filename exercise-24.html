@@ -34,50 +34,50 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>I tried to fit in an exercise this weekend but couldn&#8217;t quite get there, but tonight I just finished <a href="http://learnpythonthehardway.org/book/ex24.html">Exercise 24</a>. This one was fairly similar to exercises <a href="http://learnpythonthehardway.org/book/ex19.html">19</a> and <a href="http://learnpythonthehardway.org/book/ex21.html">21</a>, where you run a script with fairly diverse things happening, like variables, functions, printing, arguments, parameters, string formatting,&nbsp;etc.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 24</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex24.html</span>
+<div class="highlight"><pre><span></span># Exercise 24
+# http://learnpythonthehardway.org/book/ex24.html
 
-<span class="n">print</span> <span class="s">&quot;Let&#39;s practice everything.&quot;</span>
-<span class="n">print</span> <span class="err">&#39;</span><span class="n">You</span><span class="err">\&#39;</span><span class="n">d</span> <span class="n">need</span> <span class="n">to</span> <span class="n">know</span> <span class="err">\&#39;</span><span class="n">bout</span> <span class="n">escapes</span> <span class="n">with</span> <span class="err">\\</span> <span class="n">that</span> <span class="k">do</span> <span class="err">\</span><span class="n">n</span> <span class="n">newlines</span> <span class="n">and</span> <span class="err">\</span><span class="n">t</span> <span class="n">tabs</span><span class="p">.</span><span class="err">&#39;</span>
+print &quot;Let&#39;s practice everything.&quot;
+print &#39;You\&#39;d need to know \&#39;bout escapes with \\ that do \n newlines and \t tabs.&#39;
 
-<span class="n">poem</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
-<span class="err">\</span><span class="n">tThe</span> <span class="n">lovely</span> <span class="n">world</span>
-<span class="n">with</span> <span class="n">logic</span> <span class="n">so</span> <span class="n">firmly</span> <span class="n">planted</span>
-<span class="n">cannot</span> <span class="n">discern</span> <span class="err">\</span><span class="n">n</span> <span class="n">the</span> <span class="n">needs</span> <span class="n">of</span> <span class="n">love</span>
-<span class="n">nor</span> <span class="n">comprehend</span> <span class="n">passion</span> <span class="n">from</span> <span class="n">intuition</span>
-<span class="n">and</span> <span class="n">requires</span> <span class="n">an</span> <span class="n">explanation</span>
-<span class="err">\</span><span class="n">n</span><span class="err">\</span><span class="n">twhere</span> <span class="n">there</span> <span class="n">is</span> <span class="n">none</span><span class="p">.</span>
-<span class="s">&quot;&quot;&quot;</span>
+poem = &quot;&quot;&quot;
+\tThe lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explanation
+\n\twhere there is none.
+&quot;&quot;&quot;
 
-<span class="n">print</span> <span class="s">&quot;--------------&quot;</span>
-<span class="n">print</span> <span class="n">poem</span>
-<span class="n">print</span> <span class="s">&quot;--------------&quot;</span>
-
-
-<span class="n">five</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span>
-<span class="n">print</span> <span class="s">&quot;This should be five: %s&quot;</span> <span class="o">%</span> <span class="n">five</span>
-
-<span class="n">def</span> <span class="n">secret_formula</span><span class="p">(</span><span class="n">started</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">jelly_beans</span> <span class="o">=</span> <span class="n">started</span> <span class="o">*</span> <span class="mi">500</span>
-    <span class="n">jars</span> <span class="o">=</span> <span class="n">jelly_beans</span> <span class="o">/</span> <span class="mi">1000</span>
-    <span class="n">crates</span> <span class="o">=</span> <span class="n">jars</span> <span class="o">/</span> <span class="mi">100</span>
-    <span class="k">return</span> <span class="n">jelly_beans</span><span class="p">,</span> <span class="n">jars</span><span class="p">,</span> <span class="n">crates</span>
+print &quot;--------------&quot;
+print poem
+print &quot;--------------&quot;
 
 
-<span class="n">start_point</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="n">beans</span><span class="p">,</span> <span class="n">jars</span><span class="p">,</span> <span class="n">crates</span> <span class="o">=</span> <span class="n">secret_formula</span><span class="p">(</span><span class="n">start_point</span><span class="p">)</span>
+five = 10 - 2 + 3 - 6
+print &quot;This should be five: %s&quot; % five
 
-<span class="n">print</span> <span class="s">&quot;With a starting point of: %d&quot;</span> <span class="o">%</span> <span class="n">start_point</span>
-<span class="n">print</span> <span class="s">&quot;We&#39;d have %d beans, %d jars, and %d crates.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">beans</span><span class="p">,</span> <span class="n">jars</span><span class="p">,</span> <span class="n">crates</span><span class="p">)</span>
+def secret_formula(started):
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crates = jars / 100
+    return jelly_beans, jars, crates
 
-<span class="n">start_point</span> <span class="o">=</span> <span class="n">start_point</span> <span class="o">/</span> <span class="mi">10</span>
 
-<span class="n">print</span> <span class="s">&quot;We can also do that this way:&quot;</span>
-<span class="n">print</span> <span class="s">&quot;We&#39;d have %d beans, %d jars, and %d crates.&quot;</span> <span class="o">%</span> <span class="n">secret_formula</span><span class="p">(</span><span class="n">start_point</span><span class="p">)</span>
+start_point = 10000
+beans, jars, crates = secret_formula(start_point)
+
+print &quot;With a starting point of: %d&quot; % start_point
+print &quot;We&#39;d have %d beans, %d jars, and %d crates.&quot; % (beans, jars, crates)
+
+start_point = start_point / 10
+
+print &quot;We can also do that this way:&quot;
+print &quot;We&#39;d have %d beans, %d jars, and %d crates.&quot; % secret_formula(start_point)
 </pre></div>
 
 
-<p><img alt="Exercise 24" src="/images/ex24.png" title="Exercise 24" /></p>
+<p><img alt="Exercise 24" src="/images/ex24.png" title="Exercise 24"></p>
     </div><!-- /.entry-content -->
 
   </article>

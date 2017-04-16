@@ -37,38 +37,38 @@
 <p>It bums me out that people look at the whole thing and think &#8220;I can&#8217;t do this. It&#8217;s too much.&#8221; Just do <em>one exercise</em>. Or hell, just <em>read the exercise</em>. Just get something done. Maybe something will pique your interest. Maybe natural curiosity will take over. Maybe you&#8217;ll want to do it because it&#8217;s&#8212;<em>gasp</em>&#8212;fun. There have already been a few nights that I didn&#8217;t have time to do my exericse. No big deal, I did two tomorrow, or if that wasn&#8217;t possible, I would have just done one exercise. And I would have taken 53 days to finish 52 exercises. That&#8217;s not a big deal when you compare it to doing <em>0 exercises in 52 days</em>.</p>
 <p>I&#8217;m not perfect, which makes my perfectionist skin crawl, but I do my best where I can, and move on to the next thing. The time where I had the luxury to make my code &#8220;perfect&#8221; I found that there wasn&#8217;t a perfect answer. Programming is about making tradeoffs. Sometimes there were better ones and there were worse ones, but when you eventually get good enough, you realize that there is no right answer, but only different answers. That&#8217;s my advice for&nbsp;tonight.</p>
 <p>Anyway, back to tonight&#8217;s exercise&#8230; <a href="http://learnpythonthehardway.org/book/ex15.html">Exercise 15</a> is all about opening files! Who needs desktop and a&nbsp;mouse??</p>
-<div class="highlight"><pre><span class="cp"># Exercise 15</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex15.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 15</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex15.html</span>
 
-<span class="cp"># import argv from the sys module</span>
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="c1"># import argv from the sys module</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
-<span class="cp"># assign the the name of the file as an argument to argv</span>
+<span class="c1"># assign the the name of the file as an argument to argv</span>
 <span class="n">script</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="cp"># open the file and assign the result to txt</span>
-<span class="n">txt</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="c1"># open the file and assign the result to txt</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 
-<span class="cp"># print the name of the file and the contents of the file</span>
-<span class="n">print</span> <span class="s">&quot;Here&#39;s your file %r:&quot;</span> <span class="o">%</span> <span class="n">filename</span>
-<span class="n">print</span> <span class="n">txt</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># print the name of the file and the contents of the file</span>
+<span class="k">print</span> <span class="s2">&quot;Here&#39;s your file </span><span class="si">%r</span><span class="s2">:&quot;</span> <span class="o">%</span> <span class="n">filename</span>
+<span class="k">print</span> <span class="n">txt</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="cp"># prompt asking the name of the file again</span>
-<span class="n">print</span> <span class="s">&quot;Type the filename again:&quot;</span>
-<span class="n">file_again</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;&gt; &quot;</span><span class="p">)</span>
+<span class="c1"># prompt asking the name of the file again</span>
+<span class="k">print</span> <span class="s2">&quot;Type the filename again:&quot;</span>
+<span class="n">file_again</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
 
-<span class="cp"># open the file</span>
-<span class="n">txt_again</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">file_again</span><span class="p">)</span>
+<span class="c1"># open the file</span>
+<span class="n">txt_again</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_again</span><span class="p">)</span>
 
-<span class="cp"># print the contents of the file</span>
-<span class="n">print</span> <span class="n">txt_again</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># print the contents of the file</span>
+<span class="k">print</span> <span class="n">txt_again</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 
 
-<p><img alt="Exercise 15" src="/images/ex15.png" title="Exercise 15" /></p>
+<p><img alt="Exercise 15" src="/images/ex15.png" title="Exercise 15"></p>
 <p>We&#8217;re using the <a href="https://docs.python.org/2/library/functions.html#open"><code>open</code></a> command to, well, open files. The study drills encourage you to also open a file from the Python prompt instead of from Bash, which is slightly less obvious. You have to type in the full path to the&nbsp;file:</p>
-<div class="highlight"><pre><span class="err">$</span> <span class="n">python</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">&quot;/Users/Rich/Sites/lpthw/exercises/ex15_sample.txt&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span>$ python
+&gt;&gt;&gt; <span class="nv">file</span> <span class="o">=</span> open<span class="o">(</span><span class="s2">&quot;/Users/Rich/Sites/lpthw/exercises/ex15_sample.txt&quot;</span><span class="o">)</span>
 </pre></div>
 
 

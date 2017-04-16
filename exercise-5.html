@@ -35,43 +35,43 @@
 
 </footer><!-- /.post-info -->      <p>Another late night with Python. Tonight was <a href="http://learnpythonthehardway.org/book/ex5.html">exercise 5</a> and it covered string formatting and&nbsp;replacement.</p>
 <p>I entered these lines into a <code>.py</code> file and ran it with <code>python ex05.py</code>:</p>
-<div class="highlight"><pre><span class="cp"># Exercise 5</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex5.html</span>
+<div class="highlight"><pre><span></span># Exercise 5
+# http://learnpythonthehardway.org/book/ex5.html
 
-<span class="n">name</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Zed</span> <span class="n">A</span><span class="p">.</span> <span class="n">Shaw</span><span class="err">&#39;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">35</span> <span class="err">#</span> <span class="n">not</span> <span class="n">a</span> <span class="n">lie</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">74</span> <span class="err">#</span> <span class="n">inches</span>
-<span class="n">weight</span> <span class="o">=</span> <span class="mi">180</span> <span class="err">#</span> <span class="n">lbs</span>
-<span class="n">eyes</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Blue</span><span class="err">&#39;</span>
-<span class="n">teeth</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">White</span><span class="err">&#39;</span>
-<span class="n">hair</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">Brown</span><span class="err">&#39;</span>
+name = &#39;Zed A. Shaw&#39;
+age = 35 # not a lie
+height = 74 # inches
+weight = 180 # lbs
+eyes = &#39;Blue&#39;
+teeth = &#39;White&#39;
+hair = &#39;Brown&#39;
 
-<span class="n">print</span> <span class="s">&quot;Let&#39;s talk about %s.&quot;</span> <span class="o">%</span> <span class="n">name</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d inches tall.&quot;</span> <span class="o">%</span> <span class="n">height</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d pounds heavy.&quot;</span> <span class="o">%</span> <span class="n">weight</span>
-<span class="n">print</span> <span class="s">&quot;Actually that&#39;s not too heavy.&quot;</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s got %s eyes and %s hair.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">eyes</span><span class="p">,</span> <span class="n">hair</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;His teeth are usually %s depending on the coffee.&quot;</span> <span class="o">%</span> <span class="n">teeth</span>
+print &quot;Let&#39;s talk about %s.&quot; % name
+print &quot;He&#39;s %d inches tall.&quot; % height
+print &quot;He&#39;s %d pounds heavy.&quot; % weight
+print &quot;Actually that&#39;s not too heavy.&quot;
+print &quot;He&#39;s got %s eyes and %s hair.&quot; % (eyes, hair)
+print &quot;His teeth are usually %s depending on the coffee.&quot; % teeth
 
-<span class="cp"># this line is tricky, try to get it exactly right</span>
-<span class="n">print</span> <span class="s">&quot;If I add %d, %d, and %d I get %d.&quot;</span> <span class="o">%</span> <span class="p">(</span>
-    <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">age</span> <span class="o">+</span> <span class="n">height</span> <span class="o">+</span> <span class="n">weight</span><span class="p">)</span>
+# this line is tricky, try to get it exactly right
+print &quot;If I add %d, %d, and %d I get %d.&quot; % (
+    age, height, weight, age + height + weight)
 
 
-<span class="cp"># Study drills</span>
-<span class="n">height_cm</span> <span class="o">=</span> <span class="n">height</span> <span class="o">*</span> <span class="mf">2.54</span> <span class="err">#</span> <span class="n">cm</span>
-<span class="n">weight_kg</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">*</span> <span class="mf">0.453592</span> <span class="err">#</span> <span class="n">kg</span>
+# Study drills
+height_cm = height * 2.54 # cm
+weight_kg = weight * 0.453592 # kg
 
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d centimeters tall.&quot;</span> <span class="o">%</span> <span class="n">height_cm</span>
-<span class="n">print</span> <span class="s">&quot;He&#39;s %d kilograms heavy.&quot;</span> <span class="o">%</span> <span class="n">weight_kg</span>
+print &quot;He&#39;s %d centimeters tall.&quot; % height_cm
+print &quot;He&#39;s %d kilograms heavy.&quot; % weight_kg
 
-<span class="cp"># %r format character</span>
-<span class="n">r</span> <span class="o">=</span> <span class="s">&quot;Print this no matter what&quot;</span>
-<span class="n">print</span> <span class="s">&quot;Here is what %%r does: %r&quot;</span> <span class="o">%</span> <span class="n">r</span>
+# %r format character
+r = &quot;Print this no matter what&quot;
+print &quot;Here is what %%r does: %r&quot; % r
 </pre></div>
 
 
-<p><img alt="Exercise 05" src="/images/ex05.png" title="Exercise 05" /></p>
+<p><img alt="Exercise 05" src="/images/ex05.png" title="Exercise 05"></p>
 <p>Nothing too crazy, just some string formatting, specifically decimal, <code>%d</code>, representation, <code>%r</code>, and string, <code>%s</code>. Here are all of the <a href="https://docs.python.org/2/library/stdtypes.html#string-formatting-operations">Python format characters</a>.</p>
 <p>A quick search on Google brings up all of the Imperial-Metric conversions that I forgot from middle&nbsp;school:</p>
 <ul>

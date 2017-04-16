@@ -41,105 +41,105 @@
 </blockquote>
 <p>Amen. A million&nbsp;amens.</p>
 <p>What I came up&nbsp;with:</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">26</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex26.html</span>
+<div class="highlight"><pre><span></span># Exercise 26
+# http://learnpythonthehardway.org/book/ex26.html
 
-<span class="nx">def</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">stuff</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">stuff</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">words</span>
+def break_words(stuff):
+    &quot;&quot;&quot;This function will break up words for us.&quot;&quot;&quot;
+    words = stuff.split(&#39; &#39;)
+    return words
 
-<span class="nx">def</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nx">sorted</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def sort_words(words):
+    &quot;&quot;&quot;Sorts the words.&quot;&quot;&quot;
+    return sorted(words)
 
-<span class="nx">def</span> <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the first word after popping it off.&quot;&quot;&quot;</span>
-    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-    <span class="nx">print</span> <span class="nx">word</span>
+def print_first_word(words):
+    &quot;&quot;&quot;Prints the first word after popping it off.&quot;&quot;&quot;
+    word = words.pop(0)
+    print word
 
-<span class="nx">def</span> <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the last word after popping it off.&quot;&quot;&quot;</span>
-    <span class="nx">word</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nx">print</span> <span class="nx">word</span>
+def print_last_word(words):
+    &quot;&quot;&quot;Prints the last word after popping it off.&quot;&quot;&quot;
+    word = words.pop(-1)
+    print word
 
-<span class="nx">def</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Takes in a full sentence and returns the sorted words.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def sort_sentence(sentence):
+    &quot;&quot;&quot;Takes in a full sentence and returns the sorted words.&quot;&quot;&quot;
+    words = break_words(sentence)
+    return sort_words(words)
 
-<span class="nx">def</span> <span class="nx">print_first_and_last</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Prints the first and last words of the sentence.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+def print_first_and_last(sentence):
+    &quot;&quot;&quot;Prints the first and last words of the sentence.&quot;&quot;&quot;
+    words = break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
 
-<span class="nx">def</span> <span class="nx">print_first_and_last_sorted</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Sorts the words then prints the first and last one.&quot;&quot;&quot;</span>
-    <span class="nx">words</span> <span class="o">=</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-    <span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-    <span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-
-
-<span class="nx">print</span> <span class="s2">&quot;Let&#39;s practice everything.&quot;</span>
-<span class="nx">print</span> <span class="s1">&#39;You\&#39;d need to know \&#39;bout escapes with \\ that do \n newlines and \t tabs.&#39;</span>
-
-<span class="nx">poem</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">\tThe lovely world</span>
-<span class="s2">with logic so firmly planted</span>
-<span class="s2">cannot discern \n the needs of love</span>
-<span class="s2">nor comprehend passion from intuition</span>
-<span class="s2">and requires an explanation</span>
-<span class="s2">\n\t\twhere there is none.</span>
-<span class="s2">&quot;&quot;&quot;</span>
+def print_first_and_last_sorted(sentence):
+    &quot;&quot;&quot;Sorts the words then prints the first and last one.&quot;&quot;&quot;
+    words = sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
 
 
-<span class="nx">print</span> <span class="s2">&quot;--------------&quot;</span>
-<span class="nx">print</span> <span class="nx">poem</span>
-<span class="nx">print</span> <span class="s2">&quot;--------------&quot;</span>
+print &quot;Let&#39;s practice everything.&quot;
+print &#39;You\&#39;d need to know \&#39;bout escapes with \\ that do \n newlines and \t tabs.&#39;
 
-<span class="nx">five</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span>
-<span class="nx">print</span> <span class="s2">&quot;This should be five: %s&quot;</span> <span class="o">%</span> <span class="nx">five</span>
-
-<span class="nx">def</span> <span class="nx">secret_formula</span><span class="p">(</span><span class="nx">started</span><span class="p">)</span><span class="o">:</span>
-    <span class="nx">jelly_beans</span> <span class="o">=</span> <span class="nx">started</span> <span class="o">*</span> <span class="mi">500</span>
-    <span class="nx">jars</span> <span class="o">=</span> <span class="nx">jelly_beans</span> <span class="o">/</span> <span class="mi">1000</span>
-    <span class="nx">crates</span> <span class="o">=</span> <span class="nx">jars</span> <span class="o">/</span> <span class="mi">100</span>
-    <span class="k">return</span> <span class="nx">jelly_beans</span><span class="p">,</span> <span class="nx">jars</span><span class="p">,</span> <span class="nx">crates</span>
-
-
-<span class="nx">start_point</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="nx">beans</span><span class="p">,</span> <span class="nx">jars</span><span class="p">,</span> <span class="nx">crates</span> <span class="o">=</span> <span class="nx">secret_formula</span><span class="p">(</span><span class="nx">start_point</span><span class="p">)</span>
-
-<span class="nx">print</span> <span class="s2">&quot;With a starting point of: %d&quot;</span> <span class="o">%</span> <span class="nx">start_point</span>
-<span class="nx">print</span> <span class="s2">&quot;We&#39;d have %d beans, %d jars, and %d crates.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nx">beans</span><span class="p">,</span> <span class="nx">jars</span><span class="p">,</span> <span class="nx">crates</span><span class="p">)</span>
-
-<span class="nx">start_point</span> <span class="o">=</span> <span class="nx">start_point</span> <span class="o">/</span> <span class="mi">10</span>
-
-<span class="nx">print</span> <span class="s2">&quot;We can also do that this way:&quot;</span>
-<span class="nx">print</span> <span class="s2">&quot;We&#39;d have %d beans, %d jars, and %d crabapples.&quot;</span> <span class="o">%</span> <span class="nx">secret_formula</span><span class="p">(</span><span class="nx">start_point</span><span class="p">)</span>
+poem = &quot;&quot;&quot;
+\tThe lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explanation
+\n\t\twhere there is none.
+&quot;&quot;&quot;
 
 
-<span class="nx">sentence</span> <span class="o">=</span> <span class="s2">&quot;All good\tthings come to those who wait.&quot;</span>
+print &quot;--------------&quot;
+print poem
+print &quot;--------------&quot;
 
-<span class="nx">words</span> <span class="o">=</span> <span class="nx">break_words</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-<span class="nx">sorted_words</span> <span class="o">=</span> <span class="nx">sort_words</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+five = 10 - 2 + 3 - 6
+print &quot;This should be five: %s&quot; % five
 
-<span class="nx">print_first_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-<span class="nx">print_last_word</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
-<span class="nx">print_first_word</span><span class="p">(</span><span class="nx">sorted_words</span><span class="p">)</span>
-<span class="nx">print_last_word</span><span class="p">(</span><span class="nx">sorted_words</span><span class="p">)</span>
-<span class="nx">sorted_words</span> <span class="o">=</span> <span class="nx">sort_sentence</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
-<span class="nx">print</span> <span class="nx">sorted_words</span>
+def secret_formula(started):
+    jelly_beans = started * 500
+    jars = jelly_beans / 1000
+    crates = jars / 100
+    return jelly_beans, jars, crates
 
-<span class="nx">print_first_and_last</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
 
-<span class="nx">print_first_and_last_sorted</span><span class="p">(</span><span class="nx">sentence</span><span class="p">)</span>
+start_point = 10000
+beans, jars, crates = secret_formula(start_point)
+
+print &quot;With a starting point of: %d&quot; % start_point
+print &quot;We&#39;d have %d beans, %d jars, and %d crates.&quot; % (beans, jars, crates)
+
+start_point = start_point / 10
+
+print &quot;We can also do that this way:&quot;
+print &quot;We&#39;d have %d beans, %d jars, and %d crabapples.&quot; % secret_formula(start_point)
+
+
+sentence = &quot;All good\tthings come to those who wait.&quot;
+
+words = break_words(sentence)
+sorted_words = sort_words(words)
+
+print_first_word(words)
+print_last_word(words)
+print_first_word(sorted_words)
+print_last_word(sorted_words)
+sorted_words = sort_sentence(sentence)
+print sorted_words
+
+print_first_and_last(sentence)
+
+print_first_and_last_sorted(sentence)
 </pre></div>
 
 
 <p>Let&#8217;s run&nbsp;it:</p>
-<p><img alt="Exercise 26" src="/images/ex26.png" title="Exercise 26" /></p>
+<p><img alt="Exercise 26" src="/images/ex26.png" title="Exercise 26"></p>
 <p>I <em>think</em> that&#8217;s correct. It&#8217;s hard to know without seeing the answer. Lots of syntax errors, misspellings of function names, and even misspellings of words in strings. Spelling nerds of the world,&nbsp;unite.</p>
 <p>It&#8217;s a little more interesting (and useful) to see the diff between the two files. Fortunately, because I&#8217;ve been using <a href="https://github.com/richardcornish/lpthw">GitHub</a> to save my work on this blog, I can show the difference. Check it out: the <a href="https://github.com/richardcornish/lpthw/blob/13fdf52eedbc0dbdc2eb2c0b656a4b2fa1e74bd5/exercises/ex26.py">before file</a> and the <a href="https://github.com/richardcornish/lpthw/blob/master/exercises/ex26.py">after file</a>. And now for the <a href="https://github.com/richardcornish/lpthw/commit/7c95e54462a2309931fdfb7cb6afb595f9569efe?diff=split">pretty diff view</a>.</p>
 <p>The introduction to this lesson left a big impression on me. No matter where you go, no matter what you do, remember this: There will be  people who think that their code is perfect. They will be offended. They will tell you they are offended. They will take it out on you. Don&#8217;t let them bring you down. Your job is to make sure things work, and you have to power through and do whatever it takes to make that&nbsp;happen.</p>

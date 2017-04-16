@@ -34,43 +34,43 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>Tonight was <a href="http://learnpythonthehardway.org/book/ex17.html">Exercise 17</a>, and we&#8217;re learning how to copy one file&#8217;s contents into&nbsp;another.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 17</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex17.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 17</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex17.html</span>
 
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
-<span class="n">from</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span> <span class="n">import</span> <span class="n">exists</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">exists</span>
 
 <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="n">print</span> <span class="s">&quot;Copying from %s to %s&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Copying from </span><span class="si">%s</span><span class="s2"> to </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span><span class="p">)</span>
 
-<span class="cp"># we could do these two on one line, how?</span>
-<span class="n">in_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">)</span>
-<span class="n">indata</span> <span class="o">=</span> <span class="n">in_file</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># we could do these two on one line, how?</span>
+<span class="n">in_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">)</span>
+<span class="n">indata</span> <span class="o">=</span> <span class="n">in_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="n">print</span> <span class="s">&quot;The input file is %d bytes long&quot;</span> <span class="o">%</span> <span class="n">len</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;The input file is </span><span class="si">%d</span><span class="s2"> bytes long&quot;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
 
-<span class="n">print</span> <span class="s">&quot;Does the output file exist? %r&quot;</span> <span class="o">%</span> <span class="n">exists</span><span class="p">(</span><span class="n">to_file</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;Ready, hit RETURN to continue, CTRL-C to abort.&quot;</span>
-<span class="n">raw_input</span><span class="p">()</span>
+<span class="k">print</span> <span class="s2">&quot;Does the output file exist? </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">exists</span><span class="p">(</span><span class="n">to_file</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;Ready, hit RETURN to continue, CTRL-C to abort.&quot;</span>
+<span class="nb">raw_input</span><span class="p">()</span>
 
-<span class="n">out_file</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">)</span>
-<span class="n">out_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
+<span class="n">out_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">out_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">indata</span><span class="p">)</span>
 
-<span class="n">print</span> <span class="s">&quot;Alright, all done.&quot;</span>
+<span class="k">print</span> <span class="s2">&quot;Alright, all done.&quot;</span>
 
-<span class="n">out_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
-<span class="n">in_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">out_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">in_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
 
-<p><img alt="Exercise 17" src="/images/ex17.png" title="Exercise 17" /></p>
+<p><img alt="Exercise 17" src="/images/ex17.png" title="Exercise 17"></p>
 <p>The study drill encouraged me to read about <code>cat</code> in the&nbsp;manual.</p>
-<p><img alt="Cat" src="/images/cat-man.png" title="Cat" /></p>
+<p><img alt="Cat" src="/images/cat-man.png" title="Cat"></p>
 <p>My guess on the necessity of <a href="https://docs.python.org/2/library/stdtypes.html#file.close">closing the file</a> is that without it, it can be read or written by other code that might follow it. It might also be a memory&nbsp;issue.</p>
 <p>Another study drill encouraged me to read about the <a href="https://docs.python.org/2/reference/simple_stmts.html#import"><code>import</code> statement</a>. It&#8217;s kind of funny reading about it. It&#8217;s so fundamental to Python and was probably among the first code I typed. At first it felt strange and foreign to me, but traversing the file system with dotted sytax and importing the module directly or by directory also came across as an incredibly elegant syntax to&nbsp;me.</p>
 <p>As for the fun part about writing this code into one&nbsp;line:</p>
-<div class="highlight"><pre><span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span><span class="p">;</span> <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span><span class="p">;</span> <span class="n">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="sc">&#39;w&#39;</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">).</span><span class="n">read</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span><span class="p">;</span> <span class="n">script</span><span class="p">,</span> <span class="n">from_file</span><span class="p">,</span> <span class="n">to_file</span> <span class="o">=</span> <span class="n">argv</span><span class="p">;</span> <span class="nb">open</span><span class="p">(</span><span class="n">to_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">from_file</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 </pre></div>
 
 

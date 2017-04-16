@@ -34,35 +34,35 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p>Going to do another two exercises tonight to make up for yesterday. First up was <a href="http://learnpythonthehardway.org/book/ex13.html">exercise 13</a>, and it covered variable arguments, which is assigning more than one value to a variable with <a href="https://docs.python.org/2/library/sys.html#sys.argv"><code>argv</code></a>.</p>
-<div class="highlight"><pre><span class="cp"># Exercise 13</span>
-<span class="cp"># http:</span><span class="c1">//learnpythonthehardway.org/book/ex13.html</span>
+<div class="highlight"><pre><span></span><span class="c1"># Exercise 13</span>
+<span class="c1"># http://learnpythonthehardway.org/book/ex13.html</span>
 
-<span class="n">from</span> <span class="n">sys</span> <span class="n">import</span> <span class="n">argv</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
 <span class="n">script</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">,</span> <span class="n">third</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="n">print</span> <span class="s">&quot;The script is called:&quot;</span><span class="p">,</span> <span class="n">script</span>
-<span class="n">print</span> <span class="s">&quot;Your first variable is:&quot;</span><span class="p">,</span> <span class="n">first</span>
-<span class="n">print</span> <span class="s">&quot;Your second variable is:&quot;</span><span class="p">,</span> <span class="n">second</span>
-<span class="n">print</span> <span class="s">&quot;Your third variable is:&quot;</span><span class="p">,</span> <span class="n">third</span>
+<span class="k">print</span> <span class="s2">&quot;The script is called:&quot;</span><span class="p">,</span> <span class="n">script</span>
+<span class="k">print</span> <span class="s2">&quot;Your first variable is:&quot;</span><span class="p">,</span> <span class="n">first</span>
+<span class="k">print</span> <span class="s2">&quot;Your second variable is:&quot;</span><span class="p">,</span> <span class="n">second</span>
+<span class="k">print</span> <span class="s2">&quot;Your third variable is:&quot;</span><span class="p">,</span> <span class="n">third</span>
 
-<span class="n">opinion</span> <span class="o">=</span> <span class="n">raw_input</span><span class="p">(</span><span class="s">&quot;What do you think of this script? &quot;</span><span class="p">)</span>
-<span class="n">print</span> <span class="s">&quot;You think %s is %s!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">opinion</span><span class="p">)</span>
+<span class="n">opinion</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;What do you think of this script? &quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="s2">&quot;You think </span><span class="si">%s</span><span class="s2"> is </span><span class="si">%s</span><span class="s2">!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">opinion</span><span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="Exercise 13" src="/images/ex13-1.png" title="Exercise 13" /></p>
+<p><img alt="Exercise 13" src="/images/ex13-1.png" title="Exercise 13"></p>
 <p>When run with fewer than three&nbsp;arguments:</p>
-<div class="highlight"><pre><span class="nx">Traceback</span> <span class="p">(</span><span class="nx">most</span> <span class="nx">recent</span> <span class="nb">call</span> <span class="nb">last</span><span class="p">):</span>
-  <span class="nb">File</span> <span class="s2">&quot;ex13.py&quot;</span><span class="p">,</span> <span class="nb">line</span> <span class="mi">6</span><span class="p">,</span> <span class="k">in</span> <span class="o">&lt;</span><span class="nx">module</span><span class="o">&gt;</span>
-    <span class="nb">script</span><span class="p">,</span> <span class="nb">first</span><span class="p">,</span> <span class="nb">second</span><span class="p">,</span> <span class="n">third</span> <span class="o">=</span> <span class="nx">argv</span>
-<span class="nx">ValueError</span><span class="p">:</span> <span class="nx">need</span> <span class="nx">more</span> <span class="nx">than</span> <span class="mi">3</span> <span class="nb">values</span> <span class="k">to</span> <span class="nx">unpack</span>
+<div class="highlight"><pre><span></span>Traceback (most recent call last):
+  File &quot;ex13.py&quot;, line 6, in &lt;module&gt;
+    script, first, second, third = argv
+ValueError: need more than 3 values to unpack
 </pre></div>
 
 
 <p>It looks like <code>argv</code> requires one more value than the following three to run, that is, the first argument is the name of the file or <code>script</code> and the following arguments are the ones desired to be referenced in the script. In this example, we&#8217;ll need four or more values to &#8220;unpack&#8221; <code>argv</code>. If you provide a fourth argument without using it during script execution, it runs as&nbsp;usual.</p>
 <p>I added the last two lines to combine <code>argv</code> and <code>raw_input</code>:</p>
-<p><img alt="Exercise 13" src="/images/ex13-2.png" title="Exercise 13" /></p>
+<p><img alt="Exercise 13" src="/images/ex13-2.png" title="Exercise 13"></p>
 <p>I think I prefer <code>raw_input</code> because Python prompts me for an answer to a question rather than me having to remember which argument correspond to which parameters. Of course that&#8217;s why keyword arguments are so awesome, but we&#8217;ll get to that&nbsp;later.</p>
     </div><!-- /.entry-content -->
 

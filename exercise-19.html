@@ -34,62 +34,62 @@
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
 </footer><!-- /.post-info -->      <p><a href="http://learnpythonthehardway.org/book/ex19.html">Exercise 19</a> continues with functions and using variables as&nbsp;arguments.</p>
-<div class="highlight"><pre><span class="err">#</span> <span class="nx">Exercise</span> <span class="mi">19</span>
-<span class="err">#</span> <span class="nx">http</span><span class="o">:</span><span class="c1">//learnpythonthehardway.org/book/ex19.html</span>
+<div class="highlight"><pre><span></span># Exercise 19
+# http://learnpythonthehardway.org/book/ex19.html
 
-<span class="err">#</span> <span class="nx">define</span> <span class="nx">a</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">parameters</span>
-<span class="nx">def</span> <span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">cheese_count</span><span class="p">,</span> <span class="nx">boxes_of_crackers</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">cheeses</span>
-    <span class="nx">print</span> <span class="s2">&quot;You have %d cheeses!&quot;</span> <span class="o">%</span> <span class="nx">cheese_count</span>
-    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">boxes</span>
-    <span class="nx">print</span> <span class="s2">&quot;You have %d boxes of crackers!&quot;</span> <span class="o">%</span> <span class="nx">boxes_of_crackers</span>
-    <span class="err">#</span> <span class="nx">print</span> <span class="nx">your</span> <span class="nx">party</span> <span class="nx">animal</span> <span class="nx">street</span> <span class="nx">cred</span>
-    <span class="nx">print</span> <span class="s2">&quot;Man that&#39;s enough for a party!&quot;</span>
-    <span class="err">#</span> <span class="nx">print</span> <span class="nx">the</span> <span class="nx">necessity</span> <span class="k">for</span> <span class="nx">warmth</span>
-    <span class="nx">print</span> <span class="s2">&quot;Get a blanket.\n&quot;</span>
+# define a function with two parameters
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    # print the number of cheeses
+    print &quot;You have %d cheeses!&quot; % cheese_count
+    # print the number of boxes
+    print &quot;You have %d boxes of crackers!&quot; % boxes_of_crackers
+    # print your party animal street cred
+    print &quot;Man that&#39;s enough for a party!&quot;
+    # print the necessity for warmth
+    print &quot;Get a blanket.\n&quot;
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">description</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
-<span class="nx">print</span> <span class="s2">&quot;We can just give the function numbers directly:&quot;</span>
-<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">integers</span>
-<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+# print description of calling the function
+print &quot;We can just give the function numbers directly:&quot;
+# call the function with two arguments that are integers
+cheese_and_crackers(20, 30)
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">description</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
-<span class="nx">print</span> <span class="s2">&quot;OR, we can use variables from our script:&quot;</span>
-<span class="err">#</span> <span class="nx">assign</span> <span class="nx">integer</span> <span class="nx">values</span> <span class="nx">to</span> <span class="nx">cheese</span> <span class="nx">and</span> <span class="nx">crackers</span>
-<span class="nx">amount_of_cheese</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nx">amount_of_crackers</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">variables</span>
-<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">amount_of_cheese</span><span class="p">,</span> <span class="nx">amount_of_crackers</span><span class="p">)</span>
+# print description of calling the function
+print &quot;OR, we can use variables from our script:&quot;
+# assign integer values to cheese and crackers
+amount_of_cheese = 10
+amount_of_crackers = 50
+# call the function with two arguments that are variables
+cheese_and_crackers(amount_of_cheese, amount_of_crackers)
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">description</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
-<span class="nx">print</span> <span class="s2">&quot;We can even do math inside too:&quot;</span>
-<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">addition</span> <span class="nx">of</span> <span class="nx">integers</span> <span class="kd">with</span> <span class="nx">plus</span> <span class="nx">operator</span>
-<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span>
+# print description of calling the function
+print &quot;We can even do math inside too:&quot;
+# call the function with two arguments that are addition of integers with plus operator
+cheese_and_crackers(10 + 20, 5 + 6)
 
-<span class="err">#</span> <span class="nx">print</span> <span class="nx">desciption</span> <span class="nx">of</span> <span class="nx">calling</span> <span class="nx">the</span> <span class="kd">function</span>
-<span class="nx">print</span> <span class="s2">&quot;And we can combine the two, variables and math:&quot;</span>
-<span class="err">#</span> <span class="nx">call</span> <span class="nx">the</span> <span class="kd">function</span> <span class="kd">with</span> <span class="nx">two</span> <span class="nx">arguments</span> <span class="nx">that</span> <span class="nx">are</span> <span class="nx">variables</span> <span class="nx">and</span> <span class="nx">addition</span> <span class="nx">of</span> <span class="nx">integers</span>
-<span class="nx">cheese_and_crackers</span><span class="p">(</span><span class="nx">amount_of_cheese</span> <span class="o">+</span> <span class="mi">100</span><span class="p">,</span> <span class="nx">amount_of_crackers</span> <span class="o">+</span> <span class="mi">1000</span><span class="p">)</span>
+# print desciption of calling the function
+print &quot;And we can combine the two, variables and math:&quot;
+# call the function with two arguments that are variables and addition of integers
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
 </pre></div>
 
 
-<p><img alt="Exercise 19" src="/images/ex19-1.png" title="Exercise 19" /></p>
+<p><img alt="Exercise 19" src="/images/ex19-1.png" title="Exercise 19"></p>
 <p>The study drill told me to &#8220;write at least one more function of your own design, and run it 10 different ways.&#8221; I think Zed Shaw meant to use addition, modulo, variable assignment, <code>argv</code>, <code>*args</code>, etc., to execute the function. But seeing as I&#8217;m really lazy, I cheated and created my own random number generator to, well, run it &#8220;10 different ways&#8221; (at least, 10 ways whose probability of repetition are highly&nbsp;unlikely).</p>
 <p>Here it&nbsp;is:</p>
-<div class="highlight"><pre><span class="n">import</span> <span class="n">random</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="n">def</span> <span class="n">creeping_on_my_ex</span><span class="p">(</span><span class="n">text_messages</span><span class="p">,</span> <span class="n">calls</span><span class="p">)</span><span class="o">:</span>
-    <span class="n">print</span> <span class="s">&quot;You sent %d text messages and made %d calls. Creep!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">text_messages</span><span class="p">,</span> <span class="n">calls</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">creeping_on_my_ex</span><span class="p">(</span><span class="n">text_messages</span><span class="p">,</span> <span class="n">calls</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s2">&quot;You sent </span><span class="si">%d</span><span class="s2"> text messages and made </span><span class="si">%d</span><span class="s2"> calls. Creep!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">text_messages</span><span class="p">,</span> <span class="n">calls</span><span class="p">)</span>
 
-<span class="n">def</span> <span class="n">random_int</span><span class="p">()</span><span class="o">:</span>
-    <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="k">def</span> <span class="nf">random_int</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
 
-<span class="k">for</span> <span class="n">x</span> <span class="n">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span><span class="o">:</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
     <span class="n">creeping_on_my_ex</span><span class="p">(</span><span class="n">random_int</span><span class="p">(),</span> <span class="n">random_int</span><span class="p">())</span>
 </pre></div>
 
 
-<p><img alt="Exercise 19" src="/images/ex19-2.png" title="Exercise 19" /></p>
+<p><img alt="Exercise 19" src="/images/ex19-2.png" title="Exercise 19"></p>
 <p>I used a <a href="https://docs.python.org/2/reference/compound_stmts.html#the-for-statement"><code>for</code></a> loop (we haven&#8217;t covered this yet) and <a href="https://docs.python.org/2/library/functions.html#xrange"><code>xrange</code></a> to cover a quantity of 10 numbers, and passed in a <a href="https://docs.python.org/2/library/random.html#random.random">random integer</a> for the arguments of the&nbsp;function. </p>
 <p>What do you think of that, Jessica? Huh? Yeah. That&#8217;s what I&nbsp;thought.</p>
     </div><!-- /.entry-content -->
