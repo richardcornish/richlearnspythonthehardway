@@ -9,9 +9,9 @@ I attempt to write about this probably horrific experience with [GitHub Pages](h
 You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary. I typically install projects to `~/Sites`, but is by no means required.
 
 ```
-mkvirtualenv lpthw
-git clone git@github.com:richardcornish/lpthw.git
-cd lpthw/
+mkvirtualenv -p python3 rich-learns-python-the-hard-way
+git clone git@github.com:richardcornish/rich-learns-python-the-hard-way.git
+cd rich-learns-python-the-hard-way/
 pip install -r requirements.txt
 ```
 
@@ -21,7 +21,8 @@ pip install -r requirements.txt
 
 ```
 pelican pelican/content -o pelican/output -s pelican/pelicanconf.py -t pelican/themes/rich
-cd pelican/output/ && python -m SimpleHTTPServer
+cd pelican/output/ && python -m SimpleHTTPServer  # Python 2
+cd pelican/output/ && python -m http.server  # Python 3
 ```
 
 Add `-t` to `pelican` for plain text. :)
