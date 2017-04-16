@@ -1,6 +1,6 @@
 # Rich learns Python the hard way
 
-This repository contains the code I wrote to complete the [52 exercises](http://learnpythonthehardway.org/book/) of [Learn Python the Hard Way](http://learnpythonthehardway.org/) by [Zed Shaw](http://zedshaw.com/about/).
+This repository contains the code I wrote to complete the [52 exercises](https://learnpythonthehardway.org/book/) of [Learn Python the Hard Way](https://learnpythonthehardway.org/) by [Zed Shaw](https://zedshaw.com/about/).
 
 I attempt to write about this probably horrific experience with [GitHub Pages](https://pages.github.com/) and [Pelican](http://blog.getpelican.com/) at [richlearnspythonthehardway.org](http://richlearnspythonthehardway.org/).
 
