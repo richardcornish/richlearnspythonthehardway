@@ -9,11 +9,13 @@ I attempt to write about this probably horrific experience with [GitHub Pages](h
 You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary. I typically install projects to `~/Sites`, but is by no means required.
 
 ```
-mkvirtualenv -p python3 richlearnspythonthehardway
+mkvirtualenv richlearnspythonthehardway
 git clone git@github.com:richardcornish/richlearnspythonthehardway.git
 cd richlearnspythonthehardway/
 pip install -r requirements.txt
 ```
+
+You should use Python 2 because Zed Shaw is vehemently [against Python 3](https://learnpythonthehardway.org/book/nopython3.html).
 
 ## Write
 
@@ -21,8 +23,7 @@ pip install -r requirements.txt
 
 ```
 pelican pelican/content -o pelican/output -s pelican/pelicanconf.py -t pelican/themes/rich
-cd pelican/output/ && python -m SimpleHTTPServer  # Python 2
-cd pelican/output/ && python -m http.server  # Python 3
+cd pelican/output/ && python -m SimpleHTTPServer
 ```
 
 Add `-t` to `pelican` for plain text. :)
