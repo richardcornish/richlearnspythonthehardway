@@ -35,9 +35,6 @@ Visit [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 Now publish to the live Interwebs.
 
 ```
-cd ../../ # Back to the top
-git add .
-git commit -m "..."
 git push origin master
 ghp-import -p pelican/output
 ```
