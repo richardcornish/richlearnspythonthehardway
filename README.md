@@ -23,7 +23,7 @@ You should use Python 2 because Zed Shaw is vehemently [against Python 3](https:
 
 ```
 pelican pelican/content -o pelican/output -s pelican/pelicanconf.py -t pelican/themes/rich
-cd pelican/output/ && python -m SimpleHTTPServer
+(cd pelican/output/ && python -m SimpleHTTPServer)
 ```
 
 Add `-t` to `pelican` for plain text. :)
