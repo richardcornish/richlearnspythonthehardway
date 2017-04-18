@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 28</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-28.html" rel="bookmark"
+           title="Permalink to Exercise 28">Exercise&nbsp;28</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-04-18T15:42:00-05:00">
+                Published: Tue 18 April 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p><a href="https://learnpythonthehardway.org/book/ex28.html">Today&#8217;s exercise</a> is applying truth tables to statements to arrive at the boolean&nbsp;answers.</p>
+<div class="highlight"><pre><span></span># Exercise 28
+# https://learnpythonthehardway.org/book/ex28.html
+
+print True and True  # True
+print False and True  # False
+print 1 == 1 and 2 == 1  # False
+print &quot;test&quot; == &quot;test&quot;  # True
+print 1 == 1 or 2 != 1  # True
+print True and 1 == 1  # True
+print False and 0 != 0  # False
+print True or 1 == 1  # True
+print &quot;test&quot; == &quot;testing&quot;  # False
+print 1 != 0 and 2 == 1  # False
+print &quot;test&quot; != &quot;testing&quot;  # True
+print &quot;test&quot; == 1  # False
+print not (True and False)  # True
+print not (1 == 1 and 0 != 1)  # False
+print not (10 == 1 or 1000 == 1000)  # False
+print not (1 != 10 or 3 == 4)  # False
+print not (&quot;testing&quot; == &quot;testing&quot; and &quot;Zed&quot; == &quot;Cool Guy&quot;)  # True
+print 1 == 1 and (not (&quot;testing&quot; == 1 or 1 == 0))  # True
+print &quot;chunky&quot; == &quot;bacon&quot; and (not (3 == 4 or 3 == 3))  # False
+print 3 == 3 and (not (&quot;testing&quot; == &quot;testing&quot; or &quot;Python&quot; == &quot;Fun&quot;))  # False
+</pre></div>
+
+
+<p>And evaluating&nbsp;each:</p>
+<p><img alt="Exercise 28" src="/images/ex28.png" title="Exercise 28"></p>
+<p>Here are the <a href="https://docs.python.org/2/library/stdtypes.html#comparisons">equality operators</a> from the study&nbsp;drill:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;</code></td>
+<td>strictly less than</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>less than or equal</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>strictly greater than</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>greater than or equal</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>equal</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>not equal</td>
+</tr>
+<tr>
+<td><code>is</code></td>
+<td>object identity</td>
+</tr>
+<tr>
+<td><code>is not</code></td>
+<td>negated object identity</td>
+</tr>
+</tbody>
+</table>
+<p>I&#8217;m a little surprised that there is no mention of &#8220;<a href="https://en.wikipedia.org/wiki/Truthiness">truthiness</a>&#8221; in the exercise, but maybe that&#8217;s a little advanced at the moment. If you study each of the statements, you&#8217;ll notice that each was written as a comparison of equality rather than standalone truth&nbsp;tests.</p>
+<p>For example, <code>1 == 1 and 2 == 1</code> or <code>"test" == "testing"</code> ultimately evaluates to <code>True</code> or <code>False</code>. But is <code>1</code>&#8230;<code>True</code>? Is <code>"test"</code>?</p>
+<p><a href="https://docs.python.org/2/library/stdtypes.html#truth-value-testing">Python&#8217;s docs</a> list what values are <code>False</code>:</p>
+<ul>
+<li><code>None</code></li>
+<li><code>False</code> (duh)</li>
+<li><code>0</code> (and zero equivalents in floats,&nbsp;etc.)</li>
+<li><code>[]</code></li>
+<li><code>()</code></li>
+<li><code>''</code></li>
+</ul>
+<p>One of my favorites is a <code>datetime</code> object whose value is midnight. Objects are usually truthy, but <a href="https://lwn.net/Articles/590299/">not so for midnight</a>. Ruh&nbsp;roh.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span>
+<span class="bp">False</span>
+</pre></div>
+
+
+<p>And guess what? It hasn&#8217;t changed for Python 3! That ship has&nbsp;sailed!</p>
+<p><img alt="Truthiness" src="/images/truthiness.png" title="Truthiness"></p>
+<p>I love it when developers debate semantics as interfaces with the world because it shows they&#8217;re <em>just as much of a designer as a <span class="caps">UX</span> designer is</em>. Their medium just happens to be code. You wouldn&#8217;t know it, but they want intuition as much as the next&nbsp;person.</p>
+<blockquote>
+<p>There&#8217;s a great saying in the usability world: &#8220;You can&#8217;t document your way out of a usability problem&#8221;. What it means is that if all the affordances of your application (or programming language!) push users towards a particular logical conclusion (in this case, &#8220;datetime.time values are not numbers&#8221;), having a caveat in your documentation isn&#8217;t going to help, because people aren&#8217;t even going to think to ask the question. It doesn&#8217;t matter if you originally had a good reason for the behaviour, you&#8217;ve ended up in a place where your behaviour is confusing and inconsistent, because there is one piece of behaviour that is out of line with an otherwise consistent mental&nbsp;model.</p>
+</blockquote>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
