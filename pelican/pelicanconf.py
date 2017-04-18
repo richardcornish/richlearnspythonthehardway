@@ -22,7 +22,7 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (('Python', 'http://python.org/'),
          ('LPTHW', 'https://learnpythonthehardway.org/book/'),
-         ('Code', 'https://github.com/richardcornish/rich-learns-python-the-hard-way/'),)
+         ('Code', 'https://github.com/richardcornish/richlearnspythonthehardway/'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),

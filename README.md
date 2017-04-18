@@ -9,9 +9,9 @@ I attempt to write about this probably horrific experience with [GitHub Pages](h
 You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary. I typically install projects to `~/Sites`, but is by no means required.
 
 ```
-mkvirtualenv -p python3 rich-learns-python-the-hard-way
-git clone git@github.com:richardcornish/rich-learns-python-the-hard-way.git
-cd rich-learns-python-the-hard-way/
+mkvirtualenv -p python3 richlearnspythonthehardway
+git clone git@github.com:richardcornish/richlearnspythonthehardway.git
+cd richlearnspythonthehardway/
 pip install -r requirements.txt
 ```
 
@@ -41,7 +41,7 @@ git push origin master
 ghp-import -p pelican/output
 ```
 
-Visit [http://richardcornish.github.io/rich-learns-python-the-hard-way/](http://richardcornish.github.io/rich-learns-python-the-hard-way/) (or [http://richlearnspythonthehardway.org/](http://richlearnspythonthehardway.org/)).
+Visit [http://richardcornish.github.io/richlearnspythonthehardway/](http://richardcornish.github.io/richlearnspythonthehardway/) (or [http://richlearnspythonthehardway.org/](http://richlearnspythonthehardway.org/)).
 
 ## Domains
 
