@@ -9,10 +9,10 @@ I attempt to write about this probably horrific experience with [GitHub Pages](h
 You can create a similar diary of trauma by [forking this repository](https://help.github.com/articles/fork-a-repo/). Replace Rich-specific bits as necessary. I typically install projects to `~/Sites`, but is by no means required.
 
 ```
-mkvirtualenv richlearnspythonthehardway
-git clone git@github.com:richardcornish/richlearnspythonthehardway.git
-cd richlearnspythonthehardway/
-pip install -r requirements.txt
+$ mkvirtualenv myenv
+(myenv)$ git clone git@github.com:richardcornish/richlearnspythonthehardway.git
+(myenv)$ cd richlearnspythonthehardway/
+(myenv)$ pip install -r requirements.txt
 ```
 
 You should use Python 2 because Zed Shaw is vehemently [against Python 3](https://learnpythonthehardway.org/book/nopython3.html).
@@ -22,8 +22,8 @@ You should use Python 2 because Zed Shaw is vehemently [against Python 3](https:
 [Add](http://docs.getpelican.com/en/latest/content.html) and edit [Markdown](https://help.github.com/articles/markdown-basics/) files in `pelican/content/`. Then generate them:
 
 ```
-pelican pelican/content -o pelican/output -s pelican/pelicanconf.py -t pelican/themes/rich
-(cd pelican/output/ && python -m SimpleHTTPServer)
+(myenv)$ pelican pelican/content -o pelican/output -s pelican/pelicanconf.py -t pelican/themes/rich
+(myenv)$ (cd pelican/output/ && python -m SimpleHTTPServer)
 ```
 
 Add `-t` to `pelican` for plain text. :)
@@ -35,8 +35,8 @@ Visit [http://0.0.0.0:8000/](http://0.0.0.0:8000/).
 Now publish to the live Interwebs.
 
 ```
-git push origin master
-ghp-import -p pelican/output
+(myenv)$ git push origin master
+(myenv)$ ghp-import -p pelican/output
 ```
 
 Visit [http://richardcornish.github.io/richlearnspythonthehardway/](http://richardcornish.github.io/richlearnspythonthehardway/) (or [http://richlearnspythonthehardway.org/](http://richlearnspythonthehardway.org/)).
