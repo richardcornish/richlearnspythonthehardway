@@ -17,7 +17,79 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-28.html">Exercise&nbsp;28</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-29.html">Exercise&nbsp;29</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-04-25T17:49:00-05:00">
+                Published: Tue 25 April 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p><a href="https://learnpythonthehardway.org/book/ex29.html">Today&#8217;s exercise</a> is all about the <code>if</code> statement.</p>
+<div class="highlight"><pre><span></span># Exercise 29
+# https://learnpythonthehardway.org/book/ex29.html
+
+people = 20
+cats = 30
+dogs = 15
+
+
+if people &lt; cats:
+    print &quot;Too many cats! The world is doomed!&quot;
+
+if people &gt; cats:
+    print &quot;Not many cats! The world is saved!&quot;
+
+if people &lt; dogs:
+    print &quot;The world is drooled on!&quot;
+
+if people &gt; dogs:
+    print &quot;The world is dry!&quot;
+
+
+dogs += 5
+
+if people &gt;= dogs:
+    print &quot;People are greater than or equal to dogs.&quot;
+
+if people &lt;= dogs:
+    print &quot;People are less than or equal to dogs.&quot;
+
+
+if people == dogs:
+    print &quot;People are dogs.&quot;
+</pre></div>
+
+
+<p>And running&nbsp;it:</p>
+<p><img alt="Exercise 29" src="/images/ex29.png" title="Exercise 29"></p>
+<p>The <code>if</code> statement is &#8220;used for conditional execution,&#8221; according to the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if">docs</a>:</p>
+<blockquote>
+<p>It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section <a href="https://docs.python.org/2.7/reference/expressions.html#booleans">Boolean operations</a> for the definition of true and false); then that suite is executed (and no other part of the <code>if</code> statement is executed or evaluated). If all expressions are false, the suite of the <code>else</code> clause, if present, is&nbsp;executed.</p>
+</blockquote>
+<p>The code needs to be indented four spaces because those spaces signify that the code is meant to be run only when the condition is true. If it&#8217;s not indented, an <a href="https://docs.python.org/2.7/library/exceptions.html#exceptions.IndentationError"><code>IndentationError</code></a> exception will be&nbsp;thrown.</p>
+<p>Here was a fun one I had to look up: <code>+=</code> is shorthand for the <a href="https://docs.python.org/2.7/library/operator.html#operator.iadd"><code>iadd</code></a> method of the <code>operator</code> module.</p>
+<blockquote>
+<p><code>a = iadd(a, b)</code> is equivalent to <code>a += b</code>.</p>
+</blockquote>
+<p>I remember encountering <code>+=</code> in Java and it thoroughly confused me, but when I slowed down to think you could add to a variable and assign the new value back onto itself, it was mind blowing how much clarity that achieved for me. &#8220;Computers can do&nbsp;that??&#8221;</p>
+<p><img alt="Homer kissing a computer" src="/images/homer.gif" title="Homer kissing a computer"></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-28.html" rel="bookmark"
+                           title="Permalink to Exercise 28">Exercise&nbsp;28</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-04-18T15:42:00-05:00">
                 Published: Tue 18 April 2017
@@ -28,7 +100,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p><a href="https://learnpythonthehardway.org/book/ex28.html">Today&#8217;s exercise</a> is applying truth tables to statements to arrive at the boolean&nbsp;answers.</p>
+</footer><!-- /.post-info -->                <p><a href="https://learnpythonthehardway.org/book/ex28.html">Today&#8217;s exercise</a> is applying truth tables to statements to arrive at the boolean&nbsp;answers.</p>
 <div class="highlight"><pre><span></span># Exercise 28
 # https://learnpythonthehardway.org/book/ex28.html
 
@@ -36,99 +108,10 @@ print True and True  # True
 print False and True  # False
 print 1 == 1 and 2 == 1  # False
 print &quot;test&quot; == &quot;test&quot;  # True
-print 1 == 1 or 2 != 1  # True
-print True and 1 == 1  # True
-print False and 0 != 0  # False
-print True or 1 == 1  # True
-print &quot;test&quot; == &quot;testing&quot;  # False
-print 1 != 0 and 2 == 1  # False
-print &quot;test&quot; != &quot;testing&quot;  # True
-print &quot;test&quot; == 1  # False
-print not (True and False)  # True
-print not (1 == 1 and 0 != 1)  # False
-print not (10 == 1 or 1000 == 1000)  # False
-print not (1 != 10 or 3 == 4)  # False
-print not (&quot;testing&quot; == &quot;testing&quot; and &quot;Zed&quot; == &quot;Cool Guy&quot;)  # True
-print 1 == 1 and (not (&quot;testing&quot; == 1 or 1 == 0))  # True
-print &quot;chunky&quot; == &quot;bacon&quot; and (not (3 == 4 or 3 == 3))  # False
-print 3 == 3 and (not (&quot;testing&quot; == &quot;testing&quot; or &quot;Python&quot; == &quot;Fun&quot;))  # False
-</pre></div>
-
-
-<p>And evaluating&nbsp;each:</p>
-<p><img alt="Exercise 28" src="/images/ex28.png" title="Exercise 28"></p>
-<p>Here are the <a href="https://docs.python.org/2/library/stdtypes.html#comparisons">equality operators</a> from the study&nbsp;drill:</p>
-<table>
-<thead>
-<tr>
-<th>Operation</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>&lt;</code></td>
-<td>strictly less than</td>
-</tr>
-<tr>
-<td><code>&lt;=</code></td>
-<td>less than or equal</td>
-</tr>
-<tr>
-<td><code>&gt;</code></td>
-<td>strictly greater than</td>
-</tr>
-<tr>
-<td><code>&gt;=</code></td>
-<td>greater than or equal</td>
-</tr>
-<tr>
-<td><code>==</code></td>
-<td>equal</td>
-</tr>
-<tr>
-<td><code>!=</code></td>
-<td>not equal</td>
-</tr>
-<tr>
-<td><code>is</code></td>
-<td>object identity</td>
-</tr>
-<tr>
-<td><code>is not</code></td>
-<td>negated object identity</td>
-</tr>
-</tbody>
-</table>
-<p>I&#8217;m a little surprised that there is no mention of &#8220;<a href="https://en.wikipedia.org/wiki/Truthiness">truthiness</a>&#8221; in the exercise, but maybe that&#8217;s a little advanced at the moment. If you study each of the statements, you&#8217;ll notice that each was written as a comparison of equality rather than standalone truth&nbsp;tests.</p>
-<p>For example, <code>1 == 1 and 2 == 1</code> or <code>"test" == "testing"</code> ultimately evaluates to <code>True</code> or <code>False</code>. But is <code>1</code>&#8230;<code>True</code>? Is <code>"test"</code>?</p>
-<p><a href="https://docs.python.org/2/library/stdtypes.html#truth-value-testing">Python&#8217;s docs</a> list what values are <code>False</code>:</p>
-<ul>
-<li><code>None</code></li>
-<li><code>False</code> (duh)</li>
-<li><code>0</code> (and zero equivalents in floats,&nbsp;etc.)</li>
-<li><code>[]</code></li>
-<li><code>()</code></li>
-<li><code>''</code></li>
-</ul>
-<p>One of my favorites is a <code>datetime</code> object whose value is midnight. Objects are usually truthy, but <a href="https://lwn.net/Articles/590299/">not so for midnight</a>. Ruh&nbsp;roh.</p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span>
-<span class="bp">False</span>
-</pre></div>
-
-
-<p>And guess what? It hasn&#8217;t changed for Python 3! That ship has&nbsp;sailed!</p>
-<p><img alt="Truthiness" src="/images/truthiness.png" title="Truthiness"></p>
-<p>I love it when developers debate semantics as interfaces with the world because it shows they&#8217;re <em>just as much of a designer as a <span class="caps">UX</span> designer is</em>. Their medium just happens to be code. You wouldn&#8217;t know it, but they want intuition as much as the next&nbsp;person.</p>
-<blockquote>
-<p>There&#8217;s a great saying in the usability world: &#8220;You can&#8217;t document your way out of a usability problem&#8221;. What it means is that if all the affordances of your application (or programming language!) push users towards a particular logical conclusion (in this case, &#8220;datetime.time values are not numbers&#8221;), having a caveat in your documentation isn&#8217;t going to help, because people aren&#8217;t even going to think to ask the question. It doesn&#8217;t matter if you originally had a good reason for the behaviour, you&#8217;ve ended up in a place where your behaviour is confusing and inconsistent, because there is one piece of behaviour that is out of line with an otherwise consistent mental&nbsp;model.</p>
-</blockquote>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+print 1 == 1 or 2 != 1 …</pre></div>
+                <a class="readmore" href="/exercise-28.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 29</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-29.html" rel="bookmark"
+           title="Permalink to Exercise 29">Exercise&nbsp;29</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-04-25T17:49:00-05:00">
+                Published: Tue 25 April 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p><a href="https://learnpythonthehardway.org/book/ex29.html">Today&#8217;s exercise</a> is all about the <code>if</code> statement.</p>
+<div class="highlight"><pre><span></span># Exercise 29
+# https://learnpythonthehardway.org/book/ex29.html
+
+people = 20
+cats = 30
+dogs = 15
+
+
+if people &lt; cats:
+    print &quot;Too many cats! The world is doomed!&quot;
+
+if people &gt; cats:
+    print &quot;Not many cats! The world is saved!&quot;
+
+if people &lt; dogs:
+    print &quot;The world is drooled on!&quot;
+
+if people &gt; dogs:
+    print &quot;The world is dry!&quot;
+
+
+dogs += 5
+
+if people &gt;= dogs:
+    print &quot;People are greater than or equal to dogs.&quot;
+
+if people &lt;= dogs:
+    print &quot;People are less than or equal to dogs.&quot;
+
+
+if people == dogs:
+    print &quot;People are dogs.&quot;
+</pre></div>
+
+
+<p>And running&nbsp;it:</p>
+<p><img alt="Exercise 29" src="/images/ex29.png" title="Exercise 29"></p>
+<p>The <code>if</code> statement is &#8220;used for conditional execution,&#8221; according to the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if">docs</a>:</p>
+<blockquote>
+<p>It selects exactly one of the suites by evaluating the expressions one by one until one is found to be true (see section <a href="https://docs.python.org/2.7/reference/expressions.html#booleans">Boolean operations</a> for the definition of true and false); then that suite is executed (and no other part of the <code>if</code> statement is executed or evaluated). If all expressions are false, the suite of the <code>else</code> clause, if present, is&nbsp;executed.</p>
+</blockquote>
+<p>The code needs to be indented four spaces because those spaces signify that the code is meant to be run only when the condition is true. If it&#8217;s not indented, an <a href="https://docs.python.org/2.7/library/exceptions.html#exceptions.IndentationError"><code>IndentationError</code></a> exception will be&nbsp;thrown.</p>
+<p>Here was a fun one I had to look up: <code>+=</code> is shorthand for the <a href="https://docs.python.org/2.7/library/operator.html#operator.iadd"><code>iadd</code></a> method of the <code>operator</code> module.</p>
+<blockquote>
+<p><code>a = iadd(a, b)</code> is equivalent to <code>a += b</code>.</p>
+</blockquote>
+<p>I remember encountering <code>+=</code> in Java and it thoroughly confused me, but when I slowed down to think you could add to a variable and assign the new value back onto itself, it was mind blowing how much clarity that achieved for me. &#8220;Computers can do&nbsp;that??&#8221;</p>
+<p><img alt="Homer kissing a computer" src="/images/homer.gif" title="Homer kissing a computer"></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
