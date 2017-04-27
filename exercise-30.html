@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 30</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-30.html" rel="bookmark"
+           title="Permalink to Exercise 30">Exercise&nbsp;30</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-04-27T14:30:00-05:00">
+                Published: Thu 27 April 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>Today we <a href="https://learnpythonthehardway.org/book/ex30.html">continue learning</a> about <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if"><code>if</code></a> statements that have the <code>elif</code> and <code>else</code> clauses.</p>
+<div class="highlight"><pre><span></span># Exercise 30
+# https://learnpythonthehardway.org/book/ex30.html
+
+people = 30
+cars = 40
+trucks = 15
+
+
+if cars &gt; people:
+    print &quot;We should take the cars.&quot;
+elif cars &lt; people:
+    print &quot;We should not take the cars.&quot;
+else:
+    print &quot;We can&#39;t decide.&quot;
+
+if trucks &gt; cars:
+    print &quot;That&#39;s too many trucks.&quot;
+elif trucks &lt; cars:
+    print &quot;Maybe we could take the trucks.&quot;
+else:
+    print &quot;We still can&#39;t decide.&quot;
+
+if people &gt; trucks:
+    print &quot;Alright, let&#39;s just take the trucks.&quot;
+else:
+    print &quot;Fine, let&#39;s stay home then.&quot;
+</pre></div>
+
+
+<p>And how it&nbsp;looks:</p>
+<p><img alt="Exercise 30" src="/images/ex30.png" title="Exercise 30"></p>
+<p><code>elif</code> is short hand for &#8220;else if,&#8221; which is another conditional evaluated only when the prior statement is <code>False</code>, and <code>else</code> is finally the catch all. <code>elif</code> was always sort of odd to me, in name and partially in logic. Python is usually highly readable and doesn&#8217;t abbreviate or truncate too many things. <code>if</code>, <code>else</code>, <code>for</code>, <code>is</code>, <code>not</code>, <code>in</code>, <code>and</code>, and <code>or</code> are all highly readable. Even <code>True</code> and <code>False</code> are capitalized. Maybe <code>else if</code> is a bit too far because it conflicts with <code>else</code> (although I don&#8217;t see much of a problem if a <code>:</code> denotes the end of a conditional line), but this is one of those areas where JavaScript got it right with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>else if</code></a>.</p>
+<p>I also remember when <code>elif</code> <a href="https://code.djangoproject.com/ticket/3100">made it</a> into Django&#8217;s template language as <a href="https://docs.djangoproject.com/en/1.11/ref/templates/builtins/#if"><code>{% elif %}</code></a>, which was a <em>big deal</em>. The argument was that template&#8217;s shouldn&#8217;t contain too much logic, and that <code>elif</code> can be supplanted by nesting additional <code>if</code> statements.</p>
+<p>Here is today&#8217;s&nbsp;exercise:</p>
+<div class="highlight"><pre><span></span>if cars &gt; people:
+    print &quot;We should take the cars.&quot;
+elif cars &lt; people:
+    print &quot;We should not take the cars.&quot;
+else:
+    print &quot;We can&#39;t decide.&quot;
+</pre></div>
+
+
+<p>And rewritten for nested <code>if</code> statements without <code>elif</code>:</p>
+<div class="highlight"><pre><span></span>if cars &gt; people:
+    print &quot;We should take the cars.&quot;
+else:
+    if cars &lt; people:
+        print &quot;We should not take the cars.&quot;
+    else:
+        print &quot;We can&#39;t decide.&quot;
+</pre></div>
+
+
+<p>The second version is arguably more readable, but more verbose. However, I think <code>elif</code> shines when the conditional is simply one line, in which case it becomes a quick run through of evaluating statements. If you need more verbose checking and logic, then expand as necessary. There are some subtle implications in writing code like this. Should <code>print "We can't decide."</code> really be nested? In this scenario, there&#8217;s no other possible routes, but it could have implications in more complicated code. I might prefer to write it in a more &#8220;positive&#8221; way by explicitly understanding what we&#8217;re&nbsp;evaluating:</p>
+<div class="highlight"><pre><span></span>if cars == people:
+    print &quot;We can&#39;t decide.&quot;
+else:
+    if cars &gt; people:
+        print &quot;We should take the cars.&quot;
+    if cars &lt; people:
+        print &quot;We should not take the cars.&quot;
+</pre></div>
+
+
+<p>In this particular case, there&#8217;s no problem in just omitting <code>elif</code> all together, simply because less than and greater than are <em>mutually exclusive</em>:</p>
+<div class="highlight"><pre><span></span>if cars &gt; people:
+    print &quot;We should take the cars.&quot;
+if cars &lt; people:
+    print &quot;We should not take the cars.&quot;
+if cars == people:
+    print &quot;We can&#39;t decide.&quot;
+</pre></div>
+
+
+<p><img alt="Wednesday from the Addams Family" src="/images/wednesday.gif" title="Wednesday from the Addams Family"></p>
+<p>You tell &#8216;em, <a href="https://en.wikipedia.org/wiki/Wednesday_Addams">Wednesday</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
