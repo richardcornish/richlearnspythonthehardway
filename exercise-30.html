@@ -41,23 +41,31 @@ people = 30
 cars = 40
 trucks = 15
 
-
+# In the event that the number of cars is greater than the number of people...
 if cars &gt; people:
     print &quot;We should take the cars.&quot;
+# In the event that the number of cars is less than the number of people...
 elif cars &lt; people:
     print &quot;We should not take the cars.&quot;
+# Otherwise (the number of cars is equal to the number of people)...
 else:
     print &quot;We can&#39;t decide.&quot;
 
+# In the event that the number of trucks is greater than the number of cars...
 if trucks &gt; cars:
     print &quot;That&#39;s too many trucks.&quot;
+# In the event that the number of trucks is less than the number of cars...
 elif trucks &lt; cars:
     print &quot;Maybe we could take the trucks.&quot;
+# Otherwise (the number of trucks is equal to the numbe rof cars)...
 else:
     print &quot;We still can&#39;t decide.&quot;
 
+# In the event that the number of people is greater than the number of trucks...
 if people &gt; trucks:
     print &quot;Alright, let&#39;s just take the trucks.&quot;
+# Otherwise (the number of trucks is greater than the number of people, or
+# the number of trucks is equal to the number of people)...
 else:
     print &quot;Fine, let&#39;s stay home then.&quot;
 </pre></div>
