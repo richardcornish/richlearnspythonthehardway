@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 31</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-31.html" rel="bookmark"
+           title="Permalink to Exercise 31">Exercise&nbsp;31</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-05-02T00:50:00-05:00">
+                Published: Tue 02 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>In <a href="https://learnpythonthehardway.org/book/ex31.html">today&#8217;s lesson</a>, we are combining the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if"><code>if</code></a>, <code>elif</code>, and <code>else</code> statements with <code>raw_input</code> to create an interactive&nbsp;program.</p>
+<div class="highlight"><pre><span></span># Exercise 31
+# https://learnpythonthehardway.org/book/ex31.html
+
+print &quot;You enter a dark room with two doors.  Do you go through door #1, door #2, or door #3.141592653589793? &quot;
+
+door = raw_input(&quot;&gt; &quot;)
+
+if door == &quot;1&quot;:
+    print &quot;There&#39;s a giant bear here eating a cheese cake.  What do you do?&quot;
+    print &quot;1. Take the cake.&quot;
+    print &quot;2. Scream at the bear.&quot;
+    print &quot;x. Return to Dimension X.&quot;
+
+    bear = raw_input(&quot;&gt; &quot;)
+
+    if bear == &quot;1&quot;:
+        print &quot;The bear eats your face off.  Good job!&quot;
+    elif bear == &quot;2&quot;:
+        print &quot;The bear eats your legs off.  Good job!&quot;
+    elif bear == &quot;x&quot;:
+        print &quot;Tell Krang I said &#39;hello.&#39;&quot;
+    else:
+        print &quot;Well, doing %s is probably better.  Bear runs away.&quot; % bear
+
+elif door == &quot;2&quot;:
+    print &quot;You stare into the endless abyss at Cthulhu&#39;s retina.&quot;
+    print &quot;1. Blueberries.&quot;
+    print &quot;2. Yellow jacket clothespins.&quot;
+    print &quot;3. Understanding revolvers yelling melodies.&quot;
+    print &quot;z. Eat the pizza that Splinter left out for you.&quot;
+
+    insanity = raw_input(&quot;&gt; &quot;)
+
+    if insanity == &quot;1&quot; or insanity == &quot;2&quot;:
+        print &quot;Your body survives powered by a mind of jello.  Good job!&quot;
+    if insanity == &quot;z&quot;:
+        print &quot;Cowabunga! It&#39;s turtle time!&quot;
+    else:
+        print &quot;The insanity rots your eyes into a pool of muck.  Good job!&quot;
+
+elif door == &quot;3.141592653589793&quot;:
+    print &quot;You&#39;re so irrational.&quot;
+
+else:
+    print &quot;You stumble around and fall on a knife and die.  Good job!&quot;
+</pre></div>
+
+
+<p>I customized it a little bit to add some Teenage Mutant Ninja Turtles. I would&#8217;ve expanded on Cthulu, but then I would have had to discuss his spawn building the great green stone city of R&#8217;lyeh on the great sunken continent of Mu before it was destroyed by Ythogtha, upon which I would gaze into the unthinkable horror of Cthulu&#8217;s eyes, rendering me mentally&nbsp;insane.</p>
+<p>I wish I made that up as a joke. It&#8217;s from the <a href="https://en.wikipedia.org/wiki/Cthulhu">Wikipedia page</a>.</p>
+<p><img alt="Exercise 31" src="/images/ex31.png" title="Exercise 31"></p>
+<p>This is similar to the &#8220;game&#8221; I made for <a href="/exercise-27.html">Exercise 27</a>. These &#8220;games&#8221; are deceptively simple. User input, branched logic, and returning the desired ouput is the basis for so much of entertainment, commerce, and education. I was sort of curious to figure out the origin of the &#8220;You enter a dark room&#8221; game that so many &#8220;games&#8221; from the early days of computers. I couldn&#8217;t figure it out! I thought it was a well-known trope, but all I could find was the recent &#8220;<a href="https://en.wikipedia.org/wiki/A_Dark_Room">A Dark Room</a>&#8221; game from a few years&nbsp;ago.</p>
+<p>I&#8217;ll figure out what game this was from, right <a href="https://en.wikipedia.org/wiki/Krang">Krang</a>?!</p>
+<p><img alt="Krang" src="/images/krang.jpg" title="Krang"></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

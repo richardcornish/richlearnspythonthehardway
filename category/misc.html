@@ -17,7 +17,85 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-30.html">Exercise&nbsp;30</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-31.html">Exercise&nbsp;31</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-05-02T00:50:00-05:00">
+                Published: Tue 02 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>In <a href="https://learnpythonthehardway.org/book/ex31.html">today&#8217;s lesson</a>, we are combining the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if"><code>if</code></a>, <code>elif</code>, and <code>else</code> statements with <code>raw_input</code> to create an interactive&nbsp;program.</p>
+<div class="highlight"><pre><span></span># Exercise 31
+# https://learnpythonthehardway.org/book/ex31.html
+
+print &quot;You enter a dark room with two doors.  Do you go through door #1, door #2, or door #3.141592653589793? &quot;
+
+door = raw_input(&quot;&gt; &quot;)
+
+if door == &quot;1&quot;:
+    print &quot;There&#39;s a giant bear here eating a cheese cake.  What do you do?&quot;
+    print &quot;1. Take the cake.&quot;
+    print &quot;2. Scream at the bear.&quot;
+    print &quot;x. Return to Dimension X.&quot;
+
+    bear = raw_input(&quot;&gt; &quot;)
+
+    if bear == &quot;1&quot;:
+        print &quot;The bear eats your face off.  Good job!&quot;
+    elif bear == &quot;2&quot;:
+        print &quot;The bear eats your legs off.  Good job!&quot;
+    elif bear == &quot;x&quot;:
+        print &quot;Tell Krang I said &#39;hello.&#39;&quot;
+    else:
+        print &quot;Well, doing %s is probably better.  Bear runs away.&quot; % bear
+
+elif door == &quot;2&quot;:
+    print &quot;You stare into the endless abyss at Cthulhu&#39;s retina.&quot;
+    print &quot;1. Blueberries.&quot;
+    print &quot;2. Yellow jacket clothespins.&quot;
+    print &quot;3. Understanding revolvers yelling melodies.&quot;
+    print &quot;z. Eat the pizza that Splinter left out for you.&quot;
+
+    insanity = raw_input(&quot;&gt; &quot;)
+
+    if insanity == &quot;1&quot; or insanity == &quot;2&quot;:
+        print &quot;Your body survives powered by a mind of jello.  Good job!&quot;
+    if insanity == &quot;z&quot;:
+        print &quot;Cowabunga! It&#39;s turtle time!&quot;
+    else:
+        print &quot;The insanity rots your eyes into a pool of muck.  Good job!&quot;
+
+elif door == &quot;3.141592653589793&quot;:
+    print &quot;You&#39;re so irrational.&quot;
+
+else:
+    print &quot;You stumble around and fall on a knife and die.  Good job!&quot;
+</pre></div>
+
+
+<p>I customized it a little bit to add some Teenage Mutant Ninja Turtles. I would&#8217;ve expanded on Cthulu, but then I would have had to discuss his spawn building the great green stone city of R&#8217;lyeh on the great sunken continent of Mu before it was destroyed by Ythogtha, upon which I would gaze into the unthinkable horror of Cthulu&#8217;s eyes, rendering me mentally&nbsp;insane.</p>
+<p>I wish I made that up as a joke. It&#8217;s from the <a href="https://en.wikipedia.org/wiki/Cthulhu">Wikipedia page</a>.</p>
+<p><img alt="Exercise 31" src="/images/ex31.png" title="Exercise 31"></p>
+<p>This is similar to the &#8220;game&#8221; I made for <a href="/exercise-27.html">Exercise 27</a>. These &#8220;games&#8221; are deceptively simple. User input, branched logic, and returning the desired ouput is the basis for so much of entertainment, commerce, and education. I was sort of curious to figure out the origin of the &#8220;You enter a dark room&#8221; game that so many &#8220;games&#8221; from the early days of computers. I couldn&#8217;t figure it out! I thought it was a well-known trope, but all I could find was the recent &#8220;<a href="https://en.wikipedia.org/wiki/A_Dark_Room">A Dark Room</a>&#8221; game from a few years&nbsp;ago.</p>
+<p>I&#8217;ll figure out what game this was from, right <a href="https://en.wikipedia.org/wiki/Krang">Krang</a>?!</p>
+<p><img alt="Krang" src="/images/krang.jpg" title="Krang"></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-30.html" rel="bookmark"
+                           title="Permalink to Exercise 30">Exercise&nbsp;30</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-04-27T14:30:00-05:00">
                 Published: Thu 27 April 2017
@@ -28,7 +106,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Today we <a href="https://learnpythonthehardway.org/book/ex30.html">continue learning</a> about <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if"><code>if</code></a> statements that have the <code>elif</code> and <code>else</code> clauses.</p>
+</footer><!-- /.post-info -->                <p>Today we <a href="https://learnpythonthehardway.org/book/ex30.html">continue learning</a> about <a href="https://docs.python.org/2.7/reference/compound_stmts.html#if"><code>if</code></a> statements that have the <code>elif</code> and <code>else</code> clauses.</p>
 <div class="highlight"><pre><span></span># Exercise 30
 # https://learnpythonthehardway.org/book/ex30.html
 
@@ -38,87 +116,10 @@ trucks = 15
 
 # In the event that the number of cars is greater than the number of people...
 if cars &gt; people:
-    print &quot;We should take the cars.&quot;
-# In the event that the number of cars is less than the number of people...
-elif cars &lt; people:
-    print &quot;We should not take the cars.&quot;
-# Otherwise (the number of cars is equal to the number of people)...
-else:
-    print &quot;We can&#39;t decide.&quot;
-
-# In the event that the number of trucks is greater than the number of cars...
-if trucks &gt; cars:
-    print &quot;That&#39;s too many trucks.&quot;
-# In the event that the number of trucks is less than the number of cars...
-elif trucks &lt; cars:
-    print &quot;Maybe we could take the trucks.&quot;
-# Otherwise (the number of trucks is equal to the numbe rof cars)...
-else:
-    print &quot;We still can&#39;t decide.&quot;
-
-# In the event that the number of people is greater than the number of trucks...
-if people &gt; trucks:
-    print &quot;Alright, let&#39;s just take the trucks.&quot;
-# Otherwise (the number of trucks is greater than the number of people, or
-# the number of trucks is equal to the number of people)...
-else:
-    print &quot;Fine, let&#39;s stay home then.&quot;
-</pre></div>
-
-
-<p>And how it&nbsp;looks:</p>
-<p><img alt="Exercise 30" src="/images/ex30.png" title="Exercise 30"></p>
-<p><code>elif</code> is short hand for &#8220;else if,&#8221; which is another conditional evaluated only when the prior statement is <code>False</code>, and <code>else</code> is finally the catch all. <code>elif</code> was always sort of odd to me, in name and partially in logic. Python is usually highly readable and doesn&#8217;t abbreviate or truncate too many things. <code>if</code>, <code>else</code>, <code>for</code>, <code>is</code>, <code>not</code>, <code>in</code>, <code>and</code>, and <code>or</code> are all highly readable. Even <code>True</code> and <code>False</code> are capitalized. Maybe <code>else if</code> is a bit too far because it conflicts with <code>else</code> (although I don&#8217;t see much of a problem if a <code>:</code> denotes the end of a conditional line), but this is one of those areas where JavaScript got it right with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else"><code>else if</code></a>.</p>
-<p>I also remember when <code>elif</code> <a href="https://code.djangoproject.com/ticket/3100">made it</a> into Django&#8217;s template language as <a href="https://docs.djangoproject.com/en/1.11/ref/templates/builtins/#if"><code>{% elif %}</code></a>, which was a <em>big deal</em>. The argument was that template&#8217;s shouldn&#8217;t contain too much logic, and that <code>elif</code> can be supplanted by nesting additional <code>if</code> statements.</p>
-<p>Here is today&#8217;s&nbsp;exercise:</p>
-<div class="highlight"><pre><span></span>if cars &gt; people:
-    print &quot;We should take the cars.&quot;
-elif cars &lt; people:
-    print &quot;We should not take the cars.&quot;
-else:
-    print &quot;We can&#39;t decide.&quot;
-</pre></div>
-
-
-<p>And rewritten for nested <code>if</code> statements without <code>elif</code>:</p>
-<div class="highlight"><pre><span></span>if cars &gt; people:
-    print &quot;We should take the cars.&quot;
-else:
-    if cars &lt; people:
-        print &quot;We should not take the cars.&quot;
-    else:
-        print &quot;We can&#39;t decide.&quot;
-</pre></div>
-
-
-<p>The second version is arguably more readable, but more verbose. However, I think <code>elif</code> shines when the conditional is simply one line, in which case it becomes a quick run through of evaluating statements. If you need more verbose checking and logic, then expand as necessary. There are some subtle implications in writing code like this. Should <code>print "We can't decide."</code> really be nested? In this scenario, there&#8217;s no other possible routes, but it could have implications in more complicated code. I might prefer to write it in a more &#8220;positive&#8221; way by explicitly understanding what we&#8217;re&nbsp;evaluating:</p>
-<div class="highlight"><pre><span></span>if cars == people:
-    print &quot;We can&#39;t decide.&quot;
-else:
-    if cars &gt; people:
-        print &quot;We should take the cars.&quot;
-    if cars &lt; people:
-        print &quot;We should not take the cars.&quot;
-</pre></div>
-
-
-<p>In this particular case, there&#8217;s no problem in just omitting <code>elif</code> all together, simply because less than and greater than are <em>mutually exclusive</em>:</p>
-<div class="highlight"><pre><span></span>if cars &gt; people:
-    print &quot;We should take the cars.&quot;
-if cars &lt; people:
-    print &quot;We should not take the cars.&quot;
-if cars == people:
-    print &quot;We can&#39;t decide.&quot;
-</pre></div>
-
-
-<p><img alt="Wednesday from the Addams Family" src="/images/wednesday.gif" title="Wednesday from the Addams Family"></p>
-<p>You tell &#8216;em, <a href="https://en.wikipedia.org/wiki/Wednesday_Addams">Wednesday</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+    print &quot;We should take …</pre></div>
+                <a class="readmore" href="/exercise-30.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
