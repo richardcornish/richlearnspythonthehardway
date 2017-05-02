@@ -39,7 +39,7 @@ Now publish to the live Interwebs.
 (myenv)$ ghp-import -p pelican/output
 ```
 
-Visit [http://richardcornish.github.io/richlearnspythonthehardway/](http://richardcornish.github.io/richlearnspythonthehardway/) (or [http://richlearnspythonthehardway.org/](http://richlearnspythonthehardway.org/)).
+Visit [richardcornish.github.io/richlearnspythonthehardway](https://richardcornish.github.io/richlearnspythonthehardway/) (or [richlearnspythonthehardway.org](http://richlearnspythonthehardway.org/)).
 
 ## Domains
 
