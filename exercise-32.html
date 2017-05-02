@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 32</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-32.html" rel="bookmark"
+           title="Permalink to Exercise 32">Exercise&nbsp;32</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-05-02T14:40:00-05:00">
+                Published: Tue 02 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p><a href="https://learnpythonthehardway.org/book/ex32.html">Today&#8217;s lesson</a> is all about looping through <a href="https://docs.python.org/2.7/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange"><code>list</code></a>s with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#for"><code>for</code></a> statement, and a little bit of the <a href="https://docs.python.org/2.7/library/functions.html#range"><code>range</code></a>&nbsp;method.</p>
+<div class="highlight"><pre><span></span># Exercise 32
+# https://learnpythonthehardway.org/book/ex32.html
+
+the_count = [1, 2, 3, 4, 5]
+fruits = [&#39;apples&#39;, &#39;oranges&#39;, &#39;pears&#39;, &#39;apricots&#39;]
+change = [1, &#39;pennies&#39;, 2, &#39;dimes&#39;, 3, &#39;quarters&#39;]
+
+# this first kind of for-loop goes through a list
+for number in the_count:
+    print &quot;This is count %d&quot; % number
+
+# same as above
+for fruit in fruits:
+    print &quot;A fruit of type: %s&quot; % fruit
+
+# also we can go through mixed lists too
+# notice we have to use %r since we don&#39;t know what&#39;s in it
+for i in change:
+    print &quot;I got %r&quot; % i
+
+# we can also build lists, first start with an empty one
+elements = []
+
+# then use the range function to do 0 to 5 counts
+for i in range(0, 6):
+    print &quot;Adding %d to the list.&quot; % i
+    # append is a function that lists understand
+    elements.append(i)
+
+# now we can print them out too
+for i in elements:
+    print &quot;Element was: %d&quot; % i
+</pre></div>
+
+
+<p>And how it looks when it&nbsp;runs:</p>
+<p><img alt="Exercise 32" src="/images/ex32-1.png" title="Exercise 32"></p>
+<p><code>range</code> returns a <code>list</code>, so there&#8217;s no need to&nbsp;write:</p>
+<div class="highlight"><pre><span></span>for i in range(0, 6):
+    print &quot;Adding %d to the list.&quot; % i
+    # append is a function that lists understand
+    elements.append(i)
+</pre></div>
+
+
+<p>You can simply&nbsp;say:</p>
+<div class="highlight"><pre><span></span>elements = range(0, 6)
+</pre></div>
+
+
+<p>Like&nbsp;so:</p>
+<p><img alt="Exercise 32" src="/images/ex32-2.png" title="Exercise 32"></p>
+<p>But&#8230;you just wouldn&#8217;t ever really do that in real life from my experience. <code>range</code> already returns a list, so why put it into a variable? There are times you might want to keep track of the index of a <code>list</code>, but you would do that on a list that had other kinds of data, in which case, the Pythonic way is <a href="https://docs.python.org/2.7/library/functions.html#enumerate"><code>enumerate</code></a>.</p>
+<div class="highlight"><pre><span></span>for a, b in enumerate(fruits):
+    print a, b
+0 apples
+1 oranges
+2 pears
+3 apricots
+</pre></div>
+
+
+<p>This is an interesting lesson because it again reminds me of how awful the Python 2 documentation is. Search is your friend, but it shouldn&#8217;t have to be. When one thinks of lists (or &#8220;sequences&#8221;), one quickly thinks of iteration, and <code>for</code> is the Pythonic way to do that. <code>for</code>&#8212;and <code>list</code>s in general&#8212;isn&#8217;t mentioned at all in the <a href="https://docs.python.org/2.7/library/stdtypes.html">Built-in Types</a> page. Instead the <code>for</code> documentation is over in the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#for">Compound statements</a> documentation. Python 3 has a proper section on <a href="https://docs.python.org/3/library/stdtypes.html#lists"><code>list</code></a>, but <code>for</code> is only briefly mentioned in &#8220;using a list comprehension&#8221;, and it&#8217;s not explained or linked to its proper&nbsp;place.</p>
+<p>I think this is why more people don&#8217;t learn to program. Programming is already an alien language for people, but the documentation, the one place for readability and comprehension to occur, is organized in a way that is optimized for a computer. Let&#8217;s make the computer work for us and design for humans first. After all, isn&#8217;t Python supposed to be&nbsp;readable?</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
