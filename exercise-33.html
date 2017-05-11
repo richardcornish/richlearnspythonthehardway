@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 33</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-33.html" rel="bookmark"
+           title="Permalink to Exercise 33">Exercise&nbsp;33</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-05-11T13:13:00-05:00">
+                Published: Thu 11 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>The learning <a href="https://learnpythonthehardway.org/book/ex33.html">continues</a> with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#the-while-statement"><code>while</code></a> statement, which repeats execution as long as an expression is&nbsp;true.</p>
+<p>Here is the code with the changes in the exercise&nbsp;added.</p>
+<div class="highlight"><pre><span></span># Exercise 33
+# https://learnpythonthehardway.org/book/ex33.html
+
+
+def while_loop(limit, increment):
+    i = 0
+    numbers = []
+
+    while i &lt; limit:
+        print &quot;At the top i is %d&quot; % i
+        numbers.append(i)
+
+        i = i + increment
+        print &quot;Numbers now: &quot;, numbers
+        print &quot;At the bottom i is %d&quot; % i
+
+    print &quot;The numbers: &quot;
+
+    for num in numbers:
+        print num
+
+while_loop(6, 1)
+
+
+def for_loop(limit, increment):
+    for i in range(0, limit, increment):
+        print &quot;At the top i is %d&quot; % i
+        print &quot;Numbers now: &quot;, range(0, i + increment, increment)
+        print &quot;At the bottom i is %d&quot; % (i + increment)
+    print &quot;The numbers: &quot;
+    for i in range(0, limit, increment):
+        print i
+
+for_loop(6, 1)
+</pre></div>
+
+
+<p>And how it looks when it&nbsp;runs:</p>
+<p><img alt="Exercise 33" src="/images/ex33.png" title="Exercise 33"></p>
+<p>You can see in my <code>for_loop</code>, I went for a heavy use of <a href="https://docs.python.org/2.7/library/functions.html#range"><code>range</code></a>. I&#8217;m not sure if this is the &#8220;correct&#8221; way to do this, but in general I avoided using any sort of <a href="https://docs.python.org/2.7/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange"><code>list</code></a> to store values because it seemed like I could do everything on the fly with&nbsp;range.</p>
+<p>In all my years of programming, I don&#8217;t think I&#8217;ve ever used a <code>while</code> loop. I would like to, but I can&#8217;t seem to ever find a scenario for it. I think it&#8217;s because I am more often looping over things, I want to change or display the things rather than wait for some outside condition to be&nbsp;satisfied. </p>
+<p>However, sometimes programmers do want to run a program forever, which you might see in loggers or trackers that run at intervals. One of my <a href="https://moviecode.tumblr.com/post/79623717589/house-of-cards-s02e11-about-25-minutes-in-gavin">favorites</a> was <a href="https://en.wikipedia.org/wiki/House_of_Cards_(season_2)#ep24">episode 11 of season 2</a> of House of&nbsp;Cards.</p>
+<p><img alt="House of Cards code" src="/images/house_of_cards.png" title="House of Cards code"></p>
+<div class="highlight"><pre><span></span>int i=0;
+while (true) {
+    i++;
+    status.activityMonitorReturn(i, timeVal);
+}
+</pre></div>
+
+
+<p>The use of <code>int</code> for a statically typed language, lowercase boolean <code>true</code>, use of <code>i++</code> incrementer (which is not part of Python), curly braces, and semicolons makes me think this is either <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> or <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>. Probably C because there aren&#8217;t a bazillion classes, right, Java?&nbsp;Zing!</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

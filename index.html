@@ -17,7 +17,84 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-32.html">Exercise&nbsp;32</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-33.html">Exercise&nbsp;33</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-05-11T13:13:00-05:00">
+                Published: Thu 11 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>The learning <a href="https://learnpythonthehardway.org/book/ex33.html">continues</a> with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#the-while-statement"><code>while</code></a> statement, which repeats execution as long as an expression is&nbsp;true.</p>
+<p>Here is the code with the changes in the exercise&nbsp;added.</p>
+<div class="highlight"><pre><span></span># Exercise 33
+# https://learnpythonthehardway.org/book/ex33.html
+
+
+def while_loop(limit, increment):
+    i = 0
+    numbers = []
+
+    while i &lt; limit:
+        print &quot;At the top i is %d&quot; % i
+        numbers.append(i)
+
+        i = i + increment
+        print &quot;Numbers now: &quot;, numbers
+        print &quot;At the bottom i is %d&quot; % i
+
+    print &quot;The numbers: &quot;
+
+    for num in numbers:
+        print num
+
+while_loop(6, 1)
+
+
+def for_loop(limit, increment):
+    for i in range(0, limit, increment):
+        print &quot;At the top i is %d&quot; % i
+        print &quot;Numbers now: &quot;, range(0, i + increment, increment)
+        print &quot;At the bottom i is %d&quot; % (i + increment)
+    print &quot;The numbers: &quot;
+    for i in range(0, limit, increment):
+        print i
+
+for_loop(6, 1)
+</pre></div>
+
+
+<p>And how it looks when it&nbsp;runs:</p>
+<p><img alt="Exercise 33" src="/images/ex33.png" title="Exercise 33"></p>
+<p>You can see in my <code>for_loop</code>, I went for a heavy use of <a href="https://docs.python.org/2.7/library/functions.html#range"><code>range</code></a>. I&#8217;m not sure if this is the &#8220;correct&#8221; way to do this, but in general I avoided using any sort of <a href="https://docs.python.org/2.7/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange"><code>list</code></a> to store values because it seemed like I could do everything on the fly with&nbsp;range.</p>
+<p>In all my years of programming, I don&#8217;t think I&#8217;ve ever used a <code>while</code> loop. I would like to, but I can&#8217;t seem to ever find a scenario for it. I think it&#8217;s because I am more often looping over things, I want to change or display the things rather than wait for some outside condition to be&nbsp;satisfied. </p>
+<p>However, sometimes programmers do want to run a program forever, which you might see in loggers or trackers that run at intervals. One of my <a href="https://moviecode.tumblr.com/post/79623717589/house-of-cards-s02e11-about-25-minutes-in-gavin">favorites</a> was <a href="https://en.wikipedia.org/wiki/House_of_Cards_(season_2)#ep24">episode 11 of season 2</a> of House of&nbsp;Cards.</p>
+<p><img alt="House of Cards code" src="/images/house_of_cards.png" title="House of Cards code"></p>
+<div class="highlight"><pre><span></span>int i=0;
+while (true) {
+    i++;
+    status.activityMonitorReturn(i, timeVal);
+}
+</pre></div>
+
+
+<p>The use of <code>int</code> for a statically typed language, lowercase boolean <code>true</code>, use of <code>i++</code> incrementer (which is not part of Python), curly braces, and semicolons makes me think this is either <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> or <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>. Probably C because there aren&#8217;t a bazillion classes, right, Java?&nbsp;Zing!</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-32.html" rel="bookmark"
+                           title="Permalink to Exercise 32">Exercise&nbsp;32</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-05-02T14:40:00-05:00">
                 Published: Tue 02 May 2017
@@ -28,7 +105,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p><a href="https://learnpythonthehardway.org/book/ex32.html">Today&#8217;s lesson</a> is all about looping through <a href="https://docs.python.org/2.7/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange"><code>list</code></a>s with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#for"><code>for</code></a> statement, and a little bit of the <a href="https://docs.python.org/2.7/library/functions.html#range"><code>range</code></a>&nbsp;method.</p>
+</footer><!-- /.post-info -->                <p><a href="https://learnpythonthehardway.org/book/ex32.html">Today&#8217;s lesson</a> is all about looping through <a href="https://docs.python.org/2.7/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange"><code>list</code></a>s with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#for"><code>for</code></a> statement, and a little bit of the <a href="https://docs.python.org/2.7/library/functions.html#range"><code>range</code></a>&nbsp;method.</p>
 <div class="highlight"><pre><span></span># Exercise 32
 # https://learnpythonthehardway.org/book/ex32.html
 
@@ -36,68 +113,10 @@ the_count = [1, 2, 3, 4, 5]
 fruits = [&#39;apples&#39;, &#39;oranges&#39;, &#39;pears&#39;, &#39;apricots&#39;]
 change = [1, &#39;pennies&#39;, 2, &#39;dimes&#39;, 3, &#39;quarters&#39;]
 
-# this first kind of for-loop goes through a list
-for number in the_count:
-    print &quot;This is count %d&quot; % number
-
-# same as above
-for fruit in fruits:
-    print &quot;A fruit of type: %s&quot; % fruit
-
-# also we can go through mixed lists too
-# notice we have to use %r since we don&#39;t know what&#39;s in it
-for i in change:
-    print &quot;I got %r&quot; % i
-
-# we can also build lists, first start with an empty one
-elements = []
-
-# then use the range function to do 0 to 5 counts
-for i in range(0, 6):
-    print &quot;Adding %d to the list.&quot; % i
-    # append is a function that lists understand
-    elements.append(i)
-
-# now we can print them out too
-for i in elements:
-    print &quot;Element was: %d&quot; % i
-</pre></div>
-
-
-<p>And how it looks when it&nbsp;runs:</p>
-<p><img alt="Exercise 32" src="/images/ex32-1.png" title="Exercise 32"></p>
-<p><code>range</code> returns a <code>list</code>, so there&#8217;s no need to&nbsp;write:</p>
-<div class="highlight"><pre><span></span>for i in range(0, 6):
-    print &quot;Adding %d to the list.&quot; % i
-    # append is a function that lists understand
-    elements.append(i)
-</pre></div>
-
-
-<p>You can simply&nbsp;say:</p>
-<div class="highlight"><pre><span></span>elements = range(0, 6)
-</pre></div>
-
-
-<p>Like&nbsp;so:</p>
-<p><img alt="Exercise 32" src="/images/ex32-2.png" title="Exercise 32"></p>
-<p>But&#8230;you just wouldn&#8217;t ever really do that in real life from my experience. <code>range</code> already returns a list, so why put it into a variable? There are times you might want to keep track of the index of a <code>list</code>, but you would do that on a list that had other kinds of data, in which case, the Pythonic way is <a href="https://docs.python.org/2.7/library/functions.html#enumerate"><code>enumerate</code></a>.</p>
-<div class="highlight"><pre><span></span>for a, b in enumerate(fruits):
-    print a, b
-0 apples
-1 oranges
-2 pears
-3 apricots
-</pre></div>
-
-
-<p>This is an interesting lesson because it again reminds me of how awful the Python 2 documentation is. Search is your friend, but it shouldn&#8217;t have to be. When one thinks of lists (or &#8220;sequences&#8221;), one quickly thinks of iteration, and <code>for</code> is the Pythonic way to do that. <code>for</code>&#8212;and <code>list</code>s in general&#8212;isn&#8217;t mentioned at all in the <a href="https://docs.python.org/2.7/library/stdtypes.html">Built-in Types</a> page. Instead the <code>for</code> documentation is over in the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#for">Compound statements</a> documentation. Python 3 has a proper section on <a href="https://docs.python.org/3/library/stdtypes.html#lists"><code>list</code></a>, but <code>for</code> is only briefly mentioned in &#8220;using a list comprehension&#8221;, and it&#8217;s not explained or linked to its proper&nbsp;place.</p>
-<p>I think this is why more people don&#8217;t learn to program. Programming is already an alien language for people, but the documentation, the one place for readability and comprehension to occur, is organized in a way that is optimized for a computer. Let&#8217;s make the computer work for us and design for humans first. After all, isn&#8217;t Python supposed to be&nbsp;readable?</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+# this first …</pre></div>
+                <a class="readmore" href="/exercise-32.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
