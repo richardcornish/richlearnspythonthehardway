@@ -17,7 +17,89 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-33.html">Exercise&nbsp;33</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-34.html">Exercise&nbsp;34</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-05-15T01:51:00-05:00">
+                Published: Mon 15 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Today is all about <a href="https://docs.python.org/2.7/library/functions.html#list"><code>list</code></a>s.</p>
+<div class="highlight"><pre><span></span># Exercise 34
+# https://learnpythonthehardway.org/book/ex34.html
+
+animals = [&#39;bear&#39;, &#39;python&#39;, &#39;peacock&#39;, &#39;kangaroo&#39;, &#39;whale&#39;, &#39;platypus&#39;]
+
+print &quot;The animal at 1.&quot;, &quot;The animal at 1 is at 1 and is a python.&quot;, animals[1]
+
+print &quot;The third (3rd) animal.&quot;, &quot;The third (3rd) animal is at 2 and is a peacock.&quot;, animals[2]
+
+print &quot;The first (1st) animal.&quot;, &quot;The first (1st) animal is at 0 and is a bear.&quot;, animals[0]
+
+print &quot;The animal at 3.&quot;, &quot;The animal at 3 is at 3 and is a kangaroo.&quot;, animals[3]
+
+print &quot;The fifth (5th) animal.&quot;, &quot;The fifth (5th) animal is at 4 and is a whale.&quot;, animals[4]
+
+print &quot;The animal at 2.&quot;, &quot;The animal at 2 is at 2 and is a peacock.&quot;, animals[2]
+
+print &quot;The sixth (6th) animal.&quot;, &quot;The sixth (6th) animal is at 5 and is a platypus.&quot;, animals[5]
+
+print &quot;The animal at 4.&quot;, &quot;The animal at 4 is at 4 and is a kangaroo.&quot;, animals[3]
+</pre></div>
+
+
+<p>And the output of the&nbsp;program:</p>
+<p><img alt="Exercise 34" src="/images/ex34.png" title="Exercise 34"></p>
+<p>I never really liked that Python (or JavaScript) is <a href="http://python-history.blogspot.com/2013/10/why-python-uses-0-based-indexing.html">zero-indexed</a>, but it&#8217;s something you just sort of accept from computers history of binary. I&#8217;ve also never enjoyed the syntax for list indices, slicing for ranges of numbers, or from the end of a list. I always have to look it up, which means it&#8217;s not really human friendly, which was why I chose Python in the first&nbsp;place.</p>
+<p>Although this will look pretty arrogant of me, let&#8217;s look at how <em>I</em> might have designed lists. <strong>This is not real&nbsp;Python!</strong></p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span> <span class="o">=</span> <span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;strawberry&#39;</span><span class="p">,</span> <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">index</span> <span class="nt">1</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">the</span> <span class="nt">first</span> <span class="nt">item</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span>
+<span class="nt">apple</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">index</span> <span class="nt">0</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">an</span> <span class="nt">error</span> <span class="nt">because</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">no</span> <span class="nt">zeroeth</span> <span class="nt">item</span><span class="o">!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>
+<span class="nt">IndexError</span><span class="o">:</span> <span class="nt">list</span> <span class="nt">index</span> <span class="nt">out</span> <span class="nt">of</span> <span class="nt">range</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">To</span> <span class="nt">get</span> <span class="nt">the</span> <span class="nt">first</span> <span class="nt">two</span><span class="o">,</span> <span class="nt">you</span> <span class="nt">would</span> <span class="nt">say</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="cp">]</span><span class="o">;</span> <span class="nt">but</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">ranges</span> <span class="nt">should</span> <span class="nt">use</span> <span class="nt">pipes</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">colons</span><span class="o">;</span> <span class="nt">I</span> <span class="nt">also</span> <span class="nt">think</span> <span class="nt">ranges</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">inclusive</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">exclusive</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">You</span> <span class="nt">can</span><span class="s1">&#39;t return a new list with multiple slices, but I think that would be a great feature! It&#39;</span><span class="nt">s</span> <span class="nt">not</span> <span class="nt">hard</span> <span class="nt">to</span> <span class="nt">imagine</span> <span class="nt">comma-delimited</span> <span class="nt">ranges</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="o">|</span><span class="mi">6</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;strawberry&#39;</span><span class="p">,</span> <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">To</span> <span class="nt">get</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">two</span><span class="o">,</span> <span class="nt">you</span> <span class="nt">would</span> <span class="nt">do</span> <span class="nt">a</span> <span class="nt">negative</span> <span class="nt">animals</span><span class="cp">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="cp">]</span><span class="o">;</span> <span class="nt">I</span> <span class="nt">hate</span> <span class="nt">thinking</span> <span class="nt">the</span> <span class="nt">end</span> <span class="nt">of</span> <span class="nt">my</span> <span class="nt">list</span> <span class="nt">starts</span> <span class="nt">with</span> <span class="nt">negative</span> <span class="nt">numbers</span> <span class="nt">because</span> <span class="nt">to</span> <span class="nt">me</span> <span class="nt">that</span> <span class="nt">means</span> <span class="o">*</span><span class="nt">to</span> <span class="nt">the</span> <span class="nt">left</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">list</span><span class="o">*,</span> <span class="nt">so</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">doing</span> <span class="nt">a</span> <span class="nt">range</span> <span class="nt">starting</span> <span class="nt">from</span> <span class="nt">the</span> <span class="nt">end</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">list</span><span class="o">,</span> <span class="nt">the</span> <span class="nt">beginning</span> <span class="nt">number</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">greater</span> <span class="nt">than</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">number</span> <span class="nt">so</span> <span class="nt">it</span><span class="s1">&#39;s like you&#39;</span><span class="nt">re</span> <span class="nt">counting</span> <span class="nt">backward</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">2</span><span class="o">|</span><span class="mi">1</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">Admittedly</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">using</span> <span class="nt">negative</span> <span class="nt">indices</span> <span class="nt">makes</span> <span class="nt">it</span> <span class="nt">hard</span> <span class="nt">to</span> <span class="nt">know</span> <span class="nt">which</span> <span class="nt">symbol</span> <span class="nt">would</span> <span class="nt">be</span> <span class="nt">good</span> <span class="nt">for</span> <span class="nt">counting</span> <span class="nt">backward</span> <span class="nt">for</span> <span class="nt">a</span> <span class="nt">single</span> <span class="nt">item</span><span class="o">,</span> <span class="nt">but</span> <span class="nt">maybe</span> <span class="nt">just</span> <span class="nt">a</span> <span class="nt">pipe</span> <span class="nt">with</span> <span class="nt">no</span> <span class="nt">first</span> <span class="nt">item</span> <span class="nt">would</span> <span class="nt">be</span> <span class="nt">good</span> <span class="nt">enough</span><span class="o">?</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="o">|</span><span class="mi">1</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+</pre></div>
+
+
+<p>This part at the end of the exercise was kind of&nbsp;weird.</p>
+<blockquote>
+<p>Programmers will tell you to read this guy named &#8220;Dijkstra&#8221; on this subject. I recommend you avoid his writings on this unless you enjoy being yelled at by someone who stopped programming at the same time programming&nbsp;started.</p>
+</blockquote>
+<p>What say you about <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a>?</p>
+<blockquote>
+<p>Despite having invented much of the technology of software, Dijkstra eschewed the use of computers in his own work for many decades. Even after he succumbed to his <span class="caps">UT</span> colleagues&#8217; encouragement and acquired a Macintosh computer, he used it only for e-mail and for browsing the World Wide Web. Dijkstra never wrote his articles using a computer. He preferred to rely on his typewriter and later on his Montblanc pen. Dijkstra&#8217;s favorite writing instrument was the Montblanc Meisterstück fountain pen. He repeatedly tried other pens, but none ever displaced the&nbsp;Montblanc.</p>
+</blockquote>
+<p>Sounds like a real party guy! <img alt="Party popper emoji" src="/images/1f389.png" title="Party popper emoji"></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-33.html" rel="bookmark"
+                           title="Permalink to Exercise 33">Exercise&nbsp;33</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-05-11T13:13:00-05:00">
                 Published: Thu 11 May 2017
@@ -28,7 +110,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>The learning <a href="https://learnpythonthehardway.org/book/ex33.html">continues</a> with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#the-while-statement"><code>while</code></a> statement, which repeats execution as long as an expression is&nbsp;true.</p>
+</footer><!-- /.post-info -->                <p>The learning <a href="https://learnpythonthehardway.org/book/ex33.html">continues</a> with the <a href="https://docs.python.org/2.7/reference/compound_stmts.html#the-while-statement"><code>while</code></a> statement, which repeats execution as long as an expression is&nbsp;true.</p>
 <p>Here is the code with the changes in the exercise&nbsp;added.</p>
 <div class="highlight"><pre><span></span># Exercise 33
 # https://learnpythonthehardway.org/book/ex33.html
@@ -39,54 +121,10 @@ def while_loop(limit, increment):
     numbers = []
 
     while i &lt; limit:
-        print &quot;At the top i is %d&quot; % i
-        numbers.append(i)
-
-        i = i + increment
-        print &quot;Numbers now: &quot;, numbers
-        print &quot;At the bottom i is %d&quot; % i
-
-    print &quot;The numbers: &quot;
-
-    for num in numbers:
-        print num
-
-while_loop(6, 1)
-
-
-def for_loop(limit, increment):
-    for i in range(0, limit, increment):
-        print &quot;At the top i is %d&quot; % i
-        print &quot;Numbers now: &quot;, range(0, i + increment, increment)
-        print &quot;At the bottom i is %d&quot; % (i + increment)
-    print &quot;The numbers: &quot;
-    for i in range(0, limit, increment):
-        print i
-
-for_loop(6, 1)
-</pre></div>
-
-
-<p>And how it looks when it&nbsp;runs:</p>
-<p><img alt="Exercise 33" src="/images/ex33.png" title="Exercise 33"></p>
-<p>You can see in my <code>for_loop</code>, I went for a heavy use of <a href="https://docs.python.org/2.7/library/functions.html#range"><code>range</code></a>. I&#8217;m not sure if this is the &#8220;correct&#8221; way to do this, but in general I avoided using any sort of <a href="https://docs.python.org/2.7/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange"><code>list</code></a> to store values because it seemed like I could do everything on the fly with&nbsp;range.</p>
-<p>In all my years of programming, I don&#8217;t think I&#8217;ve ever used a <code>while</code> loop. I would like to, but I can&#8217;t seem to ever find a scenario for it. I think it&#8217;s because I am more often looping over things, I want to change or display the things rather than wait for some outside condition to be&nbsp;satisfied. </p>
-<p>However, sometimes programmers do want to run a program forever, which you might see in loggers or trackers that run at intervals. One of my <a href="https://moviecode.tumblr.com/post/79623717589/house-of-cards-s02e11-about-25-minutes-in-gavin">favorites</a> was <a href="https://en.wikipedia.org/wiki/House_of_Cards_(season_2)#ep24">episode 11 of season 2</a> of House of&nbsp;Cards.</p>
-<p><img alt="House of Cards code" src="/images/house_of_cards.png" title="House of Cards code"></p>
-<div class="highlight"><pre><span></span>int i=0;
-while (true) {
-    i++;
-    status.activityMonitorReturn(i, timeVal);
-}
-</pre></div>
-
-
-<p>The use of <code>int</code> for a statically typed language, lowercase boolean <code>true</code>, use of <code>i++</code> incrementer (which is not part of Python), curly braces, and semicolons makes me think this is either <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a> or <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>. Probably C because there aren&#8217;t a bazillion classes, right, Java?&nbsp;Zing!</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+        print &quot;At the top …</pre></div>
+                <a class="readmore" href="/exercise-33.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

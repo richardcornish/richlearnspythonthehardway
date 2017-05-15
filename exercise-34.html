@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 34</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-34.html" rel="bookmark"
+           title="Permalink to Exercise 34">Exercise&nbsp;34</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-05-15T01:51:00-05:00">
+                Published: Mon 15 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>Today is all about <a href="https://docs.python.org/2.7/library/functions.html#list"><code>list</code></a>s.</p>
+<div class="highlight"><pre><span></span># Exercise 34
+# https://learnpythonthehardway.org/book/ex34.html
+
+animals = [&#39;bear&#39;, &#39;python&#39;, &#39;peacock&#39;, &#39;kangaroo&#39;, &#39;whale&#39;, &#39;platypus&#39;]
+
+print &quot;The animal at 1.&quot;, &quot;The animal at 1 is at 1 and is a python.&quot;, animals[1]
+
+print &quot;The third (3rd) animal.&quot;, &quot;The third (3rd) animal is at 2 and is a peacock.&quot;, animals[2]
+
+print &quot;The first (1st) animal.&quot;, &quot;The first (1st) animal is at 0 and is a bear.&quot;, animals[0]
+
+print &quot;The animal at 3.&quot;, &quot;The animal at 3 is at 3 and is a kangaroo.&quot;, animals[3]
+
+print &quot;The fifth (5th) animal.&quot;, &quot;The fifth (5th) animal is at 4 and is a whale.&quot;, animals[4]
+
+print &quot;The animal at 2.&quot;, &quot;The animal at 2 is at 2 and is a peacock.&quot;, animals[2]
+
+print &quot;The sixth (6th) animal.&quot;, &quot;The sixth (6th) animal is at 5 and is a platypus.&quot;, animals[5]
+
+print &quot;The animal at 4.&quot;, &quot;The animal at 4 is at 4 and is a kangaroo.&quot;, animals[3]
+</pre></div>
+
+
+<p>And the output of the&nbsp;program:</p>
+<p><img alt="Exercise 34" src="/images/ex34.png" title="Exercise 34"></p>
+<p>I never really liked that Python (or JavaScript) is <a href="http://python-history.blogspot.com/2013/10/why-python-uses-0-based-indexing.html">zero-indexed</a>, but it&#8217;s something you just sort of accept from computers history of binary. I&#8217;ve also never enjoyed the syntax for list indices, slicing for ranges of numbers, or from the end of a list. I always have to look it up, which means it&#8217;s not really human friendly, which was why I chose Python in the first&nbsp;place.</p>
+<p>Although this will look pretty arrogant of me, let&#8217;s look at how <em>I</em> might have designed lists. <strong>This is not real&nbsp;Python!</strong></p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span> <span class="o">=</span> <span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;strawberry&#39;</span><span class="p">,</span> <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">index</span> <span class="nt">1</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">the</span> <span class="nt">first</span> <span class="nt">item</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span>
+<span class="nt">apple</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">index</span> <span class="nt">0</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">an</span> <span class="nt">error</span> <span class="nt">because</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">no</span> <span class="nt">zeroeth</span> <span class="nt">item</span><span class="o">!</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>
+<span class="nt">IndexError</span><span class="o">:</span> <span class="nt">list</span> <span class="nt">index</span> <span class="nt">out</span> <span class="nt">of</span> <span class="nt">range</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">To</span> <span class="nt">get</span> <span class="nt">the</span> <span class="nt">first</span> <span class="nt">two</span><span class="o">,</span> <span class="nt">you</span> <span class="nt">would</span> <span class="nt">say</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="cp">]</span><span class="o">;</span> <span class="nt">but</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">ranges</span> <span class="nt">should</span> <span class="nt">use</span> <span class="nt">pipes</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">colons</span><span class="o">;</span> <span class="nt">I</span> <span class="nt">also</span> <span class="nt">think</span> <span class="nt">ranges</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">inclusive</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">exclusive</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">You</span> <span class="nt">can</span><span class="s1">&#39;t return a new list with multiple slices, but I think that would be a great feature! It&#39;</span><span class="nt">s</span> <span class="nt">not</span> <span class="nt">hard</span> <span class="nt">to</span> <span class="nt">imagine</span> <span class="nt">comma-delimited</span> <span class="nt">ranges</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="o">|</span><span class="mi">6</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;strawberry&#39;</span><span class="p">,</span> <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">To</span> <span class="nt">get</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">two</span><span class="o">,</span> <span class="nt">you</span> <span class="nt">would</span> <span class="nt">do</span> <span class="nt">a</span> <span class="nt">negative</span> <span class="nt">animals</span><span class="cp">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="cp">]</span><span class="o">;</span> <span class="nt">I</span> <span class="nt">hate</span> <span class="nt">thinking</span> <span class="nt">the</span> <span class="nt">end</span> <span class="nt">of</span> <span class="nt">my</span> <span class="nt">list</span> <span class="nt">starts</span> <span class="nt">with</span> <span class="nt">negative</span> <span class="nt">numbers</span> <span class="nt">because</span> <span class="nt">to</span> <span class="nt">me</span> <span class="nt">that</span> <span class="nt">means</span> <span class="o">*</span><span class="nt">to</span> <span class="nt">the</span> <span class="nt">left</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">list</span><span class="o">*,</span> <span class="nt">so</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">doing</span> <span class="nt">a</span> <span class="nt">range</span> <span class="nt">starting</span> <span class="nt">from</span> <span class="nt">the</span> <span class="nt">end</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">list</span><span class="o">,</span> <span class="nt">the</span> <span class="nt">beginning</span> <span class="nt">number</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">greater</span> <span class="nt">than</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">number</span> <span class="nt">so</span> <span class="nt">it</span><span class="s1">&#39;s like you&#39;</span><span class="nt">re</span> <span class="nt">counting</span> <span class="nt">backward</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">2</span><span class="o">|</span><span class="mi">1</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">Admittedly</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">using</span> <span class="nt">negative</span> <span class="nt">indices</span> <span class="nt">makes</span> <span class="nt">it</span> <span class="nt">hard</span> <span class="nt">to</span> <span class="nt">know</span> <span class="nt">which</span> <span class="nt">symbol</span> <span class="nt">would</span> <span class="nt">be</span> <span class="nt">good</span> <span class="nt">for</span> <span class="nt">counting</span> <span class="nt">backward</span> <span class="nt">for</span> <span class="nt">a</span> <span class="nt">single</span> <span class="nt">item</span><span class="o">,</span> <span class="nt">but</span> <span class="nt">maybe</span> <span class="nt">just</span> <span class="nt">a</span> <span class="nt">pipe</span> <span class="nt">with</span> <span class="nt">no</span> <span class="nt">first</span> <span class="nt">item</span> <span class="nt">would</span> <span class="nt">be</span> <span class="nt">good</span> <span class="nt">enough</span><span class="o">?</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="o">|</span><span class="mi">1</span><span class="cp">]</span>
+<span class="cp">[</span><span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
+</pre></div>
+
+
+<p>This part at the end of the exercise was kind of&nbsp;weird.</p>
+<blockquote>
+<p>Programmers will tell you to read this guy named &#8220;Dijkstra&#8221; on this subject. I recommend you avoid his writings on this unless you enjoy being yelled at by someone who stopped programming at the same time programming&nbsp;started.</p>
+</blockquote>
+<p>What say you about <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a>?</p>
+<blockquote>
+<p>Despite having invented much of the technology of software, Dijkstra eschewed the use of computers in his own work for many decades. Even after he succumbed to his <span class="caps">UT</span> colleagues&#8217; encouragement and acquired a Macintosh computer, he used it only for e-mail and for browsing the World Wide Web. Dijkstra never wrote his articles using a computer. He preferred to rely on his typewriter and later on his Montblanc pen. Dijkstra&#8217;s favorite writing instrument was the Montblanc Meisterstück fountain pen. He repeatedly tried other pens, but none ever displaced the&nbsp;Montblanc.</p>
+</blockquote>
+<p>Sounds like a real party guy! <img alt="Party popper emoji" src="/images/1f389.png" title="Party popper emoji"></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
