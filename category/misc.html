@@ -17,7 +17,116 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/exercise-34.html">Exercise&nbsp;34</a></h1>
+                    <h1 class="entry-title"><a href="/exercise-35.html">Exercise&nbsp;35</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-05-23T02:44:00-05:00">
+                Published: Tue 23 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info --><p>Today&#8217;s <a href="https://learnpythonthehardway.org/book/ex35.html">lesson</a> doesn&#8217;t have much original coding. Instead we&#8217;re simply examining an existing program and understanding how it&nbsp;works.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="nb">exit</span>
+
+<span class="k">def</span> <span class="nf">gold_room</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;This room is full of gold.  How much do you take?&quot;</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;0&quot;</span> <span class="ow">in</span> <span class="n">choice</span> <span class="ow">or</span> <span class="s2">&quot;1&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="n">how_much</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;Man, learn to type a number.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">how_much</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Nice, you&#39;re not greedy, you win!&quot;</span>
+        <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;You greedy bastard!&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bear_room</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;There is a bear here.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;The bear has a bunch of honey.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;The fat bear is in front of another door.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;How are you going to move the bear?&quot;</span>
+    <span class="n">bear_moved</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;take honey&quot;</span><span class="p">:</span>
+            <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;The bear looks at you then slaps your face off.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;taunt bear&quot;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">bear_moved</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;The bear has moved from the door. You can go through it now.&quot;</span>
+            <span class="n">bear_moved</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;taunt bear&quot;</span> <span class="ow">and</span> <span class="n">bear_moved</span><span class="p">:</span>
+            <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;The bear gets pissed off and chews your leg off.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;open door&quot;</span> <span class="ow">and</span> <span class="n">bear_moved</span><span class="p">:</span>
+            <span class="n">gold_room</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;I got no idea what that means.&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">cthulhu_room</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;Here you see the great evil Cthulhu.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;He, it, whatever stares at you and you go insane.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;Do you flee for your life or eat your head?&quot;</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;flee&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="s2">&quot;head&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;Well that was tasty!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cthulhu_room</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">dead</span><span class="p">(</span><span class="n">why</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">why</span><span class="p">,</span> <span class="s2">&quot;Good job!&quot;</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">start</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;You are in a dark room.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;There is a door to your right and left.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;Which one do you take?&quot;</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+        <span class="n">bear_room</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span>
+        <span class="n">cthulhu_room</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;You stumble around the room until you starve.&quot;</span><span class="p">)</span>
+
+
+<span class="n">start</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Here it is&nbsp;running:</p>
+<p><img alt="Exercise 35" src="/images/ex35.png" title="Exercise 35"></p>
+<p>And here it is mapped out using&nbsp;OmniGraffle:</p>
+<p><img alt="Exercise 35 graphic" src="/images/ex35-graphic.png" title="Exercise 35 graphic"></p>
+<p>This one was a little hard to diagram, but it eventually came together. I usually try to make sure the lines don&#8217;t cross, but I don&#8217;t think that was possible here. It&#8217;s amazing how expressive code is in such a short space, while graphics, which are easier to understand at a glance, are so much more verbose and can be overwhelming&nbsp;quickly.</p>
+<p>The <code>gold_room</code> function is kind of weird. One doesn&#8217;t check the if the input has a <code>0</code> or <code>1</code> to understand if it&#8217;s a number. The <a href="https://stackoverflow.com/questions/3501382/checking-whether-a-variable-is-an-integer-or-not">Pythonic way</a> is to use the <a href="https://docs.python.org/2/library/functions.html#isinstance"><code>isinstance</code></a> method: <code>if isinstance(choice, (int, long))</code>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/exercise-34.html" rel="bookmark"
+                           title="Permalink to Exercise 34">Exercise&nbsp;34</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-05-15T01:51:00-05:00">
                 Published: Mon 15 May 2017
@@ -28,7 +137,7 @@
         </address>
 <p>In <a href="/category/misc.html">misc</a>. </p>
 
-</footer><!-- /.post-info --><p>Today is all about <a href="https://docs.python.org/2.7/library/functions.html#list"><code>list</code></a>s.</p>
+</footer><!-- /.post-info -->                <p>Today&#8217;s <a href="https://learnpythonthehardway.org/book/ex34.html">lesson</a> is all about <a href="https://docs.python.org/2.7/library/functions.html#list"><code>list</code></a>s.</p>
 <div class="highlight"><pre><span></span># Exercise 34
 # https://learnpythonthehardway.org/book/ex34.html
 
@@ -36,62 +145,10 @@ animals = [&#39;bear&#39;, &#39;python&#39;, &#39;peacock&#39;, &#39;kangaroo&#3
 
 print &quot;The animal at 1.&quot;, &quot;The animal at 1 is at 1 and is a python.&quot;, animals[1]
 
-print &quot;The third (3rd) animal.&quot;, &quot;The third (3rd) animal is at 2 and is a peacock.&quot;, animals[2]
-
-print &quot;The first (1st) animal.&quot;, &quot;The first (1st) animal is at 0 and is a bear.&quot;, animals[0]
-
-print &quot;The animal at 3.&quot;, &quot;The animal at 3 is at 3 and is a kangaroo.&quot;, animals[3]
-
-print &quot;The fifth (5th) animal.&quot;, &quot;The fifth (5th) animal is at 4 and is a whale.&quot;, animals[4]
-
-print &quot;The animal at 2.&quot;, &quot;The animal at 2 is at 2 and is a peacock.&quot;, animals[2]
-
-print &quot;The sixth (6th) animal.&quot;, &quot;The sixth (6th) animal is at 5 and is a platypus.&quot;, animals[5]
-
-print &quot;The animal at 4.&quot;, &quot;The animal at 4 is at 4 and is a kangaroo.&quot;, animals[3]
-</pre></div>
-
-
-<p>And the output of the&nbsp;program:</p>
-<p><img alt="Exercise 34" src="/images/ex34.png" title="Exercise 34"></p>
-<p>I never really liked that Python (or JavaScript) is <a href="http://python-history.blogspot.com/2013/10/why-python-uses-0-based-indexing.html">zero-indexed</a>, but it&#8217;s something you just sort of accept from computers history of binary. I&#8217;ve also never enjoyed the syntax for list indices, slicing for ranges of numbers, or from the end of a list. I always have to look it up, which means it&#8217;s not really human friendly, which was why I chose Python in the first&nbsp;place.</p>
-<p>Although this will look pretty arrogant of me, let&#8217;s look at how <em>I</em> might have designed lists. <strong>This is not real&nbsp;Python!</strong></p>
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span> <span class="o">=</span> <span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;strawberry&#39;</span><span class="p">,</span> <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">index</span> <span class="nt">1</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">the</span> <span class="nt">first</span> <span class="nt">item</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="cp">]</span>
-<span class="nt">apple</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">index</span> <span class="nt">0</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">an</span> <span class="nt">error</span> <span class="nt">because</span> <span class="nt">there</span> <span class="nt">is</span> <span class="nt">no</span> <span class="nt">zeroeth</span> <span class="nt">item</span><span class="o">!</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">0</span><span class="cp">]</span>
-<span class="nt">IndexError</span><span class="o">:</span> <span class="nt">list</span> <span class="nt">index</span> <span class="nt">out</span> <span class="nt">of</span> <span class="nt">range</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">To</span> <span class="nt">get</span> <span class="nt">the</span> <span class="nt">first</span> <span class="nt">two</span><span class="o">,</span> <span class="nt">you</span> <span class="nt">would</span> <span class="nt">say</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="cp">]</span><span class="o">;</span> <span class="nt">but</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">ranges</span> <span class="nt">should</span> <span class="nt">use</span> <span class="nt">pipes</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">colons</span><span class="o">;</span> <span class="nt">I</span> <span class="nt">also</span> <span class="nt">think</span> <span class="nt">ranges</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">inclusive</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">exclusive</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="cp">]</span>
-<span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="cp">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">You</span> <span class="nt">can</span><span class="s1">&#39;t return a new list with multiple slices, but I think that would be a great feature! It&#39;</span><span class="nt">s</span> <span class="nt">not</span> <span class="nt">hard</span> <span class="nt">to</span> <span class="nt">imagine</span> <span class="nt">comma-delimited</span> <span class="nt">ranges</span><span class="o">.</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">1</span><span class="o">|</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="o">|</span><span class="mi">6</span><span class="cp">]</span>
-<span class="cp">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;strawberry&#39;</span><span class="p">,</span> <span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">To</span> <span class="nt">get</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">two</span><span class="o">,</span> <span class="nt">you</span> <span class="nt">would</span> <span class="nt">do</span> <span class="nt">a</span> <span class="nt">negative</span> <span class="nt">animals</span><span class="cp">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="cp">]</span><span class="o">;</span> <span class="nt">I</span> <span class="nt">hate</span> <span class="nt">thinking</span> <span class="nt">the</span> <span class="nt">end</span> <span class="nt">of</span> <span class="nt">my</span> <span class="nt">list</span> <span class="nt">starts</span> <span class="nt">with</span> <span class="nt">negative</span> <span class="nt">numbers</span> <span class="nt">because</span> <span class="nt">to</span> <span class="nt">me</span> <span class="nt">that</span> <span class="nt">means</span> <span class="o">*</span><span class="nt">to</span> <span class="nt">the</span> <span class="nt">left</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">list</span><span class="o">*,</span> <span class="nt">so</span> <span class="nt">I</span> <span class="nt">think</span> <span class="nt">doing</span> <span class="nt">a</span> <span class="nt">range</span> <span class="nt">starting</span> <span class="nt">from</span> <span class="nt">the</span> <span class="nt">end</span> <span class="nt">of</span> <span class="nt">the</span> <span class="nt">list</span><span class="o">,</span> <span class="nt">the</span> <span class="nt">beginning</span> <span class="nt">number</span> <span class="nt">should</span> <span class="nt">be</span> <span class="nt">greater</span> <span class="nt">than</span> <span class="nt">the</span> <span class="nt">last</span> <span class="nt">number</span> <span class="nt">so</span> <span class="nt">it</span><span class="s1">&#39;s like you&#39;</span><span class="nt">re</span> <span class="nt">counting</span> <span class="nt">backward</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="mi">2</span><span class="o">|</span><span class="mi">1</span><span class="cp">]</span>
-<span class="cp">[</span><span class="s1">&#39;watermelon&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="err">#</span> <span class="nt">Admittedly</span><span class="o">,</span> <span class="nt">not</span> <span class="nt">using</span> <span class="nt">negative</span> <span class="nt">indices</span> <span class="nt">makes</span> <span class="nt">it</span> <span class="nt">hard</span> <span class="nt">to</span> <span class="nt">know</span> <span class="nt">which</span> <span class="nt">symbol</span> <span class="nt">would</span> <span class="nt">be</span> <span class="nt">good</span> <span class="nt">for</span> <span class="nt">counting</span> <span class="nt">backward</span> <span class="nt">for</span> <span class="nt">a</span> <span class="nt">single</span> <span class="nt">item</span><span class="o">,</span> <span class="nt">but</span> <span class="nt">maybe</span> <span class="nt">just</span> <span class="nt">a</span> <span class="nt">pipe</span> <span class="nt">with</span> <span class="nt">no</span> <span class="nt">first</span> <span class="nt">item</span> <span class="nt">would</span> <span class="nt">be</span> <span class="nt">good</span> <span class="nt">enough</span><span class="o">?</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nt">fruits</span><span class="cp">[</span><span class="o">|</span><span class="mi">1</span><span class="cp">]</span>
-<span class="cp">[</span><span class="s1">&#39;mango&#39;</span><span class="cp">]</span>
-</pre></div>
-
-
-<p>This part at the end of the exercise was kind of&nbsp;weird.</p>
-<blockquote>
-<p>Programmers will tell you to read this guy named &#8220;Dijkstra&#8221; on this subject. I recommend you avoid his writings on this unless you enjoy being yelled at by someone who stopped programming at the same time programming&nbsp;started.</p>
-</blockquote>
-<p>What say you about <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a>?</p>
-<blockquote>
-<p>Despite having invented much of the technology of software, Dijkstra eschewed the use of computers in his own work for many decades. Even after he succumbed to his <span class="caps">UT</span> colleagues&#8217; encouragement and acquired a Macintosh computer, he used it only for e-mail and for browsing the World Wide Web. Dijkstra never wrote his articles using a computer. He preferred to rely on his typewriter and later on his Montblanc pen. Dijkstra&#8217;s favorite writing instrument was the Montblanc Meisterstück fountain pen. He repeatedly tried other pens, but none ever displaced the&nbsp;Montblanc.</p>
-</blockquote>
-<p>Sounds like a real party guy! <img alt="Party popper emoji" src="/images/1f389.png" title="Party popper emoji"></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+print &quot;The third (3rd) animal.&quot;, &quot;The third (3rd) animal …</pre></div>
+                <a class="readmore" href="/exercise-34.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

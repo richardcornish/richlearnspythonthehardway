@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Exercise 35</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rich learns Python the hard way </a></h1>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/exercise-35.html" rel="bookmark"
+           title="Permalink to Exercise 35">Exercise&nbsp;35</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-05-23T02:44:00-05:00">
+                Published: Tue 23 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rich-cornish.html">Rich Cornish</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>. </p>
+
+</footer><!-- /.post-info -->      <p>Today&#8217;s <a href="https://learnpythonthehardway.org/book/ex35.html">lesson</a> doesn&#8217;t have much original coding. Instead we&#8217;re simply examining an existing program and understanding how it&nbsp;works.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="nb">exit</span>
+
+<span class="k">def</span> <span class="nf">gold_room</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;This room is full of gold.  How much do you take?&quot;</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;0&quot;</span> <span class="ow">in</span> <span class="n">choice</span> <span class="ow">or</span> <span class="s2">&quot;1&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="n">how_much</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;Man, learn to type a number.&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">how_much</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;Nice, you&#39;re not greedy, you win!&quot;</span>
+        <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;You greedy bastard!&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">bear_room</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;There is a bear here.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;The bear has a bunch of honey.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;The fat bear is in front of another door.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;How are you going to move the bear?&quot;</span>
+    <span class="n">bear_moved</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;take honey&quot;</span><span class="p">:</span>
+            <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;The bear looks at you then slaps your face off.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;taunt bear&quot;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">bear_moved</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;The bear has moved from the door. You can go through it now.&quot;</span>
+            <span class="n">bear_moved</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;taunt bear&quot;</span> <span class="ow">and</span> <span class="n">bear_moved</span><span class="p">:</span>
+            <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;The bear gets pissed off and chews your leg off.&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;open door&quot;</span> <span class="ow">and</span> <span class="n">bear_moved</span><span class="p">:</span>
+            <span class="n">gold_room</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s2">&quot;I got no idea what that means.&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">cthulhu_room</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;Here you see the great evil Cthulhu.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;He, it, whatever stares at you and you go insane.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;Do you flee for your life or eat your head?&quot;</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;flee&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="n">start</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="s2">&quot;head&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;Well that was tasty!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cthulhu_room</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">dead</span><span class="p">(</span><span class="n">why</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">why</span><span class="p">,</span> <span class="s2">&quot;Good job!&quot;</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">start</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s2">&quot;You are in a dark room.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;There is a door to your right and left.&quot;</span>
+    <span class="k">print</span> <span class="s2">&quot;Which one do you take?&quot;</span>
+
+    <span class="n">choice</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;&gt; &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span><span class="p">:</span>
+        <span class="n">bear_room</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">choice</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span>
+        <span class="n">cthulhu_room</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dead</span><span class="p">(</span><span class="s2">&quot;You stumble around the room until you starve.&quot;</span><span class="p">)</span>
+
+
+<span class="n">start</span><span class="p">()</span>
+</pre></div>
+
+
+<p>Here it is&nbsp;running:</p>
+<p><img alt="Exercise 35" src="/images/ex35.png" title="Exercise 35"></p>
+<p>And here it is mapped out using&nbsp;OmniGraffle:</p>
+<p><img alt="Exercise 35 graphic" src="/images/ex35-graphic.png" title="Exercise 35 graphic"></p>
+<p>This one was a little hard to diagram, but it eventually came together. I usually try to make sure the lines don&#8217;t cross, but I don&#8217;t think that was possible here. It&#8217;s amazing how expressive code is in such a short space, while graphics, which are easier to understand at a glance, are so much more verbose and can be overwhelming&nbsp;quickly.</p>
+<p>The <code>gold_room</code> function is kind of weird. One doesn&#8217;t check the if the input has a <code>0</code> or <code>1</code> to understand if it&#8217;s a number. The <a href="https://stackoverflow.com/questions/3501382/checking-whether-a-variable-is-an-integer-or-not">Pythonic way</a> is to use the <a href="https://docs.python.org/2/library/functions.html#isinstance"><code>isinstance</code></a> method: <code>if isinstance(choice, (int, long))</code>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://python.org/">Python</a></li>
+                            <li><a href="https://learnpythonthehardway.org/book/">LPTHW</a></li>
+                            <li><a href="https://github.com/richardcornish/richlearnspythonthehardway/">Code</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
